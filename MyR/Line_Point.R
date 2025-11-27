@@ -536,3 +536,144 @@ plot_with_sampled_points <- function(
   
   return(p)
 }
+
+
+#' @title 绘制权衡关系双Y轴图 (已更新)
+#' @description 创建一个双Y轴的折线图，用于展示OCR/ERR与Recipe Size随阈值变化的权衡关系。
+#' @param data 数据框，必须包含以下列：`Threshold`, `OCR`, `ERR`, `RecipeSize`。
+#' @param dataset_name 数据集名称，用于图表标题和导出文件名，例如 "Linux"。
+#' @param export_path 导出路径。
+#' @param export_format 导出文件格式，例如 "pdf" 或 "png"。
+#' @param colors 包含三个元素的颜色向量，分别对应 OCR, ERR, Recipe Size。
+#' @param shapes 包含三个元素的形状向量，分别对应 OCR, ERR, Recipe Size。
+#' @param line_size 线条粗细。
+#' @param point_size 点的大小。
+#' @param stroke_size 点边框的粗细。
+#' @param axis_text_size 坐标轴文本大小。
+#' @param title_size 标题大小。
+#' @param legend_text_size 图例文本大小。
+#' @param plot_width, plot_height 图形宽高。
+#' @return 返回一个ggplot对象。
+plot_tradeoff_dual_y_axis <- function(
+  data,
+  dataset_name, # 移除默认值 ""，使其成为必需参数
+  export_path = "./",
+  export_format = "pdf",
+  colors = c("OCR" = "#AD0626", "ERR" = "#2C3359", "RecipeSize" = "#75B8BF"),
+  shapes = c("OCR" = 23, "ERR" = 24, "RecipeSize" = 22),
+  line_size = 1.5,
+  point_size = 9,
+  stroke_size = 4.5,
+  axis_text_size = 42,
+  title_size = 48,
+  legend_text_size = 32,
+  plot_width = 12,
+  plot_height = 8
+) {
+  # 1. 加载库和设置字体
+  library(ggplot2)
+  library(extrafont)
+  library(showtext)
+  library(scales)
+
+  font_add('Arial', 'C:/Windows/Fonts/arial.ttf')
+  showtext_auto()
+  windowsFonts(Arial = windowsFont("Arial"))
+
+  # 2. 数据校验
+  required_cols <- c("Threshold", "OCR", "ERR", "RecipeSize")
+  if (!all(required_cols %in% names(data))) {
+    stop(paste("Data must contain the following columns:", paste(required_cols, collapse = ", ")))
+  }
+
+  # 3. 计算缩放因子
+  primary_range <- range(c(data$OCR, data$ERR), na.rm = TRUE)
+  secondary_range <- range(data$RecipeSize, na.rm = TRUE)
+  
+  if (diff(secondary_range) == 0) {
+    scaling_factor <- 1
+  } else {
+    scaling_factor <- diff(primary_range) / diff(secondary_range)
+  }
+  
+  format_bytes_manual <- function(b) {
+    sapply(b, function(x) {
+      if (is.na(x)) return(NA)
+      if (x >= 1e9) {
+        label <- scales::number(x / 1e9, accuracy = 0.01, trim = TRUE)
+        paste0(label, "G")
+      } else if (x >= 1e6) {
+        label <- scales::number(x / 1e6, accuracy = 1, trim = TRUE)
+        paste0(label, "M")
+      } else if (x >= 1e3) {
+        label <- scales::number(x / 1e3, accuracy = 1, trim = TRUE)
+        paste0(label, "K")
+      } else {
+        paste0(x, "B")
+      }
+    })
+  }
+
+  # 4. 创建绘图
+  p <- ggplot(data, aes(x = Threshold)) +
+    # OCR and ERR lines and points
+    geom_line(aes(y = OCR, color = "OCR"), linewidth = line_size) +
+    geom_point(aes(y = OCR, color = "OCR", shape = "OCR"), size = point_size, stroke = stroke_size) +
+    geom_line(aes(y = ERR, color = "ERR"), linewidth = line_size) +
+    geom_point(aes(y = ERR, color = "ERR", shape = "ERR"), size = point_size, stroke = stroke_size) +
+    
+    # Recipe Size line and points (on secondary axis)
+    geom_line(aes(y = (RecipeSize - secondary_range[1]) * scaling_factor + primary_range[1], color = "RecipeSize"), linewidth = line_size) +
+    geom_point(aes(y = (RecipeSize - secondary_range[1]) * scaling_factor + primary_range[1], color = "RecipeSize", shape = "RecipeSize"), size = point_size, stroke = stroke_size) +
+    
+    # --- 坐标轴 ---
+    scale_x_log10(
+      breaks = data$Threshold,
+      labels = function(x) {
+        ifelse(x >= 1024*1024, paste0(x / (1024*1024), "M"), paste0(x / 1024, "K"))
+      }
+    ) +
+    scale_y_continuous(
+      name = "DRR & ERR", # 移除百分号
+      expand = expansion(mult = c(0.05, 0.1)),
+      sec.axis = sec_axis(
+        transform = ~ (.- primary_range[1]) / scaling_factor + secondary_range[1],
+        name = "Recipe Size",
+        labels = format_bytes_manual
+      )
+    ) +
+    
+    # --- 样式和标签 ---
+    scale_color_manual(
+      name = NULL, 
+      values = colors, 
+      labels = c("OCR" = "DRR", "ERR" = "ERR", "RecipeSize" = "Recipe Size")
+    ) +
+    scale_shape_manual(
+      name = NULL, 
+      values = shapes,
+      labels = c("OCR" = "DRR", "ERR" = "ERR", "RecipeSize" = "Recipe Size")
+    ) +
+    labs(
+      x = "Large File Threshold"
+    ) +
+    
+    # --- 主题 ---
+    theme_classic() +
+    theme(
+      text = element_text(family = "Arial", color = "black"),
+      axis.text = element_text(size = axis_text_size, color = "black"),
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      axis.title = element_text(size = title_size),
+      axis.line = element_line(linewidth = 1),
+      axis.ticks = element_line(linewidth = 1),
+      axis.ticks.length = unit(0.2, "cm"),
+      legend.position = "none" # 移除图例
+    )
+
+  # 5. 保存文件
+  export_name <- paste0(dataset_name, "_tradeoff_plot.", export_format)
+  ggsave(file.path(export_path, export_name), plot = p, width = plot_width, height = plot_height)
+  
+  return(p)
+}

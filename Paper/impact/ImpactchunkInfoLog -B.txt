@@ -1,0 +1,3601 @@
+
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/react -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 8192
+-----------------CHUNK NUM-----------------------
+logical chunk num: 441864
+unique chunk num: 71544
+base chunk num: 22320
+delta chunk num: 49224
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2908631040
+unique chunk size: 109436475
+base chunk size: 91071360
+delta chunk size: 18365115
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 26.5783
+OCR(+Recipe): 23.5372
+DCC: 0.688024
+DCR: 11.3801
+DCE: 26.1945
+DCE2: 0.8947
+-----------------Time------------------------------
+total time: 23s
+Throughput: 120.604MiB/s
+Reduce data speed: 116.066MiB/s
+SF generation time: 0.132359s
+SF generation throughput: 20957.2MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 11.5933MiB
+FP Overhead: 8.18756MiB
+SF Overhead: 2.55432MiB
+Name Overhead: 0.85144MiB
+Recipe Overhead: 13.4846MiB
+SF number: 66960
+-----------------Reduct----------------------------
+Dedup ratio : 8.40213
+Lossless ratio : 9.69323
+Delta ratio : 26.5783
+dedup reduct size : 2562453088
+delta reduct size : 190631795
+local reduct size : 46109682
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 11054, reduct: 25.7478MiB
+Header chunk num: 27919, reduct: 64.7387MiB
+CDC chunk num: 10251, reduct: 91.3142MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/netty -c 4 -m 5 -n 99 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 8192
+-----------------CHUNK NUM-----------------------
+logical chunk num: 458844
+unique chunk num: 98178
+base chunk num: 24539
+delta chunk num: 73639
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2272532480
+unique chunk size: 42385331
+base chunk size: 25013840
+delta chunk size: 17371491
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 53.616
+OCR(+Recipe): 39.8212
+DCC: 0.750056
+DCR: 18.1523
+DCE: 31.2041
+DCE2: 0.913776
+-----------------Time------------------------------
+total time: 16s
+Throughput: 135.453MiB/s
+Reduce data speed: 132.927MiB/s
+SF generation time: 0.134723s
+SF generation throughput: 16086.7MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 14.9799MiB
+FP Overhead: 11.2356MiB
+SF Overhead: 2.80827MiB
+Name Overhead: 0.936089MiB
+Recipe Overhead: 14.0028MiB
+SF number: 73617
+-----------------Reduct----------------------------
+Dedup ratio : 5.70222
+Lossless ratio : 6.67712
+Delta ratio : 53.616
+dedup reduct size : 1873997979
+delta reduct size : 297960935
+local reduct size : 58188235
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 11917, reduct: 37.6889MiB
+Header chunk num: 52794, reduct: 155.27MiB
+CDC chunk num: 8928, reduct: 91.1993MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/Cpython -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 8192
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1501196
+unique chunk num: 294506
+base chunk num: 73630
+delta chunk num: 220876
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 10323927040
+unique chunk size: 178773110
+base chunk size: 133507997
+delta chunk size: 45265113
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 57.7488
+OCR(+Recipe): 45.5177
+DCC: 0.749988
+DCR: 19.9459
+DCE: 42.8723
+DCE2: 0.912706
+-----------------Time------------------------------
+total time: 106s
+Throughput: 92.8836MiB/s
+Reduce data speed: 91.2752MiB/s
+SF generation time: 0.628506s
+SF generation throughput: 15665.2MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 44.9386MiB
+FP Overhead: 33.7035MiB
+SF Overhead: 8.42628MiB
+Name Overhead: 2.80876MiB
+Recipe Overhead: 45.8129MiB
+SF number: 220890
+-----------------Reduct----------------------------
+Dedup ratio : 8.52153
+Lossless ratio : 9.96172
+Delta ratio : 57.7488
+dedup reduct size : 9112416166
+delta reduct size : 857586481
+local reduct size : 175151283
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 6862, reduct: 24.9371MiB
+Header chunk num: 150554, reduct: 186.281MiB
+CDC chunk num: 63460, reduct: 606.64MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/automake_tarballs -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 8192
+-----------------CHUNK NUM-----------------------
+logical chunk num: 132494
+unique chunk num: 41280
+base chunk num: 7098
+delta chunk num: 34182
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 504084480
+unique chunk size: 23465338
+base chunk size: 15211116
+delta chunk size: 8254222
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 21.4821
+OCR(+Recipe): 18.1946
+DCC: 0.828052
+DCR: 16.7486
+DCE: 37.2727
+DCE2: 0.925317
+-----------------Time------------------------------
+total time: 10s
+Throughput: 48.0732MiB/s
+Reduce data speed: 45.8354MiB/s
+SF generation time: 0.0613518s
+SF generation throughput: 7835.67MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 5.80719MiB
+FP Overhead: 4.72412MiB
+SF Overhead: 0.812302MiB
+Name Overhead: 0.270767MiB
+Recipe Overhead: 4.0434MiB
+SF number: 21294
+-----------------Reduct----------------------------
+Dedup ratio : 3.02508
+Lossless ratio : 3.28484
+Delta ratio : 21.4821
+dedup reduct size : 337449311
+delta reduct size : 129992294
+local reduct size : 13177537
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 20590, reduct: 38.9502MiB
+Header chunk num: 8727, reduct: 40.711MiB
+CDC chunk num: 4865, reduct: 44.3091MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/coreutils_tarballs -c 4 -m 5 -n 28 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 8192
+-----------------CHUNK NUM-----------------------
+logical chunk num: 51449
+unique chunk num: 18043
+base chunk num: 4503
+delta chunk num: 13540
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 240936960
+unique chunk size: 15532154
+base chunk size: 12045857
+delta chunk size: 3486297
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 15.5121
+OCR(+Recipe): 14.0255
+DCC: 0.75043
+DCR: 18.2059
+DCE: 32.1932
+DCE2: 0.926703
+-----------------Time------------------------------
+total time: 5s
+Throughput: 45.9551MiB/s
+Reduce data speed: 42.9926MiB/s
+SF generation time: 0.0368054s
+SF generation throughput: 6242.98MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 2.75196MiB
+FP Overhead: 2.06486MiB
+SF Overhead: 0.515327MiB
+Name Overhead: 0.171776MiB
+Recipe Overhead: 1.5701MiB
+SF number: 13509
+-----------------Reduct----------------------------
+Dedup ratio : 2.67387
+Lossless ratio : 3.1905
+Delta ratio : 15.5121
+dedup reduct size : 150829148
+delta reduct size : 59984902
+local reduct size : 14590756
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 4985, reduct: 9.1318MiB
+Header chunk num: 5521, reduct: 18.7008MiB
+CDC chunk num: 3034, reduct: 29.3735MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/GNU_GCC/gcc-packed/tar -c 4 -m 5 -n 117 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 8192
+-----------------CHUNK NUM-----------------------
+logical chunk num: 10267581
+unique chunk num: 1824175
+base chunk num: 441916
+delta chunk num: 1382259
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 44142602240
+unique chunk size: 1454047823
+base chunk size: 1048496245
+delta chunk size: 405551578
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 30.3584
+OCR(+Recipe): 24.7629
+DCC: 0.757745
+DCR: 16.696
+DCE: 31.6113
+DCE2: 0.920314
+-----------------Time------------------------------
+total time: 555s
+Throughput: 75.8517MiB/s
+Reduce data speed: 73.3531MiB/s
+SF generation time: 3.35466s
+SF generation throughput: 12549MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 276.191MiB
+FP Overhead: 208.76MiB
+SF Overhead: 50.5733MiB
+Name Overhead: 16.8578MiB
+Recipe Overhead: 313.342MiB
+SF number: 1325748
+-----------------Reduct----------------------------
+Dedup ratio : 4.85808
+Lossless ratio : 5.64514
+Delta ratio : 30.3584
+dedup reduct size : 35056179594
+delta reduct size : 6365532514
+local reduct size : 1266842309
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 299344, reduct: 531.465MiB
+Header chunk num: 803468, reduct: 3088.37MiB
+CDC chunk num: 279447, reduct: 2450.8MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/linux -c 4 -m 5 -n 270 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 8192
+-----------------CHUNK NUM-----------------------
+logical chunk num: 33099229
+unique chunk num: 6631457
+base chunk num: 1581064
+delta chunk num: 5050393
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 212796651520
+unique chunk size: 3027990080
+base chunk size: 2030503803
+delta chunk size: 997486277
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 70.2765
+OCR(+Recipe): 52.0646
+DCC: 0.761581
+DCR: 18.4342
+DCE: 28.5143
+DCE2: 0.909451
+-----------------Time------------------------------
+total time: 2139s
+Throughput: 94.8755MiB/s
+Reduce data speed: 93.5255MiB/s
+SF generation time: 10.9213s
+SF generation throughput: 18581.9MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 1000.16MiB
+FP Overhead: 758.91MiB
+SF Overhead: 180.938MiB
+Name Overhead: 60.3128MiB
+Recipe Overhead: 1010.11MiB
+SF number: 4743192
+-----------------Reduct----------------------------
+Dedup ratio : 9.11692
+Lossless ratio : 10.4219
+Delta ratio : 70.2765
+dedup reduct size : 189455804893
+delta reduct size : 17390325822
+local reduct size : 2922530725
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 318401, reduct: 1147.9MiB
+Header chunk num: 3725295, reduct: 5896.77MiB
+CDC chunk num: 1006697, reduct: 9540.03MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/WEB -c 4 -m 5 -n 102 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 8192
+-----------------CHUNK NUM-----------------------
+logical chunk num: 37804141
+unique chunk num: 4422197
+base chunk num: 777882
+delta chunk num: 3644315
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 297546045440
+unique chunk size: 1378075066
+base chunk size: 577667926
+delta chunk size: 800407140
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 215.914
+OCR(+Recipe): 114.98
+DCC: 0.824096
+DCR: 9.50298
+DCE: 13.9311
+DCE2: 0.856282
+-----------------Time------------------------------
+total time: 1845s
+Throughput: 153.801MiB/s
+Reduce data speed: 153.088MiB/s
+SF generation time: 4.86501s
+SF generation throughput: 58327.1MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 624.776MiB
+FP Overhead: 506.08MiB
+SF Overhead: 89.0215MiB
+Name Overhead: 29.6738MiB
+Recipe Overhead: 1153.69MiB
+SF number: 2333646
+-----------------Reduct----------------------------
+Dedup ratio : 33.0917
+Lossless ratio : 36.3574
+Delta ratio : 215.914
+dedup reduct size : 288554486514
+delta reduct size : 6805846032
+local reduct size : 807637828
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 329271, reduct: 145.339MiB
+Header chunk num: 2841710, reduct: 1965.68MiB
+CDC chunk num: 473334, reduct: 4379.54MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/react -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 16384
+-----------------CHUNK NUM-----------------------
+logical chunk num: 433107
+unique chunk num: 62780
+base chunk num: 21882
+delta chunk num: 40898
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2908631040
+unique chunk size: 107142158
+base chunk size: 90000030
+delta chunk size: 17142128
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 27.1474
+OCR(+Recipe): 24.038
+DCC: 0.65145
+DCR: 12.2608
+DCE: 30.0924
+DCE2: 0.901513
+-----------------Time------------------------------
+total time: 28s
+Throughput: 99.0674MiB/s
+Reduce data speed: 95.4181MiB/s
+SF generation time: 0.123638s
+SF generation throughput: 22435.6MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 10.5235MiB
+FP Overhead: 7.1846MiB
+SF Overhead: 2.5042MiB
+Name Overhead: 0.834732MiB
+Recipe Overhead: 13.2174MiB
+SF number: 65646
+-----------------Reduct----------------------------
+Dedup ratio : 8.40266
+Lossless ratio : 9.68972
+Delta ratio : 27.1474
+dedup reduct size : 2562475104
+delta reduct size : 193034777
+local reduct size : 45979001
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 13245, reduct: 48.5463MiB
+Header chunk num: 19403, reduct: 64.933MiB
+CDC chunk num: 8250, reduct: 70.613MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/netty -c 4 -m 5 -n 99 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 16384
+-----------------CHUNK NUM-----------------------
+logical chunk num: 430219
+unique chunk num: 69586
+base chunk num: 19550
+delta chunk num: 50036
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2272532480
+unique chunk size: 39686625
+base chunk size: 24925218
+delta chunk size: 14761407
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 57.2619
+OCR(+Recipe): 42.5141
+DCC: 0.719053
+DCR: 20.3515
+DCE: 41.4956
+DCE2: 0.936924
+-----------------Time------------------------------
+total time: 22s
+Throughput: 98.5116MiB/s
+Reduce data speed: 96.7913MiB/s
+SF generation time: 0.122535s
+SF generation throughput: 17686.9MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 10.9466MiB
+FP Overhead: 7.96349MiB
+SF Overhead: 2.23732MiB
+Name Overhead: 0.745773MiB
+Recipe Overhead: 13.1292MiB
+SF number: 58650
+-----------------Reduct----------------------------
+Dedup ratio : 5.70002
+Lossless ratio : 6.98506
+Delta ratio : 57.2619
+dedup reduct size : 1873843867
+delta reduct size : 285655156
+local reduct size : 73346832
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 14444, reduct: 65.5992MiB
+Header chunk num: 29072, reduct: 141.96MiB
+CDC chunk num: 6520, reduct: 64.863MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/Cpython -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 16384
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1437768
+unique chunk num: 231078
+base chunk num: 60961
+delta chunk num: 170117
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 10323927040
+unique chunk size: 175214632
+base chunk size: 130158862
+delta chunk size: 45055770
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 58.9216
+OCR(+Recipe): 46.6675
+DCC: 0.736189
+DCR: 20.3156
+DCE: 52.8324
+DCE2: 0.92332
+-----------------Time------------------------------
+total time: 103s
+Throughput: 95.589MiB/s
+Reduce data speed: 93.9667MiB/s
+SF generation time: 0.580148s
+SF generation throughput: 16970.9MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 35.7467MiB
+FP Overhead: 26.4448MiB
+SF Overhead: 6.97643MiB
+Name Overhead: 2.32548MiB
+Recipe Overhead: 43.8772MiB
+SF number: 182883
+-----------------Reduct----------------------------
+Dedup ratio : 8.52153
+Lossless ratio : 9.87467
+Delta ratio : 58.9216
+dedup reduct size : 9112416166
+delta reduct size : 870280754
+local reduct size : 166015488
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 11155, reduct: 72.93MiB
+Header chunk num: 99642, reduct: 197.759MiB
+CDC chunk num: 59320, reduct: 559.275MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/automake_tarballs -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 16384
+-----------------CHUNK NUM-----------------------
+logical chunk num: 130600
+unique chunk num: 39373
+base chunk num: 6656
+delta chunk num: 32717
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 504084480
+unique chunk size: 23210741
+base chunk size: 14985101
+delta chunk size: 8225640
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 21.7177
+OCR(+Recipe): 18.404
+DCC: 0.83095
+DCR: 16.7806
+DCE: 38.423
+DCE2: 0.927636
+-----------------Time------------------------------
+total time: 10s
+Throughput: 48.0732MiB/s
+Reduce data speed: 45.8597MiB/s
+SF generation time: 0.0577487s
+SF generation throughput: 8324.56MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 5.52151MiB
+FP Overhead: 4.50588MiB
+SF Overhead: 0.761719MiB
+Name Overhead: 0.253906MiB
+Recipe Overhead: 3.9856MiB
+SF number: 19968
+-----------------Reduct----------------------------
+Dedup ratio : 3.02647
+Lossless ratio : 3.29432
+Delta ratio : 21.7177
+dedup reduct size : 337526111
+delta reduct size : 129805322
+local reduct size : 13542306
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 21342, reduct: 47.1022MiB
+Header chunk num: 7225, reduct: 40.2626MiB
+CDC chunk num: 4150, reduct: 36.4272MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/coreutils_tarballs -c 4 -m 5 -n 28 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 16384
+-----------------CHUNK NUM-----------------------
+logical chunk num: 49593
+unique chunk num: 16190
+base chunk num: 4127
+delta chunk num: 12063
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 240936960
+unique chunk size: 14982172
+base chunk size: 11382688
+delta chunk size: 3599484
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 16.0816
+OCR(+Recipe): 14.5413
+DCC: 0.74509
+DCR: 18.0094
+DCE: 33.9292
+DCE2: 0.929934
+-----------------Time------------------------------
+total time: 4s
+Throughput: 57.4438MiB/s
+Reduce data speed: 53.8718MiB/s
+SF generation time: 0.0311114s
+SF generation throughput: 7385.58MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 2.48253MiB
+FP Overhead: 1.8528MiB
+SF Overhead: 0.472298MiB
+Name Overhead: 0.157433MiB
+Recipe Overhead: 1.51346MiB
+SF number: 12381
+-----------------Reduct----------------------------
+Dedup ratio : 2.67392
+Lossless ratio : 3.1616
+Delta ratio : 16.0816
+dedup reduct size : 150830684
+delta reduct size : 61225134
+local reduct size : 13898970
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 5853, reduct: 18.3862MiB
+Header chunk num: 3890, reduct: 18.7487MiB
+CDC chunk num: 2320, reduct: 21.254MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/GNU_GCC/gcc-packed/tar -c 4 -m 5 -n 117 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 16384
+-----------------CHUNK NUM-----------------------
+logical chunk num: 10029062
+unique chunk num: 1585656
+base chunk num: 397499
+delta chunk num: 1188157
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 44142602240
+unique chunk size: 1437395662
+base chunk size: 1031873543
+delta chunk size: 405522119
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 30.7101
+OCR(+Recipe): 25.1049
+DCC: 0.749316
+DCR: 16.8173
+DCE: 34.9418
+DCE2: 0.925014
+-----------------Time------------------------------
+total time: 539s
+Throughput: 78.1033MiB/s
+Reduce data speed: 75.56MiB/s
+SF generation time: 3.18659s
+SF generation throughput: 13210.9MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 242.117MiB
+FP Overhead: 181.464MiB
+SF Overhead: 45.4902MiB
+Name Overhead: 15.1634MiB
+Recipe Overhead: 306.063MiB
+SF number: 1192497
+-----------------Reduct----------------------------
+Dedup ratio : 4.85808
+Lossless ratio : 5.62206
+Delta ratio : 30.7101
+dedup reduct size : 35056179594
+delta reduct size : 6414277234
+local reduct size : 1234749750
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 325098, reduct: 810.198MiB
+Header chunk num: 607519, reduct: 3120.38MiB
+CDC chunk num: 255540, reduct: 2186.55MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/linux -c 4 -m 5 -n 270 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 16384
+-----------------CHUNK NUM-----------------------
+logical chunk num: 31234765
+unique chunk num: 4766941
+base chunk num: 1186895
+delta chunk num: 3580046
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 212796651520
+unique chunk size: 2871810711
+base chunk size: 1931764113
+delta chunk size: 940046598
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 74.0984
+OCR(+Recipe): 54.9674
+DCC: 0.751015
+DCR: 19.6574
+DCE: 36.0599
+DCE2: 0.922609
+-----------------Time------------------------------
+total time: 2021s
+Throughput: 100.415MiB/s
+Reduce data speed: 99.0598MiB/s
+SF generation time: 9.48952s
+SF generation throughput: 21385.6MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 726.639MiB
+FP Overhead: 545.533MiB
+SF Overhead: 135.829MiB
+Name Overhead: 45.2765MiB
+Recipe Overhead: 953.209MiB
+SF number: 3560685
+-----------------Reduct----------------------------
+Dedup ratio : 9.11701
+Lossless ratio : 10.4258
+Delta ratio : 74.0984
+dedup reduct size : 189456039389
+delta reduct size : 17538816626
+local reduct size : 2929984794
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 481291, reduct: 2963.51MiB
+Header chunk num: 2246587, reduct: 5943.65MiB
+CDC chunk num: 852168, reduct: 7819.15MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/WEB -c 4 -m 5 -n 102 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 16384
+-----------------CHUNK NUM-----------------------
+logical chunk num: 37609537
+unique chunk num: 4348300
+base chunk num: 773229
+delta chunk num: 3575071
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 297546045440
+unique chunk size: 1377744067
+base chunk size: 577635450
+delta chunk size: 800108617
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 215.966
+OCR(+Recipe): 115.272
+DCC: 0.822177
+DCR: 9.65248
+DCE: 14.1536
+DCE2: 0.855623
+-----------------Time------------------------------
+total time: 1826s
+Throughput: 155.401MiB/s
+Reduce data speed: 154.681MiB/s
+SF generation time: 4.89005s
+SF generation throughput: 58028.5MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 615.609MiB
+FP Overhead: 497.623MiB
+SF Overhead: 88.489MiB
+Name Overhead: 29.4963MiB
+Recipe Overhead: 1147.75MiB
+SF number: 2319687
+-----------------Reduct----------------------------
+Dedup ratio : 32.643
+Lossless ratio : 35.846
+Delta ratio : 215.966
+dedup reduct size : 288430882546
+delta reduct size : 6922923263
+local reduct size : 814495564
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 332702, reduct: 183.418MiB
+Header chunk num: 2772512, reduct: 2077.68MiB
+CDC chunk num: 469857, reduct: 4341.12MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/react -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 32768
+-----------------CHUNK NUM-----------------------
+logical chunk num: 419909
+unique chunk num: 56287
+base chunk num: 20327
+delta chunk num: 35960
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2908631040
+unique chunk size: 104713575
+base chunk size: 86995085
+delta chunk size: 17718490
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 27.777
+OCR(+Recipe): 24.618
+DCC: 0.638869
+DCR: 12.4555
+DCE: 31.6983
+DCE2: 0.904004
+-----------------Time------------------------------
+total time: 27s
+Throughput: 102.737MiB/s
+Reduce data speed: 99.0379MiB/s
+SF generation time: 0.111115s
+SF generation throughput: 24964.1MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 9.54319MiB
+FP Overhead: 6.44154MiB
+SF Overhead: 2.32624MiB
+Name Overhead: 0.775414MiB
+Recipe Overhead: 12.8146MiB
+SF number: 60981
+-----------------Reduct----------------------------
+Dedup ratio : 8.29983
+Lossless ratio : 9.45319
+Delta ratio : 27.777
+dedup reduct size : 2558186426
+delta reduct size : 202974279
+local reduct size : 42756760
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 14593, reduct: 74.9389MiB
+Header chunk num: 15042, reduct: 65.1776MiB
+CDC chunk num: 6325, reduct: 53.4548MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/netty -c 4 -m 5 -n 99 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 32768
+-----------------CHUNK NUM-----------------------
+logical chunk num: 395528
+unique chunk num: 56088
+base chunk num: 17990
+delta chunk num: 38098
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2272532480
+unique chunk size: 38082311
+base chunk size: 25634088
+delta chunk size: 12448223
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 59.6742
+OCR(+Recipe): 44.7885
+DCC: 0.679254
+DCR: 22.8381
+DCE: 48.1574
+DCE2: 0.947353
+-----------------Time------------------------------
+total time: 21s
+Throughput: 103.203MiB/s
+Reduce data speed: 101.473MiB/s
+SF generation time: 0.118305s
+SF generation throughput: 18319.3MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 9.16382MiB
+FP Overhead: 6.41876MiB
+SF Overhead: 2.05879MiB
+Name Overhead: 0.686264MiB
+Recipe Overhead: 12.0706MiB
+SF number: 53970
+-----------------Reduct----------------------------
+Dedup ratio : 5.59291
+Lossless ratio : 7.33247
+Delta ratio : 59.6742
+dedup reduct size : 1866208406
+delta reduct size : 271845155
+local reduct size : 96396608
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 16161, reduct: 104.721MiB
+Header chunk num: 18419, reduct: 119.22MiB
+CDC chunk num: 3518, reduct: 35.3101MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/Cpython -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 32768
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1319006
+unique chunk num: 180300
+base chunk num: 60098
+delta chunk num: 120202
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 10323927040
+unique chunk size: 169725919
+base chunk size: 131737856
+delta chunk size: 37988063
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 60.8271
+OCR(+Recipe): 48.7129
+DCC: 0.666678
+DCR: 23.7001
+DCE: 68.8163
+DCE2: 0.937305
+-----------------Time------------------------------
+total time: 98s
+Throughput: 100.466MiB/s
+Reduce data speed: 98.8143MiB/s
+SF generation time: 0.552085s
+SF generation throughput: 17833.6MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 29.8039MiB
+FP Overhead: 20.6337MiB
+SF Overhead: 6.87767MiB
+Name Overhead: 2.29256MiB
+Recipe Overhead: 40.2529MiB
+SF number: 180294
+-----------------Reduct----------------------------
+Dedup ratio : 8.28501
+Lossless ratio : 10.0032
+Delta ratio : 60.8271
+dedup reduct size : 9077829901
+delta reduct size : 862333923
+local reduct size : 214037297
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 16695, reduct: 200.525MiB
+Header chunk num: 53463, reduct: 151.43MiB
+CDC chunk num: 50044, reduct: 470.43MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/automake_tarballs -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 32768
+-----------------CHUNK NUM-----------------------
+logical chunk num: 127492
+unique chunk num: 37545
+base chunk num: 6285
+delta chunk num: 31260
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 504084480
+unique chunk size: 22845127
+base chunk size: 14634246
+delta chunk size: 8210881
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 22.0653
+OCR(+Recipe): 18.7219
+DCC: 0.832601
+DCR: 17.0596
+DCE: 39.0169
+DCE2: 0.928903
+-----------------Time------------------------------
+total time: 9s
+Throughput: 53.4147MiB/s
+Reduce data speed: 50.994MiB/s
+SF generation time: 0.0527687s
+SF generation throughput: 9110.18MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 5.2557MiB
+FP Overhead: 4.29668MiB
+SF Overhead: 0.719261MiB
+Name Overhead: 0.239754MiB
+Recipe Overhead: 3.89075MiB
+SF number: 18855
+-----------------Reduct----------------------------
+Dedup ratio : 2.98444
+Lossless ratio : 3.25828
+Delta ratio : 22.0653
+dedup reduct size : 335180431
+delta reduct size : 131863639
+local reduct size : 14195283
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 21871, reduct: 58.4469MiB
+Header chunk num: 6214, reduct: 39.6003MiB
+CDC chunk num: 3175, reduct: 27.7079MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/coreutils_tarballs -c 4 -m 5 -n 28 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 32768
+-----------------CHUNK NUM-----------------------
+logical chunk num: 46339
+unique chunk num: 14195
+base chunk num: 3581
+delta chunk num: 10614
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 240936960
+unique chunk size: 14138788
+base chunk size: 10057221
+delta chunk size: 4081567
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 17.0408
+OCR(+Recipe): 15.4233
+DCC: 0.747728
+DCR: 17.1423
+DCE: 31.2712
+DCE2: 0.929273
+-----------------Time------------------------------
+total time: 4s
+Throughput: 57.4438MiB/s
+Reduce data speed: 54.0729MiB/s
+SF generation time: 0.0226866s
+SF generation throughput: 10128.2MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 2.17091MiB
+FP Overhead: 1.62449MiB
+SF Overhead: 0.409813MiB
+Name Overhead: 0.136604MiB
+Recipe Overhead: 1.41415MiB
+SF number: 10743
+-----------------Reduct----------------------------
+Dedup ratio : 2.60021
+Lossless ratio : 3.01078
+Delta ratio : 17.0408
+dedup reduct size : 148276447
+delta reduct size : 65886023
+local reduct size : 12635702
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 6638, reduct: 34.4766MiB
+Header chunk num: 2920, reduct: 18.633MiB
+CDC chunk num: 1056, reduct: 9.7242MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/GNU_GCC/gcc-packed/tar -c 4 -m 5 -n 117 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 32768
+-----------------CHUNK NUM-----------------------
+logical chunk num: 9724192
+unique chunk num: 1455005
+base chunk num: 365197
+delta chunk num: 1089808
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 44142602240
+unique chunk size: 1418083549
+base chunk size: 1004895433
+delta chunk size: 413188116
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 31.1284
+OCR(+Recipe): 25.5269
+DCC: 0.749006
+DCR: 16.8318
+DCE: 36.0033
+DCE2: 0.927045
+-----------------Time------------------------------
+total time: 523s
+Throughput: 80.4927MiB/s
+Reduce data speed: 77.9068MiB/s
+SF generation time: 2.9663s
+SF generation throughput: 14192MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 222.237MiB
+FP Overhead: 166.512MiB
+SF Overhead: 41.7935MiB
+Name Overhead: 13.9312MiB
+Recipe Overhead: 296.759MiB
+SF number: 1095591
+-----------------Reduct----------------------------
+Dedup ratio : 4.81823
+Lossless ratio : 5.54583
+Delta ratio : 31.1284
+dedup reduct size : 34981030901
+delta reduct size : 6541519422
+local reduct size : 1201968368
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 342421, reduct: 1168.16MiB
+Header chunk num: 519820, reduct: 3138.3MiB
+CDC chunk num: 227567, reduct: 1932.02MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/linux -c 4 -m 5 -n 270 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 32768
+-----------------CHUNK NUM-----------------------
+logical chunk num: 28018700
+unique chunk num: 3428376
+base chunk num: 857090
+delta chunk num: 2571286
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 212796651520
+unique chunk size: 2706189183
+base chunk size: 1797823349
+delta chunk size: 908365834
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 78.6333
+OCR(+Recipe): 59.0644
+DCC: 0.750001
+DCR: 21.2247
+DCE: 43.1645
+DCE2: 0.937357
+-----------------Time------------------------------
+total time: 1827s
+Throughput: 111.078MiB/s
+Reduce data speed: 109.665MiB/s
+SF generation time: 7.74222s
+SF generation throughput: 26212MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 523.128MiB
+FP Overhead: 392.346MiB
+SF Overhead: 98.0862MiB
+Name Overhead: 32.6954MiB
+Recipe Overhead: 855.063MiB
+SF number: 2571270
+-----------------Reduct----------------------------
+Dedup ratio : 8.80752
+Lossless ratio : 10.0959
+Delta ratio : 78.6333
+dedup reduct size : 188635864091
+delta reduct size : 18371395520
+local reduct size : 3083202726
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 633827, reduct: 6363.43MiB
+Header chunk num: 1345927, reduct: 5805.57MiB
+CDC chunk num: 591532, reduct: 5351.33MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/WEB -c 4 -m 5 -n 102 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 32768
+-----------------CHUNK NUM-----------------------
+logical chunk num: 37513621
+unique chunk num: 4312292
+base chunk num: 770026
+delta chunk num: 3542266
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 297546045440
+unique chunk size: 1376609335
+base chunk size: 578021963
+delta chunk size: 798587372
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 216.144
+OCR(+Recipe): 115.46
+DCC: 0.821435
+DCR: 9.66634
+DCE: 14.1757
+DCE2: 0.855531
+-----------------Time------------------------------
+total time: 1823s
+Throughput: 155.657MiB/s
+Reduce data speed: 154.936MiB/s
+SF generation time: 4.89659s
+SF generation throughput: 57950.9MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 610.999MiB
+FP Overhead: 493.503MiB
+SF Overhead: 88.1225MiB
+Name Overhead: 29.3742MiB
+Recipe Overhead: 1144.82MiB
+SF number: 2310078
+-----------------Reduct----------------------------
+Dedup ratio : 32.6255
+Lossless ratio : 35.86
+Delta ratio : 216.144
+dedup reduct size : 288425997885
+delta reduct size : 6920830197
+local reduct size : 822608023
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 333540, reduct: 199.96MiB
+Header chunk num: 2740375, reduct: 2071.72MiB
+CDC chunk num: 468351, reduct: 4328.54MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/react -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 65536
+-----------------CHUNK NUM-----------------------
+logical chunk num: 404470
+unique chunk num: 51694
+base chunk num: 19161
+delta chunk num: 32533
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2908631040
+unique chunk size: 102438220
+base chunk size: 84735292
+delta chunk size: 17702928
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 28.394
+OCR(+Recipe): 25.2089
+DCC: 0.629338
+DCR: 13.145
+DCE: 32.1134
+DCE2: 0.906544
+-----------------Time------------------------------
+total time: 27s
+Throughput: 102.737MiB/s
+Reduce data speed: 99.1183MiB/s
+SF generation time: 0.101728s
+SF generation throughput: 27267.6MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 8.83965MiB
+FP Overhead: 5.91591MiB
+SF Overhead: 2.1928MiB
+Name Overhead: 0.730934MiB
+Recipe Overhead: 12.3434MiB
+SF number: 57483
+-----------------Reduct----------------------------
+Dedup ratio : 8.11022
+Lossless ratio : 9.16275
+Delta ratio : 28.394
+dedup reduct size : 2549993143
+delta reduct size : 215002574
+local reduct size : 41197103
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 15297, reduct: 102.564MiB
+Header chunk num: 12709, reduct: 65.2157MiB
+CDC chunk num: 4527, reduct: 37.2625MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/netty -c 4 -m 5 -n 99 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 65536
+-----------------CHUNK NUM-----------------------
+logical chunk num: 369859
+unique chunk num: 50677
+base chunk num: 16328
+delta chunk num: 34349
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2272532480
+unique chunk size: 36546665
+base chunk size: 24501223
+delta chunk size: 12045442
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 62.1817
+OCR(+Recipe): 46.9705
+DCC: 0.677803
+DCR: 24.407
+DCE: 49.0961
+DCE2: 0.950411
+-----------------Time------------------------------
+total time: 20s
+Throughput: 108.363MiB/s
+Reduce data speed: 106.62MiB/s
+SF generation time: 0.108949s
+SF generation throughput: 19892.5MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 8.29098MiB
+FP Overhead: 5.79952MiB
+SF Overhead: 1.86859MiB
+Name Overhead: 0.622864MiB
+Recipe Overhead: 11.2872MiB
+SF number: 48984
+-----------------Reduct----------------------------
+Dedup ratio : 5.41651
+Lossless ratio : 7.13525
+Delta ratio : 62.1817
+dedup reduct size : 1852975761
+delta reduct size : 281947110
+local reduct size : 101062944
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 16971, reduct: 139.227MiB
+Header chunk num: 15798, reduct: 113.359MiB
+CDC chunk num: 1580, reduct: 16.2994MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/Cpython -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 65536
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1134549
+unique chunk num: 139037
+base chunk num: 46342
+delta chunk num: 92695
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 10323927040
+unique chunk size: 162033962
+base chunk size: 125493120
+delta chunk size: 36540842
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 63.7146
+OCR(+Recipe): 52.0518
+DCC: 0.666693
+DCR: 28.4814
+DCE: 81.2034
+DCE2: 0.950575
+-----------------Time------------------------------
+total time: 91s
+Throughput: 108.194MiB/s
+Reduce data speed: 106.496MiB/s
+SF generation time: 0.474283s
+SF generation throughput: 20759.1MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 22.9827MiB
+FP Overhead: 15.9115MiB
+SF Overhead: 5.30342MiB
+Name Overhead: 1.76781MiB
+Recipe Overhead: 34.6237MiB
+SF number: 139026
+-----------------Reduct----------------------------
+Dedup ratio : 7.43672
+Lossless ratio : 8.85242
+Delta ratio : 63.7146
+dedup reduct size : 8935690850
+delta reduct size : 1004192569
+local reduct size : 222009659
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 22614, reduct: 470.097MiB
+Header chunk num: 33500, reduct: 145.561MiB
+CDC chunk num: 36581, reduct: 342.015MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/automake_tarballs -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 65536
+-----------------CHUNK NUM-----------------------
+logical chunk num: 124715
+unique chunk num: 36797
+base chunk num: 6146
+delta chunk num: 30651
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 504084480
+unique chunk size: 22603867
+base chunk size: 14402634
+delta chunk size: 8201233
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 22.3008
+OCR(+Recipe): 18.9543
+DCC: 0.832976
+DCR: 17.5165
+DCE: 38.7552
+DCE2: 0.929383
+-----------------Time------------------------------
+total time: 9s
+Throughput: 53.4147MiB/s
+Reduce data speed: 51.0195MiB/s
+SF generation time: 0.0510822s
+SF generation throughput: 9410.96MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 5.14889MiB
+FP Overhead: 4.21108MiB
+SF Overhead: 0.703354MiB
+Name Overhead: 0.234451MiB
+Recipe Overhead: 3.806MiB
+SF number: 18438
+-----------------Reduct----------------------------
+Dedup ratio : 2.91431
+Lossless ratio : 3.1892
+Delta ratio : 22.3008
+dedup reduct size : 331115472
+delta reduct size : 135455827
+local reduct size : 14909314
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 22068, reduct: 66.5223MiB
+Header chunk num: 5873, reduct: 38.8942MiB
+CDC chunk num: 2710, reduct: 23.7642MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/coreutils_tarballs -c 4 -m 5 -n 28 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 65536
+-----------------CHUNK NUM-----------------------
+logical chunk num: 44997
+unique chunk num: 13383
+base chunk num: 3332
+delta chunk num: 10051
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 240936960
+unique chunk size: 13874108
+base chunk size: 9543124
+delta chunk size: 4330984
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 17.3659
+OCR(+Recipe): 15.7331
+DCC: 0.751027
+DCR: 16.785
+DCE: 29.9049
+DCE2: 0.929177
+-----------------Time------------------------------
+total time: 3s
+Throughput: 76.5918MiB/s
+Reduce data speed: 72.1813MiB/s
+SF generation time: 0.0191699s
+SF generation throughput: 11986.2MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 2.03999MiB
+FP Overhead: 1.53156MiB
+SF Overhead: 0.381317MiB
+Name Overhead: 0.127106MiB
+Recipe Overhead: 1.3732MiB
+SF number: 9996
+-----------------Reduct----------------------------
+Dedup ratio : 2.54793
+Lossless ratio : 2.92973
+Delta ratio : 17.3659
+dedup reduct size : 146375084
+delta reduct size : 68364507
+local reduct size : 12323261
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 6765, reduct: 41.4362MiB
+Header chunk num: 2727, reduct: 18.5672MiB
+CDC chunk num: 559, reduct: 5.19408MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/GNU_GCC/gcc-packed/tar -c 4 -m 5 -n 117 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 65536
+-----------------CHUNK NUM-----------------------
+logical chunk num: 9364655
+unique chunk num: 1362758
+base chunk num: 338937
+delta chunk num: 1023821
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 44142602240
+unique chunk size: 1393418231
+base chunk size: 969597831
+delta chunk size: 423820400
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 31.6794
+OCR(+Recipe): 26.0723
+DCC: 0.751286
+DCR: 17.0509
+DCE: 36.2764
+DCE2: 0.928108
+-----------------Time------------------------------
+total time: 505s
+Throughput: 83.3617MiB/s
+Reduce data speed: 80.7303MiB/s
+SF generation time: 2.80068s
+SF generation throughput: 15031.2MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 207.673MiB
+FP Overhead: 155.955MiB
+SF Overhead: 38.7883MiB
+Name Overhead: 12.9294MiB
+Recipe Overhead: 285.787MiB
+SF number: 1016811
+-----------------Reduct----------------------------
+Dedup ratio : 4.71001
+Lossless ratio : 5.3858
+Delta ratio : 31.6794
+dedup reduct size : 34770514637
+delta reduct size : 6802687468
+local reduct size : 1175981904
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 354900, reduct: 1697.95MiB
+Header chunk num: 474029, reduct: 3147.54MiB
+CDC chunk num: 194892, reduct: 1642.06MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/linux -c 4 -m 5 -n 270 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 65536
+-----------------CHUNK NUM-----------------------
+logical chunk num: 24419126
+unique chunk num: 2640462
+base chunk num: 660112
+delta chunk num: 1980350
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 212796651520
+unique chunk size: 2581830152
+base chunk size: 1656290068
+delta chunk size: 925540084
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 82.4209
+OCR(+Recipe): 63.2713
+DCC: 0.750001
+DCR: 22.9816
+DCE: 47.7989
+DCE2: 0.945759
+-----------------Time------------------------------
+total time: 1658s
+Throughput: 122.4MiB/s
+Reduce data speed: 120.915MiB/s
+SF generation time: 6.41453s
+SF generation throughput: 31637.3MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 402.902MiB
+FP Overhead: 302.177MiB
+SF Overhead: 75.5438MiB
+Name Overhead: 25.1813MiB
+Recipe Overhead: 745.213MiB
+SF number: 1980336
+-----------------Reduct----------------------------
+Dedup ratio : 8.10181
+Lossless ratio : 9.2816
+Delta ratio : 82.4209
+dedup reduct size : 186531321020
+delta reduct size : 20344878355
+local reduct size : 3338621993
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 739720, reduct: 11018.5MiB
+Header chunk num: 919395, reduct: 5532.27MiB
+CDC chunk num: 321235, reduct: 2851.63MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/WEB -c 4 -m 5 -n 102 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 65536
+-----------------CHUNK NUM-----------------------
+logical chunk num: 33586276
+unique chunk num: 3660344
+base chunk num: 699790
+delta chunk num: 2960554
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 297546045440
+unique chunk size: 1221940743
+base chunk size: 560697724
+delta chunk size: 661243019
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 243.503
+OCR(+Recipe): 129.554
+DCC: 0.808819
+DCR: 12.1931
+DCE: 15.6721
+DCE2: 0.855861
+-----------------Time------------------------------
+total time: 1770s
+Throughput: 160.318MiB/s
+Reduce data speed: 159.659MiB/s
+SF generation time: 4.94492s
+SF generation throughput: 57384.5MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 525.673MiB
+FP Overhead: 418.893MiB
+SF Overhead: 80.0846MiB
+Name Overhead: 26.6949MiB
+Recipe Overhead: 1024.97MiB
+SF number: 2099370
+-----------------Reduct----------------------------
+Dedup ratio : 31.457
+Lossless ratio : 34.5049
+Delta ratio : 243.503
+dedup reduct size : 288087240389
+delta reduct size : 7401369819
+local reduct size : 835494489
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 347150, reduct: 845.663MiB
+Header chunk num: 2183530, reduct: 2079.96MiB
+CDC chunk num: 429874, reduct: 4132.88MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/react -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 131072
+-----------------CHUNK NUM-----------------------
+logical chunk num: 388798
+unique chunk num: 48352
+base chunk num: 17917
+delta chunk num: 30435
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2908631040
+unique chunk size: 101405435
+base chunk size: 83330693
+delta chunk size: 18074742
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 28.6832
+OCR(+Recipe): 25.5486
+DCC: 0.629447
+DCR: 13.5052
+DCE: 32.391
+DCE2: 0.907426
+-----------------Time------------------------------
+total time: 26s
+Throughput: 106.688MiB/s
+Reduce data speed: 102.968MiB/s
+SF generation time: 0.0967836s
+SF generation throughput: 28660.7MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 8.26736MiB
+FP Overhead: 5.53345MiB
+SF Overhead: 2.05044MiB
+Name Overhead: 0.683479MiB
+Recipe Overhead: 11.8652MiB
+SF number: 53751
+-----------------Reduct----------------------------
+Dedup ratio : 7.89116
+Lossless ratio : 8.88309
+Delta ratio : 28.6832
+dedup reduct size : 2540037454
+delta reduct size : 226029088
+local reduct size : 41159063
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 15588, reduct: 125.25MiB
+Header chunk num: 11653, reduct: 65.1693MiB
+CDC chunk num: 3194, reduct: 25.1388MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/netty -c 4 -m 5 -n 99 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 131072
+-----------------CHUNK NUM-----------------------
+logical chunk num: 357792
+unique chunk num: 48784
+base chunk num: 15722
+delta chunk num: 33062
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2272532480
+unique chunk size: 36064393
+base chunk size: 23797085
+delta chunk size: 12267308
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 63.0132
+OCR(+Recipe): 47.829
+DCC: 0.677722
+DCR: 25.1249
+DCE: 48.9246
+DCE2: 0.951028
+-----------------Time------------------------------
+total time: 20s
+Throughput: 108.363MiB/s
+Reduce data speed: 106.643MiB/s
+SF generation time: 0.103442s
+SF generation throughput: 20951.5MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 7.98187MiB
+FP Overhead: 5.58289MiB
+SF Overhead: 1.79924MiB
+Name Overhead: 0.599747MiB
+Recipe Overhead: 10.9189MiB
+SF number: 47166
+-----------------Reduct----------------------------
+Dedup ratio : 5.24232
+Lossless ratio : 6.84472
+Delta ratio : 63.0132
+dedup reduct size : 1839035262
+delta reduct size : 295948143
+local reduct size : 101484682
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 17280, reduct: 164.656MiB
+Header chunk num: 15251, reduct: 112.288MiB
+CDC chunk num: 531, reduct: 5.29399MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/Cpython -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 131072
+-----------------CHUNK NUM-----------------------
+logical chunk num: 924965
+unique chunk num: 106935
+base chunk num: 35644
+delta chunk num: 71291
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 10323927040
+unique chunk size: 158713118
+base chunk size: 116427184
+delta chunk size: 42285934
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 65.0477
+OCR(+Recipe): 54.8235
+DCC: 0.666676
+DCR: 33.5779
+DCE: 91.9778
+DCE2: 0.956814
+-----------------Time------------------------------
+total time: 84s
+Throughput: 117.21MiB/s
+Reduce data speed: 115.408MiB/s
+SF generation time: 0.385497s
+SF generation throughput: 25540.2MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 17.6766MiB
+FP Overhead: 12.2377MiB
+SF Overhead: 4.07913MiB
+Name Overhead: 1.35971MiB
+Recipe Overhead: 28.2277MiB
+SF number: 106932
+-----------------Reduct----------------------------
+Dedup ratio : 5.89703
+Lossless ratio : 6.71999
+Delta ratio : 65.0477
+dedup reduct size : 8573229068
+delta reduct size : 1377588698
+local reduct size : 214396156
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 28626, reduct: 991.856MiB
+Header chunk num: 24039, reduct: 151.171MiB
+CDC chunk num: 18626, reduct: 170.744MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/automake_tarballs -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 131072
+-----------------CHUNK NUM-----------------------
+logical chunk num: 118476
+unique chunk num: 35790
+base chunk num: 5978
+delta chunk num: 29812
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 504084480
+unique chunk size: 22662517
+base chunk size: 14308294
+delta chunk size: 8354223
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 22.2431
+OCR(+Recipe): 19.0553
+DCC: 0.83297
+DCR: 18.4671
+DCE: 39.0842
+DCE2: 0.92982
+-----------------Time------------------------------
+total time: 9s
+Throughput: 53.4147MiB/s
+Reduce data speed: 51.0133MiB/s
+SF generation time: 0.0535496s
+SF generation throughput: 8977.33MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 5.00801MiB
+FP Overhead: 4.09584MiB
+SF Overhead: 0.684128MiB
+Name Overhead: 0.228043MiB
+Recipe Overhead: 3.6156MiB
+SF number: 17934
+-----------------Reduct----------------------------
+Dedup ratio : 2.73571
+Lossless ratio : 2.99007
+Delta ratio : 22.2431
+dedup reduct size : 319823704
+delta reduct size : 145923892
+local reduct size : 15674367
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 22215, reduct: 82.2661MiB
+Header chunk num: 5420, reduct: 38.2573MiB
+CDC chunk num: 2177, reduct: 18.6404MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/coreutils_tarballs -c 4 -m 5 -n 28 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 131072
+-----------------CHUNK NUM-----------------------
+logical chunk num: 42421
+unique chunk num: 12525
+base chunk num: 3003
+delta chunk num: 9522
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 240936960
+unique chunk size: 13510919
+base chunk size: 8997128
+delta chunk size: 4513791
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 17.8328
+OCR(+Recipe): 16.2046
+DCC: 0.76024
+DCR: 16.919
+DCE: 30.4672
+DCE2: 0.930153
+-----------------Time------------------------------
+total time: 3s
+Throughput: 76.5918MiB/s
+Reduce data speed: 72.2968MiB/s
+SF generation time: 0.0161669s
+SF generation throughput: 14212.7MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 1.89159MiB
+FP Overhead: 1.43337MiB
+SF Overhead: 0.343666MiB
+Name Overhead: 0.114555MiB
+Recipe Overhead: 1.29459MiB
+SF number: 9009
+-----------------Reduct----------------------------
+Dedup ratio : 2.47529
+Lossless ratio : 2.82241
+Delta ratio : 17.8328
+dedup reduct size : 143600108
+delta reduct size : 71854903
+local reduct size : 11971030
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 6825, reduct: 48.8575MiB
+Header chunk num: 2585, reduct: 18.4688MiB
+CDC chunk num: 112, reduct: 1.19984MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/GNU_GCC/gcc-packed/tar -c 4 -m 5 -n 117 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 131072
+-----------------CHUNK NUM-----------------------
+logical chunk num: 8968596
+unique chunk num: 1288498
+base chunk num: 313873
+delta chunk num: 974625
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 44142602240
+unique chunk size: 1378099385
+base chunk size: 931660519
+delta chunk size: 446438866
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 32.0315
+OCR(+Recipe): 26.5106
+DCC: 0.756404
+DCR: 17.3135
+DCE: 35.843
+DCE2: 0.928172
+-----------------Time------------------------------
+total time: 489s
+Throughput: 86.0893MiB/s
+Reduce data speed: 83.4017MiB/s
+SF generation time: 2.57331s
+SF generation throughput: 16359.4MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 195.35MiB
+FP Overhead: 147.457MiB
+SF Overhead: 35.9199MiB
+Name Overhead: 11.9733MiB
+Recipe Overhead: 273.7MiB
+SF number: 941619
+-----------------Reduct----------------------------
+Dedup ratio : 4.49748
+Lossless ratio : 5.09667
+Delta ratio : 32.0315
+dedup reduct size : 34327632797
+delta reduct size : 7282961988
+local reduct size : 1153908070
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 363904, reduct: 2463.98MiB
+Header chunk num: 452397, reduct: 3152.47MiB
+CDC chunk num: 158324, reduct: 1329.12MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/linux -c 4 -m 5 -n 270 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 131072
+-----------------CHUNK NUM-----------------------
+logical chunk num: 21499465
+unique chunk num: 2239841
+base chunk num: 559957
+delta chunk num: 1679884
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 212796651520
+unique chunk size: 2529020185
+base chunk size: 1553849573
+delta chunk size: 975170612
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 84.1419
+OCR(+Recipe): 66.1475
+DCC: 0.750001
+DCR: 24.3532
+DCE: 49.9147
+DCE2: 0.949383
+-----------------Time------------------------------
+total time: 1548s
+Throughput: 131.097MiB/s
+Reduce data speed: 129.539MiB/s
+SF generation time: 5.75658s
+SF generation throughput: 35253.3MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 341.772MiB
+FP Overhead: 256.329MiB
+SF Overhead: 64.082MiB
+Name Overhead: 21.3607MiB
+Recipe Overhead: 656.112MiB
+SF number: 1679871
+-----------------Reduct----------------------------
+Dedup ratio : 7.38006
+Lossless ratio : 8.41013
+Delta ratio : 84.1419
+dedup reduct size : 183962634565
+delta reduct size : 22773391542
+local reduct size : 3531605228
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 788341, reduct: 15277.6MiB
+Header chunk num: 763275, reduct: 5319.12MiB
+CDC chunk num: 128268, reduct: 1121.7MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/WEB -c 4 -m 5 -n 102 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 131072
+-----------------CHUNK NUM-----------------------
+logical chunk num: 5772268
+unique chunk num: 991362
+base chunk num: 166024
+delta chunk num: 825338
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 297546045440
+unique chunk size: 1205770199
+base chunk size: 308210636
+delta chunk size: 897559563
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 246.768
+OCR(+Recipe): 213.988
+DCC: 0.832529
+DCR: 14.6969
+DCE: 20.7506
+DCE2: 0.893509
+-----------------Time------------------------------
+total time: 1338s
+Throughput: 212.079MiB/s
+Reduce data speed: 211.22MiB/s
+SF generation time: 6.59854s
+SF generation throughput: 43003.8MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 138.786MiB
+FP Overhead: 113.452MiB
+SF Overhead: 18.9999MiB
+Name Overhead: 6.33331MiB
+Recipe Overhead: 176.156MiB
+SF number: 498072
+-----------------Reduct----------------------------
+Dedup ratio : 21.1966
+Lossless ratio : 22.0412
+Delta ratio : 246.768
+dedup reduct size : 283508601713
+delta reduct size : 12293755104
+local reduct size : 537918424
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 436997, reduct: 9052.12MiB
+Header chunk num: 363577, reduct: 2438.49MiB
+CDC chunk num: 24764, reduct: 233.629MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/react -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 262144
+-----------------CHUNK NUM-----------------------
+logical chunk num: 362730
+unique chunk num: 45390
+base chunk num: 16626
+delta chunk num: 28764
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2908631040
+unique chunk size: 100477327
+base chunk size: 81660359
+delta chunk size: 18816968
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 28.9481
+OCR(+Recipe): 25.9503
+DCC: 0.633708
+DCR: 13.7301
+DCE: 32.5204
+DCE2: 0.908523
+-----------------Time------------------------------
+total time: 26s
+Throughput: 106.688MiB/s
+Reduce data speed: 103.002MiB/s
+SF generation time: 0.0942403s
+SF generation throughput: 29434.2MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 7.7314MiB
+FP Overhead: 5.19447MiB
+SF Overhead: 1.90269MiB
+Name Overhead: 0.634232MiB
+Recipe Overhead: 11.0696MiB
+SF number: 49878
+-----------------Reduct----------------------------
+Dedup ratio : 7.63216
+Lossless ratio : 8.55434
+Delta ratio : 28.9481
+dedup reduct size : 2527529143
+delta reduct size : 239541028
+local reduct size : 41083542
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 15721, reduct: 146.633MiB
+Header chunk num: 10857, reduct: 65.1366MiB
+CDC chunk num: 2186, reduct: 16.6746MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/netty -c 4 -m 5 -n 99 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 262144
+-----------------CHUNK NUM-----------------------
+logical chunk num: 349974
+unique chunk num: 48064
+base chunk num: 15549
+delta chunk num: 32515
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2272532480
+unique chunk size: 35941274
+base chunk size: 23545182
+delta chunk size: 12396092
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 63.229
+OCR(+Recipe): 48.2077
+DCC: 0.676494
+DCR: 25.7744
+DCE: 49.2045
+DCE2: 0.950798
+-----------------Time------------------------------
+total time: 19s
+Throughput: 114.066MiB/s
+Reduce data speed: 112.262MiB/s
+SF generation time: 0.100548s
+SF generation throughput: 21554.4MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 7.87308MiB
+FP Overhead: 5.50049MiB
+SF Overhead: 1.77944MiB
+Name Overhead: 0.593147MiB
+Recipe Overhead: 10.6804MiB
+SF number: 46647
+-----------------Reduct----------------------------
+Dedup ratio : 5.10534
+Lossless ratio : 6.62456
+Delta ratio : 63.229
+dedup reduct size : 1827403633
+delta reduct size : 307105207
+local reduct size : 102082366
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 17356, reduct: 180.345MiB
+Header chunk num: 15055, reduct: 111.265MiB
+CDC chunk num: 104, reduct: 1.26775MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/Cpython -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 262144
+-----------------CHUNK NUM-----------------------
+logical chunk num: 776095
+unique chunk num: 92968
+base chunk num: 30989
+delta chunk num: 61979
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 10323927040
+unique chunk size: 158507724
+base chunk size: 111834736
+delta chunk size: 46672988
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 65.132
+OCR(+Recipe): 56.3094
+DCC: 0.66667
+DCR: 37.0686
+DCE: 98.8971
+DCE2: 0.959974
+-----------------Time------------------------------
+total time: 81s
+Throughput: 121.551MiB/s
+Reduce data speed: 119.685MiB/s
+SF generation time: 0.362315s
+SF generation throughput: 27174.3MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 15.3679MiB
+FP Overhead: 10.6393MiB
+SF Overhead: 3.54641MiB
+Name Overhead: 1.18214MiB
+Recipe Overhead: 23.6845MiB
+SF number: 92967
+-----------------Reduct----------------------------
+Dedup ratio : 5.01991
+Lossless ratio : 5.60493
+Delta ratio : 65.132
+dedup reduct size : 8267332314
+delta reduct size : 1683430395
+local reduct size : 214656607
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 30692, reduct: 1364.74MiB
+Header chunk num: 21116, reduct: 149.09MiB
+CDC chunk num: 10171, reduct: 91.6106MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/automake_tarballs -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 262144
+-----------------CHUNK NUM-----------------------
+logical chunk num: 110219
+unique chunk num: 34096
+base chunk num: 5726
+delta chunk num: 28370
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 504084480
+unique chunk size: 21996568
+base chunk size: 13660878
+delta chunk size: 8335690
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 22.9165
+OCR(+Recipe): 19.7498
+DCC: 0.832062
+DCR: 20.9459
+DCE: 41.9839
+DCE2: 0.93173
+-----------------Time------------------------------
+total time: 9s
+Throughput: 53.4147MiB/s
+Reduce data speed: 51.0839MiB/s
+SF generation time: 0.060235s
+SF generation throughput: 7980.95MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 4.7757MiB
+FP Overhead: 3.90198MiB
+SF Overhead: 0.655289MiB
+Name Overhead: 0.21843MiB
+Recipe Overhead: 3.36362MiB
+SF number: 17178
+-----------------Reduct----------------------------
+Dedup ratio : 2.44778
+Lossless ratio : 2.6776
+Delta ratio : 22.9165
+dedup reduct size : 298149317
+delta reduct size : 166262932
+local reduct size : 17675663
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 22296, reduct: 112.884MiB
+Header chunk num: 4986, reduct: 36.2857MiB
+CDC chunk num: 1088, reduct: 9.39135MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/coreutils_tarballs -c 4 -m 5 -n 28 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 262144
+-----------------CHUNK NUM-----------------------
+logical chunk num: 41498
+unique chunk num: 12363
+base chunk num: 2926
+delta chunk num: 9437
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 240936960
+unique chunk size: 13395961
+base chunk size: 8808794
+delta chunk size: 4587167
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 17.9858
+OCR(+Recipe): 16.3637
+DCC: 0.763326
+DCR: 17.0598
+DCE: 31.1083
+DCE2: 0.929885
+-----------------Time------------------------------
+total time: 3s
+Throughput: 76.5918MiB/s
+Reduce data speed: 72.3333MiB/s
+SF generation time: 0.015491s
+SF generation throughput: 14832.9MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 1.86131MiB
+FP Overhead: 1.41483MiB
+SF Overhead: 0.334854MiB
+Name Overhead: 0.111618MiB
+Recipe Overhead: 1.26642MiB
+SF number: 8778
+-----------------Reduct----------------------------
+Dedup ratio : 2.4395
+Lossless ratio : 2.76732
+Delta ratio : 17.9858
+dedup reduct size : 142172160
+delta reduct size : 73668986
+local reduct size : 11699853
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 6836, reduct: 51.3472MiB
+Header chunk num: 2561, reduct: 18.4445MiB
+CDC chunk num: 40, reduct: 0.464525MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/GNU_GCC/gcc-packed/tar -c 4 -m 5 -n 117 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 262144
+-----------------CHUNK NUM-----------------------
+logical chunk num: 8516856
+unique chunk num: 1220301
+base chunk num: 290835
+delta chunk num: 929466
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 44142602240
+unique chunk size: 1366828202
+base chunk size: 897197888
+delta chunk size: 469630314
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 32.2956
+OCR(+Recipe): 26.9266
+DCC: 0.761669
+DCR: 18.0561
+DCE: 35.906
+DCE2: 0.929202
+-----------------Time------------------------------
+total time: 475s
+Throughput: 88.6267MiB/s
+Reduce data speed: 85.8824MiB/s
+SF generation time: 2.36598s
+SF generation throughput: 17792.9MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 184.03MiB
+FP Overhead: 139.652MiB
+SF Overhead: 33.2834MiB
+Name Overhead: 11.0945MiB
+Recipe Overhead: 259.914MiB
+SF number: 872505
+-----------------Reduct----------------------------
+Dedup ratio : 4.19446
+Lossless ratio : 4.70759
+Delta ratio : 32.2956
+dedup reduct size : 33618589342
+delta reduct size : 8010069045
+local reduct size : 1147115651
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 369447, reduct: 3471.13MiB
+Header chunk num: 440159, reduct: 3154.14MiB
+CDC chunk num: 119860, reduct: 1013.73MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/linux -c 4 -m 5 -n 270 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 262144
+-----------------CHUNK NUM-----------------------
+logical chunk num: 20001792
+unique chunk num: 2087126
+base chunk num: 521780
+delta chunk num: 1565346
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 212796651520
+unique chunk size: 2517723470
+base chunk size: 1501740828
+delta chunk size: 1015982642
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 84.5195
+OCR(+Recipe): 67.388
+DCC: 0.750001
+DCR: 25.0304
+DCE: 50.4577
+DCE2: 0.950253
+-----------------Time------------------------------
+total time: 1502s
+Throughput: 135.112MiB/s
+Reduce data speed: 133.514MiB/s
+SF generation time: 5.5724s
+SF generation throughput: 36418.6MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 318.47MiB
+FP Overhead: 238.853MiB
+SF Overhead: 59.713MiB
+Name Overhead: 19.9043MiB
+Recipe Overhead: 610.406MiB
+SF number: 1565340
+-----------------Reduct----------------------------
+Dedup ratio : 6.96584
+Lossless ratio : 7.9012
+Delta ratio : 84.5195
+dedup reduct size : 182248066094
+delta reduct size : 24414477154
+local reduct size : 3616384802
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 801931, reduct: 17708.3MiB
+Header chunk num: 722939, reduct: 5220.01MiB
+CDC chunk num: 40476, reduct: 355.138MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/WEB -c 4 -m 5 -n 102 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 262144
+-----------------CHUNK NUM-----------------------
+logical chunk num: 4744483
+unique chunk num: 926153
+base chunk num: 155041
+delta chunk num: 771112
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 297546045440
+unique chunk size: 1202234383
+base chunk size: 299417167
+delta chunk size: 902817216
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 247.494
+OCR(+Recipe): 219.744
+DCC: 0.832597
+DCR: 14.8337
+DCE: 21.3598
+DCE2: 0.894071
+-----------------Time------------------------------
+total time: 1333s
+Throughput: 212.875MiB/s
+Reduce data speed: 212.015MiB/s
+SF generation time: 6.73622s
+SF generation throughput: 42124.8MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 129.647MiB
+FP Overhead: 105.99MiB
+SF Overhead: 17.743MiB
+Name Overhead: 5.91434MiB
+Recipe Overhead: 144.79MiB
+SF number: 465123
+-----------------Reduct----------------------------
+Dedup ratio : 20.8186
+Lossless ratio : 21.7321
+Delta ratio : 247.494
+dedup reduct size : 283253717071
+delta reduct size : 12489315956
+local reduct size : 600778030
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 440243, reduct: 9491.12MiB
+Header chunk num: 326162, reduct: 2375.43MiB
+CDC chunk num: 4707, reduct: 44.1923MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/react -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 524288
+-----------------CHUNK NUM-----------------------
+logical chunk num: 332047
+unique chunk num: 43391
+base chunk num: 15663
+delta chunk num: 27728
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2908631040
+unique chunk size: 101193099
+base chunk size: 82967750
+delta chunk size: 18225349
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 28.7434
+OCR(+Recipe): 26.012
+DCC: 0.639027
+DCR: 14.2608
+DCE: 33.9908
+DCE2: 0.913583
+-----------------Time------------------------------
+total time: 25s
+Throughput: 110.955MiB/s
+Reduce data speed: 107.095MiB/s
+SF generation time: 0.0950144s
+SF generation throughput: 29194.4MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 7.35569MiB
+FP Overhead: 4.96571MiB
+SF Overhead: 1.79249MiB
+Name Overhead: 0.597496MiB
+Recipe Overhead: 10.1333MiB
+SF number: 46989
+-----------------Reduct----------------------------
+Dedup ratio : 7.5519
+Lossless ratio : 8.48306
+Delta ratio : 28.7434
+dedup reduct size : 2523479040
+delta reduct size : 241682073
+local reduct size : 42276828
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 15630, reduct: 151.75MiB
+Header chunk num: 10311, reduct: 65.1029MiB
+CDC chunk num: 1787, reduct: 13.6331MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/netty -c 4 -m 5 -n 99 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 524288
+-----------------CHUNK NUM-----------------------
+logical chunk num: 349685
+unique chunk num: 47986
+base chunk num: 15449
+delta chunk num: 32537
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2272532480
+unique chunk size: 35918788
+base chunk size: 23435137
+delta chunk size: 12483651
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 63.2686
+OCR(+Recipe): 48.2402
+DCC: 0.678052
+DCR: 25.7079
+DCE: 48.6736
+DCE2: 0.950737
+-----------------Time------------------------------
+total time: 19s
+Throughput: 114.066MiB/s
+Reduce data speed: 112.263MiB/s
+SF generation time: 0.0997327s
+SF generation throughput: 21730.6MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 7.84889MiB
+FP Overhead: 5.49156MiB
+SF Overhead: 1.768MiB
+Name Overhead: 0.589333MiB
+Recipe Overhead: 10.6715MiB
+SF number: 46347
+-----------------Reduct----------------------------
+Dedup ratio : 5.09616
+Lossless ratio : 6.59924
+Delta ratio : 63.2686
+dedup reduct size : 1826602203
+delta reduct size : 308444192
+local reduct size : 101567297
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 17363, reduct: 181.534MiB
+Header chunk num: 15084, reduct: 111.506MiB
+CDC chunk num: 90, reduct: 1.115MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/Cpython -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 524288
+-----------------CHUNK NUM-----------------------
+logical chunk num: 702321
+unique chunk num: 87592
+base chunk num: 29198
+delta chunk num: 58394
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 10323927040
+unique chunk size: 158425450
+base chunk size: 108929638
+delta chunk size: 49495812
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 65.1658
+OCR(+Recipe): 57.0699
+DCC: 0.666659
+DCR: 37.581
+DCE: 102.239
+DCE2: 0.960801
+-----------------Time------------------------------
+total time: 81s
+Throughput: 121.551MiB/s
+Reduce data speed: 119.686MiB/s
+SF generation time: 0.356277s
+SF generation throughput: 27634.9MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 14.4794MiB
+FP Overhead: 10.0241MiB
+SF Overhead: 3.34145MiB
+Name Overhead: 1.11382MiB
+Recipe Overhead: 21.4331MiB
+SF number: 87594
+-----------------Reduct----------------------------
+Dedup ratio : 4.72685
+Lossless ratio : 5.24314
+Delta ratio : 65.1658
+dedup reduct size : 8139825713
+delta reduct size : 1810607945
+local reduct size : 215067932
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 31160, reduct: 1517.49MiB
+Header chunk num: 20170, reduct: 146.335MiB
+CDC chunk num: 7064, reduct: 62.9014MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/automake_tarballs -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 524288
+-----------------CHUNK NUM-----------------------
+logical chunk num: 105091
+unique chunk num: 32891
+base chunk num: 5495
+delta chunk num: 27396
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 504084480
+unique chunk size: 21660087
+base chunk size: 13080159
+delta chunk size: 8579928
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 23.2725
+OCR(+Recipe): 20.1448
+DCC: 0.832933
+DCR: 22.4689
+DCE: 41.2238
+DCE2: 0.931366
+-----------------Time------------------------------
+total time: 9s
+Throughput: 53.4147MiB/s
+Reduce data speed: 51.1195MiB/s
+SF generation time: 0.0552073s
+SF generation throughput: 8707.76MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 4.60255MiB
+FP Overhead: 3.76408MiB
+SF Overhead: 0.628853MiB
+Name Overhead: 0.209618MiB
+Recipe Overhead: 3.20712MiB
+SF number: 16485
+-----------------Reduct----------------------------
+Dedup ratio : 2.2492
+Lossless ratio : 2.44866
+Delta ratio : 23.2725
+dedup reduct size : 279967437
+delta reduct size : 184201328
+local reduct size : 18255628
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 22339, reduct: 138.212MiB
+Header chunk num: 4858, reduct: 35.6091MiB
+CDC chunk num: 199, reduct: 1.84712MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/coreutils_tarballs -c 4 -m 5 -n 28 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 524288
+-----------------CHUNK NUM-----------------------
+logical chunk num: 38670
+unique chunk num: 12128
+base chunk num: 2768
+delta chunk num: 9360
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 240936960
+unique chunk size: 13232190
+base chunk size: 8942989
+delta chunk size: 4289201
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 18.2084
+OCR(+Recipe): 16.6512
+DCC: 0.771768
+DCR: 18.1312
+DCE: 32.1985
+DCE2: 0.933091
+-----------------Time------------------------------
+total time: 3s
+Throughput: 76.5918MiB/s
+Reduce data speed: 72.3854MiB/s
+SF generation time: 0.015834s
+SF generation throughput: 14511.5MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 1.8103MiB
+FP Overhead: 1.38794MiB
+SF Overhead: 0.316772MiB
+Name Overhead: 0.105591MiB
+Recipe Overhead: 1.18011MiB
+SF number: 8304
+-----------------Reduct----------------------------
+Dedup ratio : 2.4394
+Lossless ratio : 2.77861
+Delta ratio : 18.2084
+dedup reduct size : 142168064
+delta reduct size : 73479016
+local reduct size : 12057690
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 6795, reduct: 51.1242MiB
+Header chunk num: 2526, reduct: 18.5016MiB
+CDC chunk num: 39, reduct: 0.449223MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/GNU_GCC/gcc-packed/tar -c 4 -m 5 -n 117 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 524288
+-----------------CHUNK NUM-----------------------
+logical chunk num: 8043469
+unique chunk num: 1155637
+base chunk num: 266355
+delta chunk num: 889282
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 44142602240
+unique chunk size: 1379515827
+base chunk size: 860798297
+delta chunk size: 518717530
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 31.9986
+OCR(+Recipe): 26.9671
+DCC: 0.769517
+DCR: 18.4722
+DCE: 35.3644
+DCE2: 0.928768
+-----------------Time------------------------------
+total time: 465s
+Throughput: 90.5326MiB/s
+Reduce data speed: 87.7033MiB/s
+SF generation time: 2.25162s
+SF generation throughput: 18696.6MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 172.895MiB
+FP Overhead: 132.252MiB
+SF Overhead: 30.4819MiB
+Name Overhead: 10.1606MiB
+Recipe Overhead: 245.467MiB
+SF number: 799065
+-----------------Reduct----------------------------
+Dedup ratio : 3.81244
+Lossless ratio : 4.22715
+Delta ratio : 31.9986
+dedup reduct size : 32564041852
+delta reduct size : 9063132556
+local reduct size : 1135912005
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 372322, reduct: 4795.83MiB
+Header chunk num: 434826, reduct: 3156.62MiB
+CDC chunk num: 82134, reduct: 690.826MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/linux -c 4 -m 5 -n 270 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 524288
+-----------------CHUNK NUM-----------------------
+logical chunk num: 19173868
+unique chunk num: 2036524
+base chunk num: 509129
+delta chunk num: 1527395
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 212796651520
+unique chunk size: 2517959450
+base chunk size: 1475794247
+delta chunk size: 1042165203
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 84.5115
+OCR(+Recipe): 67.9531
+DCC: 0.750001
+DCR: 25.0791
+DCE: 50.5
+DCE2: 0.950493
+-----------------Time------------------------------
+total time: 1487s
+Throughput: 136.475MiB/s
+Reduce data speed: 134.86MiB/s
+SF generation time: 5.48697s
+SF generation throughput: 36985.5MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 310.749MiB
+FP Overhead: 233.062MiB
+SF Overhead: 58.2652MiB
+Name Overhead: 19.4217MiB
+Recipe Overhead: 585.14MiB
+SF number: 1527387
+-----------------Reduct----------------------------
+Dedup ratio : 6.80506
+Lossless ratio : 7.70657
+Delta ratio : 84.5115
+dedup reduct size : 181526288385
+delta reduct size : 25094426655
+local reduct size : 3657977030
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 805426, reduct: 18635.8MiB
+Header chunk num: 707508, reduct: 5163.76MiB
+CDC chunk num: 14461, reduct: 132.31MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/WEB -c 4 -m 5 -n 102 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 524288
+-----------------CHUNK NUM-----------------------
+logical chunk num: 4677309
+unique chunk num: 922844
+base chunk num: 154460
+delta chunk num: 768384
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 297546045440
+unique chunk size: 1201173942
+base chunk size: 299514111
+delta chunk size: 901659831
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 247.713
+OCR(+Recipe): 220.266
+DCC: 0.832626
+DCR: 14.8624
+DCE: 21.4098
+DCE2: 0.894109
+-----------------Time------------------------------
+total time: 1333s
+Throughput: 212.875MiB/s
+Reduce data speed: 212.015MiB/s
+SF generation time: 6.73565s
+SF generation throughput: 42128.4MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 129.18MiB
+FP Overhead: 105.611MiB
+SF Overhead: 17.6765MiB
+Name Overhead: 5.89218MiB
+Recipe Overhead: 142.74MiB
+SF number: 463380
+-----------------Reduct----------------------------
+Dedup ratio : 20.7915
+Lossless ratio : 21.7181
+Delta ratio : 247.713
+dedup reduct size : 283235077771
+delta reduct size : 12499198649
+local reduct size : 610595078
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 440335, reduct: 9516.98MiB
+Header chunk num: 324147, reduct: 2365.42MiB
+CDC chunk num: 3902, reduct: 37.7631MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/react -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 1048576
+-----------------CHUNK NUM-----------------------
+logical chunk num: 189178
+unique chunk num: 36087
+base chunk num: 11966
+delta chunk num: 24121
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2908631040
+unique chunk size: 105444211
+base chunk size: 90279117
+delta chunk size: 15165094
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 27.5845
+OCR(+Recipe): 26.0869
+DCC: 0.668412
+DCR: 17.7767
+DCE: 38.7036
+DCE2: 0.927664
+-----------------Time------------------------------
+total time: 25s
+Throughput: 110.955MiB/s
+Reduce data speed: 106.933MiB/s
+SF generation time: 0.100298s
+SF generation throughput: 27656.4MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 5.9557MiB
+FP Overhead: 4.12983MiB
+SF Overhead: 1.3694MiB
+Name Overhead: 0.456467MiB
+Recipe Overhead: 5.77325MiB
+SF number: 35898
+-----------------Reduct----------------------------
+Dedup ratio : 7.142
+Lossless ratio : 8.08257
+Delta ratio : 27.5845
+dedup reduct size : 2501374051
+delta reduct size : 254420588
+local reduct size : 47392190
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 15105, reduct: 176.735MiB
+Header chunk num: 8970, reduct: 65.2045MiB
+CDC chunk num: 46, reduct: 0.694937MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/netty -c 4 -m 5 -n 99 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 1048576
+-----------------CHUNK NUM-----------------------
+logical chunk num: 349230
+unique chunk num: 47879
+base chunk num: 15401
+delta chunk num: 32478
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2272532480
+unique chunk size: 36094679
+base chunk size: 23361758
+delta chunk size: 12732921
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 62.9603
+OCR(+Recipe): 48.0755
+DCC: 0.678335
+DCR: 25.5765
+DCE: 48.5163
+DCE2: 0.950663
+-----------------Time------------------------------
+total time: 20s
+Throughput: 108.363MiB/s
+Reduce data speed: 106.642MiB/s
+SF generation time: 0.0990693s
+SF generation throughput: 21876.2MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 7.82932MiB
+FP Overhead: 5.47932MiB
+SF Overhead: 1.7625MiB
+Name Overhead: 0.587502MiB
+Recipe Overhead: 10.6577MiB
+SF number: 46203
+-----------------Reduct----------------------------
+Dedup ratio : 5.04795
+Lossless ratio : 6.51108
+Delta ratio : 62.9603
+dedup reduct size : 1822343168
+delta reduct size : 312930823
+local reduct size : 101163810
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 17374, reduct: 186.762MiB
+Header chunk num: 15104, reduct: 111.672MiB
+CDC chunk num: 0, reduct: 0MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/Cpython -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 1048576
+-----------------CHUNK NUM-----------------------
+logical chunk num: 657341
+unique chunk num: 84245
+base chunk num: 28082
+delta chunk num: 56163
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 10323927040
+unique chunk size: 160372490
+base chunk size: 108365140
+delta chunk size: 52007350
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 64.3747
+OCR(+Recipe): 56.9102
+DCC: 0.666663
+DCR: 38.015
+DCE: 102.818
+DCE2: 0.960944
+-----------------Time------------------------------
+total time: 82s
+Throughput: 120.069MiB/s
+Reduce data speed: 118.204MiB/s
+SF generation time: 0.353339s
+SF generation throughput: 27864.6MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 13.926MiB
+FP Overhead: 9.64108MiB
+SF Overhead: 3.21373MiB
+Name Overhead: 1.07124MiB
+Recipe Overhead: 20.0605MiB
+SF number: 84246
+-----------------Reduct----------------------------
+Dedup ratio : 4.48726
+Lossless ratio : 4.95051
+Delta ratio : 64.3747
+dedup reduct size : 8023209365
+delta reduct size : 1925054012
+local reduct size : 215291173
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 31334, reduct: 1646.79MiB
+Header chunk num: 19667, reduct: 144.033MiB
+CDC chunk num: 5162, reduct: 45.0504MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/automake_tarballs -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 1048576
+-----------------CHUNK NUM-----------------------
+logical chunk num: 101657
+unique chunk num: 32488
+base chunk num: 5477
+delta chunk num: 27011
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 504084480
+unique chunk size: 21184428
+base chunk size: 12453999
+delta chunk size: 8730429
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 23.795
+OCR(+Recipe): 20.6275
+DCC: 0.831415
+DCR: 23.1248
+DCE: 43.5694
+DCE2: 0.93106
+-----------------Time------------------------------
+total time: 9s
+Throughput: 53.4147MiB/s
+Reduce data speed: 51.1699MiB/s
+SF generation time: 0.059718s
+SF generation throughput: 8050.04MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 4.55368MiB
+FP Overhead: 3.71796MiB
+SF Overhead: 0.626793MiB
+Name Overhead: 0.208931MiB
+Recipe Overhead: 3.10233MiB
+SF number: 16431
+-----------------Reduct----------------------------
+Dedup ratio : 2.15796
+Lossless ratio : 2.35176
+Delta ratio : 23.795
+dedup reduct size : 270491648
+delta reduct size : 193159363
+local reduct size : 19249041
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 22351, reduct: 149.923MiB
+Header chunk num: 4660, reduct: 34.2886MiB
+CDC chunk num: 0, reduct: 0MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/coreutils_tarballs -c 4 -m 5 -n 28 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 1048576
+-----------------CHUNK NUM-----------------------
+logical chunk num: 37400
+unique chunk num: 12118
+base chunk num: 2798
+delta chunk num: 9320
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 240936960
+unique chunk size: 13313282
+base chunk size: 9069170
+delta chunk size: 4244112
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 18.0975
+OCR(+Recipe): 16.6048
+DCC: 0.769104
+DCR: 18.487
+DCE: 33.2965
+DCE2: 0.933618
+-----------------Time------------------------------
+total time: 3s
+Throughput: 76.5918MiB/s
+Reduce data speed: 72.3596MiB/s
+SF generation time: 0.0167294s
+SF generation throughput: 13734.8MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 1.81374MiB
+FP Overhead: 1.3868MiB
+SF Overhead: 0.320206MiB
+Name Overhead: 0.106735MiB
+Recipe Overhead: 1.14136MiB
+SF number: 8394
+-----------------Reduct----------------------------
+Dedup ratio : 2.41437
+Lossless ratio : 2.75262
+Delta ratio : 18.0975
+dedup reduct size : 141144064
+delta reduct size : 74216841
+local reduct size : 12262773
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 6767, reduct: 51.8631MiB
+Header chunk num: 2515, reduct: 18.4819MiB
+CDC chunk num: 38, reduct: 0.433742MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/GNU_GCC/gcc-packed/tar -c 4 -m 5 -n 117 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 1048576
+-----------------CHUNK NUM-----------------------
+logical chunk num: 7658342
+unique chunk num: 1104934
+base chunk num: 243570
+delta chunk num: 861364
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 44142602240
+unique chunk size: 1369659444
+base chunk size: 831808913
+delta chunk size: 537850531
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 32.2289
+OCR(+Recipe): 27.3375
+DCC: 0.779561
+DCR: 19.4791
+DCE: 35.6178
+DCE2: 0.928801
+-----------------Time------------------------------
+total time: 457s
+Throughput: 92.1174MiB/s
+Reduce data speed: 89.2592MiB/s
+SF generation time: 2.20899s
+SF generation throughput: 19057.5MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 163.615MiB
+FP Overhead: 126.45MiB
+SF Overhead: 27.8744MiB
+Name Overhead: 9.29146MiB
+Recipe Overhead: 233.714MiB
+SF number: 730710
+-----------------Reduct----------------------------
+Dedup ratio : 3.54777
+Lossless ratio : 3.90344
+Delta ratio : 32.2289
+dedup reduct size : 31700240547
+delta reduct size : 9938967749
+local reduct size : 1133734500
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 372380, reduct: 5844.47MiB
+Header chunk num: 431775, reduct: 3153.11MiB
+CDC chunk num: 57209, reduct: 480.952MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/linux -c 4 -m 5 -n 270 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 1048576
+-----------------CHUNK NUM-----------------------
+logical chunk num: 18582352
+unique chunk num: 2018994
+base chunk num: 504747
+delta chunk num: 1514247
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 212796651520
+unique chunk size: 2529151139
+base chunk size: 1482032882
+delta chunk size: 1047118257
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 84.1376
+OCR(+Recipe): 68.1214
+DCC: 0.750001
+DCR: 25.1039
+DCE: 50.7729
+DCE2: 0.95059
+-----------------Time------------------------------
+total time: 1475s
+Throughput: 137.586MiB/s
+Reduce data speed: 135.95MiB/s
+SF generation time: 5.53638s
+SF generation throughput: 36655.5MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 308.074MiB
+FP Overhead: 231.056MiB
+SF Overhead: 57.7637MiB
+Name Overhead: 19.2546MiB
+Recipe Overhead: 567.088MiB
+SF number: 1514241
+-----------------Reduct----------------------------
+Dedup ratio : 6.76352
+Lossless ratio : 7.66317
+Delta ratio : 84.1376
+dedup reduct size : 181334218065
+delta reduct size : 25239581821
+local reduct size : 3693700495
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 804362, reduct: 18841.5MiB
+Header chunk num: 701465, reduct: 5145.52MiB
+CDC chunk num: 8420, reduct: 83.3566MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/WEB -c 4 -m 5 -n 102 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 1048576
+-----------------CHUNK NUM-----------------------
+logical chunk num: 4635606
+unique chunk num: 916260
+base chunk num: 153308
+delta chunk num: 762952
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 297546045440
+unique chunk size: 1208187648
+base chunk size: 300780078
+delta chunk size: 907407570
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 246.275
+OCR(+Recipe): 219.344
+DCC: 0.832681
+DCR: 14.8774
+DCE: 21.5385
+DCE2: 0.893869
+-----------------Time------------------------------
+total time: 1333s
+Throughput: 212.875MiB/s
+Reduce data speed: 212.01MiB/s
+SF generation time: 6.81471s
+SF generation throughput: 41639.6MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 128.251MiB
+FP Overhead: 104.858MiB
+SF Overhead: 17.5447MiB
+Name Overhead: 5.84824MiB
+Recipe Overhead: 141.467MiB
+SF number: 459924
+-----------------Reduct----------------------------
+Dedup ratio : 20.624
+Lossless ratio : 21.5603
+Delta ratio : 246.275
+dedup reduct size : 283118897152
+delta reduct size : 12592461102
+local reduct size : 626499538
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 440616, reduct: 9655.68MiB
+Header chunk num: 322336, reduct: 2353.43MiB
+CDC chunk num: 0, reduct: 0MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/react -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 2097152
+-----------------CHUNK NUM-----------------------
+logical chunk num: 165967
+unique chunk num: 35206
+base chunk num: 11313
+delta chunk num: 23893
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2908631040
+unique chunk size: 105386555
+base chunk size: 90940918
+delta chunk size: 14445637
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 27.5996
+OCR(+Recipe): 26.2755
+DCC: 0.678663
+DCR: 18.5051
+DCE: 39.3397
+DCE2: 0.928901
+-----------------Time------------------------------
+total time: 24s
+Throughput: 115.579MiB/s
+Reduce data speed: 111.391MiB/s
+SF generation time: 0.102333s
+SF generation throughput: 27106.4MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 5.75523MiB
+FP Overhead: 4.02901MiB
+SF Overhead: 1.29467MiB
+Name Overhead: 0.431557MiB
+Recipe Overhead: 5.06491MiB
+SF number: 33939
+-----------------Reduct----------------------------
+Dedup ratio : 7.12102
+Lossless ratio : 8.1188
+Delta ratio : 27.5996
+dedup reduct size : 2500173824
+delta reduct size : 252872123
+local reduct size : 50198538
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 14960, reduct: 175.947MiB
+Header chunk num: 8933, reduct: 65.2108MiB
+CDC chunk num: 0, reduct: 0MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/netty -c 4 -m 5 -n 99 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 2097152
+-----------------CHUNK NUM-----------------------
+logical chunk num: 349230
+unique chunk num: 47879
+base chunk num: 15401
+delta chunk num: 32478
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2272532480
+unique chunk size: 36094679
+base chunk size: 23361758
+delta chunk size: 12732921
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 62.9603
+OCR(+Recipe): 48.0755
+DCC: 0.678335
+DCR: 25.5765
+DCE: 48.5163
+DCE2: 0.950663
+-----------------Time------------------------------
+total time: 20s
+Throughput: 108.363MiB/s
+Reduce data speed: 106.642MiB/s
+SF generation time: 0.0989679s
+SF generation throughput: 21898.6MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 7.82932MiB
+FP Overhead: 5.47932MiB
+SF Overhead: 1.7625MiB
+Name Overhead: 0.587502MiB
+Recipe Overhead: 10.6577MiB
+SF number: 46203
+-----------------Reduct----------------------------
+Dedup ratio : 5.04795
+Lossless ratio : 6.51108
+Delta ratio : 62.9603
+dedup reduct size : 1822343168
+delta reduct size : 312930823
+local reduct size : 101163810
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 17374, reduct: 186.762MiB
+Header chunk num: 15104, reduct: 111.672MiB
+CDC chunk num: 0, reduct: 0MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/Cpython -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 2097152
+-----------------CHUNK NUM-----------------------
+logical chunk num: 583999
+unique chunk num: 76479
+base chunk num: 25915
+delta chunk num: 50564
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 10323927040
+unique chunk size: 170019943
+base chunk size: 113899643
+delta chunk size: 56120300
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 60.7219
+OCR(+Recipe): 54.7085
+DCC: 0.661149
+DCR: 36.3816
+DCE: 105.585
+DCE2: 0.961796
+-----------------Time------------------------------
+total time: 81s
+Throughput: 121.551MiB/s
+Reduce data speed: 119.55MiB/s
+SF generation time: 0.322173s
+SF generation throughput: 30560.1MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 12.7066MiB
+FP Overhead: 8.75233MiB
+SF Overhead: 2.96574MiB
+Name Overhead: 0.988579MiB
+Recipe Overhead: 17.8222MiB
+SF number: 77745
+-----------------Reduct----------------------------
+Dedup ratio : 4.35257
+Lossless ratio : 4.78925
+Delta ratio : 60.7219
+dedup reduct size : 7952010036
+delta reduct size : 1985623932
+local reduct size : 216273129
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 31648, reduct: 1753.18MiB
+Header chunk num: 17816, reduct: 131.322MiB
+CDC chunk num: 1100, reduct: 9.14009MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/automake_tarballs -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 2097152
+-----------------CHUNK NUM-----------------------
+logical chunk num: 101657
+unique chunk num: 32488
+base chunk num: 5477
+delta chunk num: 27011
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 504084480
+unique chunk size: 21184428
+base chunk size: 12453999
+delta chunk size: 8730429
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 23.795
+OCR(+Recipe): 20.6275
+DCC: 0.831415
+DCR: 23.1248
+DCE: 43.5694
+DCE2: 0.93106
+-----------------Time------------------------------
+total time: 9s
+Throughput: 53.4147MiB/s
+Reduce data speed: 51.1699MiB/s
+SF generation time: 0.0589788s
+SF generation throughput: 8150.93MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 4.55368MiB
+FP Overhead: 3.71796MiB
+SF Overhead: 0.626793MiB
+Name Overhead: 0.208931MiB
+Recipe Overhead: 3.10233MiB
+SF number: 16431
+-----------------Reduct----------------------------
+Dedup ratio : 2.15796
+Lossless ratio : 2.35176
+Delta ratio : 23.795
+dedup reduct size : 270491648
+delta reduct size : 193159363
+local reduct size : 19249041
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 22351, reduct: 149.923MiB
+Header chunk num: 4660, reduct: 34.2886MiB
+CDC chunk num: 0, reduct: 0MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/coreutils_tarballs -c 4 -m 5 -n 28 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 2097152
+-----------------CHUNK NUM-----------------------
+logical chunk num: 37400
+unique chunk num: 12118
+base chunk num: 2798
+delta chunk num: 9320
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 240936960
+unique chunk size: 13313282
+base chunk size: 9069170
+delta chunk size: 4244112
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 18.0975
+OCR(+Recipe): 16.6048
+DCC: 0.769104
+DCR: 18.487
+DCE: 33.2965
+DCE2: 0.933618
+-----------------Time------------------------------
+total time: 3s
+Throughput: 76.5918MiB/s
+Reduce data speed: 72.3596MiB/s
+SF generation time: 0.0167806s
+SF generation throughput: 13692.9MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 1.81374MiB
+FP Overhead: 1.3868MiB
+SF Overhead: 0.320206MiB
+Name Overhead: 0.106735MiB
+Recipe Overhead: 1.14136MiB
+SF number: 8394
+-----------------Reduct----------------------------
+Dedup ratio : 2.41437
+Lossless ratio : 2.75262
+Delta ratio : 18.0975
+dedup reduct size : 141144064
+delta reduct size : 74216841
+local reduct size : 12262773
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 6767, reduct: 51.8631MiB
+Header chunk num: 2515, reduct: 18.4819MiB
+CDC chunk num: 38, reduct: 0.433742MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/GNU_GCC/gcc-packed/tar -c 4 -m 5 -n 117 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 2097152
+-----------------CHUNK NUM-----------------------
+logical chunk num: 7226450
+unique chunk num: 1024324
+base chunk num: 215136
+delta chunk num: 809188
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 44142602240
+unique chunk size: 1292623100
+base chunk size: 768300969
+delta chunk size: 524322131
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 34.1496
+OCR(+Recipe): 28.9674
+DCC: 0.789973
+DCR: 20.7229
+DCE: 36.5935
+DCE2: 0.929137
+-----------------Time------------------------------
+total time: 435s
+Throughput: 96.7762MiB/s
+Reduce data speed: 93.9424MiB/s
+SF generation time: 2.13843s
+SF generation throughput: 19686.2MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 150.052MiB
+FP Overhead: 117.225MiB
+SF Overhead: 24.6204MiB
+Name Overhead: 8.20679MiB
+Recipe Overhead: 220.534MiB
+SF number: 645408
+-----------------Reduct----------------------------
+Dedup ratio : 3.44011
+Lossless ratio : 3.79435
+Delta ratio : 34.1496
+dedup reduct size : 31310855261
+delta reduct size : 10341137405
+local reduct size : 1197986474
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 370968, reduct: 6620.13MiB
+Header chunk num: 414365, reduct: 3040.57MiB
+CDC chunk num: 23855, reduct: 201.38MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/linux -c 4 -m 5 -n 270 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 2097152
+-----------------CHUNK NUM-----------------------
+logical chunk num: 17896279
+unique chunk num: 2008682
+base chunk num: 502170
+delta chunk num: 1506512
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 212796651520
+unique chunk size: 2530079465
+base chunk size: 1482314781
+delta chunk size: 1047764684
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 84.1067
+OCR(+Recipe): 68.583
+DCC: 0.75
+DCR: 25.1846
+DCE: 51.1168
+DCE2: 0.95092
+-----------------Time------------------------------
+total time: 1467s
+Throughput: 138.336MiB/s
+Reduce data speed: 136.691MiB/s
+SF generation time: 5.58826s
+SF generation throughput: 36315.2MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 306.5MiB
+FP Overhead: 229.875MiB
+SF Overhead: 57.4688MiB
+Name Overhead: 19.1563MiB
+Recipe Overhead: 546.151MiB
+SF number: 1506510
+-----------------Reduct----------------------------
+Dedup ratio : 6.73644
+Lossless ratio : 7.63536
+Delta ratio : 84.1067
+dedup reduct size : 181207776787
+delta reduct size : 25339794257
+local reduct size : 3719001011
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 804319, reduct: 18977.7MiB
+Header chunk num: 696036, reduct: 5124.35MiB
+CDC chunk num: 6157, reduct: 63.903MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/WEB -c 4 -m 5 -n 102 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 2097152
+-----------------CHUNK NUM-----------------------
+logical chunk num: 4635606
+unique chunk num: 916260
+base chunk num: 153308
+delta chunk num: 762952
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 297546045440
+unique chunk size: 1208187648
+base chunk size: 300780078
+delta chunk size: 907407570
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 246.275
+OCR(+Recipe): 219.344
+DCC: 0.832681
+DCR: 14.8774
+DCE: 21.5385
+DCE2: 0.893869
+-----------------Time------------------------------
+total time: 1333s
+Throughput: 212.875MiB/s
+Reduce data speed: 212.01MiB/s
+SF generation time: 6.80589s
+SF generation throughput: 41693.6MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 128.251MiB
+FP Overhead: 104.858MiB
+SF Overhead: 17.5447MiB
+Name Overhead: 5.84824MiB
+Recipe Overhead: 141.467MiB
+SF number: 459924
+-----------------Reduct----------------------------
+Dedup ratio : 20.624
+Lossless ratio : 21.5603
+Delta ratio : 246.275
+dedup reduct size : 283118897152
+delta reduct size : 12592461102
+local reduct size : 626499538
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 440616, reduct: 9655.68MiB
+Header chunk num: 322336, reduct: 2353.43MiB
+CDC chunk num: 0, reduct: 0MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/react -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 4194304
+-----------------CHUNK NUM-----------------------
+logical chunk num: 165967
+unique chunk num: 35206
+base chunk num: 11313
+delta chunk num: 23893
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2908631040
+unique chunk size: 105386555
+base chunk size: 90940918
+delta chunk size: 14445637
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 27.5996
+OCR(+Recipe): 26.2755
+DCC: 0.678663
+DCR: 18.5051
+DCE: 39.3397
+DCE2: 0.928901
+-----------------Time------------------------------
+total time: 24s
+Throughput: 115.579MiB/s
+Reduce data speed: 111.391MiB/s
+SF generation time: 0.102142s
+SF generation throughput: 27157.3MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 5.75523MiB
+FP Overhead: 4.02901MiB
+SF Overhead: 1.29467MiB
+Name Overhead: 0.431557MiB
+Recipe Overhead: 5.06491MiB
+SF number: 33939
+-----------------Reduct----------------------------
+Dedup ratio : 7.12102
+Lossless ratio : 8.1188
+Delta ratio : 27.5996
+dedup reduct size : 2500173824
+delta reduct size : 252872123
+local reduct size : 50198538
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 14960, reduct: 175.947MiB
+Header chunk num: 8933, reduct: 65.2108MiB
+CDC chunk num: 0, reduct: 0MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/netty -c 4 -m 5 -n 99 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 4194304
+-----------------CHUNK NUM-----------------------
+logical chunk num: 349230
+unique chunk num: 47879
+base chunk num: 15401
+delta chunk num: 32478
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 2272532480
+unique chunk size: 36094679
+base chunk size: 23361758
+delta chunk size: 12732921
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 62.9603
+OCR(+Recipe): 48.0755
+DCC: 0.678335
+DCR: 25.5765
+DCE: 48.5163
+DCE2: 0.950663
+-----------------Time------------------------------
+total time: 20s
+Throughput: 108.363MiB/s
+Reduce data speed: 106.642MiB/s
+SF generation time: 0.0995256s
+SF generation throughput: 21775.9MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 7.82932MiB
+FP Overhead: 5.47932MiB
+SF Overhead: 1.7625MiB
+Name Overhead: 0.587502MiB
+Recipe Overhead: 10.6577MiB
+SF number: 46203
+-----------------Reduct----------------------------
+Dedup ratio : 5.04795
+Lossless ratio : 6.51108
+Delta ratio : 62.9603
+dedup reduct size : 1822343168
+delta reduct size : 312930823
+local reduct size : 101163810
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 17374, reduct: 186.762MiB
+Header chunk num: 15104, reduct: 111.672MiB
+CDC chunk num: 0, reduct: 0MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/Cpython -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 4194304
+-----------------CHUNK NUM-----------------------
+logical chunk num: 551213
+unique chunk num: 71506
+base chunk num: 24637
+delta chunk num: 46869
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 10323927040
+unique chunk size: 169002493
+base chunk size: 114260578
+delta chunk size: 54741915
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 61.0874
+OCR(+Recipe): 55.3143
+DCC: 0.655455
+DCR: 37.1707
+DCE: 111.081
+DCE2: 0.962876
+-----------------Time------------------------------
+total time: 82s
+Throughput: 120.069MiB/s
+Reduce data speed: 118.104MiB/s
+SF generation time: 0.333902s
+SF generation throughput: 29486.7MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 11.9425MiB
+FP Overhead: 8.18321MiB
+SF Overhead: 2.81948MiB
+Name Overhead: 0.939827MiB
+Recipe Overhead: 16.8217MiB
+SF number: 73911
+-----------------Reduct----------------------------
+Dedup ratio : 4.33547
+Lossless ratio : 4.80394
+Delta ratio : 61.0874
+dedup reduct size : 7942654464
+delta reduct size : 1980052069
+local reduct size : 232218014
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 31588, reduct: 1775.39MiB
+Header chunk num: 15281, reduct: 112.937MiB
+CDC chunk num: 0, reduct: 0MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/automake_tarballs -c 4 -m 5 -n 100 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 4194304
+-----------------CHUNK NUM-----------------------
+logical chunk num: 101657
+unique chunk num: 32488
+base chunk num: 5477
+delta chunk num: 27011
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 504084480
+unique chunk size: 21184428
+base chunk size: 12453999
+delta chunk size: 8730429
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 23.795
+OCR(+Recipe): 20.6275
+DCC: 0.831415
+DCR: 23.1248
+DCE: 43.5694
+DCE2: 0.93106
+-----------------Time------------------------------
+total time: 9s
+Throughput: 53.4147MiB/s
+Reduce data speed: 51.1699MiB/s
+SF generation time: 0.059157s
+SF generation throughput: 8126.38MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 4.55368MiB
+FP Overhead: 3.71796MiB
+SF Overhead: 0.626793MiB
+Name Overhead: 0.208931MiB
+Recipe Overhead: 3.10233MiB
+SF number: 16431
+-----------------Reduct----------------------------
+Dedup ratio : 2.15796
+Lossless ratio : 2.35176
+Delta ratio : 23.795
+dedup reduct size : 270491648
+delta reduct size : 193159363
+local reduct size : 19249041
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 22351, reduct: 149.923MiB
+Header chunk num: 4660, reduct: 34.2886MiB
+CDC chunk num: 0, reduct: 0MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/coreutils_tarballs -c 4 -m 5 -n 28 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 4194304
+-----------------CHUNK NUM-----------------------
+logical chunk num: 35493
+unique chunk num: 11735
+base chunk num: 2512
+delta chunk num: 9223
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 240936960
+unique chunk size: 13145498
+base chunk size: 9117386
+delta chunk size: 4028112
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 18.3285
+OCR(+Recipe): 16.8708
+DCC: 0.785939
+DCR: 19.2483
+DCE: 34.5509
+DCE2: 0.935853
+-----------------Time------------------------------
+total time: 3s
+Throughput: 76.5918MiB/s
+Reduce data speed: 72.413MiB/s
+SF generation time: 0.0180361s
+SF generation throughput: 12739.7MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 1.72626MiB
+FP Overhead: 1.34296MiB
+SF Overhead: 0.287476MiB
+Name Overhead: 0.0958252MiB
+Recipe Overhead: 1.08316MiB
+SF number: 7536
+-----------------Reduct----------------------------
+Dedup ratio : 2.41438
+Lossless ratio : 2.78053
+Delta ratio : 18.3285
+dedup reduct size : 141144576
+delta reduct size : 73506096
+local reduct size : 13140790
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 6712, reduct: 51.6338MiB
+Header chunk num: 2511, reduct: 18.4671MiB
+CDC chunk num: 0, reduct: 0MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/GNU_GCC/gcc-packed/tar -c 4 -m 5 -n 117 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 4194304
+-----------------CHUNK NUM-----------------------
+logical chunk num: 7063299
+unique chunk num: 961902
+base chunk num: 194514
+delta chunk num: 767388
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 44142602240
+unique chunk size: 1239042637
+base chunk size: 716070153
+delta chunk size: 522972484
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 35.6264
+OCR(+Recipe): 30.1301
+DCC: 0.797782
+DCR: 21.2981
+DCE: 36.1432
+DCE2: 0.928751
+-----------------Time------------------------------
+total time: 425s
+Throughput: 99.0533MiB/s
+Reduce data speed: 96.273MiB/s
+SF generation time: 2.04443s
+SF generation throughput: 20591.4MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 139.761MiB
+FP Overhead: 110.081MiB
+SF Overhead: 22.2604MiB
+Name Overhead: 7.42012MiB
+Recipe Overhead: 215.555MiB
+SF number: 583542
+-----------------Reduct----------------------------
+Dedup ratio : 3.36337
+Lossless ratio : 3.72374
+Delta ratio : 35.6264
+dedup reduct size : 31018080825
+delta reduct size : 10615343817
+local reduct size : 1270134961
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 370008, reduct: 7202.77MiB
+Header chunk num: 397350, reduct: 2920.61MiB
+CDC chunk num: 30, reduct: 0.20035MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/linux -c 4 -m 5 -n 270 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 4194304
+-----------------CHUNK NUM-----------------------
+logical chunk num: 17513029
+unique chunk num: 2004931
+base chunk num: 501232
+delta chunk num: 1503699
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 212796651520
+unique chunk size: 2531763452
+base chunk size: 1484529464
+delta chunk size: 1047233988
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 84.0508
+OCR(+Recipe): 68.8177
+DCC: 0.75
+DCR: 25.2425
+DCE: 51.298
+DCE2: 0.950952
+-----------------Time------------------------------
+total time: 1449s
+Throughput: 140.054MiB/s
+Reduce data speed: 138.388MiB/s
+SF generation time: 5.59996s
+SF generation throughput: 36239.3MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 305.928MiB
+FP Overhead: 229.446MiB
+SF Overhead: 57.3615MiB
+Name Overhead: 19.1205MiB
+Recipe Overhead: 534.455MiB
+SF number: 1503696
+-----------------Reduct----------------------------
+Dedup ratio : 6.72161
+Lossless ratio : 7.62184
+Delta ratio : 84.0508
+dedup reduct size : 181138049375
+delta reduct size : 25387564098
+local reduct size : 3739274595
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 804294, reduct: 19042.2MiB
+Header chunk num: 694337, reduct: 5116.66MiB
+CDC chunk num: 5068, reduct: 52.6074MiB
+-----------------END-------------------------------
+-----------------INSTRUCTION----------------------
+./BiSearch -i /mnt/dataset2/WEB -c 4 -m 5 -n 102 -r 0.1 -a 0 -b 1 -t 1 -H 16 -B 4194304
+-----------------CHUNK NUM-----------------------
+logical chunk num: 4635606
+unique chunk num: 916260
+base chunk num: 153308
+delta chunk num: 762952
+-----------------CHUNK SIZE-----------------------
+logical chunk size: 297546045440
+unique chunk size: 1208187648
+base chunk size: 300780078
+delta chunk size: 907407570
+-----------------Delta METRICS-------------------------
+Overall Compression Ratio: 246.275
+OCR(+Recipe): 219.344
+DCC: 0.832681
+DCR: 14.8774
+DCE: 21.5385
+DCE2: 0.893869
+-----------------Time------------------------------
+total time: 1333s
+Throughput: 212.875MiB/s
+Reduce data speed: 212.01MiB/s
+SF generation time: 6.82188s
+SF generation throughput: 41595.9MiB/s
+-----------------OverHead--------------------------
+Index Overhead: 128.251MiB
+FP Overhead: 104.858MiB
+SF Overhead: 17.5447MiB
+Name Overhead: 5.84824MiB
+Recipe Overhead: 141.467MiB
+SF number: 459924
+-----------------Reduct----------------------------
+Dedup ratio : 20.624
+Lossless ratio : 21.5603
+Delta ratio : 246.275
+dedup reduct size : 283118897152
+delta reduct size : 12592461102
+local reduct size : 626499538
+Odess LZ4 Ratio avg: 0
+-----------------Breakdown Reduct--------------------
+File chunk num: 440616, reduct: 9655.68MiB
+Header chunk num: 322336, reduct: 2353.43MiB
+CDC chunk num: 0, reduct: 0MiB
+-----------------END-------------------------------

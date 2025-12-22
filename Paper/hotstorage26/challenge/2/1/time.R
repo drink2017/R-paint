@@ -2,7 +2,7 @@
 setwd("E:/Users/drinkwater/Desktop/R-script-template/Paper/hotstorage26/challenge/2/1/")
 
 # 加载绘图函数
-source("E:/Users/drinkwater/Desktop/R-script-template/MyR/Line_Point.R")
+source("C:\\Users\\YP\\Desktop\\work\\R-paint\\MyR\\Line_NoPoint.R")
 
 # 定义文件名和导出名
 files <- c("glibc.txt", "linux.txt", "web.txt", "windowsLog.txt")

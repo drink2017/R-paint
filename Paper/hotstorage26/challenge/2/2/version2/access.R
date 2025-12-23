@@ -4,10 +4,10 @@ setwd("C:/Users/YP/Desktop/work/R-paint/Paper/hotstorage26/challenge/2/2/version
 library(ggplot2)
 
 # 可选：手动设置y轴刻度（如不需要手动设置，设为NULL即可）
-# y_breaks <- NULL
-y_breaks <- c(0, 200, 400, 600) # 示例：手动设置
+y_breaks <- NULL
+# y_breaks <- c(0, 200, 400, 600) # 示例：手动设置
 
-files <- c("linux.csv")
+files <- c("glibc.csv", "web.csv", "windowsLog.csv")
 
 for (i in seq_along(files)) {
   data <- read.csv(files[i], header = TRUE)
@@ -28,6 +28,9 @@ for (i in seq_along(files)) {
       limits = c(0, y_max),
       breaks = y_breaks_use,
       expand = expansion(mult = c(0, 0.05))
+    ) +
+    scale_x_continuous(
+      expand = expansion(mult = c(0, 0.10))  # 右侧留8%空白
     ) +
     theme(
       axis.text.x = element_text(size = 40),

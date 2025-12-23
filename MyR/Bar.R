@@ -747,3 +747,72 @@ create_grouped_barplot_with_ci <- function(
   
   return(p)
 }
+
+create_single_barplot <- function(
+    data,
+    labels,
+    fill_color = "#AD0626",
+    fill_name = "Value",
+    x_label = "",
+    y_label = "",
+    export_name = NULL,
+    export_path = "./",
+    width = 8,
+    height = 5,
+    show_legend = FALSE,
+    show_data_labels = FALSE,
+    axis_text_size = 40, 
+    label_text_size = 40, 
+    y_max_multiplier = 1.35,
+    bar_width = 0.35,
+    y_breaks = NULL   # 新增参数：y轴刻度
+) {
+    library(ggplot2)
+    library(scales)
+
+    n <- length(data)
+    df <- data.frame(
+        label = factor(labels, levels = labels),
+        value = data * 100,
+        group = fill_name
+    )
+
+    y_max <- max(df$value, na.rm = TRUE) * y_max_multiplier
+
+    # 自动或手动设置y轴刻度
+    if (is.null(y_breaks)) {
+        y_breaks_use <- pretty(c(0, y_max), n = 5)
+    } else {
+        y_breaks_use <- y_breaks
+    }
+
+    p <- ggplot(df, aes(x = label, y = value, fill = group)) +
+        geom_col(width = bar_width, color = "black") +
+        scale_fill_manual(values = setNames(fill_color, fill_name)) +
+        scale_y_continuous(
+            expand = c(0, 0),
+            limits = c(0, y_max),
+            breaks = y_breaks_use,
+            labels = percent_format(scale = 1)
+        ) +
+        scale_x_discrete(labels = labels) +
+        labs(x = x_label, y = y_label) +
+        theme_classic() +
+        theme(
+            axis.text.x = element_text(size = axis_text_size),
+            axis.text.y = element_text(size = axis_text_size),
+            axis.title.x = element_text(size = label_text_size),
+            axis.title.y = element_text(size = label_text_size),
+            legend.position = if (show_legend) "top" else "none"
+        )
+
+    if (show_data_labels) {
+        p <- p + geom_text(aes(label = paste0(round(value, 1), "%")), vjust = -0.5, size = axis_text_size * 0.28)
+    }
+
+    if (!is.null(export_name)) {
+        ggsave(filename = file.path(export_path, export_name), plot = p, width = width, height = height)
+    } else {
+        print(p)
+    }
+}

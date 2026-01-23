@@ -725,3 +725,114 @@ plot_line_comparison_xcdf <- function(
   
   return(p)
 }
+
+plot_line_comparison_log2 <- function(
+  data,
+  export_path = "./",
+  export_name = "line_comparison_log2.pdf",
+  x_lim = NULL,
+  y_lim = NULL,
+  line_size = 2.8,
+  axis_text_size = 42,
+  x_title_size = 48,
+  y_title_size = 45,
+  x_breaks = NULL,
+  y_breaks = NULL,
+  x_label = "log2(X_Value)",
+  y_label = "Y_Value",
+  plot_width = 10,
+  plot_height = 5,
+  range_extension = 1.0,
+  colors = c("#AD0626", "#B79AD1", "#75B8BF", "#F2BE5C","#FF5809")
+) {
+  library(ggplot2)
+  library(extrafont)
+  library(showtext)
+  font_add('Arial', 'C:/Windows/Fonts/arial.ttf')
+  showtext_auto()
+  windowsFonts(Arial = windowsFont("Arial"))
+
+  if (!is.data.frame(data)) stop("数据必须是数据框")
+
+  plot_data <- data.frame()
+  col_count <- 0
+  for (col_name in names(data)) {
+    col_count <- col_count + 1
+    if (col_count > length(colors)) break
+    col_data <- data[[col_name]]
+    temp_df <- data.frame(
+      x = 1:length(col_data),
+      y = col_data,
+      group = factor(col_count)
+    )
+    plot_data <- rbind(plot_data, temp_df)
+  }
+  if (nrow(plot_data) == 0) stop("没有有效的数据可供绘图")
+
+  # x轴必须大于0才能做log2变换
+  plot_data <- plot_data[plot_data$x > 0, ]
+
+  # 自动确定x轴范围
+  if(is.null(x_lim)) {
+    x_range <- range(plot_data$x, na.rm = TRUE)
+    x_range_width <- diff(log2(x_range))
+    x_range <- c(x_range[1], 2^(log2(x_range[2]) + x_range_width * (range_extension - 1)))
+  } else {
+    x_range <- x_lim
+  }
+  if(is.null(y_lim)) {
+    y_range <- range(plot_data$y, na.rm = TRUE)
+    y_range_width <- diff(y_range)
+    y_range <- c(y_range[1], y_range[2] + y_range_width * (range_extension - 1))
+  } else {
+    y_range <- y_lim
+  }
+
+  # 自动生成2的幂次刻度
+  if (is.null(x_breaks)) {
+    min_pow <- ceiling(log2(x_range[1]))
+    max_pow <- floor(log2(x_range[2]))
+    x_breaks <- 2^(min_pow:max_pow)
+    # 保证x_range边界也在breaks里
+    if (!x_range[1] %in% x_breaks) x_breaks <- sort(unique(c(x_range[1], x_breaks)))
+    if (!x_range[2] %in% x_breaks) x_breaks <- sort(unique(c(x_breaks, x_range[2])))
+  }
+
+  # x轴标签为整数
+  n <- 2
+  x_labels <- as.character(x_breaks)
+  if (length(x_labels) > 0) {
+    x_labels[length(x_labels)] <- ""  # 最后一个不显示
+    x_labels[seq_along(x_labels) %% n != 1] <- ""  # 只显示第1、1+n、1+2n...个
+  }
+
+  p <- ggplot(plot_data, aes(x = x, y = y, color = group)) +
+    geom_line(size = line_size) +
+    scale_color_manual(values = colors[1:col_count], guide = "none") +
+    theme_classic() +
+    theme(
+      axis.text = element_text(size = axis_text_size, color = "black"),
+      text = element_text(family = "Arial"),
+      axis.title.x = element_text(size = x_title_size),
+      axis.title.y = element_text(size = y_title_size, hjust = 0.5),
+      plot.margin = margin(t = 15, r = 15, b = 10, l = 10, unit = "pt"),
+      axis.text.x = element_text(size = axis_text_size, color = "black", margin = margin(t = 5), angle = 0),
+      axis.text.y = element_text(size = axis_text_size, color = "black", margin = margin(r = 5))
+    ) +
+    labs(y = y_label, x = x_label) +
+    scale_x_continuous(
+      trans = "log2",
+      breaks = x_breaks,
+      labels = x_labels,
+      expand = c(0, 0)
+    ) +
+    scale_y_continuous(
+      breaks = y_breaks,
+      labels = y_breaks,
+      expand = c(0, 0)
+    ) +
+    coord_cartesian(xlim = x_range, ylim = y_range)
+
+  ggsave(paste(export_path, export_name, sep = ""), plot = p, width = plot_width, height = plot_height)
+  return(p)
+}

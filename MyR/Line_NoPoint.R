@@ -743,7 +743,8 @@ plot_line_comparison_log2 <- function(
   plot_width = 10,
   plot_height = 5,
   range_extension = 1.0,
-  colors = c("#AD0626", "#B79AD1", "#75B8BF", "#F2BE5C","#FF5809")
+  colors = c("#AD0626", "#B79AD1", "#75B8BF", "#F2BE5C","#FF5809"),
+  x_labels = NULL   # 新增参数
 ) {
   library(ggplot2)
   library(extrafont)
@@ -798,12 +799,18 @@ plot_line_comparison_log2 <- function(
     if (!x_range[2] %in% x_breaks) x_breaks <- sort(unique(c(x_breaks, x_range[2])))
   }
 
+  # 如果最后一个break等于x_range[2]，则移除
+  if (length(x_breaks) > 0 && abs(x_breaks[length(x_breaks)] - x_range[2]) < 1e-8) {
+    x_breaks <- x_breaks[-length(x_breaks)]
+  }
+
   # x轴标签为整数
   n <- 2
-  x_labels <- as.character(x_breaks)
-  if (length(x_labels) > 0) {
-    x_labels[length(x_labels)] <- ""  # 最后一个不显示
-    x_labels[seq_along(x_labels) %% n != 1] <- ""  # 只显示第1、1+n、1+2n...个
+  if (is.null(x_labels)) {
+    x_labels <- as.character(x_breaks)
+    if (length(x_labels) > 0) {
+      x_labels[seq_along(x_labels) %% n != 1] <- ""  # 只显示第1、1+n、1+2n...个
+    }
   }
 
   p <- ggplot(plot_data, aes(x = x, y = y, color = group)) +

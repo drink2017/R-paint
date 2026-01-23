@@ -1,4 +1,4 @@
-setwd("C:/Users/YP/Desktop/work/R-paint/Paper/hotstorage26/challenge/1/2")
+setwd("E:/Users/drinkwater/Desktop/R-script-template/Paper/hotstorage26/challenge/1/2")
 
 # 加载自定义绘图函数
 source("../../../../../MyR/Line_NoPoint.R")

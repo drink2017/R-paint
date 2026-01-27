@@ -805,12 +805,24 @@ plot_line_comparison_log2 <- function(
   }
 
   # x轴标签为整数
-  n <- 2
+  # n <- 2
+  # if (is.null(x_labels)) {
+  #   x_labels <- as.character(x_breaks)
+  #   if (length(x_labels) > 0) {
+  #     x_labels[seq_along(x_labels) %% n != 1] <- ""  # 只显示第1、1+n、1+2n...个
+  #   }
+  # }
+
+  # x轴标签为2的n次方形式
   if (is.null(x_labels)) {
-    x_labels <- as.character(x_breaks)
-    if (length(x_labels) > 0) {
-      x_labels[seq_along(x_labels) %% n != 1] <- ""  # 只显示第1、1+n、1+2n...个
-    }
+    x_labels <- sapply(seq_along(x_breaks), function(i) {
+      n <- log2(x_breaks[i])
+      if (i %% 4 == 1 && n %% 1 == 0) {
+        bquote(2^.(as.integer(n)))
+      } else {
+        ""
+      }
+    })
   }
 
   p <- ggplot(plot_data, aes(x = x, y = y, color = group)) +

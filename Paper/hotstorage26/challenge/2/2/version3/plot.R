@@ -21,7 +21,7 @@ draw_pdf <- function(txt_path, pdf_name) {
     data = data.frame(y = y),
     export_path = "./",
     export_name = pdf_name,
-    x_label = "distance",
+    x_label = "Reuse Distance",
     y_label = "CDF",
     x_breaks = x_breaks,
     # x_labels = x_labels,

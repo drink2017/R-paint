@@ -1,8 +1,8 @@
 # 设置工作目录
-setwd("E:/Users/drinkwater/Desktop/R-script-template/Paper/hotstorage26/challenge/3/amplification")
+setwd("C:/Users/YP/Desktop/work/R-paint/Paper/hotstorage26/challenge/3/amplification")
 
 # 加载绘图函数
-source("E:/Users/drinkwater/Desktop/R-script-template/MyR/Line_NoPoint.R")
+source("C:/Users/YP/Desktop/work/R-paint/MyR/Line_NoPoint.R")
 
 # 读取数据
 glibc_allGreedy <- scan("glibc_allGreedy.txt")
@@ -26,8 +26,8 @@ plot_line_comparison(
   export_path = "./",
   export_name = "glibc_line.pdf",
   x_label = "Backup",
-  y_label = "Amplification",
-  colors = c("#AD0626", "#75B8BF")
+  y_label = "Read Amp.",
+  colors = c("#AD0626", "#B79AD1")
 )
 
 # 绘制linux图
@@ -37,5 +37,5 @@ plot_line_comparison(
   export_name = "linux_line.pdf",
   x_label = "Backup",
   y_label = "Amplification",
-  colors = c("#AD0626", "#75B8BF")
+  colors = c("#AD0626", "#B79AD1")
 )

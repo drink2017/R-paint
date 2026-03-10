@@ -431,6 +431,7 @@ create_grouped_two_with_stacked_right <- function(
   width = 10,
   height = 6,
   dpi = 300,
+  normalize_to_left = TRUE,
   ...                 # 额外给 ggsave 的参数（谨慎使用，见说明）
 ) {
   if(!requireNamespace("ggplot2", quietly = TRUE)) stop("需要 ggplot2 包，请先 install.packages('ggplot2')")
@@ -518,6 +519,31 @@ create_grouped_two_with_stacked_right <- function(
   # x positions: for each group, two x values (1..G), use dodge offset within group for left/right
   plot_df$group_pos <- as.numeric(plot_df$group)
   # build stacked position by ggplot stacking (no manual cumulative necessary)
+
+  # 归一化：使左边柱子都为1
+  if(normalize_to_left) {
+    for(i in seq_len(group_count)) {
+      # 找到这一组的左边值
+      left_idx <- which(plot_df$group == group_labels[i] & plot_df$type == "Left")
+      if(length(left_idx) > 0) {
+        scale_factor <- plot_df$value[left_idx[1]]
+        
+        if(scale_factor != 0 && !is.na(scale_factor)) {
+          # 缩放 plot_df
+          group_mask <- plot_df$group == group_labels[i]
+          plot_df$value[group_mask] <- plot_df$value[group_mask] / scale_factor
+          plot_df$ymin[group_mask] <- plot_df$ymin[group_mask] / scale_factor
+          plot_df$ymax[group_mask] <- plot_df$ymax[group_mask] / scale_factor
+          
+          # 缩放 total_stats
+          total_mask <- total_stats$group == group_labels[i]
+          total_stats$total_mean[total_mask] <- total_stats$total_mean[total_mask] / scale_factor
+          total_stats$ymin[total_mask] <- total_stats$ymin[total_mask] / scale_factor
+          total_stats$ymax[total_mask] <- total_stats$ymax[total_mask] / scale_factor
+        }
+      }
+    }
+  }
 
   # 绘图
   p <- ggplot() +

@@ -18,6 +18,7 @@ p <- create_grouped_two_with_stacked_right(
   component_fills = c("#FB8072","#80B1D3","#BEBADA"),
   show_data_labels = TRUE,
   show_legend = FALSE,  # 添加这一行
+  normalize_to_left = TRUE,  # 启用归一化
   export_name = "group2_stacked_right.png",
   export_path = "E:/Users/drinkwater/Desktop/R-script-template/Paper/hotstorage26/challenge/process",
   width = 8, height = 5, dpi = 300

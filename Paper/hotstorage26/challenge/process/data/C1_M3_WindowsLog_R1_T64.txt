@@ -1,0 +1,76 @@
+2026-02-14 23:45:09 <Chunker>: chunking done.
+total_size is 8
+Version: 1
+-----------------CHUNK NUM-----------------------
+logical chunk num: 2563441
+unique chunk num: 1135858
+base chunk num: 206065
+delta chunk num: 929793
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 28012696901
+uniquechunkSize is 753025306
+base chunk size: 312529733
+delta chunk size: 440495573
+-----------------METRICS-------------------------
+Overall Compression Ratio: 37.2002
+DCC: 0.818582
+DCR: 26.2804
+DCE: 38.3614
+-----------------Time------------------------------
+Version time: 88.5059s
+Throughput: 301.844MiB/s
+Reduce data speed: 293.73MiB/s
+SF generation time: 9.75858s
+SF generation throughput: 2737.59MiB/s
+MiDelta Time: 0s
+IO Time: 5.25977s
+Decode Time: 0s
+Encode Time: 0s
+-----------------OverHead--------------------------
+Index Overhead: 144.905MiB
+FP Overhead: 121.323MiB
+SF Overhead: 23.5823MiB
+Recipe Overhead: 19.5575MiB
+SF number: 618195
+-----------------END-------------------------------
+Time taken by for loop: 88.5061 s 
+2026-02-14 23:45:10 <DFree>: logical Chunk Num is 2563441
+2026-02-14 23:45:10 <DFree>: unique Chunk Num is 1135858
+2026-02-14 23:45:10 <DFree>: Total logical size is 28012696901
+2026-02-14 23:45:10 <DFree>: Total compressed size is 753025306
+2026-02-14 23:45:10 <DFree>: Compression ratio is 37.2002
+logical read bytes: 0
+physical read bytes: 10215865301
+read amplification: inf
+write path is ./restoreFile/Windows.log
+----------------------restore-------------------------
+Version 0
+Restore time: 22.6636 s
+Version logical read bytes: 1465817866
+Version physical read bytes: 10639427813
+Version read amplification: 7.25836
+before visit container: 1789278
+after visit container: 1788437
+total visit container: 3577715
+IO in restore: 5.64454 s 
+Decode time in restore: 6.02317 s 
+Decode count in restore: 2175632
+decode count / restore chunk: 0.848715
+----------------------overall-------------------------
+Time taken by restoreFile: 22.6636 s 
+Avg Restore throughput: 1178.76 MiB/s
+Overall read amplification: 7.25836
+IO in restore: 5.64454 s 
+Decode time in restore: 6.02317 s 
+Decode count in restore: 2175632
+decode count / restore chunk: 0.848715
+----------------------inline container-------------------------
+load container times: 4973
+cache hit times: 5451115
+Cache hit rate: 99.9089%
+Read IO time: 6 seconds
+Write IO time: 0 seconds
+Update Cache time: 2seconds
+Read Cache time: 3seconds
+----------------------offline container-------------------------
+offline container offline_dataWrite_ is nullptr!

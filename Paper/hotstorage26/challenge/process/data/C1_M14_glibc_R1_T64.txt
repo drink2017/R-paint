@@ -1,0 +1,4927 @@
+2026-02-13 21:37:56 <Chunker>: chunking done.
+total_size is 8
+Version: 1
+-----------------CHUNK NUM-----------------------
+logical chunk num: 5746
+unique chunk num: 5561
+base chunk num: 5061
+delta chunk num: 500
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 40488960
+uniquechunkSize is 16659599
+base chunk size: 16466363
+delta chunk size: 193236
+-----------------METRICS-------------------------
+Overall Compression Ratio: 2.43037
+DCC: 0.0899119
+DCR: 23.2803
+DCE: 76.974
+-----------------Time------------------------------
+Version time: 0.719302s
+Throughput: 53.6816MiB/s
+Reduce data speed: 31.5938MiB/s
+SF generation time: 0.0309446s
+SF generation throughput: 1247.82MiB/s
+MiDelta Time: 0.369758s
+IO Time: 0.0216641s
+Decode Time: 0.035218s
+Encode Time: 0.309847s
+-----------------OverHead--------------------------
+Index Overhead: 1.17316MiB
+FP Overhead: 0.593979MiB
+SF Overhead: 0.579185MiB
+Recipe Overhead: 0.0438385MiB
+SF number: 15183
+-----------------END-------------------------------
+2026-02-13 21:37:57 <Chunker>: chunking done.
+total_size is 8
+Version: 2
+-----------------CHUNK NUM-----------------------
+logical chunk num: 13262
+unique chunk num: 11610
+base chunk num: 8807
+delta chunk num: 2803
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 92426240
+uniquechunkSize is 28140456
+base chunk size: 27468922
+delta chunk size: 671534
+-----------------METRICS-------------------------
+Overall Compression Ratio: 3.28446
+DCC: 0.24143
+DCR: 29.7514
+DCE: 72.7881
+-----------------Time------------------------------
+Version time: 0.517857s
+Throughput: 95.6465MiB/s
+Reduce data speed: 43.8237MiB/s
+SF generation time: 0.0292313s
+SF generation throughput: 1694.46MiB/s
+MiDelta Time: 0.611595s
+IO Time: 0.0406116s
+Decode Time: 0.0545874s
+Encode Time: 0.511405s
+-----------------OverHead--------------------------
+Index Overhead: 2.24796MiB
+FP Overhead: 1.24008MiB
+SF Overhead: 1.00788MiB
+Recipe Overhead: 0.101181MiB
+SF number: 26421
+-----------------END-------------------------------
+2026-02-13 21:37:58 <Chunker>: chunking done.
+total_size is 8
+Version: 3
+-----------------CHUNK NUM-----------------------
+logical chunk num: 21406
+unique chunk num: 16532
+base chunk num: 10278
+delta chunk num: 6254
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 149258240
+uniquechunkSize is 32350753
+base chunk size: 31383721
+delta chunk size: 967032
+-----------------METRICS-------------------------
+Overall Compression Ratio: 4.61375
+DCC: 0.378297
+DCR: 43.5035
+DCE: 94.7139
+-----------------Time------------------------------
+Version time: 0.430598s
+Throughput: 125.87MiB/s
+Reduce data speed: 54.2203MiB/s
+SF generation time: 0.0230823s
+SF generation throughput: 2348.09MiB/s
+MiDelta Time: 0.804764s
+IO Time: 0.057398s
+Decode Time: 0.0725152s
+Encode Time: 0.666988s
+-----------------OverHead--------------------------
+Index Overhead: 2.94203MiB
+FP Overhead: 1.76581MiB
+SF Overhead: 1.17622MiB
+Recipe Overhead: 0.163315MiB
+SF number: 30834
+-----------------END-------------------------------
+2026-02-13 21:37:58 <Chunker>: chunking done.
+total_size is 8
+Version: 4
+-----------------CHUNK NUM-----------------------
+logical chunk num: 29491
+unique chunk num: 20942
+base chunk num: 11039
+delta chunk num: 9903
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 206018560
+uniquechunkSize is 34559503
+base chunk size: 33257338
+delta chunk size: 1302165
+-----------------METRICS-------------------------
+Overall Compression Ratio: 5.96127
+DCC: 0.472877
+DCR: 50.1383
+DCE: 95.4441
+-----------------Time------------------------------
+Version time: 0.490635s
+Throughput: 110.328MiB/s
+Reduce data speed: 43.1529MiB/s
+SF generation time: 0.0215112s
+SF generation throughput: 2516.4MiB/s
+MiDelta Time: 1.05763s
+IO Time: 0.079464s
+Decode Time: 0.0985535s
+Encode Time: 0.867801s
+-----------------OverHead--------------------------
+Index Overhead: 3.50016MiB
+FP Overhead: 2.23685MiB
+SF Overhead: 1.26331MiB
+Recipe Overhead: 0.224998MiB
+SF number: 33117
+-----------------END-------------------------------
+2026-02-13 21:37:59 <Chunker>: chunking done.
+total_size is 8
+Version: 5
+-----------------CHUNK NUM-----------------------
+logical chunk num: 38034
+unique chunk num: 25875
+base chunk num: 12144
+delta chunk num: 13731
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 266332160
+uniquechunkSize is 37637584
+base chunk size: 36007614
+delta chunk size: 1629970
+-----------------METRICS-------------------------
+Overall Compression Ratio: 7.07623
+DCC: 0.530667
+DCR: 54.9489
+DCE: 96.7035
+-----------------Time------------------------------
+Version time: 0.556782s
+Throughput: 103.307MiB/s
+Reduce data speed: 38.8402MiB/s
+SF generation time: 0.0230134s
+SF generation throughput: 2499.39MiB/s
+MiDelta Time: 1.37159s
+IO Time: 0.10283s
+Decode Time: 0.132135s
+Encode Time: 1.11928s
+-----------------OverHead--------------------------
+Index Overhead: 4.15352MiB
+FP Overhead: 2.76375MiB
+SF Overhead: 1.38977MiB
+Recipe Overhead: 0.290176MiB
+SF number: 36432
+-----------------END-------------------------------
+2026-02-13 21:37:59 <Chunker>: chunking done.
+total_size is 8
+Version: 6
+-----------------CHUNK NUM-----------------------
+logical chunk num: 46806
+unique chunk num: 30242
+base chunk num: 12611
+delta chunk num: 17631
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 328407040
+uniquechunkSize is 39067481
+base chunk size: 37131742
+delta chunk size: 1935739
+-----------------METRICS-------------------------
+Overall Compression Ratio: 8.40615
+DCC: 0.582997
+DCR: 58.9659
+DCE: 97.3729
+-----------------Time------------------------------
+Version time: 0.648651s
+Throughput: 91.2652MiB/s
+Reduce data speed: 33.8265MiB/s
+SF generation time: 0.0196698s
+SF generation throughput: 3009.65MiB/s
+MiDelta Time: 1.78335s
+IO Time: 0.135301s
+Decode Time: 0.178471s
+Encode Time: 1.4449s
+-----------------OverHead--------------------------
+Index Overhead: 4.67341MiB
+FP Overhead: 3.23019MiB
+SF Overhead: 1.44321MiB
+Recipe Overhead: 0.357101MiB
+SF number: 37833
+-----------------END-------------------------------
+2026-02-13 21:38:00 <Chunker>: chunking done.
+total_size is 8
+Version: 7
+-----------------CHUNK NUM-----------------------
+logical chunk num: 55620
+unique chunk num: 34466
+base chunk num: 12945
+delta chunk num: 21521
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 390799360
+uniquechunkSize is 40069176
+base chunk size: 37819979
+delta chunk size: 2249197
+-----------------METRICS-------------------------
+Overall Compression Ratio: 9.75312
+DCC: 0.624412
+DCR: 61.698
+DCE: 97.6457
+-----------------Time------------------------------
+Version time: 0.694421s
+Throughput: 85.6856MiB/s
+Reduce data speed: 30.6572MiB/s
+SF generation time: 0.0189105s
+SF generation throughput: 3146.51MiB/s
+MiDelta Time: 2.24054s
+IO Time: 0.170378s
+Decode Time: 0.233355s
+Encode Time: 1.80287s
+-----------------OverHead--------------------------
+Index Overhead: 5.1628MiB
+FP Overhead: 3.68137MiB
+SF Overhead: 1.48144MiB
+Recipe Overhead: 0.424347MiB
+SF number: 38835
+-----------------END-------------------------------
+2026-02-13 21:38:00 <Chunker>: chunking done.
+total_size is 8
+Version: 8
+-----------------CHUNK NUM-----------------------
+logical chunk num: 64905
+unique chunk num: 39168
+base chunk num: 13718
+delta chunk num: 25450
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 456960000
+uniquechunkSize is 42717750
+base chunk size: 40176525
+delta chunk size: 2541225
+-----------------METRICS-------------------------
+Overall Compression Ratio: 10.6972
+DCC: 0.649765
+DCR: 64.3324
+DCE: 98.1439
+-----------------Time------------------------------
+Version time: 0.774212s
+Throughput: 81.4967MiB/s
+Reduce data speed: 28.8769MiB/s
+SF generation time: 0.0216625s
+SF generation throughput: 2912.67MiB/s
+MiDelta Time: 2.76016s
+IO Time: 0.214179s
+Decode Time: 0.296272s
+Encode Time: 2.2044s
+-----------------OverHead--------------------------
+Index Overhead: 5.75349MiB
+FP Overhead: 4.18359MiB
+SF Overhead: 1.5699MiB
+Recipe Overhead: 0.495186MiB
+SF number: 41154
+-----------------END-------------------------------
+2026-02-13 21:38:01 <Chunker>: chunking done.
+total_size is 8
+Version: 9
+-----------------CHUNK NUM-----------------------
+logical chunk num: 74237
+unique chunk num: 43647
+base chunk num: 14293
+delta chunk num: 29354
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 523479040
+uniquechunkSize is 44367920
+base chunk size: 41466218
+delta chunk size: 2901702
+-----------------METRICS-------------------------
+Overall Compression Ratio: 11.7986
+DCC: 0.672532
+DCR: 64.9735
+DCE: 97.4743
+-----------------Time------------------------------
+Version time: 0.921411s
+Throughput: 68.8482MiB/s
+Reduce data speed: 22.9267MiB/s
+SF generation time: 0.0203395s
+SF generation throughput: 3118.93MiB/s
+MiDelta Time: 3.42025s
+IO Time: 0.26092s
+Decode Time: 0.378552s
+Encode Time: 2.72214s
+-----------------OverHead--------------------------
+Index Overhead: 6.29771MiB
+FP Overhead: 4.662MiB
+SF Overhead: 1.6357MiB
+Recipe Overhead: 0.566383MiB
+SF number: 42879
+-----------------END-------------------------------
+2026-02-13 21:38:02 <Chunker>: chunking done.
+total_size is 8
+Version: 10
+-----------------CHUNK NUM-----------------------
+logical chunk num: 83621
+unique chunk num: 48641
+base chunk num: 15258
+delta chunk num: 33383
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 590305280
+uniquechunkSize is 47441292
+base chunk size: 44196007
+delta chunk size: 3245285
+-----------------METRICS-------------------------
+Overall Compression Ratio: 12.4429
+DCC: 0.686314
+DCR: 66.006
+DCE: 97.6048
+-----------------Time------------------------------
+Version time: 1.09661s
+Throughput: 58.1158MiB/s
+Reduce data speed: 16.8582MiB/s
+SF generation time: 0.0235094s
+SF generation throughput: 2710.85MiB/s
+MiDelta Time: 4.24804s
+IO Time: 0.317832s
+Decode Time: 0.488252s
+Encode Time: 3.36676s
+-----------------OverHead--------------------------
+Index Overhead: 6.94156MiB
+FP Overhead: 5.19542MiB
+SF Overhead: 1.74614MiB
+Recipe Overhead: 0.637978MiB
+SF number: 45774
+-----------------END-------------------------------
+2026-02-13 21:38:03 <Chunker>: chunking done.
+total_size is 8
+Version: 11
+-----------------CHUNK NUM-----------------------
+logical chunk num: 93766
+unique chunk num: 53898
+base chunk num: 16499
+delta chunk num: 37399
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 662497280
+uniquechunkSize is 51337970
+base chunk size: 47668501
+delta chunk size: 3669469
+-----------------METRICS-------------------------
+Overall Compression Ratio: 12.9046
+DCC: 0.693885
+DCR: 65.4303
+DCE: 97.2382
+-----------------Time------------------------------
+Version time: 1.10004s
+Throughput: 62.5866MiB/s
+Reduce data speed: 18.0793MiB/s
+SF generation time: 0.0242305s
+SF generation throughput: 2841.37MiB/s
+MiDelta Time: 5.06227s
+IO Time: 0.377366s
+Decode Time: 0.591005s
+Encode Time: 4.00091s
+-----------------OverHead--------------------------
+Index Overhead: 7.64509MiB
+FP Overhead: 5.75693MiB
+SF Overhead: 1.88816MiB
+Recipe Overhead: 0.715378MiB
+SF number: 49497
+-----------------END-------------------------------
+2026-02-13 21:38:04 <Chunker>: chunking done.
+total_size is 8
+Version: 12
+-----------------CHUNK NUM-----------------------
+logical chunk num: 104748
+unique chunk num: 60426
+base chunk num: 19375
+delta chunk num: 41051
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 739051520
+uniquechunkSize is 59325825
+base chunk size: 54973138
+delta chunk size: 4352687
+-----------------METRICS-------------------------
+Overall Compression Ratio: 12.4575
+DCC: 0.67936
+DCR: 60.5939
+DCE: 95.5673
+-----------------Time------------------------------
+Version time: 1.34796s
+Throughput: 54.1617MiB/s
+Reduce data speed: 12.189MiB/s
+SF generation time: 0.0300793s
+SF generation throughput: 2427.18MiB/s
+MiDelta Time: 6.06516s
+IO Time: 0.43968s
+Decode Time: 0.700341s
+Encode Time: 4.81529s
+-----------------OverHead--------------------------
+Index Overhead: 8.67149MiB
+FP Overhead: 6.45419MiB
+SF Overhead: 2.21729MiB
+Recipe Overhead: 0.799164MiB
+SF number: 58125
+-----------------END-------------------------------
+2026-02-13 21:38:06 <Chunker>: chunking done.
+total_size is 8
+Version: 13
+-----------------CHUNK NUM-----------------------
+logical chunk num: 115868
+unique chunk num: 65903
+base chunk num: 20184
+delta chunk num: 45719
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 816496640
+uniquechunkSize is 61994577
+base chunk size: 57178852
+delta chunk size: 4815725
+-----------------METRICS-------------------------
+Overall Compression Ratio: 13.1705
+DCC: 0.693732
+DCR: 60.6295
+DCE: 95.1023
+-----------------Time------------------------------
+Version time: 1.30306s
+Throughput: 56.68MiB/s
+Reduce data speed: 11.3078MiB/s
+SF generation time: 0.0239886s
+SF generation throughput: 3078.86MiB/s
+MiDelta Time: 7.04691s
+IO Time: 0.500947s
+Decode Time: 0.832348s
+Encode Time: 5.58548s
+-----------------OverHead--------------------------
+Index Overhead: 9.34908MiB
+FP Overhead: 7.0392MiB
+SF Overhead: 2.30988MiB
+Recipe Overhead: 0.884003MiB
+SF number: 60552
+-----------------END-------------------------------
+2026-02-13 21:38:07 <Chunker>: chunking done.
+total_size is 8
+Version: 14
+-----------------CHUNK NUM-----------------------
+logical chunk num: 125162
+unique chunk num: 70041
+base chunk num: 20381
+delta chunk num: 49660
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 882688000
+uniquechunkSize is 62576133
+base chunk size: 57488431
+delta chunk size: 5087702
+-----------------METRICS-------------------------
+Overall Compression Ratio: 14.1058
+DCC: 0.709013
+DCR: 62.2281
+DCE: 95.6098
+-----------------Time------------------------------
+Version time: 1.30045s
+Throughput: 48.541MiB/s
+Reduce data speed: 2.65121MiB/s
+SF generation time: 0.0184039s
+SF generation throughput: 3429.98MiB/s
+MiDelta Time: 8.04184s
+IO Time: 0.578115s
+Decode Time: 0.971423s
+Encode Time: 6.33988s
+-----------------OverHead--------------------------
+Index Overhead: 9.81361MiB
+FP Overhead: 7.48119MiB
+SF Overhead: 2.33242MiB
+Recipe Overhead: 0.95491MiB
+SF number: 61143
+-----------------END-------------------------------
+2026-02-13 21:38:08 <Chunker>: chunking done.
+total_size is 8
+Version: 15
+-----------------CHUNK NUM-----------------------
+logical chunk num: 137011
+unique chunk num: 77643
+base chunk num: 23171
+delta chunk num: 54472
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 965898240
+uniquechunkSize is 71488835
+base chunk size: 65603939
+delta chunk size: 5884896
+-----------------METRICS-------------------------
+Overall Compression Ratio: 13.5112
+DCC: 0.70157
+DCR: 58.9752
+DCE: 94.0073
+-----------------Time------------------------------
+Version time: 1.81954s
+Throughput: 43.6129MiB/s
+Reduce data speed: 6.14353MiB/s
+SF generation time: 0.0362973s
+SF generation throughput: 2186.26MiB/s
+MiDelta Time: 9.48141s
+IO Time: 0.661894s
+Decode Time: 1.15089s
+Encode Time: 7.49222s
+-----------------OverHead--------------------------
+Index Overhead: 10.9449MiB
+FP Overhead: 8.29317MiB
+SF Overhead: 2.65171MiB
+Recipe Overhead: 1.04531MiB
+SF number: 69513
+-----------------END-------------------------------
+2026-02-13 21:38:10 <Chunker>: chunking done.
+total_size is 8
+Version: 16
+-----------------CHUNK NUM-----------------------
+logical chunk num: 149357
+unique chunk num: 84162
+base chunk num: 24767
+delta chunk num: 59395
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 1052221440
+uniquechunkSize is 76344593
+base chunk size: 69828897
+delta chunk size: 6515696
+-----------------METRICS-------------------------
+Overall Compression Ratio: 13.7825
+DCC: 0.705722
+DCR: 57.8307
+DCE: 93.2239
+-----------------Time------------------------------
+Version time: 1.79012s
+Throughput: 45.9882MiB/s
+Reduce data speed: 5.31604MiB/s
+SF generation time: 0.029141s
+SF generation throughput: 2825.03MiB/s
+MiDelta Time: 10.9225s
+IO Time: 0.745054s
+Decode Time: 1.34808s
+Encode Time: 8.62766s
+-----------------OverHead--------------------------
+Index Overhead: 11.8238MiB
+FP Overhead: 8.98947MiB
+SF Overhead: 2.83436MiB
+Recipe Overhead: 1.1395MiB
+SF number: 74301
+-----------------END-------------------------------
+2026-02-13 21:38:12 <Chunker>: chunking done.
+total_size is 8
+Version: 17
+-----------------CHUNK NUM-----------------------
+logical chunk num: 162326
+unique chunk num: 90982
+base chunk num: 26351
+delta chunk num: 64631
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 1142845440
+uniquechunkSize is 81223787
+base chunk size: 74021756
+delta chunk size: 7202031
+-----------------METRICS-------------------------
+Overall Compression Ratio: 14.0703
+DCC: 0.710371
+DCR: 56.784
+DCE: 92.3278
+-----------------Time------------------------------
+Version time: 2.01235s
+Throughput: 42.9477MiB/s
+Reduce data speed: 4.45486MiB/s
+SF generation time: 0.0308261s
+SF generation throughput: 2803.65MiB/s
+MiDelta Time: 12.5549s
+IO Time: 0.833976s
+Decode Time: 1.58118s
+Encode Time: 9.90899s
+-----------------OverHead--------------------------
+Index Overhead: 12.7336MiB
+FP Overhead: 9.71793MiB
+SF Overhead: 3.01563MiB
+Recipe Overhead: 1.23845MiB
+SF number: 79053
+-----------------END-------------------------------
+2026-02-13 21:38:14 <Chunker>: chunking done.
+total_size is 8
+Version: 18
+-----------------CHUNK NUM-----------------------
+logical chunk num: 175479
+unique chunk num: 97898
+base chunk num: 28045
+delta chunk num: 69853
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 1235200000
+uniquechunkSize is 86598008
+base chunk size: 78660333
+delta chunk size: 7937675
+-----------------METRICS-------------------------
+Overall Compression Ratio: 14.2636
+DCC: 0.713528
+DCR: 55.5807
+DCE: 91.3696
+-----------------Time------------------------------
+Version time: 2.11921s
+Throughput: 41.5609MiB/s
+Reduce data speed: 2.59053MiB/s
+SF generation time: 0.0311125s
+SF generation throughput: 2830.89MiB/s
+MiDelta Time: 14.2938s
+IO Time: 0.925422s
+Decode Time: 1.82905s
+Encode Time: 11.2787s
+-----------------OverHead--------------------------
+Index Overhead: 13.6661MiB
+FP Overhead: 10.4566MiB
+SF Overhead: 3.2095MiB
+Recipe Overhead: 1.3388MiB
+SF number: 84135
+-----------------END-------------------------------
+2026-02-13 21:38:16 <Chunker>: chunking done.
+total_size is 8
+Version: 19
+-----------------CHUNK NUM-----------------------
+logical chunk num: 188926
+unique chunk num: 104286
+base chunk num: 28823
+delta chunk num: 75463
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 1329653760
+uniquechunkSize is 89327225
+base chunk size: 80927853
+delta chunk size: 8399372
+-----------------METRICS-------------------------
+Overall Compression Ratio: 14.8852
+DCC: 0.723616
+DCR: 56.4871
+DCE: 91.6022
+-----------------Time------------------------------
+Version time: 2.01881s
+Throughput: 44.6194MiB/s
+Reduce data speed: 2.42174MiB/s
+SF generation time: 0.0276796s
+SF generation throughput: 3254.31MiB/s
+MiDelta Time: 15.9678s
+IO Time: 1.01681s
+Decode Time: 2.08436s
+Encode Time: 12.5744s
+-----------------OverHead--------------------------
+Index Overhead: 14.4375MiB
+FP Overhead: 11.1389MiB
+SF Overhead: 3.29853MiB
+Recipe Overhead: 1.44139MiB
+SF number: 86469
+-----------------END-------------------------------
+2026-02-13 21:38:18 <Chunker>: chunking done.
+total_size is 8
+Version: 20
+-----------------CHUNK NUM-----------------------
+logical chunk num: 202384
+unique chunk num: 110374
+base chunk num: 29106
+delta chunk num: 81268
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 1424199680
+uniquechunkSize is 90297400
+base chunk size: 81469328
+delta chunk size: 8828072
+-----------------METRICS-------------------------
+Overall Compression Ratio: 15.7723
+DCC: 0.736297
+DCR: 57.6688
+DCE: 92.1148
+-----------------Time------------------------------
+Version time: 2.00209s
+Throughput: 45.036MiB/s
+Reduce data speed: 2.02374MiB/s
+SF generation time: 0.0261607s
+SF generation throughput: 3446.63MiB/s
+MiDelta Time: 17.6378s
+IO Time: 1.11256s
+Decode Time: 2.3632s
+Encode Time: 13.8339s
+-----------------OverHead--------------------------
+Index Overhead: 15.1201MiB
+FP Overhead: 11.7892MiB
+SF Overhead: 3.33092MiB
+Recipe Overhead: 1.54407MiB
+SF number: 87318
+-----------------END-------------------------------
+2026-02-13 21:38:20 <Chunker>: chunking done.
+total_size is 8
+Version: 21
+-----------------CHUNK NUM-----------------------
+logical chunk num: 214226
+unique chunk num: 115618
+base chunk num: 29408
+delta chunk num: 86210
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 1507368960
+uniquechunkSize is 91197451
+base chunk size: 81984964
+delta chunk size: 9212487
+-----------------METRICS-------------------------
+Overall Compression Ratio: 16.5286
+DCC: 0.745645
+DCR: 58.4514
+DCE: 92.4392
+-----------------Time------------------------------
+Version time: 2.27024s
+Throughput: 34.9375MiB/s
+Reduce data speed: 7.74905e+12MiB/s
+SF generation time: 0.0224003s
+SF generation throughput: 3540.87MiB/s
+MiDelta Time: 19.6063s
+IO Time: 1.22383s
+Decode Time: 2.68908s
+Encode Time: 15.3228s
+-----------------OverHead--------------------------
+Index Overhead: 15.7148MiB
+FP Overhead: 12.3493MiB
+SF Overhead: 3.36548MiB
+Recipe Overhead: 1.63441MiB
+SF number: 88224
+-----------------END-------------------------------
+2026-02-13 21:38:23 <Chunker>: chunking done.
+total_size is 8
+Version: 22
+-----------------CHUNK NUM-----------------------
+logical chunk num: 228203
+unique chunk num: 122708
+base chunk num: 31542
+delta chunk num: 91166
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 1607096320
+uniquechunkSize is 98217161
+base chunk size: 88234040
+delta chunk size: 9983121
+-----------------METRICS-------------------------
+Overall Compression Ratio: 16.3627
+DCC: 0.742951
+DCR: 57.0277
+DCE: 91.8379
+-----------------Time------------------------------
+Version time: 2.88032s
+Throughput: 33.0198MiB/s
+Reduce data speed: 0.500028MiB/s
+SF generation time: 0.0323258s
+SF generation throughput: 2942.15MiB/s
+MiDelta Time: 22.0729s
+IO Time: 1.34198s
+Decode Time: 3.06868s
+Encode Time: 17.2471s
+-----------------OverHead--------------------------
+Index Overhead: 16.7163MiB
+FP Overhead: 13.1066MiB
+SF Overhead: 3.6097MiB
+Recipe Overhead: 1.74105MiB
+SF number: 94626
+-----------------END-------------------------------
+2026-02-13 21:38:26 <Chunker>: chunking done.
+total_size is 8
+Version: 23
+-----------------CHUNK NUM-----------------------
+logical chunk num: 242300
+unique chunk num: 129238
+base chunk num: 32357
+delta chunk num: 96881
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 1707663360
+uniquechunkSize is 100877842
+base chunk size: 90315547
+delta chunk size: 10562295
+-----------------METRICS-------------------------
+Overall Compression Ratio: 16.928
+DCC: 0.749632
+DCR: 57.2439
+DCE: 91.9336
+-----------------Time------------------------------
+Version time: 2.35619s
+Throughput: 40.7048MiB/s
+Reduce data speed: 7.46638e+12MiB/s
+SF generation time: 0.0291659s
+SF generation throughput: 3288.37MiB/s
+MiDelta Time: 24.0497s
+IO Time: 1.45188s
+Decode Time: 3.39434s
+Encode Time: 18.7463s
+-----------------OverHead--------------------------
+Index Overhead: 17.5071MiB
+FP Overhead: 13.8041MiB
+SF Overhead: 3.70296MiB
+Recipe Overhead: 1.8486MiB
+SF number: 97071
+-----------------END-------------------------------
+2026-02-13 21:38:28 <Chunker>: chunking done.
+total_size is 8
+Version: 24
+-----------------CHUNK NUM-----------------------
+logical chunk num: 256347
+unique chunk num: 135172
+base chunk num: 32601
+delta chunk num: 102571
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 1807964160
+uniquechunkSize is 101601004
+base chunk size: 90663358
+delta chunk size: 10937646
+-----------------METRICS-------------------------
+Overall Compression Ratio: 17.7947
+DCC: 0.758818
+DCR: 58.4123
+DCE: 92.6072
+-----------------Time------------------------------
+Version time: 2.23272s
+Throughput: 42.8421MiB/s
+Reduce data speed: 7.87926e+12MiB/s
+SF generation time: 0.0256182s
+SF generation throughput: 3733.84MiB/s
+MiDelta Time: 25.9301s
+IO Time: 1.56044s
+Decode Time: 3.71267s
+Encode Time: 20.1576s
+-----------------OverHead--------------------------
+Index Overhead: 18.1688MiB
+FP Overhead: 14.4379MiB
+SF Overhead: 3.73089MiB
+Recipe Overhead: 1.95577MiB
+SF number: 97803
+-----------------END-------------------------------
+2026-02-13 21:38:30 <Chunker>: chunking done.
+total_size is 8
+Version: 25
+-----------------CHUNK NUM-----------------------
+logical chunk num: 270629
+unique chunk num: 141633
+base chunk num: 33247
+delta chunk num: 108386
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 1909831680
+uniquechunkSize is 103721409
+base chunk size: 92327504
+delta chunk size: 11393905
+-----------------METRICS-------------------------
+Overall Compression Ratio: 18.4131
+DCC: 0.76526
+DCR: 59.1677
+DCE: 93.2489
+-----------------Time------------------------------
+Version time: 2.54172s
+Throughput: 38.2215MiB/s
+Reduce data speed: 6.92137e+12MiB/s
+SF generation time: 0.028458s
+SF generation throughput: 3413.75MiB/s
+MiDelta Time: 28.0947s
+IO Time: 1.68212s
+Decode Time: 4.08258s
+Encode Time: 21.781s
+-----------------OverHead--------------------------
+Index Overhead: 18.9329MiB
+FP Overhead: 15.128MiB
+SF Overhead: 3.80482MiB
+Recipe Overhead: 2.06474MiB
+SF number: 99741
+-----------------END-------------------------------
+2026-02-13 21:38:33 <Chunker>: chunking done.
+total_size is 8
+Version: 26
+-----------------CHUNK NUM-----------------------
+logical chunk num: 284899
+unique chunk num: 147557
+base chunk num: 33509
+delta chunk num: 114048
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 2011627520
+uniquechunkSize is 104402623
+base chunk size: 92665881
+delta chunk size: 11736742
+-----------------METRICS-------------------------
+Overall Compression Ratio: 19.268
+DCC: 0.772908
+DCR: 60.3239
+DCE: 94.342
+-----------------Time------------------------------
+Version time: 2.33617s
+Throughput: 41.5553MiB/s
+Reduce data speed: 7.53037e+12MiB/s
+SF generation time: 0.0255389s
+SF generation throughput: 3801.27MiB/s
+MiDelta Time: 30.0818s
+IO Time: 1.80423s
+Decode Time: 4.44174s
+Encode Time: 23.2367s
+-----------------OverHead--------------------------
+Index Overhead: 19.5956MiB
+FP Overhead: 15.7608MiB
+SF Overhead: 3.8348MiB
+Recipe Overhead: 2.17361MiB
+SF number: 100527
+-----------------END-------------------------------
+2026-02-13 21:38:35 <Chunker>: chunking done.
+total_size is 8
+Version: 27
+-----------------CHUNK NUM-----------------------
+logical chunk num: 299413
+unique chunk num: 154149
+base chunk num: 34359
+delta chunk num: 119790
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 2115102720
+uniquechunkSize is 107104731
+base chunk size: 94861934
+delta chunk size: 12242797
+-----------------METRICS-------------------------
+Overall Compression Ratio: 19.748
+DCC: 0.777105
+DCR: 60.6777
+DCE: 94.4099
+-----------------Time------------------------------
+Version time: 2.83336s
+Throughput: 34.8285MiB/s
+Reduce data speed: 6.20896e+12MiB/s
+SF generation time: 0.0290683s
+SF generation throughput: 3394.82MiB/s
+MiDelta Time: 32.5326s
+IO Time: 1.94757s
+Decode Time: 4.87402s
+Encode Time: 25.0534s
+-----------------OverHead--------------------------
+Index Overhead: 20.397MiB
+FP Overhead: 16.4649MiB
+SF Overhead: 3.93208MiB
+Recipe Overhead: 2.28434MiB
+SF number: 103077
+-----------------END-------------------------------
+2026-02-13 21:38:38 <Chunker>: chunking done.
+total_size is 8
+Version: 28
+-----------------CHUNK NUM-----------------------
+logical chunk num: 314035
+unique chunk num: 160804
+base chunk num: 35003
+delta chunk num: 125801
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 2219345920
+uniquechunkSize is 109178396
+base chunk size: 96427996
+delta chunk size: 12750400
+-----------------METRICS-------------------------
+Overall Compression Ratio: 20.3277
+DCC: 0.782325
+DCR: 61.1453
+DCE: 94.4286
+-----------------Time------------------------------
+Version time: 2.87487s
+Throughput: 34.5804MiB/s
+Reduce data speed: 6.1193e+12MiB/s
+SF generation time: 0.0296287s
+SF generation throughput: 3355.33MiB/s
+MiDelta Time: 35.0118s
+IO Time: 2.09956s
+Decode Time: 5.32358s
+Encode Time: 26.8717s
+-----------------OverHead--------------------------
+Index Overhead: 21.1815MiB
+FP Overhead: 17.1757MiB
+SF Overhead: 4.00578MiB
+Recipe Overhead: 2.3959MiB
+SF number: 105009
+-----------------END-------------------------------
+2026-02-13 21:38:41 <Chunker>: chunking done.
+total_size is 8
+Version: 29
+-----------------CHUNK NUM-----------------------
+logical chunk num: 328781
+unique chunk num: 167197
+base chunk num: 35458
+delta chunk num: 131739
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 2324490240
+uniquechunkSize is 110643387
+base chunk size: 97437575
+delta chunk size: 13205812
+-----------------METRICS-------------------------
+Overall Compression Ratio: 21.0088
+DCC: 0.787927
+DCR: 61.7539
+DCE: 94.6551
+-----------------Time------------------------------
+Version time: 3.1726s
+Throughput: 31.6061MiB/s
+Reduce data speed: 5.54504e+12MiB/s
+SF generation time: 0.0278656s
+SF generation throughput: 3598.47MiB/s
+MiDelta Time: 37.8135s
+IO Time: 2.26037s
+Decode Time: 5.84404s
+Encode Time: 28.9253s
+-----------------OverHead--------------------------
+Index Overhead: 21.9164MiB
+FP Overhead: 17.8586MiB
+SF Overhead: 4.05785MiB
+Recipe Overhead: 2.5084MiB
+SF number: 106374
+-----------------END-------------------------------
+2026-02-13 21:38:44 <Chunker>: chunking done.
+total_size is 8
+Version: 30
+-----------------CHUNK NUM-----------------------
+logical chunk num: 343437
+unique chunk num: 173819
+base chunk num: 36230
+delta chunk num: 137589
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 2429153280
+uniquechunkSize is 113203850
+base chunk size: 99456155
+delta chunk size: 13747695
+-----------------METRICS-------------------------
+Overall Compression Ratio: 21.4582
+DCC: 0.791565
+DCR: 61.9173
+DCE: 94.4602
+-----------------Time------------------------------
+Version time: 3.61988s
+Throughput: 27.574MiB/s
+Reduce data speed: 4.85988e+12MiB/s
+SF generation time: 0.0295032s
+SF generation throughput: 3383.17MiB/s
+MiDelta Time: 41.0317s
+IO Time: 2.43102s
+Decode Time: 6.42107s
+Encode Time: 31.3235s
+-----------------OverHead--------------------------
+Index Overhead: 22.7121MiB
+FP Overhead: 18.5659MiB
+SF Overhead: 4.14619MiB
+Recipe Overhead: 2.62022MiB
+SF number: 108690
+-----------------END-------------------------------
+2026-02-13 21:38:48 <Chunker>: chunking done.
+total_size is 8
+Version: 31
+-----------------CHUNK NUM-----------------------
+logical chunk num: 358101
+unique chunk num: 179890
+base chunk num: 36550
+delta chunk num: 143340
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 2533847040
+uniquechunkSize is 114179203
+base chunk size: 99988795
+delta chunk size: 14190408
+-----------------METRICS-------------------------
+Overall Compression Ratio: 22.1918
+DCC: 0.79682
+DCR: 62.4196
+DCE: 94.6097
+-----------------Time------------------------------
+Version time: 3.01636s
+Throughput: 33.1007MiB/s
+Reduce data speed: 5.83225e+12MiB/s
+SF generation time: 0.0262333s
+SF generation throughput: 3806MiB/s
+MiDelta Time: 43.67s
+IO Time: 2.59768s
+Decode Time: 6.90158s
+Encode Time: 33.2446s
+-----------------OverHead--------------------------
+Index Overhead: 23.3971MiB
+FP Overhead: 19.2143MiB
+SF Overhead: 4.18282MiB
+Recipe Overhead: 2.73209MiB
+SF number: 109650
+-----------------END-------------------------------
+2026-02-13 21:38:51 <Chunker>: chunking done.
+total_size is 8
+Version: 32
+-----------------CHUNK NUM-----------------------
+logical chunk num: 372759
+unique chunk num: 185986
+base chunk num: 36835
+delta chunk num: 149151
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 2638510080
+uniquechunkSize is 114924753
+base chunk size: 100359097
+delta chunk size: 14565656
+-----------------METRICS-------------------------
+Overall Compression Ratio: 22.9586
+DCC: 0.801947
+DCR: 63.1993
+DCE: 95.1283
+-----------------Time------------------------------
+Version time: 3.71046s
+Throughput: 26.9009MiB/s
+Reduce data speed: 4.74125e+12MiB/s
+SF generation time: 0.0262939s
+SF generation throughput: 3796.11MiB/s
+MiDelta Time: 47.0107s
+IO Time: 2.7989s
+Decode Time: 7.54298s
+Encode Time: 35.6567s
+-----------------OverHead--------------------------
+Index Overhead: 24.0809MiB
+FP Overhead: 19.8654MiB
+SF Overhead: 4.21543MiB
+Recipe Overhead: 2.84393MiB
+SF number: 110505
+-----------------END-------------------------------
+2026-02-13 21:38:55 <Chunker>: chunking done.
+total_size is 8
+Version: 33
+-----------------CHUNK NUM-----------------------
+logical chunk num: 387566
+unique chunk num: 192321
+base chunk num: 37344
+delta chunk num: 154977
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 2744207360
+uniquechunkSize is 116446812
+base chunk size: 101406359
+delta chunk size: 15040453
+-----------------METRICS-------------------------
+Overall Compression Ratio: 23.5662
+DCC: 0.805825
+DCR: 63.5502
+DCE: 95.2874
+-----------------Time------------------------------
+Version time: 3.52949s
+Throughput: 28.5596MiB/s
+Reduce data speed: 4.98434e+12MiB/s
+SF generation time: 0.0277446s
+SF generation throughput: 3633.17MiB/s
+MiDelta Time: 50.1658s
+IO Time: 2.98423s
+Decode Time: 8.15548s
+Encode Time: 37.9327s
+-----------------OverHead--------------------------
+Index Overhead: 24.8158MiB
+FP Overhead: 20.5421MiB
+SF Overhead: 4.27368MiB
+Recipe Overhead: 2.95689MiB
+SF number: 112032
+-----------------END-------------------------------
+2026-02-13 21:38:58 <Chunker>: chunking done.
+total_size is 8
+Version: 34
+-----------------CHUNK NUM-----------------------
+logical chunk num: 402377
+unique chunk num: 198415
+base chunk num: 37573
+delta chunk num: 160842
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 2849914880
+uniquechunkSize is 117151534
+base chunk size: 101723835
+delta chunk size: 15427699
+-----------------METRICS-------------------------
+Overall Compression Ratio: 24.3267
+DCC: 0.810634
+DCR: 64.2261
+DCE: 95.5807
+-----------------Time------------------------------
+Version time: 3.5768s
+Throughput: 28.1846MiB/s
+Reduce data speed: 4.91842e+12MiB/s
+SF generation time: 0.0262515s
+SF generation throughput: 3840.19MiB/s
+MiDelta Time: 53.3839s
+IO Time: 3.18063s
+Decode Time: 8.77412s
+Encode Time: 40.2496s
+-----------------OverHead--------------------------
+Index Overhead: 25.4929MiB
+FP Overhead: 21.193MiB
+SF Overhead: 4.29989MiB
+Recipe Overhead: 3.06989MiB
+SF number: 112719
+-----------------END-------------------------------
+2026-02-13 21:39:02 <Chunker>: chunking done.
+total_size is 8
+Version: 35
+-----------------CHUNK NUM-----------------------
+logical chunk num: 417191
+unique chunk num: 204512
+base chunk num: 37788
+delta chunk num: 166724
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 2955653120
+uniquechunkSize is 117852655
+base chunk size: 102040213
+delta chunk size: 15812442
+-----------------METRICS-------------------------
+Overall Compression Ratio: 25.0792
+DCC: 0.815228
+DCR: 64.8823
+DCE: 95.8033
+-----------------Time------------------------------
+Version time: 3.70666s
+Throughput: 27.205MiB/s
+Reduce data speed: 4.7461e+12MiB/s
+SF generation time: 0.0262016s
+SF generation throughput: 3848.62MiB/s
+MiDelta Time: 56.7279s
+IO Time: 3.39261s
+Decode Time: 9.47127s
+Encode Time: 42.5903s
+-----------------OverHead--------------------------
+Index Overhead: 26.1687MiB
+FP Overhead: 21.8442MiB
+SF Overhead: 4.32449MiB
+Recipe Overhead: 3.18291MiB
+SF number: 113364
+-----------------END-------------------------------
+2026-02-13 21:39:06 <Chunker>: chunking done.
+total_size is 8
+Version: 36
+-----------------CHUNK NUM-----------------------
+logical chunk num: 431997
+unique chunk num: 210563
+base chunk num: 38019
+delta chunk num: 172544
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 3061329920
+uniquechunkSize is 118524642
+base chunk size: 102333315
+delta chunk size: 16191327
+-----------------METRICS-------------------------
+Overall Compression Ratio: 25.8286
+DCC: 0.819441
+DCR: 65.5055
+DCE: 96.0771
+-----------------Time------------------------------
+Version time: 4.41548s
+Throughput: 22.8245MiB/s
+Reduce data speed: 3.9842e+12MiB/s
+SF generation time: 0.0259952s
+SF generation throughput: 3876.92MiB/s
+MiDelta Time: 60.7838s
+IO Time: 3.63358s
+Decode Time: 10.3144s
+Encode Time: 45.4539s
+-----------------OverHead--------------------------
+Index Overhead: 26.8415MiB
+FP Overhead: 22.4906MiB
+SF Overhead: 4.35093MiB
+Recipe Overhead: 3.29588MiB
+SF number: 114057
+-----------------END-------------------------------
+2026-02-13 21:39:10 <Chunker>: chunking done.
+total_size is 8
+Version: 37
+-----------------CHUNK NUM-----------------------
+logical chunk num: 446901
+unique chunk num: 216916
+base chunk num: 38466
+delta chunk num: 178450
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 3167569920
+uniquechunkSize is 119761767
+base chunk size: 103159211
+delta chunk size: 16602556
+-----------------METRICS-------------------------
+Overall Compression Ratio: 26.4489
+DCC: 0.822669
+DCR: 66.0239
+DCE: 96.6013
+-----------------Time------------------------------
+Version time: 4.27506s
+Throughput: 23.6999MiB/s
+Reduce data speed: 4.11508e+12MiB/s
+SF generation time: 0.0276006s
+SF generation throughput: 3670.88MiB/s
+MiDelta Time: 64.6907s
+IO Time: 3.87438s
+Decode Time: 11.1284s
+Encode Time: 48.1967s
+-----------------OverHead--------------------------
+Index Overhead: 27.5712MiB
+FP Overhead: 23.1691MiB
+SF Overhead: 4.40208MiB
+Recipe Overhead: 3.40958MiB
+SF number: 115398
+-----------------END-------------------------------
+2026-02-13 21:39:14 <Chunker>: chunking done.
+total_size is 8
+Version: 38
+-----------------CHUNK NUM-----------------------
+logical chunk num: 461806
+unique chunk num: 223046
+base chunk num: 38655
+delta chunk num: 184391
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 3273850880
+uniquechunkSize is 120407504
+base chunk size: 103400843
+delta chunk size: 17006661
+-----------------METRICS-------------------------
+Overall Compression Ratio: 27.1898
+DCC: 0.826695
+DCR: 66.5359
+DCE: 96.704
+-----------------Time------------------------------
+Version time: 4.05764s
+Throughput: 24.9794MiB/s
+Reduce data speed: 4.33557e+12MiB/s
+SF generation time: 0.0264214s
+SF generation throughput: 3836.19MiB/s
+MiDelta Time: 68.39s
+IO Time: 4.12037s
+Decode Time: 11.9193s
+Encode Time: 50.748s
+-----------------OverHead--------------------------
+Index Overhead: 28.2476MiB
+FP Overhead: 23.8239MiB
+SF Overhead: 4.42371MiB
+Recipe Overhead: 3.5233MiB
+SF number: 115965
+-----------------END-------------------------------
+2026-02-13 21:39:19 <Chunker>: chunking done.
+total_size is 8
+Version: 39
+-----------------CHUNK NUM-----------------------
+logical chunk num: 476712
+unique chunk num: 229151
+base chunk num: 38863
+delta chunk num: 190288
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 3380090880
+uniquechunkSize is 121063016
+base chunk size: 103666436
+delta chunk size: 17396580
+-----------------METRICS-------------------------
+Overall Compression Ratio: 27.9201
+DCC: 0.830404
+DCR: 67.0573
+DCE: 96.8497
+-----------------Time------------------------------
+Version time: 4.62169s
+Throughput: 21.9224MiB/s
+Reduce data speed: 3.80644e+12MiB/s
+SF generation time: 0.0261518s
+SF generation throughput: 3874.24MiB/s
+MiDelta Time: 72.6523s
+IO Time: 4.38297s
+Decode Time: 12.8128s
+Encode Time: 53.733s
+-----------------OverHead--------------------------
+Index Overhead: 28.9235MiB
+FP Overhead: 24.476MiB
+SF Overhead: 4.44752MiB
+Recipe Overhead: 3.63702MiB
+SF number: 116589
+-----------------END-------------------------------
+2026-02-13 21:39:23 <Chunker>: chunking done.
+total_size is 8
+Version: 40
+-----------------CHUNK NUM-----------------------
+logical chunk num: 491741
+unique chunk num: 235547
+base chunk num: 39352
+delta chunk num: 196195
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 3487150080
+uniquechunkSize is 122574216
+base chunk size: 104728145
+delta chunk size: 17846071
+-----------------METRICS-------------------------
+Overall Compression Ratio: 28.4493
+DCC: 0.832934
+DCR: 67.3517
+DCE: 96.8882
+-----------------Time------------------------------
+Version time: 4.85897s
+Throughput: 21.0126MiB/s
+Reduce data speed: 3.62056e+12MiB/s
+SF generation time: 0.027816s
+SF generation throughput: 3670.53MiB/s
+MiDelta Time: 77.0737s
+IO Time: 4.6658s
+Decode Time: 13.7668s
+Encode Time: 56.7894s
+-----------------OverHead--------------------------
+Index Overhead: 29.6626MiB
+FP Overhead: 25.1591MiB
+SF Overhead: 4.50348MiB
+Recipe Overhead: 3.75169MiB
+SF number: 118056
+-----------------END-------------------------------
+2026-02-13 21:39:29 <Chunker>: chunking done.
+total_size is 8
+Version: 41
+-----------------CHUNK NUM-----------------------
+logical chunk num: 506527
+unique chunk num: 242271
+base chunk num: 40376
+delta chunk num: 201895
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 3592017920
+uniquechunkSize is 125194640
+base chunk size: 106897834
+delta chunk size: 18296806
+-----------------METRICS-------------------------
+Overall Compression Ratio: 28.6915
+DCC: 0.833344
+DCR: 67.6015
+DCE: 97.2732
+-----------------Time------------------------------
+Version time: 7.15556s
+Throughput: 13.9765MiB/s
+Reduce data speed: 2.45853e+12MiB/s
+SF generation time: 0.0299562s
+SF generation throughput: 3338.53MiB/s
+MiDelta Time: 83.7888s
+IO Time: 4.99943s
+Decode Time: 15.1832s
+Encode Time: 61.5924s
+-----------------OverHead--------------------------
+Index Overhead: 30.498MiB
+FP Overhead: 25.8773MiB
+SF Overhead: 4.62067MiB
+Recipe Overhead: 3.86449MiB
+SF number: 121128
+-----------------END-------------------------------
+2026-02-13 21:39:35 <Chunker>: chunking done.
+total_size is 8
+Version: 42
+-----------------CHUNK NUM-----------------------
+logical chunk num: 521305
+unique chunk num: 248465
+base chunk num: 40717
+delta chunk num: 207748
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 3696865280
+uniquechunkSize is 126093590
+base chunk size: 107361453
+delta chunk size: 18732137
+-----------------METRICS-------------------------
+Overall Compression Ratio: 29.3184
+DCC: 0.836126
+DCR: 67.899
+DCE: 97.1027
+-----------------Time------------------------------
+Version time: 4.632s
+Throughput: 21.5868MiB/s
+Reduce data speed: 3.79797e+12MiB/s
+SF generation time: 0.0267804s
+SF generation throughput: 3733.72MiB/s
+MiDelta Time: 87.9601s
+IO Time: 5.29214s
+Decode Time: 16.1089s
+Encode Time: 64.4092s
+-----------------OverHead--------------------------
+Index Overhead: 31.1986MiB
+FP Overhead: 26.5389MiB
+SF Overhead: 4.65969MiB
+Recipe Overhead: 3.97724MiB
+SF number: 122151
+-----------------END-------------------------------
+2026-02-13 21:39:40 <Chunker>: chunking done.
+total_size is 8
+Version: 43
+-----------------CHUNK NUM-----------------------
+logical chunk num: 536082
+unique chunk num: 254639
+base chunk num: 40897
+delta chunk num: 213742
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 3801712640
+uniquechunkSize is 126674075
+base chunk size: 107564040
+delta chunk size: 19110035
+-----------------METRICS-------------------------
+Overall Compression Ratio: 30.0118
+DCC: 0.839392
+DCR: 68.4206
+DCE: 97.3165
+-----------------Time------------------------------
+Version time: 4.94677s
+Throughput: 20.2133MiB/s
+Reduce data speed: 3.5563e+12MiB/s
+SF generation time: 0.0265035s
+SF generation throughput: 3772.72MiB/s
+MiDelta Time: 92.4601s
+IO Time: 5.59204s
+Decode Time: 17.1207s
+Encode Time: 67.4494s
+-----------------OverHead--------------------------
+Index Overhead: 31.8787MiB
+FP Overhead: 27.1984MiB
+SF Overhead: 4.68029MiB
+Recipe Overhead: 4.08998MiB
+SF number: 122691
+-----------------END-------------------------------
+2026-02-13 21:39:45 <Chunker>: chunking done.
+total_size is 8
+Version: 44
+-----------------CHUNK NUM-----------------------
+logical chunk num: 551062
+unique chunk num: 261704
+base chunk num: 41882
+delta chunk num: 219822
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 3907819520
+uniquechunkSize is 129763832
+base chunk size: 110139373
+delta chunk size: 19624459
+-----------------METRICS-------------------------
+Overall Compression Ratio: 30.1149
+DCC: 0.839964
+DCR: 68.5124
+DCE: 97.6183
+-----------------Time------------------------------
+Version time: 5.70837s
+Throughput: 17.7269MiB/s
+Reduce data speed: 3.08182e+12MiB/s
+SF generation time: 0.0314325s
+SF generation throughput: 3219.33MiB/s
+MiDelta Time: 97.7745s
+IO Time: 5.90254s
+Decode Time: 18.2394s
+Encode Time: 71.186s
+-----------------OverHead--------------------------
+Index Overhead: 32.746MiB
+FP Overhead: 27.953MiB
+SF Overhead: 4.79301MiB
+Recipe Overhead: 4.20427MiB
+SF number: 125646
+-----------------END-------------------------------
+2026-02-13 21:39:49 <Chunker>: chunking done.
+total_size is 8
+Version: 45
+-----------------CHUNK NUM-----------------------
+logical chunk num: 552701
+unique chunk num: 263087
+base chunk num: 42713
+delta chunk num: 220374
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 3918745600
+uniquechunkSize is 132009645
+base chunk size: 112226474
+delta chunk size: 19783171
+-----------------METRICS-------------------------
+Overall Compression Ratio: 29.6853
+DCC: 0.837647
+DCR: 68.1622
+DCE: 97.5356
+-----------------Time------------------------------
+Version time: 0.463741s
+Throughput: 22.4693MiB/s
+Reduce data speed: 3.79354e+13MiB/s
+SF generation time: 0.00642381s
+SF generation throughput: 1622.08MiB/s
+MiDelta Time: 98.0824s
+IO Time: 5.9225s
+Decode Time: 18.2787s
+Encode Time: 71.4275s
+-----------------OverHead--------------------------
+Index Overhead: 32.9888MiB
+FP Overhead: 28.1007MiB
+SF Overhead: 4.88811MiB
+Recipe Overhead: 4.21677MiB
+SF number: 128139
+-----------------END-------------------------------
+2026-02-13 21:39:53 <Chunker>: chunking done.
+total_size is 8
+Version: 46
+-----------------CHUNK NUM-----------------------
+logical chunk num: 569113
+unique chunk num: 271648
+base chunk num: 45102
+delta chunk num: 226546
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 4035194880
+uniquechunkSize is 138571470
+base chunk size: 117778990
+delta chunk size: 20792480
+-----------------METRICS-------------------------
+Overall Compression Ratio: 29.12
+DCC: 0.833969
+DCR: 66.7508
+DCE: 96.7456
+-----------------Time------------------------------
+Version time: 6.68366s
+Throughput: 16.6158MiB/s
+Reduce data speed: 2.63212e+12MiB/s
+SF generation time: 0.0391222s
+SF generation throughput: 2838.66MiB/s
+MiDelta Time: 104.288s
+IO Time: 6.25296s
+Decode Time: 19.4913s
+Encode Time: 75.9339s
+-----------------OverHead--------------------------
+Index Overhead: 34.1767MiB
+FP Overhead: 29.0151MiB
+SF Overhead: 5.16151MiB
+Recipe Overhead: 4.34199MiB
+SF number: 135306
+-----------------END-------------------------------
+2026-02-13 21:39:58 <Chunker>: chunking done.
+total_size is 8
+Version: 47
+-----------------CHUNK NUM-----------------------
+logical chunk num: 583896
+unique chunk num: 277788
+base chunk num: 45624
+delta chunk num: 232164
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 4140707840
+uniquechunkSize is 139834746
+base chunk size: 118561433
+delta chunk size: 21273313
+-----------------METRICS-------------------------
+Overall Compression Ratio: 29.6114
+DCC: 0.83576
+DCR: 66.8214
+DCE: 96.6152
+-----------------Time------------------------------
+Version time: 4.76952s
+Throughput: 21.0975MiB/s
+Reduce data speed: 3.68846e+12MiB/s
+SF generation time: 0.0260538s
+SF generation throughput: 3862.2MiB/s
+MiDelta Time: 108.604s
+IO Time: 6.50945s
+Decode Time: 20.3967s
+Encode Time: 78.9662s
+-----------------OverHead--------------------------
+Index Overhead: 34.8922MiB
+FP Overhead: 29.671MiB
+SF Overhead: 5.22125MiB
+Recipe Overhead: 4.45477MiB
+SF number: 136872
+-----------------END-------------------------------
+2026-02-13 21:40:03 <Chunker>: chunking done.
+total_size is 8
+Version: 48
+-----------------CHUNK NUM-----------------------
+logical chunk num: 598664
+unique chunk num: 283826
+base chunk num: 45935
+delta chunk num: 237891
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 4246231040
+uniquechunkSize is 140679472
+base chunk size: 118986813
+delta chunk size: 21692659
+-----------------METRICS-------------------------
+Overall Compression Ratio: 30.1837
+DCC: 0.838158
+DCR: 67.0984
+DCE: 96.6278
+-----------------Time------------------------------
+Version time: 4.8209s
+Throughput: 20.8747MiB/s
+Reduce data speed: 3.64915e+12MiB/s
+SF generation time: 0.0256526s
+SF generation throughput: 3922.99MiB/s
+MiDelta Time: 112.966s
+IO Time: 6.77438s
+Decode Time: 21.2945s
+Encode Time: 82.0375s
+-----------------OverHead--------------------------
+Index Overhead: 35.5727MiB
+FP Overhead: 30.3159MiB
+SF Overhead: 5.25684MiB
+Recipe Overhead: 4.56744MiB
+SF number: 137805
+-----------------END-------------------------------
+2026-02-13 21:40:08 <Chunker>: chunking done.
+total_size is 8
+Version: 49
+-----------------CHUNK NUM-----------------------
+logical chunk num: 615077
+unique chunk num: 290963
+base chunk num: 46427
+delta chunk num: 244536
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 4362680320
+uniquechunkSize is 141799542
+base chunk size: 119671229
+delta chunk size: 22128313
+-----------------METRICS-------------------------
+Overall Compression Ratio: 30.7665
+DCC: 0.840437
+DCR: 67.5837
+DCE: 97.0861
+-----------------Time------------------------------
+Version time: 4.80663s
+Throughput: 23.1045MiB/s
+Reduce data speed: 3.65999e+12MiB/s
+SF generation time: 0.0305492s
+SF generation throughput: 3635.28MiB/s
+MiDelta Time: 117.354s
+IO Time: 7.05944s
+Decode Time: 22.2088s
+Encode Time: 85.0928s
+-----------------OverHead--------------------------
+Index Overhead: 36.3913MiB
+FP Overhead: 31.0782MiB
+SF Overhead: 5.31315MiB
+Recipe Overhead: 4.69267MiB
+SF number: 139281
+-----------------END-------------------------------
+2026-02-13 21:40:12 <Chunker>: chunking done.
+total_size is 8
+Version: 50
+-----------------CHUNK NUM-----------------------
+logical chunk num: 629844
+unique chunk num: 296994
+base chunk num: 46691
+delta chunk num: 250303
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 4468203520
+uniquechunkSize is 142511555
+base chunk size: 120010014
+delta chunk size: 22501541
+-----------------METRICS-------------------------
+Overall Compression Ratio: 31.3533
+DCC: 0.842788
+DCR: 67.9834
+DCE: 97.2791
+-----------------Time------------------------------
+Version time: 4.30824s
+Throughput: 23.3587MiB/s
+Reduce data speed: 4.08338e+12MiB/s
+SF generation time: 0.0257014s
+SF generation throughput: 3915.54MiB/s
+MiDelta Time: 121.235s
+IO Time: 7.32501s
+Decode Time: 23.0483s
+Encode Time: 87.7441s
+-----------------OverHead--------------------------
+Index Overhead: 37.0657MiB
+FP Overhead: 31.7224MiB
+SF Overhead: 5.34336MiB
+Recipe Overhead: 4.80533MiB
+SF number: 140073
+-----------------END-------------------------------
+2026-02-13 21:40:18 <Chunker>: chunking done.
+total_size is 8
+Version: 51
+-----------------CHUNK NUM-----------------------
+logical chunk num: 646596
+unique chunk num: 305212
+base chunk num: 48204
+delta chunk num: 257008
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 4587223040
+uniquechunkSize is 147206268
+base chunk size: 123936781
+delta chunk size: 23269487
+-----------------METRICS-------------------------
+Overall Compression Ratio: 31.1619
+DCC: 0.842064
+DCR: 67.521
+DCE: 97.0039
+-----------------Time------------------------------
+Version time: 6.41374s
+Throughput: 17.6973MiB/s
+Reduce data speed: 2.74289e+12MiB/s
+SF generation time: 0.0367128s
+SF generation throughput: 3091.72MiB/s
+MiDelta Time: 127.186s
+IO Time: 7.66859s
+Decode Time: 24.2733s
+Encode Time: 91.9621s
+-----------------OverHead--------------------------
+Index Overhead: 38.1167MiB
+FP Overhead: 32.6002MiB
+SF Overhead: 5.51651MiB
+Recipe Overhead: 4.93314MiB
+SF number: 144612
+-----------------END-------------------------------
+2026-02-13 21:40:24 <Chunker>: chunking done.
+total_size is 8
+Version: 52
+-----------------CHUNK NUM-----------------------
+logical chunk num: 663350
+unique chunk num: 312512
+base chunk num: 48612
+delta chunk num: 263900
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 4706242560
+uniquechunkSize is 148252475
+base chunk size: 124516878
+delta chunk size: 23735597
+-----------------METRICS-------------------------
+Overall Compression Ratio: 31.7448
+DCC: 0.844448
+DCR: 67.934
+DCE: 97.3126
+-----------------Time------------------------------
+Version time: 5.7721s
+Throughput: 19.6646MiB/s
+Reduce data speed: 3.0478e+12MiB/s
+SF generation time: 0.0312046s
+SF generation throughput: 3637.48MiB/s
+MiDelta Time: 132.458s
+IO Time: 7.99745s
+Decode Time: 25.4194s
+Encode Time: 95.5973s
+-----------------OverHead--------------------------
+Index Overhead: 38.9431MiB
+FP Overhead: 33.3799MiB
+SF Overhead: 5.5632MiB
+Recipe Overhead: 5.06096MiB
+SF number: 145836
+-----------------END-------------------------------
+2026-02-13 21:40:30 <Chunker>: chunking done.
+total_size is 8
+Version: 53
+-----------------CHUNK NUM-----------------------
+logical chunk num: 680528
+unique chunk num: 321703
+base chunk num: 50606
+delta chunk num: 271097
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 4828692480
+uniquechunkSize is 154156732
+base chunk size: 129490553
+delta chunk size: 24666179
+-----------------METRICS-------------------------
+Overall Compression Ratio: 31.3233
+DCC: 0.842693
+DCR: 67.2128
+DCE: 96.9422
+-----------------Time------------------------------
+Version time: 7.94087s
+Throughput: 14.7059MiB/s
+Reduce data speed: 2.2154e+12MiB/s
+SF generation time: 0.0424043s
+SF generation throughput: 2753.9MiB/s
+MiDelta Time: 139.8s
+IO Time: 8.39525s
+Decode Time: 26.9277s
+Encode Time: 100.839s
+-----------------OverHead--------------------------
+Index Overhead: 40.153MiB
+FP Overhead: 34.3616MiB
+SF Overhead: 5.7914MiB
+Recipe Overhead: 5.19202MiB
+SF number: 151818
+-----------------END-------------------------------
+2026-02-13 21:40:38 <Chunker>: chunking done.
+total_size is 8
+Version: 54
+-----------------CHUNK NUM-----------------------
+logical chunk num: 697704
+unique chunk num: 329180
+base chunk num: 51030
+delta chunk num: 278150
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 4951142400
+uniquechunkSize is 155280344
+base chunk size: 130094893
+delta chunk size: 25185451
+-----------------METRICS-------------------------
+Overall Compression Ratio: 31.8852
+DCC: 0.844978
+DCR: 67.5016
+DCE: 97.0162
+-----------------Time------------------------------
+Version time: 6.69547s
+Throughput: 17.4413MiB/s
+Reduce data speed: 2.62748e+12MiB/s
+SF generation time: 0.0319178s
+SF generation throughput: 3658.69MiB/s
+MiDelta Time: 145.965s
+IO Time: 8.75356s
+Decode Time: 28.2587s
+Encode Time: 105.136s
+-----------------OverHead--------------------------
+Index Overhead: 41.0001MiB
+FP Overhead: 35.1602MiB
+SF Overhead: 5.83992MiB
+Recipe Overhead: 5.32306MiB
+SF number: 153090
+-----------------END-------------------------------
+2026-02-13 21:40:45 <Chunker>: chunking done.
+total_size is 8
+Version: 55
+-----------------CHUNK NUM-----------------------
+logical chunk num: 716913
+unique chunk num: 339936
+base chunk num: 54042
+delta chunk num: 285894
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 5094461440
+uniquechunkSize is 162705770
+base chunk size: 136604720
+delta chunk size: 26101050
+-----------------METRICS-------------------------
+Overall Compression Ratio: 31.3109
+DCC: 0.841023
+DCR: 67.0133
+DCE: 96.7776
+-----------------Time------------------------------
+Version time: 7.79383s
+Throughput: 17.5369MiB/s
+Reduce data speed: 2.25719e+12MiB/s
+SF generation time: 0.0536853s
+SF generation throughput: 2545.94MiB/s
+MiDelta Time: 153.096s
+IO Time: 9.14398s
+Decode Time: 29.7357s
+Encode Time: 110.203s
+-----------------OverHead--------------------------
+Index Overhead: 42.4937MiB
+FP Overhead: 36.3091MiB
+SF Overhead: 6.18462MiB
+Recipe Overhead: 5.46961MiB
+SF number: 162126
+-----------------END-------------------------------
+2026-02-13 21:40:53 <Chunker>: chunking done.
+total_size is 8
+Version: 56
+-----------------CHUNK NUM-----------------------
+logical chunk num: 736121
+unique chunk num: 347607
+base chunk num: 54532
+delta chunk num: 293075
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 5237780480
+uniquechunkSize is 163929239
+base chunk size: 137305605
+delta chunk size: 26623634
+-----------------METRICS-------------------------
+Overall Compression Ratio: 31.9515
+DCC: 0.843122
+DCR: 67.3171
+DCE: 96.8771
+-----------------Time------------------------------
+Version time: 6.34143s
+Throughput: 21.5535MiB/s
+Reduce data speed: 2.77417e+12MiB/s
+SF generation time: 0.0327841s
+SF generation throughput: 4169.08MiB/s
+MiDelta Time: 158.855s
+IO Time: 9.48858s
+Decode Time: 30.9517s
+Encode Time: 114.231s
+-----------------OverHead--------------------------
+Index Overhead: 43.3691MiB
+FP Overhead: 37.1284MiB
+SF Overhead: 6.24069MiB
+Recipe Overhead: 5.61616MiB
+SF number: 163596
+-----------------END-------------------------------
+2026-02-13 21:41:00 <Chunker>: chunking done.
+total_size is 8
+Version: 57
+-----------------CHUNK NUM-----------------------
+logical chunk num: 755449
+unique chunk num: 357406
+base chunk num: 56681
+delta chunk num: 300725
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 5383393280
+uniquechunkSize is 169501500
+base chunk size: 141963512
+delta chunk size: 27537988
+-----------------METRICS-------------------------
+Overall Compression Ratio: 31.7602
+DCC: 0.84141
+DCR: 66.9347
+DCE: 96.9275
+-----------------Time------------------------------
+Version time: 8.01976s
+Throughput: 17.3156MiB/s
+Reduce data speed: 2.1936e+12MiB/s
+SF generation time: 0.0490121s
+SF generation throughput: 2833.32MiB/s
+MiDelta Time: 166.153s
+IO Time: 9.87855s
+Decode Time: 32.4598s
+Encode Time: 119.431s
+-----------------OverHead--------------------------
+Index Overhead: 44.6617MiB
+FP Overhead: 38.1751MiB
+SF Overhead: 6.48663MiB
+Recipe Overhead: 5.76362MiB
+SF number: 170043
+-----------------END-------------------------------
+2026-02-13 21:41:07 <Chunker>: chunking done.
+total_size is 8
+Version: 58
+-----------------CHUNK NUM-----------------------
+logical chunk num: 774777
+unique chunk num: 365048
+base chunk num: 57186
+delta chunk num: 307862
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 5529006080
+uniquechunkSize is 170779349
+base chunk size: 142711280
+delta chunk size: 28068069
+-----------------METRICS-------------------------
+Overall Compression Ratio: 32.3751
+DCC: 0.843347
+DCR: 67.1968
+DCE: 97.0671
+-----------------Time------------------------------
+Version time: 7.19305s
+Throughput: 19.3057MiB/s
+Reduce data speed: 2.44572e+12MiB/s
+SF generation time: 0.0326491s
+SF generation throughput: 4253.32MiB/s
+MiDelta Time: 172.804s
+IO Time: 10.257s
+Decode Time: 33.9078s
+Encode Time: 124.064s
+-----------------OverHead--------------------------
+Index Overhead: 45.5358MiB
+FP Overhead: 38.9913MiB
+SF Overhead: 6.54442MiB
+Recipe Overhead: 5.91108MiB
+SF number: 171558
+-----------------END-------------------------------
+2026-02-13 21:41:15 <Chunker>: chunking done.
+total_size is 8
+Version: 59
+-----------------CHUNK NUM-----------------------
+logical chunk num: 794314
+unique chunk num: 374147
+base chunk num: 58773
+delta chunk num: 315374
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 5675765760
+uniquechunkSize is 175736291
+base chunk size: 146840650
+delta chunk size: 28895641
+-----------------METRICS-------------------------
+Overall Compression Ratio: 32.2971
+DCC: 0.842915
+DCR: 66.879
+DCE: 96.9088
+-----------------Time------------------------------
+Version time: 8.20155s
+Throughput: 17.0652MiB/s
+Reduce data speed: 2.14498e+12MiB/s
+SF generation time: 0.0406598s
+SF generation throughput: 3442.24MiB/s
+MiDelta Time: 180.364s
+IO Time: 10.6733s
+Decode Time: 35.5117s
+Encode Time: 129.389s
+-----------------OverHead--------------------------
+Index Overhead: 46.6892MiB
+FP Overhead: 39.9632MiB
+SF Overhead: 6.72604MiB
+Recipe Overhead: 6.06013MiB
+SF number: 176319
+-----------------END-------------------------------
+2026-02-13 21:41:23 <Chunker>: chunking done.
+total_size is 8
+Version: 60
+-----------------CHUNK NUM-----------------------
+logical chunk num: 813828
+unique chunk num: 381845
+base chunk num: 59227
+delta chunk num: 322618
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 5822525440
+uniquechunkSize is 176917938
+base chunk size: 147499608
+delta chunk size: 29418330
+-----------------METRICS-------------------------
+Overall Compression Ratio: 32.9109
+DCC: 0.844893
+DCR: 67.1677
+DCE: 97.0847
+-----------------Time------------------------------
+Version time: 7.009s
+Throughput: 19.9688MiB/s
+Reduce data speed: 2.50994e+12MiB/s
+SF generation time: 0.032956s
+SF generation throughput: 4246.91MiB/s
+MiDelta Time: 186.784s
+IO Time: 11.0609s
+Decode Time: 36.9182s
+Encode Time: 133.816s
+-----------------OverHead--------------------------
+Index Overhead: 47.5634MiB
+FP Overhead: 40.7854MiB
+SF Overhead: 6.77799MiB
+Recipe Overhead: 6.20901MiB
+SF number: 177681
+-----------------END-------------------------------
+2026-02-13 21:41:30 <Chunker>: chunking done.
+total_size is 8
+Version: 61
+-----------------CHUNK NUM-----------------------
+logical chunk num: 834400
+unique chunk num: 391349
+base chunk num: 61117
+delta chunk num: 330232
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 5977559040
+uniquechunkSize is 182118294
+base chunk size: 151927067
+delta chunk size: 30191227
+-----------------METRICS-------------------------
+Overall Compression Ratio: 32.8224
+DCC: 0.84383
+DCR: 67.0028
+DCE: 96.9588
+-----------------Time------------------------------
+Version time: 8.5914s
+Throughput: 17.2092MiB/s
+Reduce data speed: 2.04765e+12MiB/s
+SF generation time: 0.0436437s
+SF generation throughput: 3387.69MiB/s
+MiDelta Time: 194.715s
+IO Time: 11.4915s
+Decode Time: 38.6072s
+Encode Time: 139.406s
+-----------------OverHead--------------------------
+Index Overhead: 48.7949MiB
+FP Overhead: 41.8006MiB
+SF Overhead: 6.99429MiB
+Recipe Overhead: 6.36597MiB
+SF number: 183351
+-----------------END-------------------------------
+2026-02-13 21:41:38 <Chunker>: chunking done.
+total_size is 8
+Version: 62
+-----------------CHUNK NUM-----------------------
+logical chunk num: 854971
+unique chunk num: 399267
+base chunk num: 61449
+delta chunk num: 337818
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 6132592640
+uniquechunkSize is 183071469
+base chunk size: 152371316
+delta chunk size: 30700153
+-----------------METRICS-------------------------
+Overall Compression Ratio: 33.4984
+DCC: 0.846095
+DCR: 67.3675
+DCE: 97.1438
+-----------------Time------------------------------
+Version time: 7.20932s
+Throughput: 20.5084MiB/s
+Reduce data speed: 2.4402e+12MiB/s
+SF generation time: 0.0338345s
+SF generation throughput: 4369.84MiB/s
+MiDelta Time: 201.329s
+IO Time: 11.9012s
+Decode Time: 40.1293s
+Encode Time: 143.873s
+-----------------OverHead--------------------------
+Index Overhead: 49.6786MiB
+FP Overhead: 42.6463MiB
+SF Overhead: 7.03228MiB
+Recipe Overhead: 6.52291MiB
+SF number: 184347
+-----------------END-------------------------------
+2026-02-13 21:41:47 <Chunker>: chunking done.
+total_size is 8
+Version: 63
+-----------------CHUNK NUM-----------------------
+logical chunk num: 876701
+unique chunk num: 409537
+base chunk num: 63957
+delta chunk num: 345580
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 6298593280
+uniquechunkSize is 189128548
+base chunk size: 157501902
+delta chunk size: 31626646
+-----------------METRICS-------------------------
+Overall Compression Ratio: 33.3032
+DCC: 0.843831
+DCR: 66.9436
+DCE: 96.9403
+-----------------Time------------------------------
+Version time: 9.84495s
+Throughput: 16.0804MiB/s
+Reduce data speed: 1.78693e+12MiB/s
+SF generation time: 0.0488521s
+SF generation throughput: 3240.61MiB/s
+MiDelta Time: 210.47s
+IO Time: 12.3838s
+Decode Time: 42.163s
+Encode Time: 150.242s
+-----------------OverHead--------------------------
+Index Overhead: 51.0626MiB
+FP Overhead: 43.7433MiB
+SF Overhead: 7.3193MiB
+Recipe Overhead: 6.6887MiB
+SF number: 191871
+-----------------END-------------------------------
+2026-02-13 21:41:56 <Chunker>: chunking done.
+total_size is 8
+Version: 64
+-----------------CHUNK NUM-----------------------
+logical chunk num: 898439
+unique chunk num: 417641
+base chunk num: 64397
+delta chunk num: 353244
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 6464593920
+uniquechunkSize is 190270613
+base chunk size: 158112846
+delta chunk size: 32157767
+-----------------METRICS-------------------------
+Overall Compression Ratio: 33.9758
+DCC: 0.845808
+DCR: 67.2585
+DCE: 97.1498
+-----------------Time------------------------------
+Version time: 8.19848s
+Throughput: 19.3098MiB/s
+Reduce data speed: 2.14579e+12MiB/s
+SF generation time: 0.0345417s
+SF generation throughput: 4583.17MiB/s
+MiDelta Time: 218.044s
+IO Time: 12.8182s
+Decode Time: 43.8792s
+Encode Time: 155.435s
+-----------------OverHead--------------------------
+Index Overhead: 51.9785MiB
+FP Overhead: 44.6089MiB
+SF Overhead: 7.36965MiB
+Recipe Overhead: 6.85455MiB
+SF number: 193191
+-----------------END-------------------------------
+2026-02-13 21:42:05 <Chunker>: chunking done.
+total_size is 8
+Version: 65
+-----------------CHUNK NUM-----------------------
+logical chunk num: 920180
+unique chunk num: 429666
+base chunk num: 68430
+delta chunk num: 361236
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 6630082560
+uniquechunkSize is 198707113
+base chunk size: 165572583
+delta chunk size: 33134530
+-----------------METRICS-------------------------
+Overall Compression Ratio: 33.3661
+DCC: 0.840737
+DCR: 66.8039
+DCE: 97.0492
+-----------------Time------------------------------
+Version time: 7.95857s
+Throughput: 19.8305MiB/s
+Reduce data speed: 2.21047e+12MiB/s
+SF generation time: 0.0635725s
+SF generation throughput: 2482.56MiB/s
+MiDelta Time: 225.245s
+IO Time: 13.2373s
+Decode Time: 45.4831s
+Encode Time: 160.39s
+-----------------OverHead--------------------------
+Index Overhead: 53.7245MiB
+FP Overhead: 45.8933MiB
+SF Overhead: 7.83119MiB
+Recipe Overhead: 7.02042MiB
+SF number: 205290
+-----------------END-------------------------------
+2026-02-13 21:42:12 <Chunker>: chunking done.
+total_size is 8
+Version: 66
+-----------------CHUNK NUM-----------------------
+logical chunk num: 941921
+unique chunk num: 437824
+base chunk num: 68801
+delta chunk num: 369023
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 6795571200
+uniquechunkSize is 199784241
+base chunk size: 166077167
+delta chunk size: 33707074
+-----------------METRICS-------------------------
+Overall Compression Ratio: 34.0146
+DCC: 0.842857
+DCR: 67.0476
+DCE: 97.0552
+-----------------Time------------------------------
+Version time: 7.47559s
+Throughput: 21.1117MiB/s
+Reduce data speed: 2.35328e+12MiB/s
+SF generation time: 0.0348468s
+SF generation throughput: 4529.03MiB/s
+MiDelta Time: 232.084s
+IO Time: 13.6548s
+Decode Time: 47.0696s
+Encode Time: 165s
+-----------------OverHead--------------------------
+Index Overhead: 54.6383MiB
+FP Overhead: 46.7646MiB
+SF Overhead: 7.87365MiB
+Recipe Overhead: 7.18629MiB
+SF number: 206403
+-----------------END-------------------------------
+2026-02-13 21:42:20 <Chunker>: chunking done.
+total_size is 8
+Version: 67
+-----------------CHUNK NUM-----------------------
+logical chunk num: 964228
+unique chunk num: 448685
+base chunk num: 70894
+delta chunk num: 377791
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 6966896640
+uniquechunkSize is 205223880
+base chunk size: 170473257
+delta chunk size: 34750623
+-----------------METRICS-------------------------
+Overall Compression Ratio: 33.9478
+DCC: 0.841996
+DCR: 66.7324
+DCE: 97.0421
+-----------------Time------------------------------
+Version time: 9.6958s
+Throughput: 16.8515MiB/s
+Reduce data speed: 1.81441e+12MiB/s
+SF generation time: 0.0539946s
+SF generation throughput: 3026.02MiB/s
+MiDelta Time: 241.023s
+IO Time: 14.1454s
+Decode Time: 49.0847s
+Encode Time: 171.167s
+-----------------OverHead--------------------------
+Index Overhead: 56.0379MiB
+FP Overhead: 47.9247MiB
+SF Overhead: 8.11317MiB
+Recipe Overhead: 7.35648MiB
+SF number: 212682
+-----------------END-------------------------------
+2026-02-13 21:42:29 <Chunker>: chunking done.
+total_size is 8
+Version: 68
+-----------------CHUNK NUM-----------------------
+logical chunk num: 986536
+unique chunk num: 456982
+base chunk num: 71306
+delta chunk num: 385676
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 7138222080
+uniquechunkSize is 206345504
+base chunk size: 171045884
+delta chunk size: 35299620
+-----------------METRICS-------------------------
+Overall Compression Ratio: 34.5935
+DCC: 0.843963
+DCR: 67.024
+DCE: 97.1889
+-----------------Time------------------------------
+Version time: 8.49658s
+Throughput: 19.2299MiB/s
+Reduce data speed: 2.0705e+12MiB/s
+SF generation time: 0.035271s
+SF generation throughput: 4632.37MiB/s
+MiDelta Time: 248.866s
+IO Time: 14.6024s
+Decode Time: 50.9031s
+Encode Time: 176.489s
+-----------------OverHead--------------------------
+Index Overhead: 56.9713MiB
+FP Overhead: 48.8109MiB
+SF Overhead: 8.16032MiB
+Recipe Overhead: 7.52667MiB
+SF number: 213918
+-----------------END-------------------------------
+2026-02-13 21:42:39 <Chunker>: chunking done.
+total_size is 8
+Version: 69
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1012627
+unique chunk num: 470202
+base chunk num: 75843
+delta chunk num: 394359
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 7340984320
+uniquechunkSize is 215660389
+base chunk size: 179211728
+delta chunk size: 36448661
+-----------------METRICS-------------------------
+Overall Compression Ratio: 34.0396
+DCC: 0.838701
+DCR: 66.4742
+DCE: 96.8261
+-----------------Time------------------------------
+Version time: 10.1986s
+Throughput: 18.9604MiB/s
+Reduce data speed: 1.72496e+12MiB/s
+SF generation time: 0.0655144s
+SF generation throughput: 2951.55MiB/s
+MiDelta Time: 258.181s
+IO Time: 15.1064s
+Decode Time: 52.9474s
+Encode Time: 182.982s
+-----------------OverHead--------------------------
+Index Overhead: 58.9025MiB
+FP Overhead: 50.223MiB
+SF Overhead: 8.67954MiB
+Recipe Overhead: 7.72573MiB
+SF number: 227529
+-----------------END-------------------------------
+2026-02-13 21:42:48 <Chunker>: chunking done.
+total_size is 8
+Version: 70
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1038715
+unique chunk num: 478787
+base chunk num: 76284
+delta chunk num: 402503
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 7543746560
+uniquechunkSize is 216853980
+base chunk size: 179844681
+delta chunk size: 37009299
+-----------------METRICS-------------------------
+Overall Compression Ratio: 34.7872
+DCC: 0.840672
+DCR: 66.7857
+DCE: 96.9747
+-----------------Time------------------------------
+Version time: 8.76496s
+Throughput: 22.0616MiB/s
+Reduce data speed: 2.0071e+12MiB/s
+SF generation time: 0.036762s
+SF generation throughput: 5260.03MiB/s
+MiDelta Time: 266.211s
+IO Time: 15.574s
+Decode Time: 54.8153s
+Encode Time: 188.422s
+-----------------OverHead--------------------------
+Index Overhead: 59.87MiB
+FP Overhead: 51.14MiB
+SF Overhead: 8.73001MiB
+Recipe Overhead: 7.92477MiB
+SF number: 228852
+-----------------END-------------------------------
+2026-02-13 21:42:58 <Chunker>: chunking done.
+total_size is 8
+Version: 71
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1065640
+unique chunk num: 489541
+base chunk num: 78974
+delta chunk num: 410567
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 7752652800
+uniquechunkSize is 224628360
+base chunk size: 186616583
+delta chunk size: 38011777
+-----------------METRICS-------------------------
+Overall Compression Ratio: 34.5132
+DCC: 0.838677
+DCR: 66.348
+DCE: 96.7844
+-----------------Time------------------------------
+Version time: 8.90609s
+Throughput: 22.3699MiB/s
+Reduce data speed: 1.9753e+12MiB/s
+SF generation time: 0.04871s
+SF generation throughput: 4090.1MiB/s
+MiDelta Time: 274.278s
+IO Time: 16.0476s
+Decode Time: 56.6505s
+Encode Time: 193.924s
+-----------------OverHead--------------------------
+Index Overhead: 61.3265MiB
+FP Overhead: 52.2886MiB
+SF Overhead: 9.03786MiB
+Recipe Overhead: 8.13019MiB
+SF number: 236922
+-----------------END-------------------------------
+2026-02-13 21:43:06 <Chunker>: chunking done.
+total_size is 8
+Version: 72
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1092570
+unique chunk num: 498294
+base chunk num: 79536
+delta chunk num: 418758
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 7961559040
+uniquechunkSize is 226013474
+base chunk size: 187390167
+delta chunk size: 38623307
+-----------------METRICS-------------------------
+Overall Compression Ratio: 35.226
+DCC: 0.840383
+DCR: 66.5587
+DCE: 96.877
+-----------------Time------------------------------
+Version time: 7.88887s
+Throughput: 25.2544MiB/s
+Reduce data speed: 2.23e+12MiB/s
+SF generation time: 0.0372236s
+SF generation throughput: 5352.21MiB/s
+MiDelta Time: 281.398s
+IO Time: 16.4814s
+Decode Time: 58.327s
+Encode Time: 198.694s
+-----------------OverHead--------------------------
+Index Overhead: 62.3257MiB
+FP Overhead: 53.2235MiB
+SF Overhead: 9.10217MiB
+Recipe Overhead: 8.33565MiB
+SF number: 238608
+-----------------END-------------------------------
+2026-02-13 21:43:15 <Chunker>: chunking done.
+total_size is 8
+Version: 73
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1121384
+unique chunk num: 510632
+base chunk num: 83073
+delta chunk num: 427559
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 8186951680
+uniquechunkSize is 236404987
+base chunk size: 196677500
+delta chunk size: 39727487
+-----------------METRICS-------------------------
+Overall Compression Ratio: 34.631
+DCC: 0.837313
+DCR: 66.0946
+DCE: 96.6818
+-----------------Time------------------------------
+Version time: 8.87191s
+Throughput: 24.2283MiB/s
+Reduce data speed: 1.98291e+12MiB/s
+SF generation time: 0.0593868s
+SF generation throughput: 3619.51MiB/s
+MiDelta Time: 289.456s
+IO Time: 16.9441s
+Decode Time: 60.11s
+Encode Time: 204.26s
+-----------------OverHead--------------------------
+Index Overhead: 64.0483MiB
+FP Overhead: 54.5414MiB
+SF Overhead: 9.50695MiB
+Recipe Overhead: 8.55548MiB
+SF number: 249219
+-----------------END-------------------------------
+2026-02-13 21:43:23 <Chunker>: chunking done.
+total_size is 8
+Version: 74
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1150202
+unique chunk num: 519550
+base chunk num: 83485
+delta chunk num: 436065
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 8412344320
+uniquechunkSize is 237549252
+base chunk size: 197245576
+delta chunk size: 40303676
+-----------------METRICS-------------------------
+Overall Compression Ratio: 35.4131
+DCC: 0.839313
+DCR: 66.4002
+DCE: 96.8391
+-----------------Time------------------------------
+Version time: 7.61311s
+Throughput: 28.2343MiB/s
+Reduce data speed: 2.31078e+12MiB/s
+SF generation time: 0.03788s
+SF generation throughput: 5674.52MiB/s
+MiDelta Time: 296.282s
+IO Time: 17.3812s
+Decode Time: 61.7605s
+Encode Time: 208.759s
+-----------------OverHead--------------------------
+Index Overhead: 65.048MiB
+FP Overhead: 55.4939MiB
+SF Overhead: 9.5541MiB
+Recipe Overhead: 8.77534MiB
+SF number: 250455
+-----------------END-------------------------------
+2026-02-13 21:43:31 <Chunker>: chunking done.
+total_size is 8
+Version: 75
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1179087
+unique chunk num: 529997
+base chunk num: 85056
+delta chunk num: 444941
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 8638289920
+uniquechunkSize is 242183573
+base chunk size: 200920227
+delta chunk size: 41263346
+-----------------METRICS-------------------------
+Overall Compression Ratio: 35.6684
+DCC: 0.839516
+DCR: 66.188
+DCE: 96.7662
+-----------------Time------------------------------
+Version time: 11.1972s
+Throughput: 19.244MiB/s
+Reduce data speed: 1.57113e+12MiB/s
+SF generation time: 0.0463994s
+SF generation throughput: 4643.99MiB/s
+MiDelta Time: 306.608s
+IO Time: 17.9457s
+Decode Time: 64.1835s
+Encode Time: 215.78s
+-----------------OverHead--------------------------
+Index Overhead: 66.3437MiB
+FP Overhead: 56.6098MiB
+SF Overhead: 9.73389MiB
+Recipe Overhead: 8.99572MiB
+SF number: 255168
+-----------------END-------------------------------
+2026-02-13 21:43:42 <Chunker>: chunking done.
+total_size is 8
+Version: 76
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1207978
+unique chunk num: 539047
+base chunk num: 85559
+delta chunk num: 453488
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 8864235520
+uniquechunkSize is 243499122
+base chunk size: 201643937
+delta chunk size: 41855185
+-----------------METRICS-------------------------
+Overall Compression Ratio: 36.4036
+DCC: 0.841277
+DCR: 66.4646
+DCE: 96.9078
+-----------------Time------------------------------
+Version time: 8.78919s
+Throughput: 24.5163MiB/s
+Reduce data speed: 2.00157e+12MiB/s
+SF generation time: 0.0384841s
+SF generation throughput: 5599.16MiB/s
+MiDelta Time: 314.585s
+IO Time: 18.4427s
+Decode Time: 66.075s
+Encode Time: 221.102s
+-----------------OverHead--------------------------
+Index Overhead: 67.3679MiB
+FP Overhead: 57.5764MiB
+SF Overhead: 9.79145MiB
+Recipe Overhead: 9.21614MiB
+SF number: 256677
+-----------------END-------------------------------
+2026-02-13 21:43:51 <Chunker>: chunking done.
+total_size is 8
+Version: 77
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1236808
+unique chunk num: 549142
+base chunk num: 86605
+delta chunk num: 462537
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 9090201600
+uniquechunkSize is 246751779
+base chunk size: 203997527
+delta chunk size: 42754252
+-----------------METRICS-------------------------
+Overall Compression Ratio: 36.8395
+DCC: 0.84229
+DCR: 66.3923
+DCE: 96.8945
+-----------------Time------------------------------
+Version time: 8.72732s
+Throughput: 24.6924MiB/s
+Reduce data speed: 2.01576e+12MiB/s
+SF generation time: 0.0453097s
+SF generation throughput: 4756.11MiB/s
+MiDelta Time: 322.486s
+IO Time: 18.9383s
+Decode Time: 68.0172s
+Encode Time: 226.294s
+-----------------OverHead--------------------------
+Index Overhead: 68.5658MiB
+FP Overhead: 58.6547MiB
+SF Overhead: 9.91116MiB
+Recipe Overhead: 9.4361MiB
+SF number: 259815
+-----------------END-------------------------------
+2026-02-13 21:43:59 <Chunker>: chunking done.
+total_size is 8
+Version: 78
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1265631
+unique chunk num: 558115
+base chunk num: 86986
+delta chunk num: 471129
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 9316167680
+uniquechunkSize is 247851135
+base chunk size: 204518480
+delta chunk size: 43332655
+-----------------METRICS-------------------------
+Overall Compression Ratio: 37.5878
+DCC: 0.844143
+DCR: 66.6835
+DCE: 97.0371
+-----------------Time------------------------------
+Version time: 8.84692s
+Throughput: 24.3585MiB/s
+Reduce data speed: 1.98851e+12MiB/s
+SF generation time: 0.0382054s
+SF generation throughput: 5640.52MiB/s
+MiDelta Time: 330.527s
+IO Time: 19.4443s
+Decode Time: 69.9739s
+Encode Time: 231.596s
+-----------------OverHead--------------------------
+Index Overhead: 69.5679MiB
+FP Overhead: 59.6131MiB
+SF Overhead: 9.95476MiB
+Recipe Overhead: 9.656MiB
+SF number: 260958
+-----------------END-------------------------------
+2026-02-13 21:44:11 <Chunker>: chunking done.
+total_size is 8
+Version: 79
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1294550
+unique chunk num: 568736
+base chunk num: 88585
+delta chunk num: 480151
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 9542328320
+uniquechunkSize is 252452362
+base chunk size: 208018380
+delta chunk size: 44433982
+-----------------METRICS-------------------------
+Overall Compression Ratio: 37.7985
+DCC: 0.844242
+DCR: 66.3167
+DCE: 96.8926
+-----------------Time------------------------------
+Version time: 13.5533s
+Throughput: 15.9137MiB/s
+Reduce data speed: 1.298e+12MiB/s
+SF generation time: 0.0477233s
+SF generation throughput: 4519.46MiB/s
+MiDelta Time: 343.193s
+IO Time: 20.0998s
+Decode Time: 72.9571s
+Encode Time: 240.257s
+-----------------OverHead--------------------------
+Index Overhead: 70.8853MiB
+FP Overhead: 60.7476MiB
+SF Overhead: 10.1377MiB
+Recipe Overhead: 9.87663MiB
+SF number: 265755
+-----------------END-------------------------------
+2026-02-13 21:44:22 <Chunker>: chunking done.
+total_size is 8
+Version: 80
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1323457
+unique chunk num: 577879
+base chunk num: 89062
+delta chunk num: 488817
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 9768488960
+uniquechunkSize is 253684488
+base chunk size: 208695976
+delta chunk size: 44988512
+-----------------METRICS-------------------------
+Overall Compression Ratio: 38.5064
+DCC: 0.845881
+DCR: 66.6438
+DCE: 97.3628
+-----------------Time------------------------------
+Version time: 10.6373s
+Throughput: 20.2762MiB/s
+Reduce data speed: 1.65383e+12MiB/s
+SF generation time: 0.038811s
+SF generation throughput: 5557.28MiB/s
+MiDelta Time: 353.044s
+IO Time: 20.6613s
+Decode Time: 75.3899s
+Encode Time: 246.791s
+-----------------OverHead--------------------------
+Index Overhead: 71.9165MiB
+FP Overhead: 61.7241MiB
+SF Overhead: 10.1923MiB
+Recipe Overhead: 10.0972MiB
+SF number: 267186
+-----------------END-------------------------------
+2026-02-13 21:44:34 <Chunker>: chunking done.
+total_size is 8
+Version: 81
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1352452
+unique chunk num: 588478
+base chunk num: 90736
+delta chunk num: 497742
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 9995366400
+uniquechunkSize is 258670110
+base chunk size: 212631363
+delta chunk size: 46038747
+-----------------METRICS-------------------------
+Overall Compression Ratio: 38.6414
+DCC: 0.845812
+DCR: 66.3337
+DCE: 97.192
+-----------------Time------------------------------
+Version time: 12.1023s
+Throughput: 17.8782MiB/s
+Reduce data speed: 1.45362e+12MiB/s
+SF generation time: 0.0477032s
+SF generation throughput: 4535.7MiB/s
+MiDelta Time: 364.248s
+IO Time: 21.2649s
+Decode Time: 78.0441s
+Encode Time: 254.396s
+-----------------OverHead--------------------------
+Index Overhead: 73.2401MiB
+FP Overhead: 62.8562MiB
+SF Overhead: 10.3839MiB
+Recipe Overhead: 10.3184MiB
+SF number: 272208
+-----------------END-------------------------------
+2026-02-13 21:44:45 <Chunker>: chunking done.
+total_size is 8
+Version: 82
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1381445
+unique chunk num: 597662
+base chunk num: 91220
+delta chunk num: 506442
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 10222243840
+uniquechunkSize is 259970703
+base chunk size: 213313584
+delta chunk size: 46657119
+-----------------METRICS-------------------------
+Overall Compression Ratio: 39.3208
+DCC: 0.847372
+DCR: 66.5596
+DCE: 97.2615
+-----------------Time------------------------------
+Version time: 10.4951s
+Throughput: 20.6161MiB/s
+Reduce data speed: 1.67623e+12MiB/s
+SF generation time: 0.0388674s
+SF generation throughput: 5566.81MiB/s
+MiDelta Time: 373.966s
+IO Time: 21.8284s
+Decode Time: 80.4386s
+Encode Time: 260.836s
+-----------------OverHead--------------------------
+Index Overhead: 74.2765MiB
+FP Overhead: 63.8372MiB
+SF Overhead: 10.4393MiB
+Recipe Overhead: 10.5396MiB
+SF number: 273660
+-----------------END-------------------------------
+2026-02-13 21:44:57 <Chunker>: chunking done.
+total_size is 8
+Version: 83
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1410698
+unique chunk num: 608276
+base chunk num: 92672
+delta chunk num: 515604
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 10451087360
+uniquechunkSize is 264562774
+base chunk size: 216921455
+delta chunk size: 47641319
+-----------------METRICS-------------------------
+Overall Compression Ratio: 39.5032
+DCC: 0.847648
+DCR: 66.363
+DCE: 97.0923
+-----------------Time------------------------------
+Version time: 13.6396s
+Throughput: 16.0007MiB/s
+Reduce data speed: 1.28979e+12MiB/s
+SF generation time: 0.0469776s
+SF generation throughput: 4645.67MiB/s
+MiDelta Time: 386.731s
+IO Time: 22.5085s
+Decode Time: 83.4967s
+Encode Time: 269.476s
+-----------------OverHead--------------------------
+Index Overhead: 75.5764MiB
+FP Overhead: 64.9709MiB
+SF Overhead: 10.6055MiB
+Recipe Overhead: 10.7628MiB
+SF number: 278016
+-----------------END-------------------------------
+2026-02-13 21:45:10 <Chunker>: chunking done.
+total_size is 8
+Version: 84
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1439954
+unique chunk num: 617539
+base chunk num: 93168
+delta chunk num: 524371
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 10679930880
+uniquechunkSize is 265872470
+base chunk size: 217620169
+delta chunk size: 48252301
+-----------------METRICS-------------------------
+Overall Compression Ratio: 40.1694
+DCC: 0.84913
+DCR: 66.5981
+DCE: 97.2154
+-----------------Time------------------------------
+Version time: 11.9402s
+Throughput: 18.278MiB/s
+Reduce data speed: 1.47336e+12MiB/s
+SF generation time: 0.039212s
+SF generation throughput: 5565.7MiB/s
+MiDelta Time: 397.845s
+IO Time: 23.1313s
+Decode Time: 86.2045s
+Encode Time: 276.908s
+-----------------OverHead--------------------------
+Index Overhead: 76.6225MiB
+FP Overhead: 65.9603MiB
+SF Overhead: 10.6622MiB
+Recipe Overhead: 10.986MiB
+SF number: 279504
+-----------------END-------------------------------
+2026-02-13 21:45:23 <Chunker>: chunking done.
+total_size is 8
+Version: 85
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1469589
+unique chunk num: 628272
+base chunk num: 94922
+delta chunk num: 533350
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 10911846400
+uniquechunkSize is 271052258
+base chunk size: 221807238
+delta chunk size: 49245020
+-----------------METRICS-------------------------
+Overall Compression Ratio: 40.2574
+DCC: 0.848916
+DCR: 66.3832
+DCE: 97.0979
+-----------------Time------------------------------
+Version time: 13.8839s
+Throughput: 15.9301MiB/s
+Reduce data speed: 1.2671e+12MiB/s
+SF generation time: 0.0482352s
+SF generation throughput: 4585.28MiB/s
+MiDelta Time: 410.821s
+IO Time: 23.8096s
+Decode Time: 89.2744s
+Encode Time: 285.75s
+-----------------OverHead--------------------------
+Index Overhead: 77.9697MiB
+FP Overhead: 67.1067MiB
+SF Overhead: 10.863MiB
+Recipe Overhead: 11.2121MiB
+SF number: 284766
+-----------------END-------------------------------
+2026-02-13 21:45:35 <Chunker>: chunking done.
+total_size is 8
+Version: 86
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1499230
+unique chunk num: 637672
+base chunk num: 95582
+delta chunk num: 542090
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 11143761920
+uniquechunkSize is 272660154
+base chunk size: 222777772
+delta chunk size: 49882382
+-----------------METRICS-------------------------
+Overall Compression Ratio: 40.8705
+DCC: 0.850108
+DCR: 66.5749
+DCE: 97.1678
+-----------------Time------------------------------
+Version time: 10.6102s
+Throughput: 20.8452MiB/s
+Reduce data speed: 1.65804e+12MiB/s
+SF generation time: 0.0398321s
+SF generation throughput: 5552.61MiB/s
+MiDelta Time: 420.605s
+IO Time: 24.4089s
+Decode Time: 91.7473s
+Encode Time: 292.126s
+-----------------OverHead--------------------------
+Index Overhead: 79.0492MiB
+FP Overhead: 68.1107MiB
+SF Overhead: 10.9385MiB
+Recipe Overhead: 11.4382MiB
+SF number: 286746
+-----------------END-------------------------------
+2026-02-13 21:45:49 <Chunker>: chunking done.
+total_size is 8
+Version: 87
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1530507
+unique chunk num: 650322
+base chunk num: 98583
+delta chunk num: 551739
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 11391488000
+uniquechunkSize is 281334613
+base chunk size: 230219786
+delta chunk size: 51114827
+-----------------METRICS-------------------------
+Overall Compression Ratio: 40.4909
+DCC: 0.848409
+DCR: 66.1637
+DCE: 96.9561
+-----------------Time------------------------------
+Version time: 15.0515s
+Throughput: 15.6961MiB/s
+Reduce data speed: 1.1688e+12MiB/s
+SF generation time: 0.0609328s
+SF generation throughput: 3877.22MiB/s
+MiDelta Time: 434.64s
+IO Time: 25.1324s
+Decode Time: 95.1129s
+Encode Time: 301.648s
+-----------------OverHead--------------------------
+Index Overhead: 80.7438MiB
+FP Overhead: 69.4619MiB
+SF Overhead: 11.2819MiB
+Recipe Overhead: 11.6768MiB
+SF number: 295749
+-----------------END-------------------------------
+2026-02-13 21:46:02 <Chunker>: chunking done.
+total_size is 8
+Version: 88
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1561782
+unique chunk num: 660171
+base chunk num: 99278
+delta chunk num: 560893
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 11639214080
+uniquechunkSize is 282926150
+base chunk size: 231136218
+delta chunk size: 51789932
+-----------------METRICS-------------------------
+Overall Compression Ratio: 41.1387
+DCC: 0.849618
+DCR: 66.3537
+DCE: 97.0123
+-----------------Time------------------------------
+Version time: 11.7209s
+Throughput: 20.1563MiB/s
+Reduce data speed: 1.50093e+12MiB/s
+SF generation time: 0.0417268s
+SF generation throughput: 5661.82MiB/s
+MiDelta Time: 445.491s
+IO Time: 25.757s
+Decode Time: 97.8102s
+Encode Time: 308.814s
+-----------------OverHead--------------------------
+Index Overhead: 81.8753MiB
+FP Overhead: 70.5139MiB
+SF Overhead: 11.3615MiB
+Recipe Overhead: 11.9155MiB
+SF number: 297834
+-----------------END-------------------------------
+2026-02-13 21:46:15 <Chunker>: chunking done.
+total_size is 8
+Version: 89
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1593601
+unique chunk num: 671110
+base chunk num: 100963
+delta chunk num: 570147
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 11890647040
+uniquechunkSize is 288648099
+base chunk size: 236035041
+delta chunk size: 52613058
+-----------------METRICS-------------------------
+Overall Compression Ratio: 41.1943
+DCC: 0.849558
+DCR: 66.367
+DCE: 96.9235
+-----------------Time------------------------------
+Version time: 12.9428s
+Throughput: 18.5265MiB/s
+Reduce data speed: 1.35922e+12MiB/s
+SF generation time: 0.0476201s
+SF generation throughput: 5035.38MiB/s
+MiDelta Time: 457.496s
+IO Time: 26.4384s
+Decode Time: 100.844s
+Encode Time: 316.708s
+-----------------OverHead--------------------------
+Index Overhead: 83.2366MiB
+FP Overhead: 71.6823MiB
+SF Overhead: 11.5543MiB
+Recipe Overhead: 12.1582MiB
+SF number: 302889
+-----------------END-------------------------------
+2026-02-13 21:46:27 <Chunker>: chunking done.
+total_size is 8
+Version: 90
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1625424
+unique chunk num: 681111
+base chunk num: 101543
+delta chunk num: 579568
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 12142080000
+uniquechunkSize is 290085001
+base chunk size: 236807947
+delta chunk size: 53277054
+-----------------METRICS-------------------------
+Overall Compression Ratio: 41.857
+DCC: 0.850916
+DCR: 66.5858
+DCE: 96.9635
+-----------------Time------------------------------
+Version time: 13.3527s
+Throughput: 17.9578MiB/s
+Reduce data speed: 1.3175e+12MiB/s
+SF generation time: 0.042383s
+SF generation throughput: 5657.58MiB/s
+MiDelta Time: 469.957s
+IO Time: 27.1454s
+Decode Time: 104.108s
+Encode Time: 324.787s
+-----------------OverHead--------------------------
+Index Overhead: 84.3712MiB
+FP Overhead: 72.7505MiB
+SF Overhead: 11.6207MiB
+Recipe Overhead: 12.401MiB
+SF number: 304629
+-----------------END-------------------------------
+2026-02-13 21:46:43 <Chunker>: chunking done.
+total_size is 8
+Version: 91
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1657369
+unique chunk num: 692596
+base chunk num: 102830
+delta chunk num: 589766
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 12394649600
+uniquechunkSize is 294145858
+base chunk size: 239834701
+delta chunk size: 54311157
+-----------------METRICS-------------------------
+Overall Compression Ratio: 42.1378
+DCC: 0.85153
+DCR: 66.4679
+DCE: 96.8483
+-----------------Time------------------------------
+Version time: 15.9673s
+Throughput: 15.0851MiB/s
+Reduce data speed: 1.10176e+12MiB/s
+SF generation time: 0.0512652s
+SF generation throughput: 4698.49MiB/s
+MiDelta Time: 484.923s
+IO Time: 27.9447s
+Decode Time: 107.868s
+Encode Time: 334.711s
+-----------------OverHead--------------------------
+Index Overhead: 85.7452MiB
+FP Overhead: 73.9772MiB
+SF Overhead: 11.768MiB
+Recipe Overhead: 12.6447MiB
+SF number: 308490
+-----------------END-------------------------------
+2026-02-13 21:46:57 <Chunker>: chunking done.
+total_size is 8
+Version: 92
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1689309
+unique chunk num: 702718
+base chunk num: 103284
+delta chunk num: 599434
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 12647219200
+uniquechunkSize is 295399030
+base chunk size: 240406233
+delta chunk size: 54992797
+-----------------METRICS-------------------------
+Overall Compression Ratio: 42.814
+DCC: 0.853022
+DCR: 66.6837
+DCE: 96.9282
+-----------------Time------------------------------
+Version time: 12.8778s
+Throughput: 18.7043MiB/s
+Reduce data speed: 1.36609e+12MiB/s
+SF generation time: 0.0430007s
+SF generation throughput: 5601.52MiB/s
+MiDelta Time: 496.839s
+IO Time: 28.6665s
+Decode Time: 111.082s
+Encode Time: 342.258s
+-----------------OverHead--------------------------
+Index Overhead: 86.8783MiB
+FP Overhead: 75.0584MiB
+SF Overhead: 11.8199MiB
+Recipe Overhead: 12.8884MiB
+SF number: 309852
+-----------------END-------------------------------
+2026-02-13 21:47:09 <Chunker>: chunking done.
+total_size is 8
+Version: 93
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1721539
+unique chunk num: 714097
+base chunk num: 104473
+delta chunk num: 609624
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 12901662720
+uniquechunkSize is 299136334
+base chunk size: 243211940
+delta chunk size: 55924394
+-----------------METRICS-------------------------
+Overall Compression Ratio: 43.1297
+DCC: 0.853699
+DCR: 66.6825
+DCE: 96.8785
+-----------------Time------------------------------
+Version time: 14.3905s
+Throughput: 16.8623MiB/s
+Reduce data speed: 1.22249e+12MiB/s
+SF generation time: 0.0499643s
+SF generation throughput: 4856.59MiB/s
+MiDelta Time: 510.179s
+IO Time: 29.4196s
+Decode Time: 114.46s
+Encode Time: 351.028s
+-----------------OverHead--------------------------
+Index Overhead: 88.2298MiB
+FP Overhead: 76.2738MiB
+SF Overhead: 11.956MiB
+Recipe Overhead: 13.1343MiB
+SF number: 313419
+-----------------END-------------------------------
+2026-02-13 21:47:23 <Chunker>: chunking done.
+total_size is 8
+Version: 94
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1753774
+unique chunk num: 724359
+base chunk num: 105013
+delta chunk num: 619346
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 13156106240
+uniquechunkSize is 300505843
+base chunk size: 243913190
+delta chunk size: 56592653
+-----------------METRICS-------------------------
+Overall Compression Ratio: 43.7799
+DCC: 0.855026
+DCR: 66.9099
+DCE: 96.971
+-----------------Time------------------------------
+Version time: 12.7482s
+Throughput: 19.0346MiB/s
+Reduce data speed: 1.37998e+12MiB/s
+SF generation time: 0.0434475s
+SF generation throughput: 5585.05MiB/s
+MiDelta Time: 522.059s
+IO Time: 30.1507s
+Decode Time: 117.675s
+Encode Time: 358.525s
+-----------------OverHead--------------------------
+Index Overhead: 89.3877MiB
+FP Overhead: 77.3699MiB
+SF Overhead: 12.0178MiB
+Recipe Overhead: 13.3802MiB
+SF number: 315039
+-----------------END-------------------------------
+2026-02-13 21:47:37 <Chunker>: chunking done.
+total_size is 8
+Version: 95
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1785495
+unique chunk num: 735704
+base chunk num: 106426
+delta chunk num: 629278
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 13406945280
+uniquechunkSize is 304785380
+base chunk size: 247235233
+delta chunk size: 57550147
+-----------------METRICS-------------------------
+Overall Compression Ratio: 43.9882
+DCC: 0.855341
+DCR: 66.853
+DCE: 96.8764
+-----------------Time------------------------------
+Version time: 14.2248s
+Throughput: 16.817MiB/s
+Reduce data speed: 1.23673e+12MiB/s
+SF generation time: 0.0498979s
+SF generation throughput: 4794.16MiB/s
+MiDelta Time: 535.332s
+IO Time: 30.9008s
+Decode Time: 121.102s
+Encode Time: 367.181s
+-----------------OverHead--------------------------
+Index Overhead: 90.7612MiB
+FP Overhead: 78.5817MiB
+SF Overhead: 12.1795MiB
+Recipe Overhead: 13.6222MiB
+SF number: 319278
+-----------------END-------------------------------
+2026-02-13 21:47:50 <Chunker>: chunking done.
+total_size is 8
+Version: 96
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1817216
+unique chunk num: 745845
+base chunk num: 106944
+delta chunk num: 638901
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 13657784320
+uniquechunkSize is 306153379
+base chunk size: 247936549
+delta chunk size: 58216830
+-----------------METRICS-------------------------
+Overall Compression Ratio: 44.6109
+DCC: 0.856614
+DCR: 67.0615
+DCE: 96.9464
+-----------------Time------------------------------
+Version time: 13.5886s
+Throughput: 17.6043MiB/s
+Reduce data speed: 1.29463e+12MiB/s
+SF generation time: 0.0427874s
+SF generation throughput: 5590.87MiB/s
+MiDelta Time: 548.039s
+IO Time: 31.6516s
+Decode Time: 124.62s
+Encode Time: 375.171s
+-----------------OverHead--------------------------
+Index Overhead: 91.9036MiB
+FP Overhead: 79.6648MiB
+SF Overhead: 12.2388MiB
+Recipe Overhead: 13.8643MiB
+SF number: 320832
+-----------------END-------------------------------
+2026-02-13 21:48:05 <Chunker>: chunking done.
+total_size is 8
+Version: 97
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1849335
+unique chunk num: 756995
+base chunk num: 108156
+delta chunk num: 648839
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 13911674880
+uniquechunkSize is 309886151
+base chunk size: 250774894
+delta chunk size: 59111257
+-----------------METRICS-------------------------
+Overall Compression Ratio: 44.8929
+DCC: 0.857125
+DCR: 67.0563
+DCE: 96.83
+-----------------Time------------------------------
+Version time: 15.5273s
+Throughput: 15.5937MiB/s
+Reduce data speed: 1.13298e+12MiB/s
+SF generation time: 0.0487963s
+SF generation throughput: 4962.03MiB/s
+MiDelta Time: 562.607s
+IO Time: 32.4694s
+Decode Time: 128.686s
+Encode Time: 384.354s
+-----------------OverHead--------------------------
+Index Overhead: 93.2333MiB
+FP Overhead: 80.8558MiB
+SF Overhead: 12.3775MiB
+Recipe Overhead: 14.1093MiB
+SF number: 324468
+-----------------END-------------------------------
+2026-02-13 21:48:20 <Chunker>: chunking done.
+total_size is 8
+Version: 98
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1881447
+unique chunk num: 767285
+base chunk num: 108578
+delta chunk num: 658707
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 14165565440
+uniquechunkSize is 311123515
+base chunk size: 251342028
+delta chunk size: 59781487
+-----------------METRICS-------------------------
+Overall Compression Ratio: 45.5304
+DCC: 0.858491
+DCR: 67.2747
+DCE: 96.9057
+-----------------Time------------------------------
+Version time: 13.6547s
+Throughput: 17.7323MiB/s
+Reduce data speed: 1.28836e+12MiB/s
+SF generation time: 0.0432459s
+SF generation throughput: 5598.89MiB/s
+MiDelta Time: 575.382s
+IO Time: 33.2312s
+Decode Time: 132.293s
+Encode Time: 392.299s
+-----------------OverHead--------------------------
+Index Overhead: 94.3806MiB
+FP Overhead: 81.9549MiB
+SF Overhead: 12.4258MiB
+Recipe Overhead: 14.3543MiB
+SF number: 325734
+-----------------END-------------------------------
+2026-02-13 21:48:35 <Chunker>: chunking done.
+total_size is 8
+Version: 99
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1914491
+unique chunk num: 779835
+base chunk num: 110744
+delta chunk num: 669091
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 14427801600
+uniquechunkSize is 316754816
+base chunk size: 255933851
+delta chunk size: 60820965
+-----------------METRICS-------------------------
+Overall Compression Ratio: 45.5488
+DCC: 0.85799
+DCR: 67.176
+DCE: 96.8226
+-----------------Time------------------------------
+Version time: 15.7408s
+Throughput: 15.8878MiB/s
+Reduce data speed: 1.11762e+12MiB/s
+SF generation time: 0.0570976s
+SF generation throughput: 4380.01MiB/s
+MiDelta Time: 590.115s
+IO Time: 34.0711s
+Decode Time: 136.16s
+Encode Time: 401.824s
+-----------------OverHead--------------------------
+Index Overhead: 95.969MiB
+FP Overhead: 83.2954MiB
+SF Overhead: 12.6736MiB
+Recipe Overhead: 14.6064MiB
+SF number: 332232
+-----------------END-------------------------------
+2026-02-13 21:48:50 <Chunker>: chunking done.
+total_size is 8
+Version: 100
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1947530
+unique chunk num: 790359
+base chunk num: 111341
+delta chunk num: 679018
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 14690037760
+uniquechunkSize is 318286721
+base chunk size: 256776250
+delta chunk size: 61510471
+-----------------METRICS-------------------------
+Overall Compression Ratio: 46.1535
+DCC: 0.859126
+DCR: 67.3748
+DCE: 96.8974
+-----------------Time------------------------------
+Version time: 16.037s
+Throughput: 15.5944MiB/s
+Reduce data speed: 1.09698e+12MiB/s
+SF generation time: 0.0443312s
+SF generation throughput: 5641.36MiB/s
+MiDelta Time: 605.208s
+IO Time: 34.934s
+Decode Time: 140.472s
+Encode Time: 411.218s
+-----------------OverHead--------------------------
+Index Overhead: 97.1614MiB
+FP Overhead: 84.4194MiB
+SF Overhead: 12.742MiB
+Recipe Overhead: 14.8585MiB
+SF number: 334023
+-----------------END-------------------------------
+Time taken by for loop: 662.207 s 
+2026-02-13 21:48:58 <DFree>: logical Chunk Num is 1947530
+2026-02-13 21:48:58 <DFree>: unique Chunk Num is 790359
+2026-02-13 21:48:58 <DFree>: Total logical size is 14690037760
+2026-02-13 21:48:58 <DFree>: Total compressed size is 318286721
+2026-02-13 21:48:58 <DFree>: Compression ratio is 46.1535
+logical read bytes: 0
+physical read bytes: 314484050
+read amplification: inf
+write path is ./restoreFile/glibc-2.1.2.tar
+----------------------restore-------------------------
+Version 0
+Restore time: 0.0461934 s
+Version logical read bytes: 17036305
+Version physical read bytes: 16769818
+Version read amplification: 0.984358
+before visit container: 22
+after visit container: 28
+total visit container: 50
+IO in restore: 0.0262452 s 
+Decode time in restore: 0.00472521 s 
+Decode count in restore: 1372
+decode count / restore chunk: 0.238775
+write path is ./restoreFile/glibc-2.1.91.tar
+----------------------restore-------------------------
+Version 1
+Restore time: 0.0566045 s
+Version logical read bytes: 16187419
+Version physical read bytes: 29350118
+Version read amplification: 1.81314
+before visit container: 2180
+after visit container: 2021
+total visit container: 4201
+IO in restore: 0.0569677 s 
+Decode time in restore: 0.0111381 s 
+Decode count in restore: 4550
+decode count / restore chunk: 0.343086
+write path is ./restoreFile/glibc-2.1.92.tar
+----------------------restore-------------------------
+Version 2
+Restore time: 0.0612307 s
+Version logical read bytes: 13553533
+Version physical read bytes: 33544337
+Version read amplification: 2.47495
+before visit container: 6363
+after visit container: 6956
+total visit container: 13319
+IO in restore: 0.0869652 s 
+Decode time in restore: 0.0205475 s 
+Decode count in restore: 10955
+decode count / restore chunk: 0.511772
+write path is ./restoreFile/glibc-2.1.93.tar
+----------------------restore-------------------------
+Version 3
+Restore time: 0.0629086 s
+Version logical read bytes: 12914571
+Version physical read bytes: 37737574
+Version read amplification: 2.92209
+before visit container: 10427
+after visit container: 12851
+total visit container: 23278
+IO in restore: 0.117479 s 
+Decode time in restore: 0.0310849 s 
+Decode count in restore: 18290
+decode count / restore chunk: 0.620189
+write path is ./restoreFile/glibc-2.1.94.tar
+----------------------restore-------------------------
+Version 4
+Restore time: 0.0648065 s
+Version logical read bytes: 13370007
+Version physical read bytes: 37737574
+Version read amplification: 2.82255
+before visit container: 14645
+after visit container: 19514
+total visit container: 34159
+IO in restore: 0.147147 s 
+Decode time in restore: 0.0429611 s 
+Decode count in restore: 26616
+decode count / restore chunk: 0.699795
+write path is ./restoreFile/glibc-2.1.95.tar
+----------------------restore-------------------------
+Version 5
+Restore time: 0.0698212 s
+Version logical read bytes: 13634422
+Version physical read bytes: 41931100
+Version read amplification: 3.07539
+before visit container: 19544
+after visit container: 26935
+total visit container: 46479
+IO in restore: 0.180182 s 
+Decode time in restore: 0.0555941 s 
+Decode count in restore: 35692
+decode count / restore chunk: 0.762552
+write path is ./restoreFile/glibc-2.1.96.tar
+----------------------restore-------------------------
+Version 6
+Restore time: 0.0702 s
+Version logical read bytes: 13650824
+Version physical read bytes: 41931100
+Version read amplification: 3.07169
+before visit container: 21982
+after visit container: 36950
+total visit container: 58932
+IO in restore: 0.211271 s 
+Decode time in restore: 0.0703802 s 
+Decode count in restore: 47491
+decode count / restore chunk: 0.853848
+write path is ./restoreFile/glibc-2.1.97.tar
+----------------------restore-------------------------
+Version 7
+Restore time: 0.0767487 s
+Version logical read bytes: 15125416
+Version physical read bytes: 46124550
+Version read amplification: 3.04947
+before visit container: 26741
+after visit container: 46708
+total visit container: 73449
+IO in restore: 0.246756 s 
+Decode time in restore: 0.0853476 s 
+Decode count in restore: 59224
+decode count / restore chunk: 0.912472
+write path is ./restoreFile/glibc-2.2.1.tar
+----------------------restore-------------------------
+Version 8
+Restore time: 0.075192 s
+Version logical read bytes: 15435816
+Version physical read bytes: 46124550
+Version read amplification: 2.98815
+before visit container: 31211
+after visit container: 56635
+total visit container: 87846
+IO in restore: 0.279886 s 
+Decode time in restore: 0.101233 s 
+Decode count in restore: 71429
+decode count / restore chunk: 0.962175
+write path is ./restoreFile/glibc-2.2.2.tar
+----------------------restore-------------------------
+Version 9
+Restore time: 0.0812555 s
+Version logical read bytes: 15540051
+Version physical read bytes: 50317264
+Version read amplification: 3.23791
+before visit container: 35541
+after visit container: 69196
+total visit container: 104737
+IO in restore: 0.315938 s 
+Decode time in restore: 0.119682 s 
+Decode count in restore: 86820
+decode count / restore chunk: 1.03826
+write path is ./restoreFile/glibc-2.2.3.tar
+----------------------restore-------------------------
+Version 10
+Restore time: 0.0863182 s
+Version logical read bytes: 17968411
+Version physical read bytes: 54508942
+Version read amplification: 3.0336
+before visit container: 40066
+after visit container: 81879
+total visit container: 121945
+IO in restore: 0.354571 s 
+Decode time in restore: 0.138777 s 
+Decode count in restore: 102315
+decode count / restore chunk: 1.09117
+write path is ./restoreFile/glibc-2.2.4.tar
+----------------------restore-------------------------
+Version 11
+Restore time: 0.0943866 s
+Version logical read bytes: 21285798
+Version physical read bytes: 62896000
+Version read amplification: 2.95483
+before visit container: 44380
+after visit container: 92826
+total visit container: 137206
+IO in restore: 0.398791 s 
+Decode time in restore: 0.158828 s 
+Decode count in restore: 116032
+decode count / restore chunk: 1.10773
+write path is ./restoreFile/glibc-2.2.5.tar
+----------------------restore-------------------------
+Version 12
+Restore time: 0.0965624 s
+Version logical read bytes: 18573733
+Version physical read bytes: 62896000
+Version read amplification: 3.38629
+before visit container: 49800
+after visit container: 106260
+total visit container: 156060
+IO in restore: 0.442094 s 
+Decode time in restore: 0.18145 s 
+Decode count in restore: 132484
+decode count / restore chunk: 1.1434
+write path is ./restoreFile/glibc-2.2.tar
+----------------------restore-------------------------
+Version 13
+Restore time: 0.0841573 s
+Version logical read bytes: 14891143
+Version physical read bytes: 62896000
+Version read amplification: 4.22372
+before visit container: 54982
+after visit container: 119431
+total visit container: 174413
+IO in restore: 0.481116 s 
+Decode time in restore: 0.200041 s 
+Decode count in restore: 148455
+decode count / restore chunk: 1.1861
+write path is ./restoreFile/glibc-2.3.1.tar
+----------------------restore-------------------------
+Version 14
+Restore time: 0.107874 s
+Version logical read bytes: 21318161
+Version physical read bytes: 75473800
+Version read amplification: 3.54035
+before visit container: 60668
+after visit container: 132853
+total visit container: 193521
+IO in restore: 0.5317 s 
+Decode time in restore: 0.22439 s 
+Decode count in restore: 164624
+decode count / restore chunk: 1.20154
+write path is ./restoreFile/glibc-2.3.2.tar
+----------------------restore-------------------------
+Version 15
+Restore time: 0.113519 s
+Version logical read bytes: 21014213
+Version physical read bytes: 79667448
+Version read amplification: 3.79112
+before visit container: 67094
+after visit container: 149238
+total visit container: 216332
+IO in restore: 0.582665 s 
+Decode time in restore: 0.25232 s 
+Decode count in restore: 183992
+decode count / restore chunk: 1.23189
+write path is ./restoreFile/glibc-2.3.3.tar
+----------------------restore-------------------------
+Version 16
+Restore time: 0.120608 s
+Version logical read bytes: 21759462
+Version physical read bytes: 83860047
+Version read amplification: 3.85396
+before visit container: 73886
+after visit container: 166816
+total visit container: 240702
+IO in restore: 0.636738 s 
+Decode time in restore: 0.282427 s 
+Decode count in restore: 204574
+decode count / restore chunk: 1.26027
+write path is ./restoreFile/glibc-2.3.4.tar
+----------------------restore-------------------------
+Version 17
+Restore time: 0.123136 s
+Version logical read bytes: 22362233
+Version physical read bytes: 88047257
+Version read amplification: 3.93732
+before visit container: 80727
+after visit container: 184215
+total visit container: 264942
+IO in restore: 0.692319 s 
+Decode time in restore: 0.312764 s 
+Decode count in restore: 224770
+decode count / restore chunk: 1.28089
+write path is ./restoreFile/glibc-2.3.5.tar
+----------------------restore-------------------------
+Version 18
+Restore time: 0.131097 s
+Version logical read bytes: 21087574
+Version physical read bytes: 92238801
+Version read amplification: 4.37408
+before visit container: 87472
+after visit container: 205962
+total visit container: 293434
+IO in restore: 0.75056 s 
+Decode time in restore: 0.346552 s 
+Decode count in restore: 249625
+decode count / restore chunk: 1.32128
+write path is ./restoreFile/glibc-2.3.6.tar
+----------------------restore-------------------------
+Version 19
+Restore time: 0.131938 s
+Version logical read bytes: 20239635
+Version physical read bytes: 92238801
+Version read amplification: 4.55734
+before visit container: 95124
+after visit container: 228948
+total visit container: 324072
+IO in restore: 0.808076 s 
+Decode time in restore: 0.381619 s 
+Decode count in restore: 275807
+decode count / restore chunk: 1.36279
+write path is ./restoreFile/glibc-2.3.tar
+----------------------restore-------------------------
+Version 20
+Restore time: 0.115935 s
+Version logical read bytes: 18480640
+Version physical read bytes: 92238801
+Version read amplification: 4.9911
+before visit container: 101863
+after visit container: 247266
+total visit container: 349129
+IO in restore: 0.860792 s 
+Decode time in restore: 0.410632 s 
+Decode count in restore: 297131
+decode count / restore chunk: 1.387
+write path is ./restoreFile/glibc-2.4.tar
+----------------------restore-------------------------
+Version 21
+Restore time: 0.136132 s
+Version logical read bytes: 25684887
+Version physical read bytes: 100626664
+Version read amplification: 3.91774
+before visit container: 108491
+after visit container: 266021
+total visit container: 374512
+IO in restore: 0.923967 s 
+Decode time in restore: 0.443047 s 
+Decode count in restore: 318747
+decode count / restore chunk: 1.39677
+write path is ./restoreFile/glibc-2.5.1.tar
+----------------------restore-------------------------
+Version 22
+Restore time: 0.139881 s
+Version logical read bytes: 23552115
+Version physical read bytes: 104820865
+Version read amplification: 4.45059
+before visit container: 115382
+after visit container: 286805
+total visit container: 402187
+IO in restore: 0.987979 s 
+Decode time in restore: 0.477622 s 
+Decode count in restore: 342841
+decode count / restore chunk: 1.41494
+write path is ./restoreFile/glibc-2.5.tar
+----------------------restore-------------------------
+Version 23
+Restore time: 0.141797 s
+Version logical read bytes: 22191973
+Version physical read bytes: 104820865
+Version read amplification: 4.72337
+before visit container: 123362
+after visit container: 311371
+total visit container: 434733
+IO in restore: 1.05061 s 
+Decode time in restore: 0.51515 s 
+Decode count in restore: 370765
+decode count / restore chunk: 1.44634
+write path is ./restoreFile/glibc-2.6.1.tar
+----------------------restore-------------------------
+Version 24
+Restore time: 0.144012 s
+Version logical read bytes: 23431954
+Version physical read bytes: 104820865
+Version read amplification: 4.47342
+before visit container: 130736
+after visit container: 336467
+total visit container: 467203
+IO in restore: 1.11404 s 
+Decode time in restore: 0.553449 s 
+Decode count in restore: 399628
+decode count / restore chunk: 1.47666
+write path is ./restoreFile/glibc-2.6.tar
+----------------------restore-------------------------
+Version 25
+Restore time: 0.147676 s
+Version logical read bytes: 23026255
+Version physical read bytes: 104820865
+Version read amplification: 4.55223
+before visit container: 133864
+after visit container: 365323
+total visit container: 499187
+IO in restore: 1.17779 s 
+Decode time in restore: 0.594412 s 
+Decode count in restore: 432113
+decode count / restore chunk: 1.51672
+write path is ./restoreFile/glibc-2.7.tar
+----------------------restore-------------------------
+Version 26
+Restore time: 0.148607 s
+Version logical read bytes: 24240213
+Version physical read bytes: 109015173
+Version read amplification: 4.49729
+before visit container: 141612
+after visit container: 390027
+total visit container: 531639
+IO in restore: 1.24436 s 
+Decode time in restore: 0.633114 s 
+Decode count in restore: 460960
+decode count / restore chunk: 1.53955
+write path is ./restoreFile/glibc-2.8.tar
+----------------------restore-------------------------
+Version 27
+Restore time: 0.1525 s
+Version logical read bytes: 23677577
+Version physical read bytes: 113208324
+Version read amplification: 4.78125
+before visit container: 148763
+after visit container: 416084
+total visit container: 564847
+IO in restore: 1.31254 s 
+Decode time in restore: 0.673586 s 
+Decode count in restore: 491495
+decode count / restore chunk: 1.5651
+write path is ./restoreFile/glibc-2.9.tar
+----------------------restore-------------------------
+Version 28
+Restore time: 0.157894 s
+Version logical read bytes: 23784166
+Version physical read bytes: 113208324
+Version read amplification: 4.75982
+before visit container: 156933
+after visit container: 446142
+total visit container: 603075
+IO in restore: 1.38147 s 
+Decode time in restore: 0.717697 s 
+Decode count in restore: 526675
+decode count / restore chunk: 1.6019
+write path is ./restoreFile/glibc-2.10.1.tar
+----------------------restore-------------------------
+Version 29
+Restore time: 0.154022 s
+Version logical read bytes: 24061424
+Version physical read bytes: 113208324
+Version read amplification: 4.70497
+before visit container: 164120
+after visit container: 474394
+total visit container: 638514
+IO in restore: 1.44824 s 
+Decode time in restore: 0.760812 s 
+Decode count in restore: 559883
+decode count / restore chunk: 1.63023
+write path is ./restoreFile/glibc-2.10.2.tar
+----------------------restore-------------------------
+Version 30
+Restore time: 0.161668 s
+Version logical read bytes: 23604741
+Version physical read bytes: 117402529
+Version read amplification: 4.97368
+before visit container: 172514
+after visit container: 506390
+total visit container: 678904
+IO in restore: 1.51841 s 
+Decode time in restore: 0.807171 s 
+Decode count in restore: 597486
+decode count / restore chunk: 1.66848
+write path is ./restoreFile/glibc-2.10.tar
+----------------------restore-------------------------
+Version 31
+Restore time: 0.16275 s
+Version logical read bytes: 23416630
+Version physical read bytes: 117402529
+Version read amplification: 5.01364
+before visit container: 180327
+after visit container: 539324
+total visit container: 719651
+IO in restore: 1.58775 s 
+Decode time in restore: 0.855115 s 
+Decode count in restore: 636081
+decode count / restore chunk: 1.70641
+write path is ./restoreFile/glibc-2.11.1.tar
+----------------------restore-------------------------
+Version 32
+Restore time: 0.161884 s
+Version logical read bytes: 23883341
+Version physical read bytes: 117402529
+Version read amplification: 4.91567
+before visit container: 187664
+after visit container: 571917
+total visit container: 759581
+IO in restore: 1.6568 s 
+Decode time in restore: 0.902369 s 
+Decode count in restore: 674301
+decode count / restore chunk: 1.73984
+write path is ./restoreFile/glibc-2.11.2.tar
+----------------------restore-------------------------
+Version 33
+Restore time: 0.16611 s
+Version logical read bytes: 23396405
+Version physical read bytes: 117402529
+Version read amplification: 5.01797
+before visit container: 190789
+after visit container: 608765
+total visit container: 799554
+IO in restore: 1.72663 s 
+Decode time in restore: 0.952563 s 
+Decode count in restore: 717096
+decode count / restore chunk: 1.78215
+write path is ./restoreFile/glibc-2.11.3.tar
+----------------------restore-------------------------
+Version 34
+Restore time: 0.172158 s
+Version logical read bytes: 23368860
+Version physical read bytes: 121596812
+Version read amplification: 5.20337
+before visit container: 197156
+after visit container: 645821
+total visit container: 842977
+IO in restore: 1.79839 s 
+Decode time in restore: 1.00598 s 
+Decode count in restore: 764354
+decode count / restore chunk: 1.83214
+write path is ./restoreFile/glibc-2.11.tar
+----------------------restore-------------------------
+Version 35
+Restore time: 0.167365 s
+Version logical read bytes: 23391892
+Version physical read bytes: 121596812
+Version read amplification: 5.19825
+before visit container: 205755
+after visit container: 679676
+total visit container: 885431
+IO in restore: 1.87031 s 
+Decode time in restore: 1.05537 s 
+Decode count in restore: 804637
+decode count / restore chunk: 1.8626
+write path is ./restoreFile/glibc-2.12.1.tar
+----------------------restore-------------------------
+Version 36
+Restore time: 0.169019 s
+Version logical read bytes: 23651184
+Version physical read bytes: 121596812
+Version read amplification: 5.14126
+before visit container: 214063
+after visit container: 715802
+total visit container: 929865
+IO in restore: 1.94169 s 
+Decode time in restore: 1.10638 s 
+Decode count in restore: 847389
+decode count / restore chunk: 1.89614
+write path is ./restoreFile/glibc-2.12.2.tar
+----------------------restore-------------------------
+Version 37
+Restore time: 0.170067 s
+Version logical read bytes: 23281270
+Version physical read bytes: 121596812
+Version read amplification: 5.22295
+before visit container: 221757
+after visit container: 753058
+total visit container: 974815
+IO in restore: 2.01307 s 
+Decode time in restore: 1.15829 s 
+Decode count in restore: 891523
+decode count / restore chunk: 1.93051
+write path is ./restoreFile/glibc-2.12.tar
+----------------------restore-------------------------
+Version 38
+Restore time: 0.16964 s
+Version logical read bytes: 23314644
+Version physical read bytes: 121596812
+Version read amplification: 5.21547
+before visit container: 229397
+after visit container: 790290
+total visit container: 1019687
+IO in restore: 2.08369 s 
+Decode time in restore: 1.21049 s 
+Decode count in restore: 935474
+decode count / restore chunk: 1.96235
+write path is ./restoreFile/glibc-2.13.tar
+----------------------restore-------------------------
+Version 39
+Restore time: 0.177228 s
+Version logical read bytes: 23861339
+Version physical read bytes: 125789181
+Version read amplification: 5.27167
+before visit container: 237313
+after visit container: 828200
+total visit container: 1065513
+IO in restore: 2.15929 s 
+Decode time in restore: 1.26447 s 
+Decode count in restore: 981861
+decode count / restore chunk: 1.9967
+write path is ./restoreFile/glibc-2.14.1.tar
+----------------------restore-------------------------
+Version 40
+Restore time: 0.170603 s
+Version logical read bytes: 23652751
+Version physical read bytes: 125789181
+Version read amplification: 5.31816
+before visit container: 245340
+after visit container: 866319
+total visit container: 1111659
+IO in restore: 2.23069 s 
+Decode time in restore: 1.31714 s 
+Decode count in restore: 1027137
+decode count / restore chunk: 2.0278
+write path is ./restoreFile/glibc-2.14.9000.tar
+----------------------restore-------------------------
+Version 41
+Restore time: 0.178808 s
+Version logical read bytes: 22687783
+Version physical read bytes: 129983273
+Version read amplification: 5.72922
+before visit container: 251307
+after visit container: 908643
+total visit container: 1159950
+IO in restore: 2.30572 s 
+Decode time in restore: 1.37419 s 
+Decode count in restore: 1077095
+decode count / restore chunk: 2.06615
+write path is ./restoreFile/glibc-2.14.tar
+----------------------restore-------------------------
+Version 42
+Restore time: 0.182839 s
+Version logical read bytes: 22383439
+Version physical read bytes: 129983273
+Version read amplification: 5.80712
+before visit container: 259607
+after visit container: 953206
+total visit container: 1212813
+IO in restore: 2.38047 s 
+Decode time in restore: 1.43427 s 
+Decode count in restore: 1131613
+decode count / restore chunk: 2.1109
+write path is ./restoreFile/glibc-2.15.tar
+----------------------restore-------------------------
+Version 43
+Restore time: 0.183865 s
+Version logical read bytes: 23900019
+Version physical read bytes: 129983273
+Version read amplification: 5.43863
+before visit container: 263749
+after visit container: 998251
+total visit container: 1262000
+IO in restore: 2.45471 s 
+Decode time in restore: 1.49515 s 
+Decode count in restore: 1186162
+decode count / restore chunk: 2.1525
+write path is ./restoreFile/glibc-2.16-ports-before-merge.tar
+----------------------restore-------------------------
+Version 44
+Restore time: 0.0406579 s
+Version logical read bytes: 2957980
+Version physical read bytes: 113211409
+Version read amplification: 38.2732
+before visit container: 264320
+after visit container: 1000083
+total visit container: 1264403
+IO in restore: 2.487 s 
+Decode time in restore: 1.49901 s 
+Decode count in restore: 1188423
+decode count / restore chunk: 2.15021
+write path is ./restoreFile/glibc-2.16-ports-merge.tar
+----------------------restore-------------------------
+Version 45
+Restore time: 0.181554 s
+Version logical read bytes: 27867248
+Version physical read bytes: 142563484
+Version read amplification: 5.11581
+before visit container: 272622
+after visit container: 1032010
+total visit container: 1304632
+IO in restore: 2.56829 s 
+Decode time in restore: 1.54905 s 
+Decode count in restore: 1226842
+decode count / restore chunk: 2.15571
+write path is ./restoreFile/glibc-2.16-tps.tar
+----------------------restore-------------------------
+Version 46
+Restore time: 0.173482 s
+Version logical read bytes: 23089064
+Version physical read bytes: 142563484
+Version read amplification: 6.1745
+before visit container: 280961
+after visit container: 1066327
+total visit container: 1347288
+IO in restore: 2.64481 s 
+Decode time in restore: 1.59953 s 
+Decode count in restore: 1267455
+decode count / restore chunk: 2.17069
+write path is ./restoreFile/glibc-2.16.0.tar
+----------------------restore-------------------------
+Version 47
+Restore time: 0.173633 s
+Version logical read bytes: 22843992
+Version physical read bytes: 142563484
+Version read amplification: 6.24074
+before visit container: 287793
+after visit container: 1102141
+total visit container: 1389934
+IO in restore: 2.72015 s 
+Decode time in restore: 1.65128 s 
+Decode count in restore: 1309735
+decode count / restore chunk: 2.18776
+write path is ./restoreFile/glibc-2.16.90.tar
+----------------------restore-------------------------
+Version 48
+Restore time: 0.189186 s
+Version logical read bytes: 24402840
+Version physical read bytes: 142563484
+Version read amplification: 5.84209
+before visit container: 296533
+after visit container: 1140964
+total visit container: 1437497
+IO in restore: 2.80077 s 
+Decode time in restore: 1.70831 s 
+Decode count in restore: 1356092
+decode count / restore chunk: 2.20475
+write path is ./restoreFile/glibc-2.16.tar
+----------------------restore-------------------------
+Version 49
+Restore time: 0.17977 s
+Version logical read bytes: 22728974
+Version physical read bytes: 142563484
+Version read amplification: 6.27232
+before visit container: 300067
+after visit container: 1180250
+total visit container: 1480317
+IO in restore: 2.87774 s 
+Decode time in restore: 1.76374 s 
+Decode count in restore: 1403430
+decode count / restore chunk: 2.22822
+write path is ./restoreFile/glibc-2.17.90.tar
+----------------------restore-------------------------
+Version 50
+Restore time: 0.197392 s
+Version logical read bytes: 26523280
+Version physical read bytes: 150944948
+Version read amplification: 5.69104
+before visit container: 309475
+after visit container: 1221814
+total visit container: 1531289
+IO in restore: 2.96237 s 
+Decode time in restore: 1.82357 s 
+Decode count in restore: 1452991
+decode count / restore chunk: 2.24714
+write path is ./restoreFile/glibc-2.17.tar
+----------------------restore-------------------------
+Version 51
+Restore time: 0.202941 s
+Version logical read bytes: 24730148
+Version physical read bytes: 150944948
+Version read amplification: 6.10368
+before visit container: 319262
+after visit container: 1266448
+total visit container: 1585710
+IO in restore: 3.04606 s 
+Decode time in restore: 1.88892 s 
+Decode count in restore: 1508746
+decode count / restore chunk: 2.27443
+write path is ./restoreFile/glibc-2.18.90.tar
+----------------------restore-------------------------
+Version 52
+Restore time: 0.202756 s
+Version logical read bytes: 26853542
+Version physical read bytes: 155139224
+Version read amplification: 5.77724
+before visit container: 328645
+after visit container: 1308014
+total visit container: 1636659
+IO in restore: 3.1331 s 
+Decode time in restore: 1.95056 s 
+Decode count in restore: 1557891
+decode count / restore chunk: 2.28924
+write path is ./restoreFile/glibc-2.18.tar
+----------------------restore-------------------------
+Version 53
+Restore time: 0.211919 s
+Version logical read bytes: 24706006
+Version physical read bytes: 159331771
+Version read amplification: 6.44911
+before visit container: 336159
+after visit container: 1355311
+total visit container: 1691470
+IO in restore: 3.2224 s 
+Decode time in restore: 2.01756 s 
+Decode count in restore: 1613749
+decode count / restore chunk: 2.31294
+write path is ./restoreFile/glibc-2.19.90.tar
+----------------------restore-------------------------
+Version 54
+Restore time: 0.216996 s
+Version logical read bytes: 29394858
+Version physical read bytes: 163526060
+Version read amplification: 5.56308
+before visit container: 346136
+after visit container: 1400986
+total visit container: 1747122
+IO in restore: 3.31345 s 
+Decode time in restore: 2.08388 s 
+Decode count in restore: 1667270
+decode count / restore chunk: 2.32562
+write path is ./restoreFile/glibc-2.19.tar
+----------------------restore-------------------------
+Version 55
+Restore time: 0.226795 s
+Version logical read bytes: 27692840
+Version physical read bytes: 167719466
+Version read amplification: 6.05642
+before visit container: 354579
+after visit container: 1452211
+total visit container: 1806790
+IO in restore: 3.40778 s 
+Decode time in restore: 2.15524 s 
+Decode count in restore: 1727138
+decode count / restore chunk: 2.34627
+write path is ./restoreFile/glibc-2.20.90.tar
+----------------------restore-------------------------
+Version 56
+Restore time: 0.230462 s
+Version logical read bytes: 29157682
+Version physical read bytes: 171912703
+Version read amplification: 5.89597
+before visit container: 365067
+after visit container: 1499583
+total visit container: 1864650
+IO in restore: 3.50569 s 
+Decode time in restore: 2.22425 s 
+Decode count in restore: 1782319
+decode count / restore chunk: 2.35928
+write path is ./restoreFile/glibc-2.20.tar
+----------------------restore-------------------------
+Version 57
+Restore time: 0.236968 s
+Version logical read bytes: 27135291
+Version physical read bytes: 171912703
+Version read amplification: 6.33539
+before visit container: 374965
+after visit container: 1553091
+total visit container: 1928056
+IO in restore: 3.60355 s 
+Decode time in restore: 2.29878 s 
+Decode count in restore: 1844388
+decode count / restore chunk: 2.38054
+write path is ./restoreFile/glibc-2.21.90.tar
+----------------------restore-------------------------
+Version 58
+Restore time: 0.237184 s
+Version logical read bytes: 28913238
+Version physical read bytes: 176107008
+Version read amplification: 6.09088
+before visit container: 385773
+after visit container: 1604665
+total visit container: 1990438
+IO in restore: 3.70297 s 
+Decode time in restore: 2.37199 s 
+Decode count in restore: 1903729
+decode count / restore chunk: 2.3967
+write path is ./restoreFile/glibc-2.21.tar
+----------------------restore-------------------------
+Version 59
+Restore time: 0.244359 s
+Version logical read bytes: 27553541
+Version physical read bytes: 180300445
+Version read amplification: 6.54364
+before visit container: 396251
+after visit container: 1660756
+total visit container: 2057007
+IO in restore: 3.80421 s 
+Decode time in restore: 2.44982 s 
+Decode count in restore: 1968251
+decode count / restore chunk: 2.41851
+write path is ./restoreFile/glibc-2.22.90.tar
+----------------------restore-------------------------
+Version 60
+Restore time: 0.250466 s
+Version logical read bytes: 30786642
+Version physical read bytes: 184494717
+Version read amplification: 5.99269
+before visit container: 407593
+after visit container: 1716466
+total visit container: 2124059
+IO in restore: 3.90818 s 
+Decode time in restore: 2.52807 s 
+Decode count in restore: 2032022
+decode count / restore chunk: 2.43531
+write path is ./restoreFile/glibc-2.22.tar
+----------------------restore-------------------------
+Version 61
+Restore time: 0.258115 s
+Version logical read bytes: 29361504
+Version physical read bytes: 184494717
+Version read amplification: 6.28356
+before visit container: 416471
+after visit container: 1778520
+total visit container: 2194991
+IO in restore: 4.01404 s 
+Decode time in restore: 2.61115 s 
+Decode count in restore: 2102788
+decode count / restore chunk: 2.45948
+write path is ./restoreFile/glibc-2.23.90.tar
+----------------------restore-------------------------
+Version 62
+Restore time: 0.255752 s
+Version logical read bytes: 33077033
+Version physical read bytes: 192880960
+Version read amplification: 5.83127
+before visit container: 427685
+after visit container: 1830579
+total visit container: 2258264
+IO in restore: 4.12346 s 
+Decode time in restore: 2.68636 s 
+Decode count in restore: 2162508
+decode count / restore chunk: 2.46664
+write path is ./restoreFile/glibc-2.23.tar
+----------------------restore-------------------------
+Version 63
+Restore time: 0.262114 s
+Version logical read bytes: 30926898
+Version physical read bytes: 192880960
+Version read amplification: 6.23667
+before visit container: 439623
+after visit container: 1888791
+total visit container: 2328414
+IO in restore: 4.23255 s 
+Decode time in restore: 2.76685 s 
+Decode count in restore: 2229160
+decode count / restore chunk: 2.48115
+write path is ./restoreFile/glibc-2.24.90.tar
+----------------------restore-------------------------
+Version 64
+Restore time: 0.261199 s
+Version logical read bytes: 32690201
+Version physical read bytes: 201267159
+Version read amplification: 6.1568
+before visit container: 450433
+after visit container: 1941615
+total visit container: 2392048
+IO in restore: 4.34458 s 
+Decode time in restore: 2.8446 s 
+Decode count in restore: 2289611
+decode count / restore chunk: 2.48822
+write path is ./restoreFile/glibc-2.24.tar
+----------------------restore-------------------------
+Version 65
+Restore time: 0.268065 s
+Version logical read bytes: 30882639
+Version physical read bytes: 201267159
+Version read amplification: 6.51716
+before visit container: 461464
+after visit container: 2001887
+total visit container: 2463351
+IO in restore: 4.45733 s 
+Decode time in restore: 2.927 s 
+Decode count in restore: 2358059
+decode count / restore chunk: 2.50346
+write path is ./restoreFile/glibc-2.25.90.tar
+----------------------restore-------------------------
+Version 66
+Restore time: 0.267038 s
+Version logical read bytes: 32491064
+Version physical read bytes: 205461453
+Version read amplification: 6.32363
+before visit container: 473342
+after visit container: 2055928
+total visit container: 2529270
+IO in restore: 4.57169 s 
+Decode time in restore: 3.0057 s 
+Decode count in restore: 2419571
+decode count / restore chunk: 2.50933
+write path is ./restoreFile/glibc-2.25.tar
+----------------------restore-------------------------
+Version 67
+Restore time: 0.276595 s
+Version logical read bytes: 30614447
+Version physical read bytes: 209655242
+Version read amplification: 6.84825
+before visit container: 486021
+after visit container: 2116745
+total visit container: 2602766
+IO in restore: 4.68879 s 
+Decode time in restore: 3.09059 s 
+Decode count in restore: 2488339
+decode count / restore chunk: 2.5223
+write path is ./restoreFile/glibc-2.26.9000.tar
+----------------------restore-------------------------
+Version 68
+Restore time: 0.295267 s
+Version logical read bytes: 37247023
+Version physical read bytes: 218042290
+Version read amplification: 5.85395
+before visit container: 498014
+after visit container: 2172120
+total visit container: 2670134
+IO in restore: 4.81597 s 
+Decode time in restore: 3.17347 s 
+Decode count in restore: 2552137
+decode count / restore chunk: 2.52031
+write path is ./restoreFile/glibc-2.26.tar
+----------------------restore-------------------------
+Version 69
+Restore time: 0.302887 s
+Version logical read bytes: 34823969
+Version physical read bytes: 218042290
+Version read amplification: 6.26127
+before visit container: 509111
+after visit container: 2235377
+total visit container: 2744488
+IO in restore: 4.94234 s 
+Decode time in restore: 3.26309 s 
+Decode count in restore: 2624437
+decode count / restore chunk: 2.52662
+write path is ./restoreFile/glibc-2.27.9000.tar
+----------------------restore-------------------------
+Version 70
+Restore time: 0.302455 s
+Version logical read bytes: 39932269
+Version physical read bytes: 226428576
+Version read amplification: 5.67032
+before visit container: 520996
+after visit container: 2290988
+total visit container: 2811984
+IO in restore: 5.07346 s 
+Decode time in restore: 3.34606 s 
+Decode count in restore: 2687829
+decode count / restore chunk: 2.52227
+write path is ./restoreFile/glibc-2.27.tar
+----------------------restore-------------------------
+Version 71
+Restore time: 0.308222 s
+Version logical read bytes: 36922888
+Version physical read bytes: 226428576
+Version read amplification: 6.13247
+before visit container: 531418
+after visit container: 2352911
+total visit container: 2884329
+IO in restore: 5.20389 s 
+Decode time in restore: 3.43508 s 
+Decode count in restore: 2758339
+decode count / restore chunk: 2.52463
+write path is ./restoreFile/glibc-2.28.9000.tar
+----------------------restore-------------------------
+Version 72
+Restore time: 0.320991 s
+Version logical read bytes: 43072456
+Version physical read bytes: 239007998
+Version read amplification: 5.54898
+before visit container: 544079
+after visit container: 2412060
+total visit container: 2956139
+IO in restore: 5.34278 s 
+Decode time in restore: 3.52317 s 
+Decode count in restore: 2825558
+decode count / restore chunk: 2.51971
+write path is ./restoreFile/glibc-2.28.tar
+----------------------restore-------------------------
+Version 73
+Restore time: 0.326372 s
+Version logical read bytes: 41024381
+Version physical read bytes: 239007998
+Version read amplification: 5.826
+before visit container: 555165
+after visit container: 2476968
+total visit container: 3032133
+IO in restore: 5.48021 s 
+Decode time in restore: 3.61696 s 
+Decode count in restore: 2899669
+decode count / restore chunk: 2.52101
+write path is ./restoreFile/glibc-2.29.9000.tar
+----------------------restore-------------------------
+Version 74
+Restore time: 0.326517 s
+Version logical read bytes: 41993902
+Version physical read bytes: 243202260
+Version read amplification: 5.79137
+before visit container: 568284
+after visit container: 2539416
+total visit container: 3107700
+IO in restore: 5.62043 s 
+Decode time in restore: 3.70837 s 
+Decode count in restore: 2970311
+decode count / restore chunk: 2.51916
+write path is ./restoreFile/glibc-2.29.tar
+----------------------restore-------------------------
+Version 75
+Restore time: 0.335294 s
+Version logical read bytes: 40249730
+Version physical read bytes: 247396533
+Version read amplification: 6.14654
+before visit container: 579371
+after visit container: 2608142
+total visit container: 3187513
+IO in restore: 5.76209 s 
+Decode time in restore: 3.80639 s 
+Decode count in restore: 3048191
+decode count / restore chunk: 2.52338
+write path is ./restoreFile/glibc-2.30.9000.tar
+----------------------restore-------------------------
+Version 76
+Restore time: 0.328667 s
+Version logical read bytes: 40488700
+Version physical read bytes: 247396533
+Version read amplification: 6.11026
+before visit container: 593046
+after visit container: 2671308
+total visit container: 3264354
+IO in restore: 5.90195 s 
+Decode time in restore: 3.90055 s 
+Decode count in restore: 3119726
+decode count / restore chunk: 2.5224
+write path is ./restoreFile/glibc-2.30.tar
+----------------------restore-------------------------
+Version 77
+Restore time: 0.338787 s
+Version logical read bytes: 39413478
+Version physical read bytes: 251590527
+Version read amplification: 6.38336
+before visit container: 603277
+after visit container: 2741621
+total visit container: 3344898
+IO in restore: 6.04398 s 
+Decode time in restore: 4.00102 s 
+Decode count in restore: 3199366
+decode count / restore chunk: 2.52788
+write path is ./restoreFile/glibc-2.31.9000.tar
+----------------------restore-------------------------
+Version 78
+Restore time: 0.333215 s
+Version logical read bytes: 41140047
+Version physical read bytes: 255780780
+Version read amplification: 6.21732
+before visit container: 616637
+after visit container: 2805732
+total visit container: 3422369
+IO in restore: 6.18726 s 
+Decode time in restore: 4.09563 s 
+Decode count in restore: 3271494
+decode count / restore chunk: 2.52713
+write path is ./restoreFile/glibc-2.31.tar
+----------------------restore-------------------------
+Version 79
+Restore time: 0.341715 s
+Version logical read bytes: 38971580
+Version physical read bytes: 255780780
+Version read amplification: 6.56326
+before visit container: 629852
+after visit container: 2877331
+total visit container: 3507183
+IO in restore: 6.33051 s 
+Decode time in restore: 4.19775 s 
+Decode count in restore: 3352092
+decode count / restore chunk: 2.53283
+write path is ./restoreFile/glibc-2.32.9000.tar
+----------------------restore-------------------------
+Version 80
+Restore time: 0.343545 s
+Version logical read bytes: 40993967
+Version physical read bytes: 259972182
+Version read amplification: 6.34172
+before visit container: 643186
+after visit container: 2945206
+total visit container: 3588392
+IO in restore: 6.47526 s 
+Decode time in restore: 4.29655 s 
+Decode count in restore: 3428137
+decode count / restore chunk: 2.53476
+write path is ./restoreFile/glibc-2.32.tar
+----------------------restore-------------------------
+Version 81
+Restore time: 0.348112 s
+Version logical read bytes: 39264422
+Version physical read bytes: 259972182
+Version read amplification: 6.62106
+before visit container: 653679
+after visit container: 3019426
+total visit container: 3673105
+IO in restore: 6.62026 s 
+Decode time in restore: 4.40184 s 
+Decode count in restore: 3511667
+decode count / restore chunk: 2.54202
+write path is ./restoreFile/glibc-2.33.9000.tar
+----------------------restore-------------------------
+Version 82
+Restore time: 0.345888 s
+Version logical read bytes: 41177046
+Version physical read bytes: 268358642
+Version read amplification: 6.51719
+before visit container: 667603
+after visit container: 3087569
+total visit container: 3755172
+IO in restore: 6.76891 s 
+Decode time in restore: 4.50116 s 
+Decode count in restore: 3588109
+decode count / restore chunk: 2.5435
+write path is ./restoreFile/glibc-2.33.tar
+----------------------restore-------------------------
+Version 83
+Restore time: 0.353461 s
+Version logical read bytes: 39652277
+Version physical read bytes: 268358642
+Version read amplification: 6.7678
+before visit container: 681618
+after visit container: 3161816
+total visit container: 3843434
+IO in restore: 6.9157 s 
+Decode time in restore: 4.60691 s 
+Decode count in restore: 3671620
+decode count / restore chunk: 2.54982
+write path is ./restoreFile/glibc-2.34.9000.tar
+----------------------restore-------------------------
+Version 84
+Restore time: 0.351593 s
+Version logical read bytes: 42124758
+Version physical read bytes: 272552922
+Version read amplification: 6.47014
+before visit container: 695319
+after visit container: 3233105
+total visit container: 3928424
+IO in restore: 7.06577 s 
+Decode time in restore: 4.70945 s 
+Decode count in restore: 3751294
+decode count / restore chunk: 2.55261
+write path is ./restoreFile/glibc-2.34.tar
+----------------------restore-------------------------
+Version 85
+Restore time: 0.362322 s
+Version logical read bytes: 40353200
+Version physical read bytes: 276744943
+Version read amplification: 6.85807
+before visit container: 706338
+after visit container: 3310441
+total visit container: 4016779
+IO in restore: 7.21885 s 
+Decode time in restore: 4.81793 s 
+Decode count in restore: 3837978
+decode count / restore chunk: 2.55997
+write path is ./restoreFile/glibc-2.35.9000.tar
+----------------------restore-------------------------
+Version 86
+Restore time: 0.368596 s
+Version logical read bytes: 46369794
+Version physical read bytes: 285131766
+Version read amplification: 6.14908
+before visit container: 720149
+after visit container: 3380019
+total visit container: 4100168
+IO in restore: 7.37633 s 
+Decode time in restore: 4.92082 s 
+Decode count in restore: 3915780
+decode count / restore chunk: 2.55849
+write path is ./restoreFile/glibc-2.35.tar
+----------------------restore-------------------------
+Version 87
+Restore time: 0.371571 s
+Version logical read bytes: 44011346
+Version physical read bytes: 285131766
+Version read amplification: 6.4786
+before visit container: 734833
+after visit container: 3457263
+total visit container: 4192096
+IO in restore: 7.532 s 
+Decode time in restore: 5.03164 s 
+Decode count in restore: 4002077
+decode count / restore chunk: 2.56251
+write path is ./restoreFile/glibc-2.36.9000.tar
+----------------------restore-------------------------
+Version 88
+Restore time: 0.374028 s
+Version logical read bytes: 47516728
+Version physical read bytes: 289326001
+Version read amplification: 6.08893
+before visit container: 749004
+after visit container: 3532579
+total visit container: 4281583
+IO in restore: 7.69121 s 
+Decode time in restore: 5.13956 s 
+Decode count in restore: 4085930
+decode count / restore chunk: 2.56396
+write path is ./restoreFile/glibc-2.36.tar
+----------------------restore-------------------------
+Version 89
+Restore time: 0.381196 s
+Version logical read bytes: 46071580
+Version physical read bytes: 293519135
+Version read amplification: 6.37094
+before visit container: 764405
+after visit container: 3615255
+total visit container: 4379660
+IO in restore: 7.85149 s 
+Decode time in restore: 5.25355 s 
+Decode count in restore: 4177863
+decode count / restore chunk: 2.57032
+write path is ./restoreFile/glibc-2.37.9000.tar
+----------------------restore-------------------------
+Version 90
+Restore time: 0.379419 s
+Version logical read bytes: 46473762
+Version physical read bytes: 297712137
+Version read amplification: 6.40603
+before visit container: 779668
+after visit container: 3691364
+total visit container: 4471032
+IO in restore: 8.01395 s 
+Decode time in restore: 5.36402 s 
+Decode count in restore: 4262793
+decode count / restore chunk: 2.57202
+write path is ./restoreFile/glibc-2.37.tar
+----------------------restore-------------------------
+Version 91
+Restore time: 0.389638 s
+Version logical read bytes: 45149227
+Version physical read bytes: 297712137
+Version read amplification: 6.59396
+before visit container: 794582
+after visit container: 3775948
+total visit container: 4570530
+IO in restore: 8.17696 s 
+Decode time in restore: 5.4824 s 
+Decode count in restore: 4356741
+decode count / restore chunk: 2.57901
+write path is ./restoreFile/glibc-2.38.9000.tar
+----------------------restore-------------------------
+Version 92
+Restore time: 0.388525 s
+Version logical read bytes: 46199106
+Version physical read bytes: 301903723
+Version read amplification: 6.53484
+before visit container: 810055
+after visit container: 3856369
+total visit container: 4666424
+IO in restore: 8.34172 s 
+Decode time in restore: 5.59732 s 
+Decode count in restore: 4446010
+decode count / restore chunk: 2.58258
+write path is ./restoreFile/glibc-2.38.tar
+----------------------restore-------------------------
+Version 93
+Restore time: 0.396423 s
+Version logical read bytes: 45033240
+Version physical read bytes: 301903723
+Version read amplification: 6.70402
+before visit container: 823126
+after visit container: 3944610
+total visit container: 4767736
+IO in restore: 8.50687 s 
+Decode time in restore: 5.71795 s 
+Decode count in restore: 4543882
+decode count / restore chunk: 2.59092
+write path is ./restoreFile/glibc-2.39.9000.tar
+----------------------restore-------------------------
+Version 94
+Restore time: 0.377397 s
+Version logical read bytes: 46010355
+Version physical read bytes: 306096844
+Version read amplification: 6.65278
+before visit container: 838224
+after visit container: 4018030
+total visit container: 4856254
+IO in restore: 8.66955 s 
+Decode time in restore: 5.82621 s 
+Decode count in restore: 4625962
+decode count / restore chunk: 2.59086
+write path is ./restoreFile/glibc-2.39.tar
+----------------------restore-------------------------
+Version 95
+Restore time: 0.390438 s
+Version logical read bytes: 44196668
+Version physical read bytes: 310290589
+Version read amplification: 7.02068
+before visit container: 849402
+after visit container: 4100131
+total visit container: 4949533
+IO in restore: 8.83554 s 
+Decode time in restore: 5.94267 s 
+Decode count in restore: 4717700
+decode count / restore chunk: 2.59611
+write path is ./restoreFile/glibc-2.40.9000.tar
+----------------------restore-------------------------
+Version 96
+Restore time: 0.391395 s
+Version logical read bytes: 45706209
+Version physical read bytes: 310290589
+Version read amplification: 6.78881
+before visit container: 865074
+after visit container: 4179144
+total visit container: 5044218
+IO in restore: 9.00136 s 
+Decode time in restore: 6.05624 s 
+Decode count in restore: 4805541
+decode count / restore chunk: 2.59852
+write path is ./restoreFile/glibc-2.40.tar
+----------------------restore-------------------------
+Version 97
+Restore time: 0.398797 s
+Version logical read bytes: 44577039
+Version physical read bytes: 314484050
+Version read amplification: 7.05484
+before visit container: 877935
+after visit container: 4265499
+total visit container: 5143434
+IO in restore: 9.17012 s 
+Decode time in restore: 6.17645 s 
+Decode count in restore: 4901727
+decode count / restore chunk: 2.6053
+write path is ./restoreFile/glibc-2.41.9000.tar
+----------------------restore-------------------------
+Version 98
+Restore time: 0.393631 s
+Version logical read bytes: 47835893
+Version physical read bytes: 314484050
+Version read amplification: 6.57423
+before visit container: 893457
+after visit container: 4344669
+total visit container: 5238126
+IO in restore: 9.33806 s 
+Decode time in restore: 6.29109 s 
+Decode count in restore: 4989523
+decode count / restore chunk: 2.60619
+write path is ./restoreFile/glibc-2.41.tar
+----------------------restore-------------------------
+Version 99
+Restore time: 0.40483 s
+Version logical read bytes: 46002817
+Version physical read bytes: 314484050
+Version read amplification: 6.83619
+before visit container: 905787
+after visit container: 4431569
+total visit container: 5337356
+IO in restore: 9.50776 s 
+Decode time in restore: 6.41382 s 
+Decode count in restore: 5086519
+decode count / restore chunk: 2.61178
+----------------------overall-------------------------
+Time taken by restoreFile: 22.2036 s 
+Avg Restore throughput: 630.957 MiB/s
+Overall read amplification: 5.71639
+IO in restore: 9.50776 s 
+Decode time in restore: 6.41382 s 
+Decode count in restore: 5086519
+decode count / restore chunk: 2.61178
+----------------------inline container-------------------------
+load container times: 4048
+cache hit times: 140833347
+Cache hit rate: 99.9971%
+Read IO time: 4 seconds
+Write IO time: 0 seconds
+Update Cache time: 1seconds
+Read Cache time: 28seconds
+----------------------offline container-------------------------
+offline container offline_dataWrite_ is nullptr!

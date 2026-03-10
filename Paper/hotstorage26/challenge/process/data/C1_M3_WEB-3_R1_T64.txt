@@ -1,0 +1,174 @@
+2026-02-14 08:06:20 <Chunker>: chunking done.
+total_size is 8
+Version: 1
+-----------------CHUNK NUM-----------------------
+logical chunk num: 349658
+unique chunk num: 181563
+base chunk num: 52725
+delta chunk num: 128838
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 2869463040
+uniquechunkSize is 317317535
+base chunk size: 227829345
+delta chunk size: 89488190
+-----------------METRICS-------------------------
+Overall Compression Ratio: 9.04288
+DCC: 0.709605
+DCR: 12.7662
+DCE: 41.237
+-----------------Time------------------------------
+Version time: 13.5673s
+Throughput: 201.7MiB/s
+Reduce data speed: 179.395MiB/s
+SF generation time: 1.1323s
+SF generation throughput: 2416.8MiB/s
+MiDelta Time: 0s
+IO Time: 0.612918s
+Decode Time: 0s
+Encode Time: 0s
+-----------------OverHead--------------------------
+Index Overhead: 25.4269MiB
+FP Overhead: 19.393MiB
+SF Overhead: 6.0339MiB
+Recipe Overhead: 2.66768MiB
+SF number: 158175
+-----------------END-------------------------------
+2026-02-14 08:06:29 <Chunker>: chunking done.
+total_size is 8
+Version: 2
+-----------------CHUNK NUM-----------------------
+logical chunk num: 700527
+unique chunk num: 225166
+base chunk num: 55665
+delta chunk num: 169501
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 5748879360
+uniquechunkSize is 356258726
+base chunk size: 239527454
+delta chunk size: 116731272
+-----------------METRICS-------------------------
+Overall Compression Ratio: 16.1368
+DCC: 0.752782
+DCR: 13.1669
+DCE: 43.9627
+-----------------Time------------------------------
+Version time: 8.58855s
+Throughput: 319.731MiB/s
+Reduce data speed: 280.172MiB/s
+SF generation time: 0.286869s
+SF generation throughput: 9572.39MiB/s
+MiDelta Time: 0s
+IO Time: 0.771621s
+Decode Time: 0s
+Encode Time: 0s
+-----------------OverHead--------------------------
+Index Overhead: 30.4207MiB
+FP Overhead: 24.0503MiB
+SF Overhead: 6.37035MiB
+Recipe Overhead: 5.3446MiB
+SF number: 166995
+-----------------END-------------------------------
+2026-02-14 08:06:37 <Chunker>: chunking done.
+total_size is 8
+Version: 3
+-----------------CHUNK NUM-----------------------
+logical chunk num: 1048641
+unique chunk num: 266111
+base chunk num: 57653
+delta chunk num: 208458
+-----------------CHUNK SIZE-----------------------
+logicalchunkSize is 8606402560
+uniquechunkSize is 390300717
+base chunk size: 247459843
+delta chunk size: 142840874
+-----------------METRICS-------------------------
+Overall Compression Ratio: 22.0507
+DCC: 0.78335
+DCR: 13.42
+DCE: 45.706
+-----------------Time------------------------------
+Version time: 8.50529s
+Throughput: 320.406MiB/s
+Reduce data speed: 276.643MiB/s
+SF generation time: 0.271161s
+SF generation throughput: 10049.9MiB/s
+MiDelta Time: 0s
+IO Time: 0.929552s
+Decode Time: 0s
+Encode Time: 0s
+-----------------OverHead--------------------------
+Index Overhead: 35.0216MiB
+FP Overhead: 28.4237MiB
+SF Overhead: 6.59786MiB
+Recipe Overhead: 8.0005MiB
+SF number: 172959
+-----------------END-------------------------------
+Time taken by for loop: 30.6623 s 
+2026-02-14 08:06:37 <DFree>: logical Chunk Num is 1048641
+2026-02-14 08:06:37 <DFree>: unique Chunk Num is 266111
+2026-02-14 08:06:37 <DFree>: Total logical size is 8606402560
+2026-02-14 08:06:37 <DFree>: Total compressed size is 390300717
+2026-02-14 08:06:37 <DFree>: Compression ratio is 22.0507
+logical read bytes: 0
+physical read bytes: 389890679
+read amplification: inf
+write path is ./restoreFile/2016-06-13.tar
+----------------------restore-------------------------
+Version 0
+Restore time: 2.81517 s
+Version logical read bytes: 654745556
+Version physical read bytes: 318601000
+Version read amplification: 0.486603
+before visit container: 257016
+after visit container: 171446
+total visit container: 428462
+IO in restore: 1.00405 s 
+Decode time in restore: 0.725313 s 
+Decode count in restore: 225109
+decode count / restore chunk: 0.643798
+write path is ./restoreFile/2016-06-15.tar
+----------------------restore-------------------------
+Version 1
+Restore time: 2.77791 s
+Version logical read bytes: 623365623
+Version physical read bytes: 356340457
+Version read amplification: 0.57164
+before visit container: 520504
+after visit container: 350581
+total visit container: 871085
+IO in restore: 1.95324 s 
+Decode time in restore: 1.46333 s 
+Decode count in restore: 458202
+decode count / restore chunk: 0.654082
+write path is ./restoreFile/2016-06-16.tar
+----------------------restore-------------------------
+Version 2
+Restore time: 2.74793 s
+Version logical read bytes: 616050370
+Version physical read bytes: 389890679
+Version read amplification: 0.632888
+before visit container: 782128
+after visit container: 529232
+total visit container: 1311360
+IO in restore: 2.89541 s 
+Decode time in restore: 2.19132 s 
+Decode count in restore: 690338
+decode count / restore chunk: 0.658317
+----------------------overall-------------------------
+Time taken by restoreFile: 8.341 s 
+Avg Restore throughput: 984.019 MiB/s
+Overall read amplification: 0.562165
+IO in restore: 2.89541 s 
+Decode time in restore: 2.19132 s 
+Decode count in restore: 690338
+decode count / restore chunk: 0.658317
+----------------------inline container-------------------------
+load container times: 347
+cache hit times: 1937399
+Cache hit rate: 99.9821%
+Read IO time: 0 seconds
+Write IO time: 0 seconds
+Update Cache time: 0seconds
+Read Cache time: 2seconds
+----------------------offline container-------------------------
+offline container offline_dataWrite_ is nullptr!

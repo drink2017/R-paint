@@ -1,14 +1,12 @@
-# 先 source 保存了函数的文件
-source("C:/Users/YP/Desktop/work/R-paint/MyR/Bar.R")
+source("E:/Users/drinkwater/Desktop/R-script-template/MyR/Bar.R")
 
 set.seed(123)
-# 模拟数据：4 组
-left_list <- list(rnorm(20, 5, 1), rnorm(18, 6, 1.1), rnorm(22, 4.5, 0.9), rnorm(16, 6.2, 1.0))
+left_list <- list(c(64), c(1698), c(31), c(89))
 right_parts_list <- list(
-  list(rnorm(20,1,0.2), rnorm(20,2,0.3), rnorm(20,1.5,0.25)),
-  list(rnorm(18,1.2,0.25), rnorm(18,2.1,0.3), rnorm(18,1.6,0.3)),
-  list(rnorm(22,0.8,0.2), rnorm(22,1.8,0.25), rnorm(22,1.4,0.2)),
-  list(rnorm(16,1.5,0.3), rnorm(16,2.2,0.35), rnorm(16,1.7,0.25))
+  list(411,175,76),
+  list(5250,22701,1236),
+  list(37502,17469,1176),
+  list(9822,8772,1292)
 )
 
 p <- create_grouped_two_with_stacked_right(
@@ -19,8 +17,18 @@ p <- create_grouped_two_with_stacked_right(
   left_fill = "#92C5DE",
   component_fills = c("#FB8072","#80B1D3","#BEBADA"),
   show_data_labels = TRUE,
+  show_legend = FALSE,  # 添加这一行
   export_name = "group2_stacked_right.png",
-  export_path = "C:/Users/YP/Desktop/work/R-paint/outputs",
+  export_path = "E:/Users/drinkwater/Desktop/R-script-template/Paper/hotstorage26/challenge/process",
   width = 8, height = 5, dpi = 300
 )
+
 print(p)
+
+ggsave(
+  filename = "group2_stacked_right.png",
+  plot = p,
+  path = "E:/Users/drinkwater/Desktop/R-script-template/Paper/hotstorage26/challenge/process",
+  width = 8, height = 5, dpi = 300
+)
+

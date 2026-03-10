@@ -529,9 +529,6 @@ create_grouped_two_with_stacked_right <- function(
     geom_col(data = subset(plot_df, type == "Left"),
              aes(x = group_pos - 0.25, y = value, fill = component),
              stat = "identity", width = 0.45, color = "black") +
-    # 右侧总和的误差线（画在堆叠顶端）
-    geom_errorbar(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + 0.25, ymin = ymin, ymax = ymax),
-                  width = 0.1, size = 0.8) +
     scale_x_continuous(breaks = seq_along(group_labels), labels = group_labels) +
     labs(x = x_label, y = y_label)
 

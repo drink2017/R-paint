@@ -412,190 +412,161 @@ create_grouped_barplot_with_ci <- function(
   return(p)
 }
 
-# 每组两个柱子：左侧单一柱（mean + CI），右侧为三部分堆叠（堆叠部分显示 mean，顶部显示总和的 95% CI）
 create_grouped_two_with_stacked_right <- function(
-  left_list,          # list: 每组左侧柱子的样本向量，长度 = 组数
-  right_parts_list,   # list: 每组的右侧堆叠部分，形如 list(list(part1_vec, part2_vec, part3_vec), ...)，长度 = 组数
-  group_labels = NULL,
-  component_labels = c("C1","C2","C3"),
-  left_fill = "#6BAED6",
-  component_fills = c("#E41A1C","#4DAF4A","#984EA3"),
-  x_label = "Group",
-  y_label = "Value",
-  show_legend = TRUE,
-  show_data_labels = FALSE,
-  use_arial = FALSE,
-  y_max_multiplier = 1.1,
-  export_name = NULL,
-  export_path = "./",
-  width = 10,
-  height = 6,
-  dpi = 300,
-  normalize_to_left = TRUE,
-  ...                 # 额外给 ggsave 的参数（谨慎使用，见说明）
+  left_list, right_parts_list, group_labels = NULL, component_labels = c("C1", "C2", "C3"),
+  left_fill = "#6BAED6", component_fills = c("#E41A1C", "#4DAF4A", "#984EA3"), x_label = "Datasets",
+  y_label = "Time(s)", show_legend = FALSE, show_data_labels = FALSE, use_arial = TRUE,
+  y_max_multiplier = 1.45, export_name = NULL, export_path = "./", width = 12, height = 6, dpi = 300,
+  use_y_break = FALSE, break_start = NULL, break_end = NULL, break_scales = 0.6,
+  left_right_offset = 0.23, bar_width = 0.2, text_size = 13, axis_text_size = 42,
+  legend_text_size = 30, legend_position = c(0.85, 0.85), top_label_nudge_ratio = 0.03, ...
 ) {
-  if(!requireNamespace("ggplot2", quietly = TRUE)) stop("需要 ggplot2 包，请先 install.packages('ggplot2')")
   library(ggplot2)
+  library(scales)
 
-  # 基本检查
+  # =========================================================================
+  # 核心修复：自定义文本图层，自动过滤掉超出当前切分面板范围的文本标签
+  # =========================================================================
+  GeomTextOOB <- ggproto("GeomTextOOB", GeomText,
+    draw_panel = function(data, panel_params, coord, ...) {
+      # 将数据坐标转换为面板内的标准化坐标 (0 到 1)
+      coords <- coord$transform(data, panel_params)
+      # 过滤掉落在面板外部的文本（允许上下 10% 溢出以防正常标签被切掉）
+      keep <- coords$y >= -0.1 & coords$y <= 1.1
+      data <- data[keep, , drop = FALSE]
+      if (nrow(data) == 0) return(grid::nullGrob())
+      GeomText$draw_panel(data, panel_params, coord, ...)
+    }
+  )
+  
+  geom_text_oob <- function(mapping = NULL, data = NULL, stat = "identity", position = "identity", ..., parse = FALSE, nudge_x = 0, nudge_y = 0, check_overlap = FALSE, na.rm = FALSE, show.legend = NA, inherit.aes = TRUE) {
+    if (!missing(nudge_x) || !missing(nudge_y)) {
+      if (!missing(position)) stop("You must specify either `position` or `nudge_x`/`nudge_y`.")
+      position <- position_nudge(nudge_x, nudge_y)
+    }
+    layer(
+      data = data, mapping = mapping, stat = stat, geom = GeomTextOOB, position = position,
+      show.legend = show.legend, inherit.aes = inherit.aes,
+      params = list(parse = parse, check_overlap = check_overlap, na.rm = na.rm, ...)
+    )
+  }
+  # =========================================================================
+
+  if (use_arial) {
+    if (requireNamespace("showtext", quietly = TRUE)) {
+      library(showtext)
+      if (requireNamespace("sysfonts", quietly = TRUE)) {
+        library(sysfonts)
+        if (!("Arial" %in% sysfonts::font_families())) {
+          tryCatch({ sysfonts::font_add("Arial", "C:/Windows/Fonts/arial.ttf") }, error = function(e) {})
+        }
+        showtext::showtext_auto()
+      }
+    } else if (requireNamespace("extrafont", quietly = TRUE)) {
+      library(extrafont)
+      tryCatch({ windowsFonts(Arial = windowsFont("Arial")) }, error = function(e) {})
+    }
+  }
+
   group_count <- length(left_list)
-  if(group_count < 1) stop("left_list 必须至少包含一组")
-  if(length(right_parts_list) != group_count) stop("right_parts_list 长度须等于 left_list（组数）")
+  if (is.null(group_labels)) group_labels <- paste0("G", seq_len(group_count))
 
-  # 每组应该包含三个部分
-  parts_per_group <- sapply(right_parts_list, length)
-  if(any(parts_per_group != 3)) stop("right_parts_list 的每个元素必须包含 3 个部分的向量")
-
-  # 生成 group_labels
-  if(is.null(group_labels)) group_labels <- paste0("G", seq_len(group_count))
-
-  # 计算统计量：左侧 mean/ci；右侧每部分 mean，及右侧总和的 mean/ci（需要同一组内三部分样本长度相同）
   long_rows <- list()
   total_stats <- data.frame(group = character(0), total_mean = numeric(0), ymin = numeric(0), ymax = numeric(0), stringsAsFactors = FALSE)
-  for(i in seq_len(group_count)) {
-    # left
+
+  for (i in seq_len(group_count)) {
     lv <- left_list[[i]]
     nL <- sum(!is.na(lv))
-    meanL <- if(nL>0) mean(lv, na.rm = TRUE) else NA
-    sdL <- if(nL>1) sd(lv, na.rm = TRUE) else NA
-    seL <- if(!is.na(sdL) && nL>1) sdL / sqrt(nL) else NA
-    ciL <- if(!is.na(seL) && nL>1) seL * qt(0.975, df = nL - 1) else 0
+    meanL <- if (nL > 0) mean(lv, na.rm = TRUE) else NA
+    ciL <- 0
 
-    # right parts
     p1 <- right_parts_list[[i]][[1]]
     p2 <- right_parts_list[[i]][[2]]
     p3 <- right_parts_list[[i]][[3]]
 
-    # 检查右侧三部分是否为同长度（若不是，无法逐样本求总和 CI）
-    len_parts <- c(length(na.omit(p1)), length(na.omit(p2)), length(na.omit(p3)))
-    same_len <- length(unique(len_parts)) == 1
+    mean_p1 <- if (sum(!is.na(p1)) > 0) mean(p1, na.rm = TRUE) else 0
+    mean_p2 <- if (sum(!is.na(p2)) > 0) mean(p2, na.rm = TRUE) else 0
+    mean_p3 <- if (sum(!is.na(p3)) > 0) mean(p3, na.rm = TRUE) else 0
+    meanT <- mean_p1 + mean_p2 + mean_p3
+    ciT <- 0
 
-    mean_p1 <- if(sum(!is.na(p1))>0) mean(p1, na.rm = TRUE) else 0
-    mean_p2 <- if(sum(!is.na(p2))>0) mean(p2, na.rm = TRUE) else 0
-    mean_p3 <- if(sum(!is.na(p3))>0) mean(p3, na.rm = TRUE) else 0
+    long_rows[[length(long_rows) + 1]] <- data.frame(group = group_labels[i], type = "Left", component = "Left", value = meanL, ymin = meanL - ciL, ymax = meanL + ciL, stringsAsFactors = FALSE)
+    long_rows[[length(long_rows) + 1]] <- data.frame(group = group_labels[i], type = "Right", component = component_labels[1], value = mean_p1, ymin = NA, ymax = NA, stringsAsFactors = FALSE)
+    long_rows[[length(long_rows) + 1]] <- data.frame(group = group_labels[i], type = "Right", component = component_labels[2], value = mean_p2, ymin = NA, ymax = NA, stringsAsFactors = FALSE)
+    long_rows[[length(long_rows) + 1]] <- data.frame(group = group_labels[i], type = "Right", component = component_labels[3], value = mean_p3, ymin = NA, ymax = NA, stringsAsFactors = FALSE)
 
-    # 计算右侧总和的 mean & CI：优选对逐样本相加计算 CI（需三部分长度相同）
-    if(same_len && len_parts[1] > 1) {
-      total_vec <- (p1 + p2 + p3)
-      nT <- sum(!is.na(total_vec))
-      meanT <- mean(total_vec, na.rm = TRUE)
-      sdT <- sd(total_vec, na.rm = TRUE)
-      seT <- sdT / sqrt(nT)
-      ciT <- seT * qt(0.975, df = nT - 1)
-    } else {
-      # 退化策略：将总 mean 近似为三部分 mean 之和，CI 设为 0（并发出警告）
-      meanT <- mean_p1 + mean_p2 + mean_p3
-      ciT <- 0
-      warning(sprintf("第 %d 组右侧三部分样本长度不一致或样本数不足，无法计算总和的置信区间；将 CI 设为 0。", i))
-    }
-
-    yminT <- meanT - ciT
-    ymaxT <- meanT + ciT
-
-    # 构建用于绘图的分组长表（两列位置：左为 type = 'L', 右为 'R' 的堆叠行）
-    # 左侧单一柱（用 bar 为 "Left"）
-    long_rows[[length(long_rows)+1]] <- data.frame(
-      group = group_labels[i],
-      type = "Left",
-      component = "Left",
-      value = meanL,
-      ymin = meanL - ciL,
-      ymax = meanL + ciL,
-      stringsAsFactors = FALSE
-    )
-    # 右侧三部分（作为堆叠，每个 component 一行）
-    long_rows[[length(long_rows)+1]] <- data.frame(group = group_labels[i], type = "Right", component = component_labels[1], value = mean_p1, ymin = NA, ymax = NA, stringsAsFactors = FALSE)
-    long_rows[[length(long_rows)+1]] <- data.frame(group = group_labels[i], type = "Right", component = component_labels[2], value = mean_p2, ymin = NA, ymax = NA, stringsAsFactors = FALSE)
-    long_rows[[length(long_rows)+1]] <- data.frame(group = group_labels[i], type = "Right", component = component_labels[3], value = mean_p3, ymin = NA, ymax = NA, stringsAsFactors = FALSE)
-
-    total_stats <- rbind(total_stats, data.frame(group = group_labels[i], total_mean = meanT, ymin = yminT, ymax = ymaxT, stringsAsFactors = FALSE))
+    total_stats <- rbind(total_stats, data.frame(group = group_labels[i], total_mean = meanT, ymin = meanT - ciT, ymax = meanT + ciT, stringsAsFactors = FALSE))
   }
 
   plot_df <- do.call(rbind, long_rows)
   plot_df$group <- factor(plot_df$group, levels = group_labels)
-  plot_df$type <- factor(plot_df$type, levels = c("Left","Right"))
+  plot_df$type <- factor(plot_df$type, levels = c("Left", "Right"))
   plot_df$component <- factor(plot_df$component, levels = c("Left", component_labels))
-
-  # x positions: for each group, two x values (1..G), use dodge offset within group for left/right
   plot_df$group_pos <- as.numeric(plot_df$group)
-  # build stacked position by ggplot stacking (no manual cumulative necessary)
 
-  # 归一化：使左边柱子都为1
-  if(normalize_to_left) {
-    for(i in seq_len(group_count)) {
-      # 找到这一组的左边值
-      left_idx <- which(plot_df$group == group_labels[i] & plot_df$type == "Left")
-      if(length(left_idx) > 0) {
-        scale_factor <- plot_df$value[left_idx[1]]
-        
-        if(scale_factor != 0 && !is.na(scale_factor)) {
-          # 缩放 plot_df
-          group_mask <- plot_df$group == group_labels[i]
-          plot_df$value[group_mask] <- plot_df$value[group_mask] / scale_factor
-          plot_df$ymin[group_mask] <- plot_df$ymin[group_mask] / scale_factor
-          plot_df$ymax[group_mask] <- plot_df$ymax[group_mask] / scale_factor
-          
-          # 缩放 total_stats
-          total_mask <- total_stats$group == group_labels[i]
-          total_stats$total_mean[total_mask] <- total_stats$total_mean[total_mask] / scale_factor
-          total_stats$ymin[total_mask] <- total_stats$ymin[total_mask] / scale_factor
-          total_stats$ymax[total_mask] <- total_stats$ymax[total_mask] / scale_factor
-        }
-      }
-    }
-  }
-
-  # 绘图
-  p <- ggplot() +
-    # 右侧堆叠条（只取 type == "Right"）
-    geom_col(data = subset(plot_df, type == "Right"), 
-             aes(x = group_pos + 0.25, y = value, fill = component),
-             stat = "identity", width = 0.45, color = "black") +
-    # 左侧单一条
-    geom_col(data = subset(plot_df, type == "Left"),
-             aes(x = group_pos - 0.25, y = value, fill = component),
-             stat = "identity", width = 0.45, color = "black") +
-    scale_x_continuous(breaks = seq_along(group_labels), labels = group_labels) +
-    labs(x = x_label, y = y_label)
-
-  # 颜色映射：左使用 left_fill（component == "Left"），右三部分使用 component_fills
-  # 创建填充向量，按 component factor levels 顺序设值
   fill_values <- c(left_fill, component_fills)
   names(fill_values) <- c("Left", component_labels)
-  p <- p + scale_fill_manual(values = fill_values, name = "")
 
-  # 主题与文字
-  if(use_arial && requireNamespace("showtext", quietly = TRUE) && requireNamespace("sysfonts", quietly = TRUE)) {
-    sysfonts::font_add("Arial", "C:/Windows/Fonts/arial.ttf")
-    showtext::showtext_auto()
-    p <- p + theme_classic() + theme(text = element_text(family = "Arial"))
-  } else {
-    p <- p + theme_classic()
-  }
-  p <- p + theme(axis.text.x = element_text(size = 12), axis.text.y = element_text(size = 12), legend.position = if(show_legend) "top" else "none")
-
-  # 数据标签（若需要，仅显示数值）
-  if(show_data_labels) {
-    # 左标签
-    p <- p + geom_text(data = subset(plot_df, type == "Left"), aes(x = group_pos - 0.25, y = value, label = round(value,2)), vjust = -0.5, size = 3)
-    # 右顶部标签（显示总和）
-    p <- p + geom_text(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + 0.25, y = total_mean, label = round(total_mean,2)), vjust = -0.5, size = 3)
-  }
-
-  # y 轴上限放大
   y_top <- max(c(plot_df$value, total_stats$ymax), na.rm = TRUE)
-  if(!is.na(y_top) && is.finite(y_top)) p <- p + scale_y_continuous(expand = expansion(mult = c(0,0.02)), limits = c(0, y_top * y_max_multiplier))
+  y_limit_max <- if (!is.na(y_top) && is.finite(y_top)) y_top * y_max_multiplier else NULL
 
-  # 保存
-  if(!is.null(export_name)) {
+  p <- ggplot() +
+    scale_y_continuous(
+      expand = c(0, 0),
+      limits = c(0, y_limit_max),
+      labels = scales::comma_format()
+    ) +
+    geom_col(data = subset(plot_df, type == "Right"), aes(x = group_pos + left_right_offset, y = value, fill = component), width = bar_width, color = "black", linewidth = 0.5) +
+    geom_col(data = subset(plot_df, type == "Left"), aes(x = group_pos - left_right_offset, y = value, fill = component), width = bar_width, color = "black", linewidth = 0.5) +
+    scale_fill_manual(name = "", values = fill_values) +
+    scale_x_continuous(breaks = seq_along(group_labels), labels = group_labels) +
+    labs(y = paste(" ", y_label, " "), x = x_label) +
+    theme_classic()
+
+  if (use_arial) p <- p + theme(text = element_text(family = "Arial"))
+
+  if (show_data_labels) {
+    # 使用自定义的 geom_text_oob 替代原生的 geom_text
+    p <- p +
+      geom_text_oob(data = subset(plot_df, type == "Left"), aes(x = group_pos - left_right_offset, y = value, label = scales::comma(round(value, 2))), hjust = 0.5, vjust = -0.5, angle = 0, size = text_size) +
+      geom_text_oob(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + left_right_offset, y = total_mean, label = scales::comma(round(total_mean, 2))), hjust = 0.5, vjust = -0.5, angle = 0, size = text_size)
+  }
+
+  if (!use_y_break && !is.null(y_limit_max)) {
+    p <- p + coord_cartesian(ylim = c(0, y_limit_max), clip = "off")
+  }
+
+  if (use_y_break) {
+    p <- p + ggbreak::scale_y_break(breaks = c(break_start, break_end), scales = break_scales)
+  }
+
+  p <- p + theme(
+    axis.text.x = element_text(size = axis_text_size, color = "black"),
+    axis.text.y = element_text(size = axis_text_size, color = "black"),
+    axis.title.x = element_text(size = axis_text_size, margin = margin(t = 6)),
+    axis.title.y = element_text(size = axis_text_size, hjust = 0.5, margin = margin(r = 6)),
+    axis.line.x = element_line(color = "black", linewidth = 0.5),
+    axis.line.y.left = element_line(color = "black", linewidth = 0.5),
+    axis.line.y.right = element_blank(),
+    axis.ticks.y.right = element_blank(),
+    axis.text.y.right = element_blank(),
+    axis.title.y.right = element_blank(),
+    plot.margin = margin(t = 12, r = 12, b = 6, l = 6)
+  )
+
+  if (show_legend) {
+    p <- p + theme(legend.position = legend_position, legend.text = element_text(size = legend_text_size), legend.margin = margin(b = 10))
+  } else {
+    p <- p + theme(legend.position = "none")
+  }
+
+  if (!is.null(export_name)) {
     dir.create(export_path, showWarnings = FALSE, recursive = TRUE)
     dots <- list(...)
-    # 允许的 ggsave 参数（可按需扩展）
-    allowed <- c("dpi","units","device","bg","scale","limitsize")
+    allowed <- c("dpi", "units", "device", "bg", "scale", "limitsize")
     ggsave_args <- dots[names(dots) %in% allowed]
     base_args <- list(filename = file.path(export_path, export_name), plot = p, width = width, height = height, dpi = dpi)
-    final_args <- c(base_args, ggsave_args)
-    do.call(ggsave, final_args)
+    do.call(ggsave, c(base_args, ggsave_args))
   }
 
   return(p)

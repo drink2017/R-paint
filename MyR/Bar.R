@@ -262,7 +262,7 @@ create_grouped_barplot_with_ci <- function(
     y_max_multiplier = 1.2,
     dodge_width = 0.9,
     group_spacing = 1.0,      # 新增：分组间隔控制，1.0为默认间隔，值越大间隔越大
-    x_text_angle = 0,         # x轴文字角度，0为横着，45为斜着
+    x_text_angle = 45,         # x轴文字角度，0为横着，45为斜着
     remove_x_axis_space = FALSE,  # 是否完全移除x轴标签空间
     y_axis_margin = 0.5       # 新增：y轴左侧边距调整，值越小y轴越靠近第一个柱子
 ) {
@@ -412,160 +412,203 @@ create_grouped_barplot_with_ci <- function(
   return(p)
 }
 
-# 每组两个柱子：左侧单一柱（mean + CI），右侧为三部分堆叠（堆叠部分显示 mean，顶部显示总和的 95% CI）
 create_grouped_two_with_stacked_right <- function(
-  left_list,          # list: 每组左侧柱子的样本向量，长度 = 组数
-  right_parts_list,   # list: 每组的右侧堆叠部分，形如 list(list(part1_vec, part2_vec, part3_vec), ...)，长度 = 组数
+  left_list,
+  right_parts_list,
   group_labels = NULL,
-  component_labels = c("C1","C2","C3"),
-  left_fill = "#6BAED6",
-  component_fills = c("#E41A1C","#4DAF4A","#984EA3"),
-  x_label = "Group",
-  y_label = "Value",
+  component_labels = c("C1", "C2", "C3"),
+  left_fill = "#2E2B54",
+  component_fills = c("#A61D24", "#78B0B8", "#B196C1"),
+  x_label = "Datasets",
+  y_label = "Time(s)",
   show_legend = TRUE,
   show_data_labels = FALSE,
+  # 标签控制 —— 默认为水平居中显示在柱顶上方
+  data_label_size = 4,
+  data_label_angle = 0,
+  data_label_hjust = 0.5,
+  data_label_vjust = -0.2,
+  label_margin_frac = 0.04,   # 标签与柱顶间距占总体最大值比例
+  # 文字与布局
+  axis_text_size = 12,
+  axis_title_size = 14,
+  legend_text_size = 10,
   use_arial = FALSE,
-  y_max_multiplier = 1.1,
+  # y轴/绘图导出
+  y_max_multiplier = 1.25,
   export_name = NULL,
   export_path = "./",
-  width = 10,
+  width = 12,
   height = 6,
   dpi = 300,
-  ...                 # 额外给 ggsave 的参数（谨慎使用，见说明）
+  # 左右偏移与柱宽
+  left_right_offset = 0.23,
+  bar_width = 0.22,
+  # 可选的 y-break 支持（需 ggbreak 包）
+  use_y_break = FALSE,
+  break_start = NULL,
+  break_end = NULL,
+  break_scales = 0.6,
+  ...
 ) {
-  if(!requireNamespace("ggplot2", quietly = TRUE)) stop("需要 ggplot2 包，请先 install.packages('ggplot2')")
+  if (!requireNamespace("ggplot2", quietly = TRUE)) stop("需要 ggplot2 包，请先 install.packages('ggplot2')")
   library(ggplot2)
 
   # 基本检查
   group_count <- length(left_list)
-  if(group_count < 1) stop("left_list 必须至少包含一组")
-  if(length(right_parts_list) != group_count) stop("right_parts_list 长度须等于 left_list（组数）")
+  if (group_count < 1) stop("left_list 必须至少包含一组")
+  if (length(right_parts_list) != group_count) stop("right_parts_list 长度须等于 left_list（组数）")
+  if (any(sapply(right_parts_list, length) != length(component_labels))) {
+    stop("right_parts_list 的每个元素必须包含与 component_labels 一致数量的部分")
+  }
+  if (is.null(group_labels)) group_labels <- paste0("G", seq_len(group_count))
 
-  # 每组应该包含三个部分
-  parts_per_group <- sapply(right_parts_list, length)
-  if(any(parts_per_group != 3)) stop("right_parts_list 的每个元素必须包含 3 个部分的向量")
-
-  # 生成 group_labels
-  if(is.null(group_labels)) group_labels <- paste0("G", seq_len(group_count))
-
-  # 计算统计量：左侧 mean/ci；右侧每部分 mean，及右侧总和的 mean/ci（需要同一组内三部分样本长度相同）
+  # 计算统计量
   long_rows <- list()
   total_stats <- data.frame(group = character(0), total_mean = numeric(0), ymin = numeric(0), ymax = numeric(0), stringsAsFactors = FALSE)
-  for(i in seq_len(group_count)) {
-    # left
+
+  for (i in seq_len(group_count)) {
     lv <- left_list[[i]]
     nL <- sum(!is.na(lv))
-    meanL <- if(nL>0) mean(lv, na.rm = TRUE) else NA
-    sdL <- if(nL>1) sd(lv, na.rm = TRUE) else NA
-    seL <- if(!is.na(sdL) && nL>1) sdL / sqrt(nL) else NA
-    ciL <- if(!is.na(seL) && nL>1) seL * qt(0.975, df = nL - 1) else 0
+    meanL <- if (nL > 0) mean(lv, na.rm = TRUE) else NA
+    sdL <- if (nL > 1) sd(lv, na.rm = TRUE) else NA
+    seL <- if (!is.na(sdL) && nL > 1) sdL / sqrt(nL) else NA
+    ciL <- if (!is.na(seL) && nL > 1) seL * qt(0.975, df = nL - 1) else 0
 
-    # right parts
-    p1 <- right_parts_list[[i]][[1]]
-    p2 <- right_parts_list[[i]][[2]]
-    p3 <- right_parts_list[[i]][[3]]
+    parts <- right_parts_list[[i]]
+    means_parts <- sapply(parts, function(x) if (sum(!is.na(x)) > 0) mean(x, na.rm = TRUE) else 0)
 
-    # 检查右侧三部分是否为同长度（若不是，无法逐样本求总和 CI）
-    len_parts <- c(length(na.omit(p1)), length(na.omit(p2)), length(na.omit(p3)))
-    same_len <- length(unique(len_parts)) == 1
+    len_parts <- sapply(parts, function(x) length(na.omit(x)))
+    same_len <- length(unique(len_parts)) == 1 && len_parts[1] > 0
 
-    mean_p1 <- if(sum(!is.na(p1))>0) mean(p1, na.rm = TRUE) else 0
-    mean_p2 <- if(sum(!is.na(p2))>0) mean(p2, na.rm = TRUE) else 0
-    mean_p3 <- if(sum(!is.na(p3))>0) mean(p3, na.rm = TRUE) else 0
-
-    # 计算右侧总和的 mean & CI：优选对逐样本相加计算 CI（需三部分长度相同）
-    if(same_len && len_parts[1] > 1) {
-      total_vec <- (p1 + p2 + p3)
+    if (same_len && len_parts[1] > 1) {
+      total_vec <- Reduce(`+`, parts)
       nT <- sum(!is.na(total_vec))
       meanT <- mean(total_vec, na.rm = TRUE)
       sdT <- sd(total_vec, na.rm = TRUE)
       seT <- sdT / sqrt(nT)
       ciT <- seT * qt(0.975, df = nT - 1)
     } else {
-      # 退化策略：将总 mean 近似为三部分 mean 之和，CI 设为 0（并发出警告）
-      meanT <- mean_p1 + mean_p2 + mean_p3
+      meanT <- sum(means_parts)
       ciT <- 0
-      warning(sprintf("第 %d 组右侧三部分样本长度不一致或样本数不足，无法计算总和的置信区间；将 CI 设为 0。", i))
+      if (!same_len) warning(sprintf("第 %d 组右侧部分样本长度不一致或样本数不足，无法计算总和的置信区间；将 CI 设为 0。", i))
     }
-
     yminT <- meanT - ciT
     ymaxT <- meanT + ciT
 
-    # 构建用于绘图的分组长表（两列位置：左为 type = 'L', 右为 'R' 的堆叠行）
-    # 左侧单一柱（用 bar 为 "Left"）
-    long_rows[[length(long_rows)+1]] <- data.frame(
-      group = group_labels[i],
-      type = "Left",
-      component = "Left",
-      value = meanL,
-      ymin = meanL - ciL,
-      ymax = meanL + ciL,
-      stringsAsFactors = FALSE
-    )
-    # 右侧三部分（作为堆叠，每个 component 一行）
-    long_rows[[length(long_rows)+1]] <- data.frame(group = group_labels[i], type = "Right", component = component_labels[1], value = mean_p1, ymin = NA, ymax = NA, stringsAsFactors = FALSE)
-    long_rows[[length(long_rows)+1]] <- data.frame(group = group_labels[i], type = "Right", component = component_labels[2], value = mean_p2, ymin = NA, ymax = NA, stringsAsFactors = FALSE)
-    long_rows[[length(long_rows)+1]] <- data.frame(group = group_labels[i], type = "Right", component = component_labels[3], value = mean_p3, ymin = NA, ymax = NA, stringsAsFactors = FALSE)
-
+    long_rows[[length(long_rows) + 1]] <- data.frame(group = group_labels[i], type = "Left", component = "Left", value = meanL, ymin = meanL - ciL, ymax = meanL + ciL, stringsAsFactors = FALSE)
+    for (j in seq_along(component_labels)) {
+      long_rows[[length(long_rows) + 1]] <- data.frame(group = group_labels[i], type = "Right", component = component_labels[j], value = means_parts[j], ymin = NA, ymax = NA, stringsAsFactors = FALSE)
+    }
     total_stats <- rbind(total_stats, data.frame(group = group_labels[i], total_mean = meanT, ymin = yminT, ymax = ymaxT, stringsAsFactors = FALSE))
   }
 
   plot_df <- do.call(rbind, long_rows)
   plot_df$group <- factor(plot_df$group, levels = group_labels)
-  plot_df$type <- factor(plot_df$type, levels = c("Left","Right"))
+  plot_df$type <- factor(plot_df$type, levels = c("Left", "Right"))
   plot_df$component <- factor(plot_df$component, levels = c("Left", component_labels))
-
-  # x positions: for each group, two x values (1..G), use dodge offset within group for left/right
   plot_df$group_pos <- as.numeric(plot_df$group)
-  # build stacked position by ggplot stacking (no manual cumulative necessary)
 
-  # 绘图
-  p <- ggplot() +
-    # 右侧堆叠条（只取 type == "Right"）
-    geom_col(data = subset(plot_df, type == "Right"), 
-             aes(x = group_pos + 0.25, y = value, fill = component),
-             stat = "identity", width = 0.45, color = "black") +
-    # 左侧单一条
-    geom_col(data = subset(plot_df, type == "Left"),
-             aes(x = group_pos - 0.25, y = value, fill = component),
-             stat = "identity", width = 0.45, color = "black") +
-    scale_x_continuous(breaks = seq_along(group_labels), labels = group_labels) +
-    labs(x = x_label, y = y_label)
-
-  # 颜色映射：左使用 left_fill（component == "Left"），右三部分使用 component_fills
-  # 创建填充向量，按 component factor levels 顺序设值
+  # 颜色映射
   fill_values <- c(left_fill, component_fills)
   names(fill_values) <- c("Left", component_labels)
-  p <- p + scale_fill_manual(values = fill_values, name = "")
 
-  # 主题与文字
-  if(use_arial && requireNamespace("showtext", quietly = TRUE) && requireNamespace("sysfonts", quietly = TRUE)) {
-    sysfonts::font_add("Arial", "C:/Windows/Fonts/arial.ttf")
-    showtext::showtext_auto()
-    p <- p + theme_classic() + theme(text = element_text(family = "Arial"))
+  base_max <- max(c(plot_df$value, total_stats$ymax), na.rm = TRUE)
+
+  # 强制左右两个柱子紧贴（中心间距 = bar_width）
+  left_right_offset <- bar_width / 2
+
+  # 估算标签需要的额外空间：根据最大数字的字符长度增加少量偏移
+  all_label_vals <- c(plot_df$value, total_stats$total_mean)
+  # 只保留有限数值
+  all_label_vals <- all_label_vals[is.finite(all_label_vals) & !is.na(all_label_vals)]
+  if (length(all_label_vals) == 0) {
+    max_digits <- 0
   } else {
-    p <- p + theme_classic()
-  }
-  p <- p + theme(axis.text.x = element_text(size = 12), axis.text.y = element_text(size = 12), legend.position = if(show_legend) "top" else "none")
-
-  # 数据标签（若需要，仅显示数值）
-  if(show_data_labels) {
-    # 左标签
-    p <- p + geom_text(data = subset(plot_df, type == "Left"), aes(x = group_pos - 0.25, y = value, label = round(value,2)), vjust = -0.5, size = 3)
-    # 右顶部标签（显示总和）
-    p <- p + geom_text(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + 0.25, y = total_mean, label = round(total_mean,2)), vjust = -0.5, size = 3)
+    # 四舍五入到整数后计算字符长度（不含千分位分隔符）
+    max_digits <- max(nchar(as.character(round(all_label_vals, 0))), na.rm = TRUE)
   }
 
-  # y 轴上限放大
-  y_top <- max(c(plot_df$value, total_stats$ymax), na.rm = TRUE)
-  if(!is.na(y_top) && is.finite(y_top)) p <- p + scale_y_continuous(expand = expansion(mult = c(0,0.02)), limits = c(0, y_top * y_max_multiplier))
+  # 基础偏移（原来的比例） + 基于位数的额外偏移
+  # extra_digit_frac: 每超出 base_digit_threshold 位，额外加 base_max * extra_digit_frac
+  base_digit_threshold <- 3
+  extra_digit_frac <- 0.065   # 每多一位额外增加 base_max 的 1%（可调整）
+  extra_digits <- pmax(0, max_digits - base_digit_threshold)
+  digit_extra <- if (is.finite(base_max) && base_max > 0) base_max * extra_digit_frac * extra_digits else 0
+
+  label_offset <- if (is.finite(base_max) && base_max > 0) base_max * label_margin_frac + digit_extra else 1
+
+  # y 上限在原来基础上增加标签空间，避免被裁剪
+  # 把预留空间略放大以保证被切掉的风险更小
+  y_limit_max <- if (is.finite(base_max)) base_max * y_max_multiplier + label_offset * 1.5 else NULL
+
+  # 绘图主体
+  p <- ggplot() +
+    scale_x_continuous(breaks = seq_along(group_labels), labels = group_labels) +
+    scale_fill_manual(name = "", values = fill_values) +
+    labs(x = x_label, y = paste(" ", y_label, " ")) +
+    theme_classic()
+
+  # 右侧堆叠条与左侧单条
+  p <- p + geom_col(data = subset(plot_df, type == "Right"), aes(x = group_pos + left_right_offset, y = value, fill = component), stat = "identity", width = bar_width, color = "black")
+  p <- p + geom_col(data = subset(plot_df, type == "Left"), aes(x = group_pos - left_right_offset, y = value, fill = component), stat = "identity", width = bar_width, color = "black")
+
+  # 字体支持
+  if (use_arial && requireNamespace("showtext", quietly = TRUE) && requireNamespace("sysfonts", quietly = TRUE)) {
+    library(showtext); library(sysfonts)
+    if (!("Arial" %in% sysfonts::font_families())) tryCatch(sysfonts::font_add("Arial", "C:/Windows/Fonts/arial.ttf"), error = function(e) {})
+    showtext::showtext_auto()
+    p <- p + theme(text = element_text(family = "Arial"))
+  }
+
+  # y 轴设置（含为标签预留空间）
+  if (!is.null(y_limit_max)) {
+    p <- p + scale_y_continuous(expand = c(0, 0), limits = c(0, y_limit_max))
+  } else {
+    p <- p + scale_y_continuous(expand = c(0, 0))
+  }
+
+  if (use_y_break && requireNamespace("ggbreak", quietly = TRUE) && !is.null(break_start) && !is.null(break_end)) {
+    p <- p + ggbreak::scale_y_break(breaks = c(break_start, break_end), scales = break_scales)
+  }
+
+  # 主题大小
+  p <- p + theme(
+    axis.text.x = element_text(size = axis_text_size, color = "black"),
+    axis.text.y = element_text(size = axis_text_size, color = "black"),
+    axis.title.x = element_text(size = axis_title_size, margin = margin(t = 6)),
+    axis.title.y = element_text(size = axis_title_size, hjust = 0.5, margin = margin(r = 6)),
+    legend.text = element_text(size = legend_text_size),
+    legend.position = if (show_legend) "top" else "none",
+    plot.margin = margin(t = 8, r = 8, b = 6, l = 6)
+  )
+
+  # 数据标签：放在柱顶上方并水平居中
+  if (show_data_labels) {
+    # 左侧：y = value + offset
+    left_labels_df <- subset(plot_df, type == "Left" & !is.na(value))
+    if (nrow(left_labels_df) > 0) {
+      left_labels_df$ypos <- left_labels_df$value + label_offset
+      p <- p + geom_text(data = left_labels_df, aes(x = group_pos - left_right_offset, y = ypos, label = round(value, 2)), angle = data_label_angle, size = data_label_size, hjust = data_label_hjust, vjust = data_label_vjust)
+    }
+
+    # 右侧总和：y = total_mean + offset
+    total_stats <- total_stats[!is.na(total_stats$total_mean), , drop = FALSE]
+    if (nrow(total_stats) > 0) {
+      total_stats$ypos <- total_stats$total_mean + label_offset
+      p <- p + geom_text(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + left_right_offset, y = ypos, label = round(total_mean, 2)), angle = data_label_angle, size = data_label_size, hjust = data_label_hjust, vjust = data_label_vjust)
+      # 如果有 CI，则绘制 errorbar（在总和上方）
+      if (any(!is.na(total_stats$ymin))) {
+        p <- p + geom_errorbar(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + left_right_offset, ymin = ymin, ymax = ymax), width = bar_width * 0.25, size = 0.6)
+      }
+    }
+  }
 
   # 保存
-  if(!is.null(export_name)) {
+  if (!is.null(export_name)) {
     dir.create(export_path, showWarnings = FALSE, recursive = TRUE)
+    allowed <- c("dpi", "units", "device", "bg", "scale", "limitsize")
     dots <- list(...)
-    # 允许的 ggsave 参数（可按需扩展）
-    allowed <- c("dpi","units","device","bg","scale","limitsize")
     ggsave_args <- dots[names(dots) %in% allowed]
     base_args <- list(filename = file.path(export_path, export_name), plot = p, width = width, height = height, dpi = dpi)
     final_args <- c(base_args, ggsave_args)

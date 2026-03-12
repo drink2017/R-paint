@@ -262,7 +262,7 @@ create_grouped_barplot_with_ci <- function(
     y_max_multiplier = 1.2,
     dodge_width = 0.9,
     group_spacing = 1.0,      # 新增：分组间隔控制，1.0为默认间隔，值越大间隔越大
-    x_text_angle = 0,         # x轴文字角度，0为横着，45为斜着
+    x_text_angle = 45,         # x轴文字角度，0为横着，45为斜着
     remove_x_axis_space = FALSE,  # 是否完全移除x轴标签空间
     y_axis_margin = 0.5       # 新增：y轴左侧边距调整，值越小y轴越靠近第一个柱子
 ) {
@@ -413,14 +413,45 @@ create_grouped_barplot_with_ci <- function(
 }
 
 create_grouped_two_with_stacked_right <- function(
-  left_list, right_parts_list, group_labels = NULL, component_labels = c("C1", "C2", "C3"),
-  left_fill = "#6BAED6", component_fills = c("#E41A1C", "#4DAF4A", "#984EA3"), x_label = "Datasets",
-  y_label = "Time(s)", show_legend = FALSE, show_data_labels = FALSE, use_arial = TRUE,
-  y_max_multiplier = 1.45, export_name = NULL, export_path = "./", width = 12, height = 6, dpi = 300,
-  use_y_break = FALSE, break_start = NULL, break_end = NULL, break_scales = 0.6,
-  left_right_offset = 0.23, bar_width = 0.2, text_size = 13, axis_text_size = 42,
-  legend_text_size = 30, legend_position = c(0.85, 0.85), top_label_nudge_ratio = 0.03, ...
+  left_list,
+  right_parts_list,
+  group_labels = NULL,
+  component_labels = c("C1", "C2", "C3"),
+  left_fill = "#2E2B54",
+  component_fills = c("#A61D24", "#78B0B8", "#B196C1"),
+  x_label = "Datasets",
+  y_label = "Time(s)",
+  show_legend = TRUE,
+  show_data_labels = FALSE,
+  # 标签控制 —— 默认为水平居中显示在柱顶上方
+  data_label_size = 4,
+  data_label_angle = 0,
+  data_label_hjust = 0.5,
+  data_label_vjust = -0.2,
+  label_margin_frac = 0.04,   # 标签与柱顶间距占总体最大值比例
+  # 文字与布局
+  axis_text_size = 12,
+  axis_title_size = 14,
+  legend_text_size = 10,
+  use_arial = FALSE,
+  # y轴/绘图导出
+  y_max_multiplier = 1.25,
+  export_name = NULL,
+  export_path = "./",
+  width = 12,
+  height = 6,
+  dpi = 300,
+  # 左右偏移与柱宽
+  left_right_offset = 0.23,
+  bar_width = 0.22,
+  # 可选的 y-break 支持（需 ggbreak 包）
+  use_y_break = FALSE,
+  break_start = NULL,
+  break_end = NULL,
+  break_scales = 0.6,
+  ...
 ) {
+  if (!requireNamespace("ggplot2", quietly = TRUE)) stop("需要 ggplot2 包，请先 install.packages('ggplot2')")
   library(ggplot2)
   library(scales)
 
@@ -469,8 +500,14 @@ create_grouped_two_with_stacked_right <- function(
   }
 
   group_count <- length(left_list)
+  if (group_count < 1) stop("left_list 必须至少包含一组")
+  if (length(right_parts_list) != group_count) stop("right_parts_list 长度须等于 left_list（组数）")
+  if (any(sapply(right_parts_list, length) != length(component_labels))) {
+    stop("right_parts_list 的每个元素必须包含与 component_labels 一致数量的部分")
+  }
   if (is.null(group_labels)) group_labels <- paste0("G", seq_len(group_count))
 
+  # 计算统计量
   long_rows <- list()
   total_stats <- data.frame(group = character(0), total_mean = numeric(0), ymin = numeric(0), ymax = numeric(0), stringsAsFactors = FALSE)
 
@@ -478,24 +515,36 @@ create_grouped_two_with_stacked_right <- function(
     lv <- left_list[[i]]
     nL <- sum(!is.na(lv))
     meanL <- if (nL > 0) mean(lv, na.rm = TRUE) else NA
-    ciL <- 0
+    sdL <- if (nL > 1) sd(lv, na.rm = TRUE) else NA
+    seL <- if (!is.na(sdL) && nL > 1) sdL / sqrt(nL) else NA
+    ciL <- if (!is.na(seL) && nL > 1) seL * qt(0.975, df = nL - 1) else 0
 
-    p1 <- right_parts_list[[i]][[1]]
-    p2 <- right_parts_list[[i]][[2]]
-    p3 <- right_parts_list[[i]][[3]]
+    parts <- right_parts_list[[i]]
+    means_parts <- sapply(parts, function(x) if (sum(!is.na(x)) > 0) mean(x, na.rm = TRUE) else 0)
 
-    mean_p1 <- if (sum(!is.na(p1)) > 0) mean(p1, na.rm = TRUE) else 0
-    mean_p2 <- if (sum(!is.na(p2)) > 0) mean(p2, na.rm = TRUE) else 0
-    mean_p3 <- if (sum(!is.na(p3)) > 0) mean(p3, na.rm = TRUE) else 0
-    meanT <- mean_p1 + mean_p2 + mean_p3
-    ciT <- 0
+    len_parts <- sapply(parts, function(x) length(na.omit(x)))
+    same_len <- length(unique(len_parts)) == 1 && len_parts[1] > 0
+
+    if (same_len && len_parts[1] > 1) {
+      total_vec <- Reduce(`+`, parts)
+      nT <- sum(!is.na(total_vec))
+      meanT <- mean(total_vec, na.rm = TRUE)
+      sdT <- sd(total_vec, na.rm = TRUE)
+      seT <- sdT / sqrt(nT)
+      ciT <- seT * qt(0.975, df = nT - 1)
+    } else {
+      meanT <- sum(means_parts)
+      ciT <- 0
+      if (!same_len) warning(sprintf("第 %d 组右侧部分样本长度不一致或样本数不足，无法计算总和的置信区间；将 CI 设为 0。", i))
+    }
+    yminT <- meanT - ciT
+    ymaxT <- meanT + ciT
 
     long_rows[[length(long_rows) + 1]] <- data.frame(group = group_labels[i], type = "Left", component = "Left", value = meanL, ymin = meanL - ciL, ymax = meanL + ciL, stringsAsFactors = FALSE)
-    long_rows[[length(long_rows) + 1]] <- data.frame(group = group_labels[i], type = "Right", component = component_labels[1], value = mean_p1, ymin = NA, ymax = NA, stringsAsFactors = FALSE)
-    long_rows[[length(long_rows) + 1]] <- data.frame(group = group_labels[i], type = "Right", component = component_labels[2], value = mean_p2, ymin = NA, ymax = NA, stringsAsFactors = FALSE)
-    long_rows[[length(long_rows) + 1]] <- data.frame(group = group_labels[i], type = "Right", component = component_labels[3], value = mean_p3, ymin = NA, ymax = NA, stringsAsFactors = FALSE)
-
-    total_stats <- rbind(total_stats, data.frame(group = group_labels[i], total_mean = meanT, ymin = meanT - ciT, ymax = meanT + ciT, stringsAsFactors = FALSE))
+    for (j in seq_along(component_labels)) {
+      long_rows[[length(long_rows) + 1]] <- data.frame(group = group_labels[i], type = "Right", component = component_labels[j], value = means_parts[j], ymin = NA, ymax = NA, stringsAsFactors = FALSE)
+    }
+    total_stats <- rbind(total_stats, data.frame(group = group_labels[i], total_mean = meanT, ymin = yminT, ymax = ymaxT, stringsAsFactors = FALSE))
   }
 
   plot_df <- do.call(rbind, long_rows)
@@ -504,66 +553,106 @@ create_grouped_two_with_stacked_right <- function(
   plot_df$component <- factor(plot_df$component, levels = c("Left", component_labels))
   plot_df$group_pos <- as.numeric(plot_df$group)
 
+  # 颜色映射
   fill_values <- c(left_fill, component_fills)
   names(fill_values) <- c("Left", component_labels)
 
-  y_top <- max(c(plot_df$value, total_stats$ymax), na.rm = TRUE)
-  y_limit_max <- if (!is.na(y_top) && is.finite(y_top)) y_top * y_max_multiplier else NULL
+  base_max <- max(c(plot_df$value, total_stats$ymax), na.rm = TRUE)
 
+  # 强制左右两个柱子紧贴（中心间距 = bar_width）
+  left_right_offset <- bar_width / 2
+
+  # 估算标签需要的额外空间：根据最大数字的字符长度增加少量偏移
+  all_label_vals <- c(plot_df$value, total_stats$total_mean)
+  # 只保留有限数值
+  all_label_vals <- all_label_vals[is.finite(all_label_vals) & !is.na(all_label_vals)]
+  if (length(all_label_vals) == 0) {
+    max_digits <- 0
+  } else {
+    # 四舍五入到整数后计算字符长度（不含千分位分隔符）
+    max_digits <- max(nchar(as.character(round(all_label_vals, 0))), na.rm = TRUE)
+  }
+
+  # 基础偏移（原来的比例） + 基于位数的额外偏移
+  # extra_digit_frac: 每超出 base_digit_threshold 位，额外加 base_max * extra_digit_frac
+  base_digit_threshold <- 3
+  extra_digit_frac <- 0.065   # 每多一位额外增加 base_max 的 1%（可调整）
+  extra_digits <- pmax(0, max_digits - base_digit_threshold)
+  digit_extra <- if (is.finite(base_max) && base_max > 0) base_max * extra_digit_frac * extra_digits else 0
+
+  label_offset <- if (is.finite(base_max) && base_max > 0) base_max * label_margin_frac + digit_extra else 1
+
+  # y 上限在原来基础上增加标签空间，避免被裁剪
+  # 把预留空间略放大以保证被切掉的风险更小
+  y_limit_max <- if (is.finite(base_max)) base_max * y_max_multiplier + label_offset * 1.5 else NULL
+
+  # 绘图主体
   p <- ggplot() +
-    scale_y_continuous(
-      expand = c(0, 0),
-      limits = c(0, y_limit_max),
-      labels = scales::comma_format()
-    ) +
-    geom_col(data = subset(plot_df, type == "Right"), aes(x = group_pos + left_right_offset, y = value, fill = component), width = bar_width, color = "black", linewidth = 0.5) +
-    geom_col(data = subset(plot_df, type == "Left"), aes(x = group_pos - left_right_offset, y = value, fill = component), width = bar_width, color = "black", linewidth = 0.5) +
-    scale_fill_manual(name = "", values = fill_values) +
     scale_x_continuous(breaks = seq_along(group_labels), labels = group_labels) +
-    labs(y = paste(" ", y_label, " "), x = x_label) +
+    scale_fill_manual(name = "", values = fill_values) +
+    labs(x = x_label, y = paste(" ", y_label, " ")) +
     theme_classic()
 
-  if (use_arial) p <- p + theme(text = element_text(family = "Arial"))
+  # 右侧堆叠条与左侧单条
+  p <- p + geom_col(data = subset(plot_df, type == "Right"), aes(x = group_pos + left_right_offset, y = value, fill = component), stat = "identity", width = bar_width, color = "black")
+  p <- p + geom_col(data = subset(plot_df, type == "Left"), aes(x = group_pos - left_right_offset, y = value, fill = component), stat = "identity", width = bar_width, color = "black")
 
-  if (show_data_labels) {
-    # 使用自定义的 geom_text_oob 替代原生的 geom_text
-    p <- p +
-      geom_text_oob(data = subset(plot_df, type == "Left"), aes(x = group_pos - left_right_offset, y = value, label = scales::comma(round(value, 2))), hjust = 0.5, vjust = -0.5, angle = 0, size = text_size) +
-      geom_text_oob(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + left_right_offset, y = total_mean, label = scales::comma(round(total_mean, 2))), hjust = 0.5, vjust = -0.5, angle = 0, size = text_size)
+  # 字体支持
+  if (use_arial && requireNamespace("showtext", quietly = TRUE) && requireNamespace("sysfonts", quietly = TRUE)) {
+    library(showtext); library(sysfonts)
+    if (!("Arial" %in% sysfonts::font_families())) tryCatch(sysfonts::font_add("Arial", "C:/Windows/Fonts/arial.ttf"), error = function(e) {})
+    showtext::showtext_auto()
+    p <- p + theme(text = element_text(family = "Arial"))
   }
 
-  if (!use_y_break && !is.null(y_limit_max)) {
-    p <- p + coord_cartesian(ylim = c(0, y_limit_max), clip = "off")
+  # y 轴设置（含为标签预留空间）
+  if (!is.null(y_limit_max)) {
+    p <- p + scale_y_continuous(expand = c(0, 0), limits = c(0, y_limit_max))
+  } else {
+    p <- p + scale_y_continuous(expand = c(0, 0))
   }
 
-  if (use_y_break) {
+  if (use_y_break && requireNamespace("ggbreak", quietly = TRUE) && !is.null(break_start) && !is.null(break_end)) {
     p <- p + ggbreak::scale_y_break(breaks = c(break_start, break_end), scales = break_scales)
   }
 
+  # 主题大小
   p <- p + theme(
     axis.text.x = element_text(size = axis_text_size, color = "black"),
     axis.text.y = element_text(size = axis_text_size, color = "black"),
-    axis.title.x = element_text(size = axis_text_size, margin = margin(t = 6)),
-    axis.title.y = element_text(size = axis_text_size, hjust = 0.5, margin = margin(r = 6)),
-    axis.line.x = element_line(color = "black", linewidth = 0.5),
-    axis.line.y.left = element_line(color = "black", linewidth = 0.5),
-    axis.line.y.right = element_blank(),
-    axis.ticks.y.right = element_blank(),
-    axis.text.y.right = element_blank(),
-    axis.title.y.right = element_blank(),
-    plot.margin = margin(t = 12, r = 12, b = 6, l = 6)
+    axis.title.x = element_text(size = axis_title_size, margin = margin(t = 6)),
+    axis.title.y = element_text(size = axis_title_size, hjust = 0.5, margin = margin(r = 6)),
+    legend.text = element_text(size = legend_text_size),
+    legend.position = if (show_legend) "top" else "none",
+    plot.margin = margin(t = 8, r = 8, b = 6, l = 6)
   )
 
-  if (show_legend) {
-    p <- p + theme(legend.position = legend_position, legend.text = element_text(size = legend_text_size), legend.margin = margin(b = 10))
-  } else {
-    p <- p + theme(legend.position = "none")
+  # 数据标签：放在柱顶上方并水平居中
+  if (show_data_labels) {
+    # 左侧：y = value + offset
+    left_labels_df <- subset(plot_df, type == "Left" & !is.na(value))
+    if (nrow(left_labels_df) > 0) {
+      left_labels_df$ypos <- left_labels_df$value + label_offset
+      p <- p + geom_text(data = left_labels_df, aes(x = group_pos - left_right_offset, y = ypos, label = round(value, 2)), angle = data_label_angle, size = data_label_size, hjust = data_label_hjust, vjust = data_label_vjust)
+    }
+
+    # 右侧总和：y = total_mean + offset
+    total_stats <- total_stats[!is.na(total_stats$total_mean), , drop = FALSE]
+    if (nrow(total_stats) > 0) {
+      total_stats$ypos <- total_stats$total_mean + label_offset
+      p <- p + geom_text(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + left_right_offset, y = ypos, label = round(total_mean, 2)), angle = data_label_angle, size = data_label_size, hjust = data_label_hjust, vjust = data_label_vjust)
+      # 如果有 CI，则绘制 errorbar（在总和上方）
+      if (any(!is.na(total_stats$ymin))) {
+        p <- p + geom_errorbar(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + left_right_offset, ymin = ymin, ymax = ymax), width = bar_width * 0.25, size = 0.6)
+      }
+    }
   }
 
+  # 保存
   if (!is.null(export_name)) {
     dir.create(export_path, showWarnings = FALSE, recursive = TRUE)
-    dots <- list(...)
     allowed <- c("dpi", "units", "device", "bg", "scale", "limitsize")
+    dots <- list(...)
     ggsave_args <- dots[names(dots) %in% allowed]
     base_args <- list(filename = file.path(export_path, export_name), plot = p, width = width, height = height, dpi = dpi)
     do.call(ggsave, c(base_args, ggsave_args))

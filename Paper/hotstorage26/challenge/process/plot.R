@@ -1,4 +1,4 @@
-source("C:\\Users\\YP\\Desktop\\work\\R-paint\\MyR\\Bar.R")
+source("C:/Users/YP/Desktop/work/R-paint/MyR/Bar.R")
 
 left_list <- list(c(64), c(1698), c(31), c(89))
 right_parts_list <- list(
@@ -13,23 +13,29 @@ p <- create_grouped_two_with_stacked_right(
   right_parts_list = right_parts_list,
   group_labels = c("Glibc","Linux","Web","Win.Log"),
   component_labels = c("p1","p2","p3"),
-  left_fill = "#6BAED6",
-  component_fills = c("#E41A1C","#4DAF4A","#984EA3"),
   show_data_labels = TRUE,
+  data_label_size = 10,
+  data_label_angle = 90,       # 改为竖排
+  data_label_hjust = 0.5,      # 水平居中
+  data_label_vjust = 0.5,      # 竖直微调（可试 -0.5 / 0.5 看视觉效果）
+  label_margin_frac = 0.05,
+  axis_text_size = 12,
+  axis_title_size = 14,
   show_legend = FALSE,
-  use_y_break = TRUE,
-  break_start = 2500,
-  break_end = 8000,
-  break_scales = 0.5,
-  left_right_offset = 0.14,
-  export_name = "group2_stacked_right_break.pdf",
-  export_path = "C:\\Users\\YP\\Desktop\\work\\R-paint\\Paper\\hotstorage26\\challenge\\process\\",
-  width = 8,
-  height = 5,
-  device = cairo_pdf,
-  axis_text_size = 16,
-  text_size = 5
+  bar_width = 0.40
 )
 
+# 覆盖主题：刻度文字 10pt，轴标题 14pt，图例文字 10pt
+p <- p + theme(
+  axis.text.x = element_text(size = 32),
+  axis.text.y = element_text(size = 32),
+  axis.title.x = element_text(size = 32),
+  axis.title.y = element_text(size = 32),
+  legend.text = element_text(size = 10)
+)
+
+# 保存为 PDF（建议使用 cairo_pdf 以保证字体/向量输出）
+cairo_pdf("C:/Users/YP/Desktop/work/R-paint/Paper/hotstorage26/challenge/process/process.pdf", width = 12, height = 6)
 print(p)
+dev.off()
 

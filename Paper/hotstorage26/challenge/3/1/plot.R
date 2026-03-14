@@ -38,5 +38,6 @@ plot_line_comparison_log2(
   export_path = "./",
   export_name = "reuse.pdf",
   x_label = "Reuse Distance",
-  y_label = "CDF"
+  y_label = "CDF",
+  y_breaks = seq(0, 1, by = 0.2)   # 明确指定纵轴刻度
 )

@@ -743,7 +743,7 @@ plot_line_comparison_log2 <- function(
   plot_width = 10,
   plot_height = 5,
   range_extension = 1.0,
-  colors = c("#AD0626", "#B79AD1", "#75B8BF", "#F2BE5C","#FF5809"),
+  colors = c("#A61D24", "#B196C1", "#E8B15E", "#78B0B8","#FF5809"),
   x_labels = NULL   # 新增参数
 ) {
   library(ggplot2)

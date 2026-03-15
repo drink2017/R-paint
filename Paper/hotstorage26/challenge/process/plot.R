@@ -25,6 +25,27 @@ p <- create_grouped_two_with_stacked_right(
   bar_width = 0.40
 )
 
+# 定义科学计数法标签函数
+fancy_scientific <- function(x) {
+  sapply(x, function(val) {
+    if (is.na(val) || val == 0) {
+      return(expression(0))
+    }
+    exponent  <- floor(log10(abs(val)))
+    mantissa  <- round(val / 10^exponent, 2)
+    if (mantissa == 1) {
+      parse(text = paste0("10^", exponent))[[1]]
+    } else {
+      parse(text = paste0(mantissa, " %*% 10^", exponent))[[1]]
+    }
+  })
+}
+
+p <- p + scale_y_continuous(
+  labels = fancy_scientific,
+  expand = expansion(mult = c(0, 0.05))
+)
+
 # 覆盖主题：刻度文字 10pt，轴标题 14pt，图例文字 10pt
 p <- p + theme(
   axis.text.x = element_text(size = 32),

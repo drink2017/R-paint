@@ -11,7 +11,7 @@ right_parts_list <- list(
 p <- create_grouped_two_with_stacked_right(
   left_list = left_list,
   right_parts_list = right_parts_list,
-  group_labels = c("Glibc","Linux","Web","Log"),
+  group_labels = c("Glibc","Linux","Web*","Log"),
   component_labels = c("p1","p2","p3"),
   show_data_labels = TRUE,
   data_label_size = 10,

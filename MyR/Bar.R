@@ -420,7 +420,7 @@ create_grouped_two_with_stacked_right <- function(
   left_fill = "#2E2B54",
   component_fills = c("#A61D24", "#78B0B8", "#B196C1"),
   x_label = "Datasets",
-  y_label = "Time(s)",
+  y_label = "Time (s)",
   show_legend = TRUE,
   show_data_labels = FALSE,
   # 标签控制 —— 默认为水平居中显示在柱顶上方
@@ -576,7 +576,7 @@ create_grouped_two_with_stacked_right <- function(
   # 基础偏移（原来的比例） + 基于位数的额外偏移
   # extra_digit_frac: 每超出 base_digit_threshold 位，额外加 base_max * extra_digit_frac
   base_digit_threshold <- 3
-  extra_digit_frac <- 0.065   # 每多一位额外增加 base_max 的 1%（可调整）
+  extra_digit_frac <- 0.005   # 每多一位额外增加 base_max 的 1%（可调整）
   extra_digits <- pmax(0, max_digits - base_digit_threshold)
   digit_extra <- if (is.finite(base_max) && base_max > 0) base_max * extra_digit_frac * extra_digits else 0
 

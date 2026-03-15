@@ -1,4 +1,4 @@
-source("C:/Users/YP/Desktop/work/R-paint/MyR/Bar.R")
+source("E:/Users/drinkwater/Desktop/R-script-template/MyR/Bar.R")
 
 left_list <- list(c(64), c(1698), c(31), c(89))
 right_parts_list <- list(
@@ -11,11 +11,11 @@ right_parts_list <- list(
 p <- create_grouped_two_with_stacked_right(
   left_list = left_list,
   right_parts_list = right_parts_list,
-  group_labels = c("Glibc","Linux","Web","Win.Log"),
+  group_labels = c("Glibc","Linux","Web","Log"),
   component_labels = c("p1","p2","p3"),
   show_data_labels = TRUE,
   data_label_size = 10,
-  data_label_angle = 90,       # 改为竖排
+  data_label_angle = 0,       # 改为竖排
   data_label_hjust = 0.5,      # 水平居中
   data_label_vjust = 0.5,      # 竖直微调（可试 -0.5 / 0.5 看视觉效果）
   label_margin_frac = 0.05,
@@ -35,7 +35,7 @@ p <- p + theme(
 )
 
 # 保存为 PDF（建议使用 cairo_pdf 以保证字体/向量输出）
-cairo_pdf("C:/Users/YP/Desktop/work/R-paint/Paper/hotstorage26/challenge/process/process.pdf", width = 12, height = 6)
+cairo_pdf("E:/Users/drinkwater/Desktop/R-script-template/Paper/hotstorage26/challenge/process/process.pdf", width = 12, height = 6)
 print(p)
 dev.off()
 

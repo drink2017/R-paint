@@ -1,23 +1,4 @@
-find_line_no_point_script <- function(start_dir, max_depth = 10) {
-  current_dir <- normalizePath(start_dir, winslash = "/", mustWork = FALSE)
-
-  for (i in seq_len(max_depth + 1)) {
-    candidate <- file.path(current_dir, "MyR", "Line_NoPoint.R")
-    if (file.exists(candidate)) {
-      return(candidate)
-    }
-
-    parent_dir <- dirname(current_dir)
-    if (identical(parent_dir, current_dir)) {
-      break
-    }
-    current_dir <- parent_dir
-  }
-
-  NA_character_
-}
-
-plot_superfeature_hit_cdf <- function(txt_path, pdf_path, title = NULL) {
+read_superfeature_hit_cdf <- function(txt_path) {
   if (!file.exists(txt_path)) {
     stop(sprintf("Input file does not exist: %s", txt_path), call. = FALSE)
   }
@@ -28,6 +9,7 @@ plot_superfeature_hit_cdf <- function(txt_path, pdf_path, title = NULL) {
       header = FALSE,
       col.names = c("super_feature_id", "hit_count"),
       sep = ",",
+      colClasses = c("character", "numeric"),
       stringsAsFactors = FALSE
     ),
     error = function(e) {
@@ -46,98 +28,107 @@ plot_superfeature_hit_cdf <- function(txt_path, pdf_path, title = NULL) {
   }
 
   if (nrow(df) == 0) {
-    stop("Input file is empty.", call. = FALSE)
+    stop(sprintf("Input file is empty: %s", txt_path), call. = FALSE)
   }
 
-  hit_count <- suppressWarnings(as.numeric(df$hit_count))
-  if (any(is.na(hit_count))) {
-    stop("Column 2 (hit_count) must be numeric for all rows.", call. = FALSE)
+  if (any(is.na(df$hit_count))) {
+    stop(
+      sprintf("Column 2 (hit_count) must be numeric for all rows: %s", txt_path),
+      call. = FALSE
+    )
   }
 
-  df$hit_count <- hit_count
-
-  total_hits <- sum(df$hit_count)
-  if (!is.finite(total_hits) || total_hits <= 0) {
-    stop("Total hit_count must be greater than 0.", call. = FALSE)
-  }
-
-  # Merge duplicated features first to avoid double-counting.
   df <- aggregate(hit_count ~ super_feature_id, data = df, FUN = sum)
   df <- df[order(df$hit_count, decreasing = TRUE), , drop = FALSE]
 
-  feature_frac <- seq_len(nrow(df)) / nrow(df)
-  hit_frac <- cumsum(df$hit_count) / sum(df$hit_count)
-  cdf_df <- data.frame(
-    feature_frac = c(0, feature_frac),
-    hit_frac = c(0, hit_frac)
-  )
-
-  if (!exists("plot_line_comparison_xcdf", mode = "function")) {
-    line_script <- find_line_no_point_script(dirname(txt_path))
-    if (is.na(line_script)) {
-      stop("Cannot locate MyR/Line_NoPoint.R from txt_path.", call. = FALSE)
-    }
-    source(line_script)
+  total_hits <- sum(df$hit_count)
+  if (!is.finite(total_hits) || total_hits <= 0) {
+    stop(sprintf("Total hit_count must be greater than 0: %s", txt_path), call. = FALSE)
   }
+
+  data.frame(
+    feature_frac = c(0, seq_len(nrow(df)) / nrow(df)),
+    hit_frac = c(0, cumsum(df$hit_count) / total_hits),
+    series = tools::file_path_sans_ext(basename(txt_path)),
+    stringsAsFactors = FALSE
+  )
+}
+
+plot_superfeature_hit_cdfs <- function(txt_paths, pdf_path, title = NULL) {
+  if (length(txt_paths) == 0) {
+    stop("No txt files were found to plot.", call. = FALSE)
+  }
+
+  if (!requireNamespace("ggplot2", quietly = TRUE)) {
+    stop("Package 'ggplot2' is required but not installed.", call. = FALSE)
+  }
+
+  cdf_list <- lapply(txt_paths, read_superfeature_hit_cdf)
+  plot_df <- do.call(rbind, cdf_list)
+  series_levels <- vapply(cdf_list, function(x) x$series[[1]], character(1))
+  plot_df$series <- factor(plot_df$series, levels = series_levels)
+
+  base_colors <- c("#AD0626", "#B79AD1", "#75B8BF", "#F2BE5C")
+  if (length(series_levels) > length(base_colors)) {
+    extra_colors <- grDevices::hcl.colors(
+      length(series_levels) - length(base_colors),
+      palette = "Dark 3"
+    )
+    base_colors <- c(base_colors, extra_colors)
+  }
+  line_colors <- stats::setNames(base_colors[seq_along(series_levels)], series_levels)
 
   output_dir <- dirname(pdf_path)
   if (!dir.exists(output_dir)) {
     dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
   }
 
-  export_path <- if (output_dir %in% c(".", "")) {
-    "./"
-  } else {
-    paste0(normalizePath(output_dir, winslash = "/", mustWork = FALSE), "/")
-  }
-
-  plot_data <- data.frame(cdf = cdf_df$hit_frac)
   plot_width <- 11
   plot_height <- 6.5
 
-  p <- plot_line_comparison_xcdf(
-    data = plot_data,
-    export_path = export_path,
-    export_name = basename(pdf_path),
-    x_lim = c(0, 1),
-    y_lim = c(0, 1),
-    line_size = 2.8,
-    axis_text_size = 30,
-    x_title_size = 34,
-    y_title_size = 34,
-    x_breaks = seq(0, 1, 0.2),
-    y_breaks = seq(0, 1, 0.2),
-    x_label = "Candidate Set",
-    y_label = "Proportion",
-    plot_width = plot_width,
-    plot_height = plot_height,
-    x_expand = c(0, 0),
-    y_expand = c(0, 0)
-  )
-
-  if (!requireNamespace("ggplot2", quietly = TRUE)) {
-    stop("Package 'ggplot2' is required but not installed.", call. = FALSE)
-  }
-
-  p_final <- p +
+  p <- ggplot2::ggplot(
+    plot_df,
+    ggplot2::aes(x = feature_frac, y = hit_frac, color = series)
+  ) +
+    ggplot2::geom_line(size = 2.8) +
+    ggplot2::scale_color_manual(values = line_colors) +
+    ggplot2::scale_x_continuous(
+      limits = c(0, 1),
+      breaks = seq(0, 1, 0.2),
+      expand = ggplot2::expansion(mult = c(0, 0))
+    ) +
+    ggplot2::scale_y_continuous(
+      limits = c(0, 1),
+      breaks = seq(0, 1, 0.2),
+      expand = ggplot2::expansion(mult = c(0, 0))
+    ) +
+    ggplot2::labs(
+      x = "Candidate Set",
+      y = "Proportion",
+      color = NULL
+    ) +
+    ggplot2::theme_classic() +
     ggplot2::theme(
       plot.margin = ggplot2::margin(t = 20, r = 30, b = 35, l = 40, unit = "pt"),
-      axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 12)),
-      axis.title.y = ggplot2::element_text(margin = ggplot2::margin(r = 12))
+      axis.text = ggplot2::element_text(size = 30, color = "black"),
+      axis.title.x = ggplot2::element_text(size = 34, margin = ggplot2::margin(t = 12)),
+      axis.title.y = ggplot2::element_text(size = 34, margin = ggplot2::margin(r = 12)),
+      legend.position = "right",
+      legend.text = ggplot2::element_text(size = 24)
     )
 
   if (!is.null(title) && nzchar(title)) {
-    p_final <- p_final + ggplot2::ggtitle(title)
+    p <- p + ggplot2::ggtitle(title)
   }
 
   ggplot2::ggsave(
-    pdf_path,
-    plot = p_final,
+    filename = pdf_path,
+    plot = p,
     width = plot_width,
     height = plot_height
   )
 
-  invisible(cdf_df)
+  invisible(plot_df)
 }
 
 args <- commandArgs(trailingOnly = FALSE)
@@ -152,6 +143,7 @@ script_dir <- if (length(script_arg) > 0) {
   getwd()
 }
 
-input_txt <- file.path(script_dir, "log.txt")
-output_pdf <- file.path(script_dir, "log_cdf.pdf")
-plot_superfeature_hit_cdf(input_txt, output_pdf)
+input_txts <- sort(list.files(script_dir, pattern = "\\.txt$", full.names = TRUE))
+output_pdf <- file.path(script_dir, "all_cdf.pdf")
+
+plot_superfeature_hit_cdfs(input_txts, output_pdf)

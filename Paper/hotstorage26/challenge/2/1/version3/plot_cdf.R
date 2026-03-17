@@ -152,6 +152,6 @@ script_dir <- if (length(script_arg) > 0) {
   getwd()
 }
 
-input_txt <- file.path(script_dir, "linux.txt")
-output_pdf <- file.path(script_dir, "linux_cdf.pdf")
+input_txt <- file.path(script_dir, "log.txt")
+output_pdf <- file.path(script_dir, "log_cdf.pdf")
 plot_superfeature_hit_cdf(input_txt, output_pdf)

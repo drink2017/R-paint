@@ -1,8 +1,8 @@
 # 设置工作目录
-setwd("E:/Users/drinkwater/Desktop/R-script-template/Paper/hotstorage26/challenge/3/1")
+setwd("C:/Users/YP/Desktop/work/R-paint/Paper/hotstorage26/challenge/3/1")
 
 # 加载绘图函数
-source("E:/Users/drinkwater/Desktop/R-script-template/MyR/Line_NoPoint.R")
+source("C:/Users/YP/Desktop/work/R-paint/MyR/Line_NoPoint.R")
 
 # 读取四个数据文件
 df_web <- read.table("web.txt", header=TRUE, sep="\t")
@@ -39,5 +39,8 @@ plot_line_comparison_log2(
   export_name = "reuse.pdf",
   x_label = "Reuse Distance",
   y_label = "CDF",
-  y_breaks = seq(0, 1, by = 0.2)   # 明确指定纵轴刻度
+  y_breaks = seq(0, 1, by = 0.2),   # 明确指定纵轴刻度
+  axis_text_size = 30,
+  x_title_size = 30,
+  y_title_size = 30
 )

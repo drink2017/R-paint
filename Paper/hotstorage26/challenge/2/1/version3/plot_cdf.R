@@ -1,8 +1,30 @@
+  compact_count <- function(x) {
+    if (!is.finite(x)) {
+      return(as.character(x))
+    }
+
+    if (x >= 1e9) {
+      value <- x / 1e9
+      suffix <- "B"
+    } else if (x >= 1e6) {
+      value <- x / 1e6
+      suffix <- "M"
+    } else if (x >= 1e3) {
+      value <- x / 1e3
+      suffix <- "k"
+    } else {
+      return(format(x, scientific = FALSE, trim = TRUE))
+    }
+
+    formatted <- sub("\\.0$", "", sprintf("%.1f", value))
+    paste0(formatted, suffix)
+  }
+
   read_superfeature_hit_cdf <- function(txt_path) {                                                           
     if (!file.exists(txt_path)) {                                                                             
       stop(sprintf("Input file does not exist: %s", txt_path), call. = FALSE)                                 
     }                                                                                                         
-                                                                                                              
+                                                                                                               
     df <- tryCatch(                                                                                           
       read.csv(                                                                                               
         txt_path,                                                                                             
@@ -22,35 +44,48 @@
         )                                                                                                     
       }                                                                                                       
     )                                                                                                         
-                                                                                                              
+                                                                                                               
     if (ncol(df) != 2) {                                                                                      
       stop("Input file must contain exactly two columns.", call. = FALSE)                                     
     }                                                                                                         
-                                                                                                              
+                                                                                                               
     if (nrow(df) == 0) {
       stop(sprintf("Input file is empty: %s", txt_path), call. = FALSE)                                       
     }                                                                                                         
-                                                                                                              
+                                                                                                               
     if (any(is.na(df$hit_count))) {                                                                           
       stop(                                                                                                   
         sprintf("Column 2 (hit_count) must be numeric for all rows: %s", txt_path),                           
         call. = FALSE                                                                                         
       )                                                                                                       
     }                                                                                                         
-                                                                                                              
+                                                                                                               
     df <- aggregate(hit_count ~ super_feature_id, data = df, FUN = sum)                                       
     df <- df[order(df$hit_count, decreasing = TRUE), , drop = FALSE]                                          
-                                                                                                              
+                                                                                                               
+    feature_count <- nrow(df)
     total_hits <- sum(df$hit_count)                                                                           
     if (!is.finite(total_hits) || total_hits <= 0) {                                                          
       stop(sprintf("Total hit_count must be greater than 0: %s", txt_path), call. = FALSE)                    
     }                                                                                                         
-                                                                                                              
-    data.frame(                                                                                               
-      feature_frac = c(0, seq_len(nrow(df)) / nrow(df)),                                                      
-      hit_frac = c(0, cumsum(df$hit_count) / total_hits),                                                     
-      series = tools::file_path_sans_ext(basename(txt_path)),                                                 
-      stringsAsFactors = FALSE                                                                                
+                                                                                                               
+    series_name <- tools::file_path_sans_ext(basename(txt_path))
+    legend_label <- sprintf(
+      "%s %s/%s",
+      series_name,
+      compact_count(feature_count),
+      compact_count(total_hits)
+    )
+
+    list(
+      plot_df = data.frame(                                                                                               
+        feature_frac = c(0, seq_len(feature_count) / feature_count),                                                      
+        hit_frac = c(0, cumsum(df$hit_count) / total_hits),                                                     
+        series = series_name,                                                 
+        stringsAsFactors = FALSE                                                                                
+      ),
+      series_name = series_name,
+      legend_label = legend_label
     )                                                                                                         
   }                                                                                                           
                                                                                                               
@@ -64,8 +99,12 @@
     }                                                                                                         
                                                                                                               
     cdf_list <- lapply(txt_paths, read_superfeature_hit_cdf)                                                  
-    plot_df <- do.call(rbind, cdf_list)                                                                       
-    series_levels <- vapply(cdf_list, function(x) x$series[[1]], character(1))                                
+    plot_df <- do.call(rbind, lapply(cdf_list, `[[`, "plot_df"))                                                                       
+    series_levels <- vapply(cdf_list, `[[`, character(1), "series_name")                                
+    legend_labels <- stats::setNames(
+      vapply(cdf_list, `[[`, character(1), "legend_label"),
+      series_levels
+    )
     plot_df$series <- factor(plot_df$series, levels = series_levels)                                          
                                                                                                               
     base_colors <- c("#E8B15E", "#78B0B8", "#B196C1", "#A61D24")                                              
@@ -90,9 +129,11 @@
       plot_df,                                                                                                
       ggplot2::aes(x = feature_frac, y = hit_frac, color = series)                                            
     ) +                                                                                                       
-      ggplot2::geom_line(size = 2.8, lineend = "round") +                                                     
+      ggplot2::geom_line(linewidth = 2.8, lineend = "round") +                                                     
       ggplot2::scale_color_manual(
         values = line_colors,
+        breaks = series_levels,
+        labels = legend_labels[series_levels],
         guide = ggplot2::guide_legend(
           ncol = 1,
           byrow = TRUE,
@@ -120,13 +161,14 @@
         axis.text = ggplot2::element_text(size = 34, color = "black"),                                        
         axis.title.x = ggplot2::element_text(size = 34, margin = ggplot2::margin(t = 12)),                    
         axis.title.y = ggplot2::element_text(size = 34, margin = ggplot2::margin(r = 12)),                    
-        legend.position = c(0.80, 0.80),                                                                      
+        legend.position = c(0.30, 0.80),                                                                      
         legend.justification = c(0, 1),                                                                       
         legend.background = ggplot2::element_blank(),                                                         
         legend.key = ggplot2::element_blank(),                                                                
         legend.key.height = grid::unit(28, "pt"),                                     
         legend.spacing.y = grid::unit(28, "pt"),  
-        legend.text = ggplot2::element_text(size = 34, color = "black")                                                             
+        legend.title = ggplot2::element_blank(),
+        legend.text = ggplot2::element_text(size = 32, color = "black")                                                             
       )                                                                                                       
                                                                                                               
     if (!is.null(title) && nzchar(title)) {                                                                   

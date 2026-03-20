@@ -1,11 +1,11 @@
-source("E:/Users/drinkwater/Desktop/R-script-template/MyR/Bar.R")
+source("C:\\Users\\YP\\Desktop\\work\\R-paint\\MyR\\Bar.R")
 
 left_list <- list(c(64), c(1698), c(31), c(89))
 right_parts_list <- list(
-  list(c(411), c(175), c(76)),
-  list(c(5250), c(22701), c(1236)),
-  list(c(37502), c(17469), c(1176)),
-  list(c(9822), c(8772), c(1292))
+  list(c(410), c(185), c(74)),
+  list(c(5269), c(26213), c(1126)),
+  list(c(37552), c(18254), c(772)),
+  list(c(9793), c(9491), c(713))
 )
 
 p <- create_grouped_two_with_stacked_right(
@@ -56,7 +56,7 @@ p <- p + theme(
 )
 
 # 保存为 PDF（建议使用 cairo_pdf 以保证字体/向量输出）
-cairo_pdf("E:/Users/drinkwater/Desktop/R-script-template/Paper/hotstorage26/challenge/process/process.pdf", width = 12, height = 6)
+cairo_pdf("C:\\Users\\YP\\Desktop\\work\\R-paint\\Paper\\hotstorage26\\challenge\\process\\process.pdf", width = 12, height = 6)
 print(p)
 dev.off()
 

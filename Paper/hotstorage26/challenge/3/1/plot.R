@@ -38,12 +38,12 @@ min_len <- min(
   length(df_linux[[3]])
 )
 
-series_order <- c("Glibc", "Linux", "Log", "Web")
+series_order <- c("Glibc", "Linux", "Log", "Web*")
 line_colors <- c(
   Glibc = "#E8B15E",
   Linux = "#78B0B8",
   Log = "#B196C1",
-  Web = "#A61D24"
+  `Web*` = "#A61D24"
 )
 
 build_series_df <- function(values, label) {
@@ -59,7 +59,7 @@ plot_df <- rbind(
   build_series_df(c(0, as.numeric(df_glibc[[3]])[1:min_len]), "Glibc"),
   build_series_df(c(0, as.numeric(df_linux[[3]])[1:min_len]), "Linux"),
   build_series_df(c(0, as.numeric(df_windows[[3]])[1:min_len]), "Log"),
-  build_series_df(c(0, as.numeric(df_web[[3]])[1:min_len]), "Web")
+  build_series_df(c(0, as.numeric(df_web[[3]])[1:min_len]), "Web*")
 )
 
 plot_df$series <- factor(plot_df$series, levels = series_order)

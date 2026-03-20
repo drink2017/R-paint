@@ -70,9 +70,14 @@
     }                                                                                                         
                                                                                                                
     series_name <- tools::file_path_sans_ext(basename(txt_path))
+    display_name <- if (tolower(series_name) == "web") {
+      "Web*"
+    } else {
+      paste0(toupper(substr(series_name, 1, 1)), substr(series_name, 2, nchar(series_name)))
+    }
     legend_label <- sprintf(
       "%s %s/%s",
-      series_name,
+      display_name,
       compact_count(feature_count),
       compact_count(total_hits)
     )

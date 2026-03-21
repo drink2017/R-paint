@@ -31,13 +31,6 @@ df_windows <- read.table(input_paths[2], header = TRUE, sep = "\t")
 df_glibc <- read.table(input_paths[3], header = TRUE, sep = "\t")
 df_linux <- read.table(input_paths[4], header = TRUE, sep = "\t")
 
-min_len <- min(
-  length(df_web[[3]]),
-  length(df_windows[[3]]),
-  length(df_glibc[[3]]),
-  length(df_linux[[3]])
-)
-
 series_order <- c("Glibc", "Linux", "Log", "Web")
 line_colors <- c(
   Glibc = "#E8B15E",
@@ -46,20 +39,24 @@ line_colors <- c(
   Web = "#A61D24"
 )
 
-build_series_df <- function(values, label) {
-  data.frame(
-    x = seq_along(values),
-    y = values,
+build_series_df <- function(distances, values, label) {
+  series_df <- data.frame(
+    x = c(1, as.numeric(distances)),
+    y = c(0, as.numeric(values)),
     series = label,
     stringsAsFactors = FALSE
   )
+  series_df <- series_df[is.finite(series_df$x) & is.finite(series_df$y), , drop = FALSE]
+  series_df$x <- pmax(series_df$x, 1)
+  series_df$y[nrow(series_df)] <- 1
+  series_df
 }
 
 plot_df <- rbind(
-  build_series_df(c(0, as.numeric(df_glibc[[3]])[1:min_len]), "Glibc"),
-  build_series_df(c(0, as.numeric(df_linux[[3]])[1:min_len]), "Linux"),
-  build_series_df(c(0, as.numeric(df_windows[[3]])[1:min_len]), "Log"),
-  build_series_df(c(0, as.numeric(df_web[[3]])[1:min_len]), "Web")
+  build_series_df(df_glibc[[1]], df_glibc[[3]], "Glibc"),
+  build_series_df(df_linux[[1]], df_linux[[3]], "Linux"),
+  build_series_df(df_windows[[1]], df_windows[[3]], "Log"),
+  build_series_df(df_web[[1]], df_web[[3]], "Web")
 )
 
 plot_df$series <- factor(plot_df$series, levels = series_order)
@@ -70,11 +67,15 @@ max_pow <- floor(log2(x_range[2]))
 x_breaks <- 2^(min_pow:max_pow)
 x_breaks <- x_breaks[x_breaks >= x_range[1] & x_breaks <= x_range[2]]
 
-x_labels <- rep("", length(x_breaks))
+x_labels <- vector("list", length(x_breaks))
 if (length(x_breaks) > 0) {
   label_idx <- seq(1, length(x_breaks), by = 4)
-  x_labels[label_idx] <- as.character(x_breaks[label_idx])
+  x_labels[label_idx] <- lapply(
+    log2(x_breaks[label_idx]),
+    function(n) bquote(2^.(as.integer(n)))
+  )
 }
+x_labels <- as.expression(x_labels)
 
 p <- ggplot2::ggplot(
   plot_df,
@@ -99,7 +100,7 @@ p <- ggplot2::ggplot(
   ggplot2::scale_y_continuous(
     breaks = seq(0, 1, by = 0.2),
     labels = seq(0, 1, by = 0.2),
-    expand = ggplot2::expansion(mult = c(0, 0))
+    expand = ggplot2::expansion(mult = c(0, 0.02))
   ) +
   ggplot2::coord_cartesian(xlim = x_range, ylim = c(0, 1)) +
   ggplot2::labs(
@@ -109,11 +110,11 @@ p <- ggplot2::ggplot(
   ) +
   ggplot2::theme_classic() +
   ggplot2::theme(
-    plot.margin = ggplot2::margin(t = 20, r = 20, b = 20, l = 20, unit = "pt"),
+    plot.margin = ggplot2::margin(t = 28, r = 20, b = 20, l = 20, unit = "pt"),
     axis.text = ggplot2::element_text(size = 30, color = "black"),
     axis.title.x = ggplot2::element_text(size = 30, margin = ggplot2::margin(t = 12)),
     axis.title.y = ggplot2::element_text(size = 30, margin = ggplot2::margin(r = 12)),
-    legend.position = c(0.05, 0.95),
+    legend.position = c(0.05, 1.05),
     legend.justification = c(0, 1),
     legend.background = ggplot2::element_blank(),
     legend.key = ggplot2::element_blank(),

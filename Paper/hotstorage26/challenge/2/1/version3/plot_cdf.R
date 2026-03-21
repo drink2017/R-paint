@@ -1,25 +1,3 @@
-  compact_count <- function(x) {
-    if (!is.finite(x)) {
-      return(as.character(x))
-    }
-
-    if (x >= 1e9) {
-      value <- x / 1e9
-      suffix <- "B"
-    } else if (x >= 1e6) {
-      value <- x / 1e6
-      suffix <- "M"
-    } else if (x >= 1e3) {
-      value <- x / 1e3
-      suffix <- "k"
-    } else {
-      return(format(x, scientific = FALSE, trim = TRUE))
-    }
-
-    formatted <- sub("\\.0$", "", sprintf("%.1f", value))
-    paste0(formatted, suffix)
-  }
-
   read_superfeature_hit_cdf <- function(txt_path) {                                                           
     if (!file.exists(txt_path)) {                                                                             
       stop(sprintf("Input file does not exist: %s", txt_path), call. = FALSE)                                 
@@ -70,22 +48,18 @@
     }                                                                                                         
                                                                                                                
     series_name <- tools::file_path_sans_ext(basename(txt_path))
-    legend_label <- sprintf(
-      "%s %s/%s",
-      series_name,
-      compact_count(feature_count),
-      compact_count(total_hits)
+
+    plot_df <- data.frame(
+      feature_frac = c(0, seq_len(feature_count) / feature_count),
+      hit_frac = c(0, cumsum(df$hit_count) / total_hits),
+      series = series_name,
+      stringsAsFactors = FALSE
     )
+    plot_df$hit_frac[nrow(plot_df)] <- 1
 
     list(
-      plot_df = data.frame(                                                                                               
-        feature_frac = c(0, seq_len(feature_count) / feature_count),                                                      
-        hit_frac = c(0, cumsum(df$hit_count) / total_hits),                                                     
-        series = series_name,                                                 
-        stringsAsFactors = FALSE                                                                                
-      ),
-      series_name = series_name,
-      legend_label = legend_label
+      plot_df = plot_df,
+      series_name = series_name
     )                                                                                                         
   }                                                                                                           
                                                                                                               
@@ -101,10 +75,8 @@
     cdf_list <- lapply(txt_paths, read_superfeature_hit_cdf)                                                  
     plot_df <- do.call(rbind, lapply(cdf_list, `[[`, "plot_df"))                                                                       
     series_levels <- vapply(cdf_list, `[[`, character(1), "series_name")                                
-    legend_labels <- stats::setNames(
-      vapply(cdf_list, `[[`, character(1), "legend_label"),
-      series_levels
-    )
+    legend_labels <- stats::setNames(series_levels, series_levels)
+    legend_labels["Web"] <- "Web*"
     plot_df$series <- factor(plot_df$series, levels = series_levels)                                          
                                                                                                               
     base_colors <- c("#E8B15E", "#78B0B8", "#B196C1", "#A61D24")                                              
@@ -123,7 +95,7 @@
     }                                                                                                         
                                                                                                               
     plot_width <- 11                                                                                          
-    plot_height <- 6.5                                                                                        
+    plot_height <- 5                                                                                          
                                                                                                               
     p <- ggplot2::ggplot(                                                                                     
       plot_df,                                                                                                
@@ -148,7 +120,7 @@
       ggplot2::scale_y_continuous(                                                                            
         limits = c(0, 1),                                                                                     
         breaks = seq(0.2, 1, 0.2),                                                                            
-        expand = ggplot2::expansion(mult = c(0.01, 0))                                                        
+        expand = ggplot2::expansion(mult = c(0.01, 0.02))                                                     
       ) +                                                                                                     
       ggplot2::labs(                                                                                          
         x = "Candidate Set",                                                                                  
@@ -157,11 +129,11 @@
       ) +                                                                                                     
       ggplot2::theme_classic() +                                                                              
       ggplot2::theme(                                                                                         
-        plot.margin = ggplot2::margin(t = 20, r = 20, b = 35, l = 40, unit = "pt"),                           
+        plot.margin = ggplot2::margin(t = 16, r = 18, b = 24, l = 32, unit = "pt"),                           
         axis.text = ggplot2::element_text(size = 34, color = "black"),                                        
         axis.title.x = ggplot2::element_text(size = 34, margin = ggplot2::margin(t = 12)),                    
         axis.title.y = ggplot2::element_text(size = 34, margin = ggplot2::margin(r = 12)),                    
-        legend.position = c(0.30, 0.80),                                                                      
+        legend.position = c(0.40, 0.80),                                                                      
         legend.justification = c(0, 1),                                                                       
         legend.background = ggplot2::element_blank(),                                                         
         legend.key = ggplot2::element_blank(),                                                                

@@ -32,6 +32,12 @@ df_glibc <- read.table(input_paths[3], header = TRUE, sep = "\t")
 df_linux <- read.table(input_paths[4], header = TRUE, sep = "\t")
 
 series_order <- c("Glibc", "Linux", "Log", "Web")
+legend_labels <- c(
+  Glibc = "Glibc",
+  Linux = "Linux",
+  Log = "Log",
+  Web = "Web*"
+)
 line_colors <- c(
   Glibc = "#E8B15E",
   Linux = "#78B0B8",
@@ -85,6 +91,7 @@ p <- ggplot2::ggplot(
   ggplot2::scale_color_manual(
     values = line_colors,
     breaks = series_order,
+    labels = legend_labels[series_order],
     guide = ggplot2::guide_legend(
       ncol = 1,
       byrow = TRUE,

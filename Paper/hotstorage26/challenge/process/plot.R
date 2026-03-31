@@ -58,7 +58,7 @@ fancy_scientific <- function(x) {
 
 p <- p + scale_y_continuous(
   labels = fancy_scientific,
-  expand = expansion(mult = c(0, 0.05))
+  expand = expansion(mult = c(0, 0.12))
 )
 
 p <- p + scale_fill_manual(
@@ -80,14 +80,15 @@ p <- p + theme(
   axis.text.y = element_text(size = 32),
   axis.title.x = element_text(size = 32),
   axis.title.y = element_text(size = 32),
-  legend.position = c(0.03, 0.98),
+  legend.position = c(0.03, 1.01),
   legend.justification = c(0, 1),
   legend.direction = "vertical",
   legend.text = element_text(size = 32, color = "black"),
   legend.title = element_blank(),
   legend.background = element_blank(),
   legend.key = element_blank(),
-  legend.spacing.y = grid::unit(8, "pt")
+  legend.spacing.y = grid::unit(8, "pt"),
+  plot.margin = margin(t = 18, r = 12, b = 12, l = 12, unit = "pt")
 )
 
 # 保存为 PDF（建议使用 cairo_pdf 以保证字体/向量输出）

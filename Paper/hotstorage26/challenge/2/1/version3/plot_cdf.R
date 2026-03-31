@@ -107,9 +107,9 @@
         breaks = series_levels,
         labels = legend_labels[series_levels],
         guide = ggplot2::guide_legend(
-          ncol = 1,
+          ncol = 2,
           byrow = TRUE,
-          keyheight = grid::unit(22, "pt")
+          keyheight = grid::unit(34, "pt")
         )
       ) +                                                     
       ggplot2::scale_x_continuous(                                                                            
@@ -137,8 +137,8 @@
         legend.justification = c(0, 1),                                                                       
         legend.background = ggplot2::element_blank(),                                                         
         legend.key = ggplot2::element_blank(),                                                                
-        legend.key.height = grid::unit(28, "pt"),                                     
-        legend.spacing.y = grid::unit(28, "pt"),  
+        legend.key.height = grid::unit(40, "pt"),                                     
+        legend.spacing.y = grid::unit(18, "pt"),  
         legend.title = ggplot2::element_blank(),
         legend.text = ggplot2::element_text(size = 32, color = "black")                                                             
       )                                                                                                       

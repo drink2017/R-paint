@@ -14,18 +14,18 @@ legend_values <- c(
   p3 = "#B196C1"
 )
 
-left_list <- list(c(64), c(1698), c(31), c(89))
+left_list <- list(c(3944), c(1698), c(31), c(313))
 right_parts_list <- list(
-  list(c(410), c(185), c(74)),
+  list(c(5559), c(5533), c(2052)),
   list(c(5269), c(26213), c(1126)),
   list(c(37552), c(18254), c(772)),
-  list(c(9793), c(9491), c(713))
+  list(c(15568), c(20148), c(906))
 )
 
 p <- create_grouped_two_with_stacked_right(
   left_list = left_list,
   right_parts_list = right_parts_list,
-  group_labels = c("Glibc","Linux","Web*","Log"),
+  group_labels = c("Docker","Linux","Web*","Log"),
   component_labels = c("p1","p2","p3"),
   show_data_labels = TRUE,
   data_label_size = 10,

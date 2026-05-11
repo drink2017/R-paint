@@ -4,3 +4,4 @@ Paper/FineTarEvaluate/evaluate_FalseFilter_Is/*.txt
 .RData
 .Ruserdata
 *.csv 
+.deepseek/

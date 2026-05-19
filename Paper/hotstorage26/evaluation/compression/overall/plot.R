@@ -1,7 +1,26 @@
-source("E:/Users/drinkwater/Desktop/R-script-template/MyR/Bar.R")
-
 library(ggplot2)
 library(grid)
+
+get_script_dir <- function() {
+  args <- commandArgs(trailingOnly = FALSE)
+  file_arg <- "--file="
+  script_arg <- args[startsWith(args, file_arg)]
+
+  if (length(script_arg) > 0) {
+    return(dirname(normalizePath(sub(file_arg, "", script_arg[1]))))
+  }
+
+  if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+    context <- rstudioapi::getActiveDocumentContext()
+    if (nzchar(context$path)) {
+      return(dirname(normalizePath(context$path)))
+    }
+  }
+
+  normalizePath(getwd())
+}
+
+export_dir <- get_script_dir()
 
 # Fill in the four rows below. Each row is one group, and the two columns are:
 # Mdelta, Mdelta-fixed.
@@ -25,9 +44,9 @@ create_three_method_barplot <- function(
     fill_colors = c("Mdelta" = "#A61D24", "Mdelta-fixed" = "#78B0B8"),
     x_label = "",
     y_label = "Value",
-    axis_text_size = 32,
-    axis_title_size = 32,
-    legend_text_size = 32,
+    axis_text_size = 50,
+    axis_title_size = 50,
+    legend_text_size = 50,
     show_data_labels = FALSE,
     data_label_size = 10,
     y_max_multiplier = 1.20,
@@ -113,8 +132,11 @@ p <- create_three_method_barplot(
   show_data_labels = FALSE # Change to TRUE if labels above bars are needed.
 )
 
+output_file <- file.path(export_dir, "overall.pdf")
+message("Writing plot to: ", output_file)
+
 cairo_pdf(
-  "E:/Users/drinkwater/Desktop/R-script-template/Paper/hotstorage26/evaluation/compression/overall/overall.pdf",
+  output_file,
   width = 12,
   height = 5
 )

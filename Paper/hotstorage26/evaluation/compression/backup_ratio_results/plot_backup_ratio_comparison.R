@@ -6,11 +6,26 @@ font_add("Arial", "C:/Windows/Fonts/arial.ttf")
 showtext_auto()
 windowsFonts(Arial = windowsFont("Arial"))
 
-root_dir <- "E:/Users/drinkwater/Desktop/R-script-template"
-input_dir <- file.path(
-  root_dir,
-  "Paper/hotstorage26/evaluation/compression/backup_ratio_results"
-)
+get_script_dir <- function() {
+  args <- commandArgs(trailingOnly = FALSE)
+  file_arg <- "--file="
+  script_arg <- args[startsWith(args, file_arg)]
+
+  if (length(script_arg) > 0) {
+    return(dirname(normalizePath(sub(file_arg, "", script_arg[1]))))
+  }
+
+  if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+    context <- rstudioapi::getActiveDocumentContext()
+    if (nzchar(context$path)) {
+      return(dirname(normalizePath(context$path)))
+    }
+  }
+
+  normalizePath(getwd())
+}
+
+input_dir <- get_script_dir()
 export_dir <- input_dir
 
 read_method_pair <- function(dataset_name) {
@@ -93,13 +108,14 @@ plot_one_dataset <- function(dataset_name, export_name) {
       axis.text = element_text(size = 42, color = "black"),
       text = element_text(family = "Arial"),
       axis.title.x = element_text(size = 48),
+      axis.title.y = element_text(size = 48, margin = margin(r = 0)),
       legend.position = "top",
-      legend.text = element_text(size = 32),
-      plot.margin = margin(t = 15, r = 15, b = 10, l = 40, unit = "pt"),
+      legend.text = element_text(size = 48),
+      plot.margin = margin(t = 15, r = 15, b = 10, l = 10, unit = "pt"),
       axis.text.x = element_text(margin = margin(t = 5)),
       axis.text.y = element_text(margin = margin(r = 5))
     ) +
-    labs(x = "Backup Index", y = NULL, color = NULL) +
+    labs(x = "Backup Index", y = "DRR", color = NULL) +
     scale_x_continuous(
       breaks = x_breaks,
       labels = x_breaks,

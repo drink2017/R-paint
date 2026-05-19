@@ -33,8 +33,8 @@ names(colors) <- display_names
 line_size        <- 2.8
 axis_text_size   <- 42
 x_title_size     <- 48
-y_title_size     <- 45
-legend_text_size <- 30
+y_title_size     <- 48
+legend_text_size <- 48
 plot_width       <- 14
 plot_height      <- 7           # taller, ~2:1 aspect ratio
 n_sample         <- 300

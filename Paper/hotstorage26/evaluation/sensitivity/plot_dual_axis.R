@@ -2,7 +2,7 @@ library(ggplot2)
 library(extrafont)
 library(showtext)
 
-setwd("C:/Users/YP/Desktop/work/R-paint/Paper/hotstorage26/evaluation/sensitivity")
+setwd("E:/Users/drinkwater/Desktop/R-script-template/Paper/hotstorage26/evaluation/sensitivity")
 
 source("../../../../MyR/Line_Point.R")
 
@@ -13,14 +13,14 @@ windowsFonts(Arial = windowsFont("Arial"))
 # Fill in the two data columns below before running the script.
 plot_data <- data.frame(
   x = c(32, 64, 128, 256),
-  compression_ratio = c(65.8, 64.8, 62.7, 59.9),
-  duration = c(3326, 3038, 2796, 2890)
+  compression_ratio = c(51.0, 51.1, 50.8, 49.1),
+  duration = c(621, 608, 575, 492)
 )
 
 plot_compression_duration_dual_axis <- function(
   data,
   export_path = "./",
-  export_name = "Linux.pdf",
+  export_name = "Web.pdf",
   x_label = "Depth coefficient A (bytes)",
   left_y_label = "DRR",
   right_y_label = "Duration (s)",
@@ -52,16 +52,20 @@ plot_compression_duration_dual_axis <- function(
 
   if (is.null(left_y_lim)) {
     left_y_lim <- range(data$compression_ratio, na.rm = TRUE)
-    left_pad <- diff(left_y_lim) * 0.08
-    if (left_pad == 0) left_pad <- max(abs(left_y_lim[1]) * 0.08, 1)
-    left_y_lim <- c(left_y_lim[1] - left_pad, left_y_lim[2] + left_pad)
+    left_lower_pad <- diff(left_y_lim) * 0.08
+    left_upper_pad <- diff(left_y_lim) * 0.20
+    if (left_lower_pad == 0) left_lower_pad <- max(abs(left_y_lim[1]) * 0.08, 1)
+    if (left_upper_pad == 0) left_upper_pad <- max(abs(left_y_lim[2]) * 0.20, 1)
+    left_y_lim <- c(left_y_lim[1] - left_lower_pad, left_y_lim[2] + left_upper_pad)
   }
 
   if (is.null(right_y_lim)) {
     right_y_lim <- range(data$duration, na.rm = TRUE)
-    right_pad <- diff(right_y_lim) * 0.08
-    if (right_pad == 0) right_pad <- max(abs(right_y_lim[1]) * 0.08, 1)
-    right_y_lim <- c(right_y_lim[1] - right_pad, right_y_lim[2] + right_pad)
+    right_lower_pad <- diff(right_y_lim) * 0.08
+    right_upper_pad <- diff(right_y_lim) * 0.20
+    if (right_lower_pad == 0) right_lower_pad <- max(abs(right_y_lim[1]) * 0.08, 1)
+    if (right_upper_pad == 0) right_upper_pad <- max(abs(right_y_lim[2]) * 0.20, 1)
+    right_y_lim <- c(right_y_lim[1] - right_lower_pad, right_y_lim[2] + right_upper_pad)
   }
 
   left_span <- diff(left_y_lim)
@@ -93,7 +97,7 @@ plot_compression_duration_dual_axis <- function(
       transform = to_right_axis,
       name = right_y_label
     ),
-    expand = expansion(mult = c(0, 0))
+    expand = expansion(mult = c(0.01, 0.03))
   )
   if (!is.null(left_y_breaks)) {
     y_scale_args$breaks <- left_y_breaks
@@ -132,7 +136,7 @@ plot_compression_duration_dual_axis <- function(
       axis.line = element_line(linewidth = 1),
       axis.ticks = element_line(linewidth = 1),
       axis.ticks.length = unit(0.2, "cm"),
-      plot.margin = margin(t = 15, r = 15, b = 10, l = 10, unit = "pt"),
+      plot.margin = margin(t = 22, r = 15, b = 10, l = 10, unit = "pt"),
       legend.position = if (show_legend) "top" else "none",
       legend.text = element_text(size = legend_text_size)
     )
@@ -144,7 +148,7 @@ plot_compression_duration_dual_axis <- function(
 plot_compression_duration_dual_axis(
   data = plot_data,
   export_path = "./",
-  export_name = "Linux.pdf",
+  export_name = "Log.pdf",
   x_label = "Depth coefficient A (bytes)",
   left_y_label = "DRR",
   right_y_label = "Duration (s)",

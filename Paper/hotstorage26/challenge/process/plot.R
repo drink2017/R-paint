@@ -1,4 +1,4 @@
-source("E:/Users/drinkwater/Desktop/R-script-template/MyR/Bar.R")
+source("C:/Users/YP/Desktop/work/R-paint/MyR/Bar.R")
 
 legend_breaks <- c("p1", "Left", "p2", "p3")
 legend_labels <- c(
@@ -31,7 +31,7 @@ p <- create_grouped_two_with_stacked_right(
   data_label_size = 10,
   data_label_angle = 0,       # 改为竖排
   data_label_hjust = 0.5,      # 水平居中
-  data_label_vjust = 0.5,      # 竖直微调（可试 -0.5 / 0.5 看视觉效果）
+  data_label_vjust = 0.2,      # 竖直微调（可试 -0.5 / 0.5 看视觉效果）
   label_margin_frac = 0.05,
   axis_text_size = 12,
   axis_title_size = 14,
@@ -67,7 +67,7 @@ p <- p + scale_fill_manual(
   breaks = legend_breaks,
   labels = legend_labels,
   guide = guide_legend(
-    ncol = 1,
+    nrow = 2,
     byrow = TRUE,
     keyheight = grid::unit(18, "pt"),
     keywidth = grid::unit(18, "pt")
@@ -76,23 +76,26 @@ p <- p + scale_fill_manual(
 
 # 覆盖主题：刻度文字 10pt，轴标题 14pt，图例文字 10pt
 p <- p + theme(
-  axis.text.x = element_text(size = 32),
-  axis.text.y = element_text(size = 32),
-  axis.title.x = element_text(size = 32),
-  axis.title.y = element_text(size = 32),
-  legend.position = c(0.03, 1.01),
-  legend.justification = c(0, 1),
-  legend.direction = "vertical",
+  axis.text.x = element_text(size = 48),
+  axis.text.y = element_text(size = 48),
+  axis.title.x = element_text(size = 48),
+  axis.title.y = element_text(size = 48),
+  legend.position = "top",
+  legend.direction = "horizontal",
   legend.text = element_text(size = 32, color = "black"),
   legend.title = element_blank(),
   legend.background = element_blank(),
   legend.key = element_blank(),
+
+  legend.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"),
+  legend.box.spacing = grid::unit(0, "pt"),
+
   legend.spacing.y = grid::unit(8, "pt"),
   plot.margin = margin(t = 18, r = 12, b = 12, l = 12, unit = "pt")
 )
 
 # 保存为 PDF（建议使用 cairo_pdf 以保证字体/向量输出）
-cairo_pdf("E:/Users/drinkwater/Desktop/R-script-template/Paper/hotstorage26/challenge/process/process.pdf", width = 12, height = 5)
+cairo_pdf("process.pdf", width = 12, height = 5)
 print(p)
 dev.off()
 

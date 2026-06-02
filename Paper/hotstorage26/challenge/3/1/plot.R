@@ -93,7 +93,7 @@ p <- ggplot2::ggplot(
     breaks = series_order,
     labels = legend_labels[series_order],
     guide = ggplot2::guide_legend(
-      ncol = 2,
+      ncol = 1,
       byrow = TRUE,
       keyheight = grid::unit(34, "pt")
     )
@@ -118,16 +118,17 @@ p <- ggplot2::ggplot(
   ggplot2::theme_classic() +
   ggplot2::theme(
     plot.margin = ggplot2::margin(t = 28, r = 20, b = 20, l = 20, unit = "pt"),
-    axis.text = ggplot2::element_text(size = 30, color = "black"),
-    axis.title.x = ggplot2::element_text(size = 30, margin = ggplot2::margin(t = 12)),
-    axis.title.y = ggplot2::element_text(size = 30, margin = ggplot2::margin(r = 12)),
-    legend.position = c(0.05, 1.05),
-    legend.justification = c(0, 1),
+    axis.text = ggplot2::element_text(size = 48, color = "black"),
+    axis.title.x = ggplot2::element_text(size = 48, margin = ggplot2::margin(t = 12)),
+    axis.title.y = ggplot2::element_text(size = 48, margin = ggplot2::margin(r = 12)),
+    legend.position = c(0.98, 0.05),
+    legend.justification = c(1, 0),
+    legend.direction = "vertical",
     legend.background = ggplot2::element_blank(),
     legend.key = ggplot2::element_blank(),
     legend.key.height = grid::unit(40, "pt"),
     legend.spacing.y = grid::unit(18, "pt"),
-    legend.text = ggplot2::element_text(size = 30, color = "black")
+    legend.text = ggplot2::element_text(size = 32, color = "black")
   )
 
 ggplot2::ggsave(

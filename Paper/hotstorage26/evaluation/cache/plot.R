@@ -23,25 +23,25 @@ get_script_dir <- function() {
 export_dir <- get_script_dir()
 
 # Fill in the four rows below. Each row is one group, and the two columns are:
-# Mdelta, Mdelta-S.
+# Mdelta, Mdelta-G.
 plot_data <- data.frame(
   group = c("Docker", "Linux", "Web", "Log"),
-  Mdelta = c(429, 2766, 10493, 491),     # TODO: replace with your data
-  `Mdelta-S` = c(750, 3263, 13004, 542), # TODO: replace with your data
+  Mdelta = c(93.78, 92.21, 90.02, 95.09),           # TODO: replace with your hit-rate data
+  `Mdelta-G` = c(8.52, 1.21, 76.26, 47.76), # TODO: replace with your hit-rate data
   check.names = FALSE
 )
 
-method_labels <- c("Mdelta", "Mdelta-S")
+method_labels <- c("Mdelta", "Mdelta-G")
 method_colors <- c(
   "Mdelta" = "#A61D24",
-  "Mdelta-S" = "#78B0B8"
+  "Mdelta-G" = "#78B0B8"
 )
 
 create_three_method_barplot <- function(
     data,
     group_col = "group",
-    method_labels = c("Mdelta", "Mdelta-S"),
-    fill_colors = c("Mdelta" = "#A61D24", "Mdelta-S" = "#78B0B8"),
+    method_labels = c("Mdelta", "Mdelta-G"),
+    fill_colors = c("Mdelta" = "#A61D24", "Mdelta-G" = "#78B0B8"),
     x_label = "",
     y_label = "Value",
     axis_text_size = 50,
@@ -49,7 +49,8 @@ create_three_method_barplot <- function(
     legend_text_size = 50,
     show_data_labels = FALSE,
     data_label_size = 10,
-    y_max_multiplier = 1.20,
+    y_limit = 100,
+    y_breaks = seq(0, 100, 25),
     bar_width = 0.72
 ) {
   long_df <- reshape(
@@ -65,10 +66,11 @@ create_three_method_barplot <- function(
 
   finite_values <- long_df$value[is.finite(long_df$value)]
   if (length(finite_values) == 0) {
-    stop("No finite values found in plot_data. Fill in the data before plotting.")
+    stop("No finite values found in plot_data. Fill in the hit-rate data before plotting.")
   }
-  value_max <- max(c(0, finite_values), na.rm = TRUE)
-  y_max <- if (value_max > 0) value_max * y_max_multiplier else 1
+  if (any(finite_values < 0 | finite_values > y_limit)) {
+    stop(sprintf("Hit-rate values must be in the range 0-%s.", y_limit))
+  }
 
   p <- ggplot(long_df, aes(x = .data[[group_col]], y = value, fill = method)) +
     geom_col(
@@ -91,7 +93,9 @@ create_three_method_barplot <- function(
     ) +
     scale_y_continuous(
       expand = expansion(mult = c(0, 0.12)),
-      limits = c(0, y_max)
+      limits = c(0, y_limit),
+      breaks = y_breaks,
+      labels = function(x) paste0(x, "%")
     ) +
     labs(x = x_label, y = paste(" ", y_label, " ")) +
     theme_classic() +
@@ -100,7 +104,7 @@ create_three_method_barplot <- function(
       axis.text.y = element_text(size = axis_text_size, color = "black"),
       axis.title.x = element_text(size = axis_title_size, color = "black"),
       axis.title.y = element_text(size = axis_title_size, color = "black", hjust = 0.5),
-      legend.position = c(0.03, 1.01),
+      legend.position = c(0.03, 1.15),
       legend.justification = c(0, 1),
       legend.direction = "horizontal",
       legend.text = element_text(size = legend_text_size, color = "black"),
@@ -108,7 +112,7 @@ create_three_method_barplot <- function(
       legend.background = element_blank(),
       legend.key = element_blank(),
       legend.spacing.x = unit(10, "pt"),
-      plot.margin = margin(t = 18, r = 12, b = 12, l = 12, unit = "pt")
+      plot.margin = margin(t = 48, r = 12, b = 12, l = 12, unit = "pt")
     )
 
   if (show_data_labels) {
@@ -128,7 +132,7 @@ p <- create_three_method_barplot(
   method_labels = method_labels,
   fill_colors = method_colors,
   x_label = "",
-  y_label = "Duration (s)",
+  y_label = "Hit Rate",
   show_data_labels = FALSE # Change to TRUE if labels above bars are needed.
 )
 

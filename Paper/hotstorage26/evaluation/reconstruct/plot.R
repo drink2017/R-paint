@@ -23,25 +23,25 @@ get_script_dir <- function() {
 export_dir <- get_script_dir()
 
 # Fill in the four rows below. Each row is one group, and the two columns are:
-# Mdelta, Mdelta-NoGroup.
+# Mdelta, Mdelta-R.
 plot_data <- data.frame(
   group = c("Docker", "Linux", "Web-32", "Log"),
-  Mdelta = c(429, 2766, 3119, 491),           # TODO: replace with your data
-  `Mdelta-NoGroup` = c(817, 3717, 20826, 348), # TODO: replace with your data
+  Mdelta = c(429, 2766, 3119, 491),       # TODO: replace with your data
+  `Mdelta-R` = c(817, 3717, 20826, 348), # TODO: replace with your data
   check.names = FALSE
 )
 
-method_labels <- c("Mdelta", "Mdelta-NoGroup")
+method_labels <- c("Mdelta", "Mdelta-R")
 method_colors <- c(
   "Mdelta" = "#A61D24",
-  "Mdelta-NoGroup" = "#78B0B8"
+  "Mdelta-R" = "#78B0B8"
 )
 
 create_three_method_barplot <- function(
     data,
     group_col = "group",
-    method_labels = c("Mdelta", "Mdelta-NoGroup"),
-    fill_colors = c("Mdelta" = "#A61D24", "Mdelta-NoGroup" = "#78B0B8"),
+    method_labels = c("Mdelta", "Mdelta-R"),
+    fill_colors = c("Mdelta" = "#A61D24", "Mdelta-R" = "#78B0B8"),
     x_label = "",
     y_label = "Value",
     axis_text_size = 50,

@@ -93,9 +93,11 @@ p <- ggplot2::ggplot(
     breaks = series_order,
     labels = legend_labels[series_order],
     guide = ggplot2::guide_legend(
-      ncol = 1,
+      nrow = 1,
+      ncol = 4,
       byrow = TRUE,
-      keyheight = grid::unit(34, "pt")
+      keyheight = grid::unit(34, "pt"),
+      keywidth = grid::unit(34, "pt")
     )
   ) +
   ggplot2::scale_x_continuous(
@@ -117,23 +119,28 @@ p <- ggplot2::ggplot(
   ) +
   ggplot2::theme_classic() +
   ggplot2::theme(
-    plot.margin = ggplot2::margin(t = 28, r = 20, b = 20, l = 20, unit = "pt"),
+    plot.margin = ggplot2::margin(t = 14, r = 20, b = 20, l = 10, unit = "pt"),
     axis.text = ggplot2::element_text(size = 48, color = "black"),
     axis.title.x = ggplot2::element_text(size = 48, margin = ggplot2::margin(t = 12)),
     axis.title.y = ggplot2::element_text(size = 48, margin = ggplot2::margin(r = 12)),
-    legend.position = c(0.98, 0.05),
-    legend.justification = c(1, 0),
-    legend.direction = "vertical",
+    legend.position = "top",
+    legend.justification = "left",
+    legend.box.just = "left",
+    legend.direction = "horizontal",
     legend.background = ggplot2::element_blank(),
     legend.key = ggplot2::element_blank(),
-    legend.key.height = grid::unit(40, "pt"),
-    legend.spacing.y = grid::unit(18, "pt"),
-    legend.text = ggplot2::element_text(size = 32, color = "black")
+    legend.key.height = grid::unit(34, "pt"),
+    legend.spacing.x = grid::unit(16, "pt"),
+    legend.spacing.y = grid::unit(0, "pt"),
+    legend.margin = ggplot2::margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"),
+    legend.box.margin = ggplot2::margin(t = -12, r = 0, b = 0, l = -16, unit = "pt"),
+    legend.box.spacing = grid::unit(0, "pt"),
+    legend.text = ggplot2::element_text(size = 48, color = "black")
   )
 
 ggplot2::ggsave(
   filename = file.path(script_dir, "reuse.pdf"),
   plot = p,
   width = 10,
-  height = 5
+  height = 6.3
 )

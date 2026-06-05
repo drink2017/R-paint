@@ -444,6 +444,7 @@ create_grouped_two_with_stacked_right <- function(
   # 左右偏移与柱宽
   left_right_offset = 0.23,
   bar_width = 0.22,
+  swap_pair_positions = FALSE,
   # 可选的 y-break 支持（需 ggbreak 包）
   use_y_break = FALSE,
   break_start = NULL,
@@ -561,6 +562,8 @@ create_grouped_two_with_stacked_right <- function(
 
   # 强制左右两个柱子紧贴（中心间距 = bar_width）
   left_right_offset <- bar_width / 2
+  left_position_offset <- if (swap_pair_positions) left_right_offset else -left_right_offset
+  right_position_offset <- if (swap_pair_positions) -left_right_offset else left_right_offset
 
   # 估算标签需要的额外空间：根据最大数字的字符长度增加少量偏移
   all_label_vals <- c(plot_df$value, total_stats$total_mean)
@@ -594,8 +597,8 @@ create_grouped_two_with_stacked_right <- function(
     theme_classic()
 
   # 右侧堆叠条与左侧单条
-  p <- p + geom_col(data = subset(plot_df, type == "Right"), aes(x = group_pos + left_right_offset, y = value, fill = component), stat = "identity", width = bar_width, color = "black")
-  p <- p + geom_col(data = subset(plot_df, type == "Left"), aes(x = group_pos - left_right_offset, y = value, fill = component), stat = "identity", width = bar_width, color = "black")
+  p <- p + geom_col(data = subset(plot_df, type == "Right"), aes(x = group_pos + right_position_offset, y = value, fill = component), stat = "identity", width = bar_width, color = "black")
+  p <- p + geom_col(data = subset(plot_df, type == "Left"), aes(x = group_pos + left_position_offset, y = value, fill = component), stat = "identity", width = bar_width, color = "black")
 
   # 字体支持
   if (use_arial && requireNamespace("showtext", quietly = TRUE) && requireNamespace("sysfonts", quietly = TRUE)) {
@@ -633,17 +636,17 @@ create_grouped_two_with_stacked_right <- function(
     left_labels_df <- subset(plot_df, type == "Left" & !is.na(value))
     if (nrow(left_labels_df) > 0) {
       left_labels_df$ypos <- left_labels_df$value + label_offset
-      p <- p + geom_text(data = left_labels_df, aes(x = group_pos - left_right_offset, y = ypos, label = round(value, 2)), angle = data_label_angle, size = data_label_size, hjust = data_label_hjust, vjust = data_label_vjust)
+      p <- p + geom_text(data = left_labels_df, aes(x = group_pos + left_position_offset, y = ypos, label = round(value, 2)), angle = data_label_angle, size = data_label_size, hjust = data_label_hjust, vjust = data_label_vjust)
     }
 
     # 右侧总和：y = total_mean + offset
     total_stats <- total_stats[!is.na(total_stats$total_mean), , drop = FALSE]
     if (nrow(total_stats) > 0) {
       total_stats$ypos <- total_stats$total_mean + label_offset
-      p <- p + geom_text(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + left_right_offset, y = ypos, label = round(total_mean, 2)), angle = data_label_angle, size = data_label_size, hjust = data_label_hjust, vjust = data_label_vjust)
+      p <- p + geom_text(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + right_position_offset, y = ypos, label = round(total_mean, 2)), angle = data_label_angle, size = data_label_size, hjust = data_label_hjust, vjust = data_label_vjust)
       # 如果有 CI，则绘制 errorbar（在总和上方）
       if (any(!is.na(total_stats$ymin))) {
-        p <- p + geom_errorbar(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + left_right_offset, ymin = ymin, ymax = ymax), width = bar_width * 0.25, size = 0.6)
+        p <- p + geom_errorbar(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + right_position_offset, ymin = ymin, ymax = ymax), width = bar_width * 0.25, size = 0.6)
       }
     }
   }

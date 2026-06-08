@@ -429,6 +429,7 @@ create_grouped_two_with_stacked_right <- function(
   data_label_hjust = 0.5,
   data_label_vjust = -0.2,
   label_margin_frac = 0.04,   # 标签与柱顶间距占总体最大值比例
+  data_label_voffset = 0,     # 标签在类别轴方向的偏移（coord_flip时控制上下位置）
   # 文字与布局
   axis_text_size = 12,
   axis_title_size = 14,
@@ -636,14 +637,14 @@ create_grouped_two_with_stacked_right <- function(
     left_labels_df <- subset(plot_df, type == "Left" & !is.na(value))
     if (nrow(left_labels_df) > 0) {
       left_labels_df$ypos <- left_labels_df$value + label_offset
-      p <- p + geom_text(data = left_labels_df, aes(x = group_pos + left_position_offset, y = ypos, label = round(value, 2)), angle = data_label_angle, size = data_label_size, hjust = data_label_hjust, vjust = data_label_vjust)
+      p <- p + geom_text(data = left_labels_df, aes(x = group_pos + left_position_offset + data_label_voffset, y = ypos, label = round(value, 2)), angle = data_label_angle, size = data_label_size, hjust = data_label_hjust, vjust = data_label_vjust)
     }
 
     # 右侧总和：y = total_mean + offset
     total_stats <- total_stats[!is.na(total_stats$total_mean), , drop = FALSE]
     if (nrow(total_stats) > 0) {
       total_stats$ypos <- total_stats$total_mean + label_offset
-      p <- p + geom_text(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + right_position_offset, y = ypos, label = round(total_mean, 2)), angle = data_label_angle, size = data_label_size, hjust = data_label_hjust, vjust = data_label_vjust)
+      p <- p + geom_text(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + right_position_offset + data_label_voffset, y = ypos, label = round(total_mean, 2)), angle = data_label_angle, size = data_label_size, hjust = data_label_hjust, vjust = data_label_vjust)
       # 如果有 CI，则绘制 errorbar（在总和上方）
       if (any(!is.na(total_stats$ymin))) {
         p <- p + geom_errorbar(data = total_stats, aes(x = as.numeric(factor(group, levels = group_labels)) + right_position_offset, ymin = ymin, ymax = ymax), width = bar_width * 0.25, size = 0.6)

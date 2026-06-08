@@ -1,4 +1,4 @@
-source("E:/Users/drinkwater/Desktop/R-script-template/MyR/Bar.R")
+source("C:/Users/YP/Desktop/work/R-paint/MyR/Bar.R")
 
 legend_breaks <- c("p1", "Left", "p2", "p3")
 legend_labels <- c(
@@ -34,7 +34,8 @@ p <- create_grouped_two_with_stacked_right(
   data_label_angle = 0,       # 改为竖排
   data_label_hjust = 0,
   data_label_vjust = 0.5,
-  label_margin_frac = 0.05,
+  label_margin_frac = 0.00,
+  data_label_voffset = 0.03,
   axis_text_size = 12,
   axis_title_size = 14,
   show_legend = TRUE,

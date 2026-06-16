@@ -36,7 +36,7 @@ legend_labels <- c(
   Glibc = "Glibc",
   Linux = "Linux",
   Log = "Log",
-  Web = "Web*"
+  Web = "Web"
 )
 line_colors <- c(
   Glibc = "#E8B15E",
@@ -73,15 +73,24 @@ max_pow <- floor(log2(x_range[2]))
 x_breaks <- 2^(min_pow:max_pow)
 x_breaks <- x_breaks[x_breaks >= x_range[1] & x_breaks <= x_range[2]]
 
-x_labels <- vector("list", length(x_breaks))
+# Unicode superscript conversion
+superscript_digits <- c(
+  "0" = "\u2070", "1" = "\u00b9", "2" = "\u00b2", "3" = "\u00b3",
+  "4" = "\u2074", "5" = "\u2075", "6" = "\u2076", "7" = "\u2077",
+  "8" = "\u2078", "9" = "\u2079"
+)
+to_superscript <- function(n) {
+  chars <- strsplit(as.character(n), "", fixed = TRUE)[[1]]
+  paste0(superscript_digits[chars], collapse = "")
+}
+
+x_labels <- character(length(x_breaks))
+x_labels[] <- ""
 if (length(x_breaks) > 0) {
   label_idx <- seq(1, length(x_breaks), by = 4)
-  x_labels[label_idx] <- lapply(
-    log2(x_breaks[label_idx]),
-    function(n) bquote(2^.(as.integer(n)))
-  )
+  exponents <- as.integer(log2(x_breaks[label_idx]))
+  x_labels[label_idx] <- paste0("2", sapply(exponents, to_superscript))
 }
-x_labels <- as.expression(x_labels)
 
 p <- ggplot2::ggplot(
   plot_df,
@@ -93,11 +102,12 @@ p <- ggplot2::ggplot(
     breaks = series_order,
     labels = legend_labels[series_order],
     guide = ggplot2::guide_legend(
-      nrow = 1,
-      ncol = 4,
+      nrow = 2,
+      ncol = 2,
       byrow = TRUE,
-      keyheight = grid::unit(34, "pt"),
-      keywidth = grid::unit(34, "pt")
+      keyheight = grid::unit(18, "pt"),
+      keywidth = grid::unit(18, "pt"),
+      label.theme = ggplot2::element_text(margin = ggplot2::margin(r = 100, unit = "pt"))
     )
   ) +
   ggplot2::scale_x_continuous(
@@ -108,7 +118,7 @@ p <- ggplot2::ggplot(
   ) +
   ggplot2::scale_y_continuous(
     breaks = seq(0, 1, by = 0.2),
-    labels = seq(0, 1, by = 0.2),
+    labels = c("", "0.2", "0.4", "0.6", "0.8", "1.0"),
     expand = ggplot2::expansion(mult = c(0, 0.02))
   ) +
   ggplot2::coord_cartesian(xlim = x_range, ylim = c(0, 1)) +
@@ -120,27 +130,67 @@ p <- ggplot2::ggplot(
   ggplot2::theme_classic() +
   ggplot2::theme(
     plot.margin = ggplot2::margin(t = 14, r = 20, b = 20, l = 10, unit = "pt"),
-    axis.text = ggplot2::element_text(size = 48, color = "black"),
-    axis.title.x = ggplot2::element_text(size = 48, margin = ggplot2::margin(t = 12)),
-    axis.title.y = ggplot2::element_text(size = 48, margin = ggplot2::margin(r = 12)),
+    axis.text = ggplot2::element_text(size = 54, color = "black"),
+    axis.title.x = ggplot2::element_text(size = 54),
+    axis.title.y = ggplot2::element_text(size = 54, margin = ggplot2::margin(r = 12)),
     legend.position = "top",
     legend.justification = "left",
     legend.box.just = "left",
     legend.direction = "horizontal",
     legend.background = ggplot2::element_blank(),
     legend.key = ggplot2::element_blank(),
-    legend.key.height = grid::unit(34, "pt"),
-    legend.spacing.x = grid::unit(16, "pt"),
+    legend.key.height = grid::unit(18, "pt"),
+    legend.spacing.x = grid::unit(80, "pt"),
     legend.spacing.y = grid::unit(0, "pt"),
     legend.margin = ggplot2::margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"),
     legend.box.margin = ggplot2::margin(t = -12, r = 0, b = 0, l = -16, unit = "pt"),
     legend.box.spacing = grid::unit(0, "pt"),
-    legend.text = ggplot2::element_text(size = 48, color = "black")
+    legend.text = ggplot2::element_text(size = 52, color = "black")
   )
 
-ggplot2::ggsave(
-  filename = file.path(script_dir, "reuse.pdf"),
-  plot = p,
-  width = 10,
-  height = 6.3
+# Extract legend grob and build layout matching process
+get_legend_grob <- function(plot) {
+  plot_grob <- ggplot2::ggplotGrob(plot)
+  legend_index <- which(vapply(plot_grob$grobs, function(grob) grob$name, character(1)) == "guide-box")
+  if (length(legend_index) == 0) {
+    return(grid::nullGrob())
+  }
+  plot_grob$grobs[[legend_index[1]]]
+}
+
+legend_grob <- get_legend_grob(p)
+legend_area_height <- grid::unit(1.80, "in")
+legend_y_offset <- grid::unit(0.00, "in")
+
+main_plot <- p + ggplot2::theme(
+  legend.position = "none",
+  plot.margin = ggplot2::margin(t = 0, r = 20, b = 12, l = 10, unit = "pt")
 )
+
+cairo_pdf(file.path(script_dir, "reuse.pdf"), width = 12, height = 9)
+grid::grid.newpage()
+
+plot_layout <- grid::grid.layout(
+  nrow = 2,
+  ncol = 1,
+  heights = grid::unit.c(legend_area_height, grid::unit(1, "null"))
+)
+grid::pushViewport(grid::viewport(layout = plot_layout))
+
+grid::pushViewport(grid::viewport(
+  layout.pos.row = 1,
+  layout.pos.col = 1
+))
+grid::pushViewport(grid::viewport(
+  x = grid::unit(0.50, "npc"),
+  y = grid::unit(0.90, "npc") + legend_y_offset,
+  width = sum(legend_grob$widths),
+  height = sum(legend_grob$heights),
+  just = c("center", "top")
+))
+grid::grid.draw(legend_grob)
+grid::popViewport(2)
+
+print(main_plot, vp = grid::viewport(layout.pos.row = 2, layout.pos.col = 1))
+grid::popViewport()
+dev.off()

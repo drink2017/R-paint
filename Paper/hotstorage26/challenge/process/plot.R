@@ -1,5 +1,15 @@
 source("C:/Users/YP/Desktop/work/R-paint/MyR/Bar.R")
 
+args <- commandArgs(trailingOnly = FALSE)
+script_arg <- args[grepl("^--file=", args)]
+script_dir <- if (length(script_arg) > 0) {
+  dirname(normalizePath(sub("^--file=", "", script_arg[1]), winslash = "/", mustWork = FALSE))
+} else if (!is.null(sys.frames()[[1]]$ofile)) {
+  dirname(normalizePath(sys.frames()[[1]]$ofile, winslash = "/", mustWork = FALSE))
+} else {
+  getwd()
+}
+
 legend_breaks <- c("p1", "Left", "p2", "p3")
 legend_labels <- c(
   "Trial delta compression",
@@ -25,7 +35,7 @@ right_parts_list <- list(
 p <- create_grouped_two_with_stacked_right(
   left_list = left_list,
   right_parts_list = right_parts_list,
-  group_labels = c("Docker","Linux","Web*","Log"),
+  group_labels = c("Docker","Linux","Web","Log"),
   component_labels = c("p1","p2","p3"),
   x_label = NULL,
   y_label = "Time (s)",
@@ -133,7 +143,7 @@ main_plot <- p + theme(
   plot.margin = margin(t = 0, r = 36, b = 12, l = 12, unit = "pt")
 )
 
-cairo_pdf("time_overhead.pdf", width = 12, height = 9)
+cairo_pdf(file.path(script_dir, "time_overhead.pdf"), width = 12, height = 9)
 grid::grid.newpage()
 
 plot_layout <- grid::grid.layout(
@@ -160,4 +170,3 @@ grid::popViewport(2)
 print(main_plot, vp = grid::viewport(layout.pos.row = 2, layout.pos.col = 1))
 grid::popViewport()
 dev.off()
-

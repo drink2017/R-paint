@@ -12,7 +12,7 @@ script_dir <- if (length(script_arg) > 0) {
 
 legend_breaks <- c("p1", "Left", "p2", "p3")
 legend_labels <- c(
-  "Trial delta compression",
+  "Trial compression",
   "Real",
   "Base chunk reconstruction",
   "Others"

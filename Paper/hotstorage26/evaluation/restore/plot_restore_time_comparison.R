@@ -101,7 +101,7 @@ plot_one_dataset <- function(dataset_name, export_name) {
     geom_line(size = 2.8) +
     scale_color_manual(
       values = c(design3 = "#AD0626", odess = "#2C3359"),
-      labels = c(design3 = "Mdelta", odess = "Odess")
+      labels = c(design3 = "ReBase", odess = "Odess")
     ) +
     theme_classic() +
     theme(

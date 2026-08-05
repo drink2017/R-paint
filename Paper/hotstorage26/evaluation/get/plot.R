@@ -23,25 +23,25 @@ get_script_dir <- function() {
 export_dir <- get_script_dir()
 
 # Fill in the four rows below. Each row is one group, and the two columns are:
-# ReBase, ReBase-R.
+# ReBase, Odess.
 plot_data <- data.frame(
-  group = c("Docker", "Linux", "Web-32", "Log"),
-  ReBase = c(429, 2766, 3119, 491),       # TODO: replace with your data
-  `ReBase-R` = c(817, 3717, 20826, 348), # TODO: replace with your data
+  group = c("Docker", "Linux", "Web", "Log"),
+  ReBase = c(20.0902, 64.7865, 320.779, 51.1359),     # TODO: replace with your data
+  Odess = c(19.4882, 37.4756, 92.1916, 37.5768),       # TODO: replace with your data
   check.names = FALSE
 )
 
-method_labels <- c("ReBase", "ReBase-R")
+method_labels <- c("ReBase", "Odess")
 method_colors <- c(
   "ReBase" = "#A61D24",
-  "ReBase-R" = "#78B0B8"
+  "Odess" = "#78B0B8"
 )
 
 create_three_method_barplot <- function(
     data,
     group_col = "group",
-    method_labels = c("ReBase", "ReBase-R"),
-    fill_colors = c("ReBase" = "#A61D24", "ReBase-R" = "#78B0B8"),
+    method_labels = c("ReBase", "Odess"),
+    fill_colors = c("ReBase" = "#A61D24", "Odess" = "#78B0B8"),
     x_label = "",
     y_label = "Value",
     axis_text_size = 50,
@@ -128,7 +128,7 @@ p <- create_three_method_barplot(
   method_labels = method_labels,
   fill_colors = method_colors,
   x_label = "",
-  y_label = "Duration (s)",
+  y_label = "DRR",
   show_data_labels = FALSE # Change to TRUE if labels above bars are needed.
 )
 

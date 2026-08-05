@@ -23,25 +23,25 @@ get_script_dir <- function() {
 export_dir <- get_script_dir()
 
 # Fill in the four rows below. Each row is one group, and the two columns are:
-# Mdelta, Mdelta-G.
+# ReBase, ReBase-G.
 plot_data <- data.frame(
   group = c("Docker", "Linux", "Web", "Log"),
-  Mdelta = c(93.78, 92.21, 90.02, 95.09),           # TODO: replace with your hit-rate data
-  `Mdelta-G` = c(8.52, 1.21, 76.26, 47.76), # TODO: replace with your hit-rate data
+  ReBase = c(93.78, 92.21, 90.02, 95.09),           # TODO: replace with your hit-rate data
+  `ReBase-G` = c(8.52, 1.21, 76.26, 47.76), # TODO: replace with your hit-rate data
   check.names = FALSE
 )
 
-method_labels <- c("Mdelta", "Mdelta-G")
+method_labels <- c("ReBase", "ReBase-G")
 method_colors <- c(
-  "Mdelta" = "#A61D24",
-  "Mdelta-G" = "#78B0B8"
+  "ReBase" = "#A61D24",
+  "ReBase-G" = "#78B0B8"
 )
 
 create_three_method_barplot <- function(
     data,
     group_col = "group",
-    method_labels = c("Mdelta", "Mdelta-G"),
-    fill_colors = c("Mdelta" = "#A61D24", "Mdelta-G" = "#78B0B8"),
+    method_labels = c("ReBase", "ReBase-G"),
+    fill_colors = c("ReBase" = "#A61D24", "ReBase-G" = "#78B0B8"),
     x_label = "",
     y_label = "Value",
     axis_text_size = 50,
